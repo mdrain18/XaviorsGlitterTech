@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<TerrainDef Name="FloorBase_GT" Abstract="True">
+		<layerable>true</layerable>
+		<affordances>
+			<li>Light</li>
+			<li>Medium</li>
+			<li>Heavy</li>
+			<li>SmoothableStone</li>
+		</affordances>
+		<statBases>
+			<WorkToBuild>135</WorkToBuild>
+		</statBases>
+		<designationCategory>Floors</designationCategory>
+		<fertility>0</fertility>
+		<constructEffect>ConstructDirt</constructEffect>
+		<acceptTerrainSourceFilth>True</acceptTerrainSourceFilth>
+		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	</TerrainDef>
+
+
+	<!-- ================= Tile ================= -->
+
+	<TerrainDef  ParentName="FloorBase_GT" Name="GTTile" Abstract="True">
+		<renderPrecedence>240</renderPrecedence>
+		<description>Tiles, for that Glitter world look.</description>
+		<texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+		<color>(255,255,255)</color>
+		<edgeType>Hard</edgeType>
+		<constructEffect>ConstructMetal</constructEffect>
+		<researchPrerequisites><li>MetalFab</li></researchPrerequisites>
+	</TerrainDef>
+
+	<TerrainDef  ParentName="GTTile">
+		<defName>TitaniumTile</defName>
+		<label>Titanium tile</label>
+		<description>Titanium tiles, for that Glitter world look.</description>
+		<color>(255,255,255)</color>
+		<statBases>
+			<WorkToBuild>135</WorkToBuild>
+			<Beauty>8</Beauty>
+		</statBases>
+		<costList>
+			<Titanium>3</Titanium>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef  ParentName="GTTile">
+		<defName>AlphaTile</defName>
+		<label>Alpha-Poly tile</label>
+		<description>Alpha-Poly tiles, for that alien spaceship look.</description>
+		<color>(100,60,100)</color>
+		<statBases>
+			<WorkToBuild>15</WorkToBuild>
+			<Beauty>16</Beauty>
+		</statBases>
+		<costList>
+			<AlphaPoly>3</AlphaPoly>
+		</costList>
+	</TerrainDef>
+
+	<TerrainDef  ParentName="GTTile">
+		<defName>BetaTile</defName>
+		<label>Beta-Poly tile</label>
+		<description>Beta-Poly tiles, for that alien spaceship look.</description>
+		<color>(100,60,60)</color>
+		<statBases>
+			<WorkToBuild>100</WorkToBuild>
+			<Beauty>30</Beauty>
+		</statBases>
+		<costList>
+			<BetaPoly>3</BetaPoly>
+		</costList>
+	</TerrainDef>
+
+</Defs>

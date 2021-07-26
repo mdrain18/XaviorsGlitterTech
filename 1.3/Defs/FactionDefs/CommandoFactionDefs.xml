@@ -36,10 +36,6 @@
 		<geneticVariance>0.8</geneticVariance>
 		<earliestRaidDays>180</earliestRaidDays>
 		<autoFlee>false</autoFlee>
-		<hairTags>
-			<li>Spikes</li>
-			<li>Messy</li>
-		</hairTags>
 		<raidCommonalityFromPointsCurve>
 			<points>
 				<li>(300, 	0)</li>

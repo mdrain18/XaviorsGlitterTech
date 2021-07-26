@@ -28,9 +28,6 @@
 		<geneticVariance>0.8</geneticVariance>
 		<autoFlee>false</autoFlee>
 		<hidden>false</hidden>
-		<hairTags>
-			<li>Messy</li>
-		</hairTags>
 		<allowedArrivalTemperatureRange>
 			<min>-40</min>
 			<max>45</max>

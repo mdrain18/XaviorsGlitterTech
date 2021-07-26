@@ -23,10 +23,6 @@
 			<li>(0.3, 0.3, 0.3)</li>
 			<li>(0.2, 0.2, 0.2)</li>
 		</colorSpectrum>
-		<startingGoodwill>
-			<min>-100</min>
-			<max>-100</max>
-		</startingGoodwill>
 		<factionNameMaker>NamerFactionPirate</factionNameMaker>
 		<settlementNameMaker>NamerSettlementPirate</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
@@ -39,10 +35,6 @@
 			<li>Punk</li>
 			<li>Urban</li>
 		</hairTags>
-		<naturalColonyGoodwill>
-			<min>-100</min>
-			<max>-100</max>
-		</naturalColonyGoodwill>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
 				<li>(0,35)</li>

@@ -37,6 +37,31 @@
 			<min>0</min>
 			<max>2</max>
 		</combatEnhancingDrugsCount>
+		<initialWillRange>
+			3~4
+		</initialWillRange>
+		<initialResistanceRange>
+			12~17
+		</initialResistanceRange>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(300, 	0)</li>
+				<li>(700, 	1)</li>
+				<li>(1400, 	1.8)</li>
+				<li>(2800, 	2.2)</li>
+				<li>(4000,	2.6)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+		<raidLootMaker>MechanoidRaidLootMaker</raidLootMaker>
+		<raidLootValueFromPointsCurve>
+			<points>
+				<li>(35, 	8)</li>
+				<li>(100, 	60)</li>
+				<li>(1000, 	250)</li>
+				<li>(2000, 	400)</li>
+				<li>(4000,	500)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="OCBase">

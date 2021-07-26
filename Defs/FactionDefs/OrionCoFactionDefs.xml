@@ -16,10 +16,6 @@
 		<colorSpectrum>
 			<li>(0.6, 0.6, 1)</li>
 		</colorSpectrum>
-		<startingGoodwill>
-			<min>-100</min>
-			<max>40</max>
-		</startingGoodwill>
 		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
 		<backstoryCategories>
@@ -30,10 +26,6 @@
 		<hairTags>
 			<li>Urban</li>
 		</hairTags>
-		<naturalColonyGoodwill>
-			<min>-100</min>
-			<max>-10</max>
-		</naturalColonyGoodwill>
 		<allowedArrivalTemperatureRange>
 			<min>-40</min>
 			<max>45</max>

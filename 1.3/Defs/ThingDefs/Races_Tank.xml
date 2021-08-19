@@ -37,25 +37,11 @@
 			<ComfyTemperatureMax>250</ComfyTemperatureMax>
 		</statBases>
 		<race>
-			<FleshTypeDef>
-				<defName>Metal</defName>
-				<corpseCategory>CorpsesMechanoid</corpseCategory>
-				<damageEffecter>Damage_HitMechanoid</damageEffecter>
-				<genericWounds>
-					<li>
-						<texture>Things/Pawn/Wounds/WoundMechA</texture>
-					</li>
-					<li>
-						<texture>Things/Pawn/Wounds/WoundMechB</texture>
-					</li>
-					<li>
-						<texture>Things/Pawn/Wounds/WoundMechC</texture>
-					</li>
-				</genericWounds>
-			</FleshTypeDef>
+			<FleshTypeDef>Normal</FleshTypeDef>
 			<needsRest>false</needsRest>
 			<hasGenders>false</hasGenders>
 			<foodType>None</foodType>
+			<bloodDef>Filth_MachineBits</bloodDef>
 		</race>
 	</ThingDef>
 
@@ -84,6 +70,7 @@
 			<body>TankChassis</body>
 			<baseBodySize>3.0</baseBodySize>
 			<baseHealthScale>10.5</baseHealthScale>
+			<gestationPeriodDays>100</gestationPeriodDays>
 			<lifeStageAges>
 				<li>
 					<def>OCTankFullyFormed</def>

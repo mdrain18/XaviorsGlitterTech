@@ -3,7 +3,7 @@
 
 	<RecipeDef ParentName="GTSurgery">
 		<defName>InstallOCExo</defName>
-		<label>install Orion Exoskeleton</label>
+		<label>Install Orion Exoskeleton</label>
 		<description>Installs Orion Exoskeleton.</description>
 		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
 		<jobString>Installing Orion Exoskeleton.</jobString>

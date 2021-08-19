@@ -37,7 +37,7 @@
 			<ComfyTemperatureMax>250</ComfyTemperatureMax>
 		</statBases>
 		<race>
-			<fleshType>Mechanoid</fleshType>
+			<fleshType>Normal</fleshType>
 			<needsRest>false</needsRest>
 			<hasGenders>false</hasGenders>
 			<foodType>None</foodType>

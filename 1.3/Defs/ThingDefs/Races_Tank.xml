@@ -1,6 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+	<FleshTypeDef>
+		<defName>OCTank_Flesh</defName>
+		<damageEffecter>Damage_HitMechanoid</damageEffecter>
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundA</texture>
+				<color>0.23,0.20,0.17</color>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundB</texture>
+				<color>0.23,0.20,0.17</color>
+			</li>
+			<li>
+				<texture>Things/Pawn/Wounds/WoundC</texture>
+				<color>0.23,0.20,0.17</color>
+			</li>
+		</genericWounds>
+	</FleshTypeDef>
+	
 	<ThingDef Name="BasePawn_GT" Abstract="True">
 		<thingClass>Pawn</thingClass>
 		<category>Pawn</category>
@@ -37,7 +56,7 @@
 			<ComfyTemperatureMax>250</ComfyTemperatureMax>
 		</statBases>
 		<race>
-			<FleshTypeDef>Normal</FleshTypeDef>
+			<fleshType>OCTank_Flesh</fleshType>
 			<needsRest>false</needsRest>
 			<hasGenders>false</hasGenders>
 			<foodType>None</foodType>

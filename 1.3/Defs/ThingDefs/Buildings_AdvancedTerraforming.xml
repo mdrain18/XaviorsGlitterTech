@@ -23,7 +23,7 @@
 			<Flammability>1.0</Flammability>
 		</statBases>
 		<tickerType>Normal</tickerType>
-		<description>Detonates on command. Creates a directed blast of plasma, which impacts right into the bedrock. Used for asteroid mining and acessing underground resources.</description>
+		<description>Detonates on command. Creates a directed blast of plasma, which impacts right into the bedrock. Used for asteroid mining and accessing underground resources.</description>
 		<comps>
 			<li Class="CompProperties_Glower">
 				<glowRadius>8</glowRadius>

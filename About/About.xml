@@ -10,12 +10,14 @@
 	</supportedVersions>
 	<packageId>Xavior.GlitterTech</packageId>
 	<description>
-		(Unoffical Version for 1.3) I am not the original author 
+		(Unofficial Version for 1.3) I am not the original author
 		GlitterTech adds a ton of shiny new and futuristic items found on the richer developed Glitter worlds. But, this expensive and illegal tech attracts attention of Glitter world Commandos.
 		
 		Original Mod: https://steamcommunity.com/sharedfiles/filedetails/?id=725576127
 		Pulled and updated from: 725576127 mod folder
 		Original Git Repo: https://github.com/sam23694/GlitterTech/tree/1.0.2059
 		Current Mod Repo: https://github.com/mdrain18/XaviorsGlitterTech.git
+
+		Looking to add a few things to this mod while I'm feeling motivated. Full list to come once its done.
 	</description>
 </ModMetaData>

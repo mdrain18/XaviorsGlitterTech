@@ -203,7 +203,7 @@
 		<soundInteract>Metal_Drop</soundInteract>
 		<soundDrop>Metal_Drop</soundDrop>
 		<statBases>
-			<MarketValue>1200</MarketValue>
+			<MarketValue>600</MarketValue>
 			<Mass>0.6</Mass>
 			<Flammability>1.0</Flammability>
 		</statBases>

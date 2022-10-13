@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>ImpactionCharge</defName>
         <label>Impaction charge</label>
         <graphicData>

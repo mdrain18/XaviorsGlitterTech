@@ -11,7 +11,6 @@
         </requiredCapacities>
     </WorkGiverDef>
 
-
     <WorkGiverDef ParentName="GTWorkGiver">
         <defName>DoBillsMatterfab</defName>
         <label>operate Matter Fabricator</label>

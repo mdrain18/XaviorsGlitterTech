@@ -3,7 +3,7 @@
 
     <!--==================================PowerSource=====================================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>XenonIonTurbine</defName>
         <label>Xenon-Ion Turbine</label>
         <thingClass>Building</thingClass>
@@ -62,7 +62,6 @@
         <building>
             <ai_chillDestination>false</ai_chillDestination>
             <soundAmbient>XITurbine</soundAmbient>
-
         </building>
         <constructEffect>ConstructMetal</constructEffect>
         <placeWorkers>
@@ -73,7 +72,7 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>PlasmaReactor</defName>
         <label>Plasma Fusion Reactor</label>
         <thingClass>Building</thingClass>
@@ -91,8 +90,8 @@
         <fillPercent>1</fillPercent>
         <blockLight>true</blockLight>
         <statBases>
-            <MaxHitPoints>2500</MaxHitPoints>
-            <WorkToBuild>25000</WorkToBuild>
+            <MaxHitPoints>5000</MaxHitPoints>
+            <WorkToBuild>15000</WorkToBuild>
             <Flammability>1.0</Flammability>
             <Beauty>-10</Beauty>
         </statBases>
@@ -145,7 +144,7 @@
 
     <!--==================================Batteries=====================================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>FissionBattery</defName>
         <label>Battery</label>
         <thingClass>Building_Battery</thingClass>
@@ -193,8 +192,8 @@
         </costList>
         <comps>
             <li Class="CompProperties_Battery">
-                <storedEnergyMax>4000</storedEnergyMax>
-                <efficiency>0.7</efficiency>
+                <storedEnergyMax>6000</storedEnergyMax>
+                <efficiency>0.9</efficiency>
                 <shortCircuitInRain>true</shortCircuitInRain>
                 <transmitsPower>true</transmitsPower>
             </li>
@@ -213,7 +212,7 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>HeavyPowerConduit</defName>
         <label>heavy power conduit</label>
         <thingClass>Building</thingClass>

@@ -8,7 +8,7 @@
         <filthLeaving>Filth_RubbleRock</filthLeaving>
     </ThingDef>
 
-    <ThingDef Name="RockBase_GT" ParentName="BuildingNaturalBase_GT" Abstract="True">
+    <ThingDef Name="RockBase_GT" ParentName="BuildingNaturalBase" Abstract="True">
         <thingClass>Mineable</thingClass>
         <graphicData>
             <texPath>Things/Building/Linked/Rock_Atlas</texPath>
@@ -55,18 +55,15 @@
             <colorTwo>(240,240,240)</colorTwo>
         </graphicData>
         <statBases>
-            <MaxHitPoints>12000</MaxHitPoints>
+            <MaxHitPoints>10000</MaxHitPoints>
         </statBases>
         <description>Elemental titanium</description>
         <building>
             <isResourceRock>true</isResourceRock>
             <mineableThing>Titanium</mineableThing>
-            <mineableYield>12</mineableYield>
-            <mineableScatterCommonality>0.06</mineableScatterCommonality>
-            <mineableScatterLumpSizeRange>
-                <min>10</min>
-                <max>50</max>
-            </mineableScatterLumpSizeRange>
+            <mineableYield>16</mineableYield>
+            <mineableScatterCommonality>0.1</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>10~60</mineableScatterLumpSizeRange>
         </building>
     </ThingDef>
 

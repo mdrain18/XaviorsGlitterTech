@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef Name="ApparelBase_GT" Abstract="True">
+    <ThingDef Name="ApparelBase_GT" ParentName="ApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <category>Item</category>
         <selectable>True</selectable>

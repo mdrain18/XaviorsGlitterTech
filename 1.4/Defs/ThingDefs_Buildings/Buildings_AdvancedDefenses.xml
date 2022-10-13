@@ -1,21 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <ThingDef Name="BuildingBase_GT" Abstract="True">
-        <category>Building</category>
-        <thingClass>Building</thingClass>
-        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-        <selectable>true</selectable>
-        <drawerType>MapMeshAndRealTime</drawerType>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-        <repairEffect>Repair</repairEffect>
-        <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-        <filthLeaving>Filth_RubbleBuilding</filthLeaving>
-    </ThingDef>
-
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>Shield</defName>
         <label>Shield</label>
+        <description>Excellent cover from gunfire.</description>
         <thingClass>Building</thingClass>
         <category>Building</category>
         <graphicData>
@@ -33,19 +21,20 @@
         <castEdgeShadows>true</castEdgeShadows>
         <fillPercent>0.6</fillPercent>
         <statBases>
-            <MaxHitPoints>450</MaxHitPoints>
-            <Beauty>-10</Beauty>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Beauty>-3</Beauty>
             <WorkToBuild>360</WorkToBuild>
             <Flammability>0</Flammability>
         </statBases>
         <building>
             <ai_chillDestination>false</ai_chillDestination>
             <isInert>true</isInert>
+            <isFence>true</isFence>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
             <blueprintGraphicData>
                 <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
             </blueprintGraphicData>
         </building>
-        <description>Excellent cover from gunfire.</description>
         <placingDraggableDimensions>1</placingDraggableDimensions>
         <stuffCategories>
             <li>Metallic</li>
@@ -56,16 +45,17 @@
         <rotatable>false</rotatable>
         <selectable>true</selectable>
         <neverMultiSelect>true</neverMultiSelect>
-        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <designationCategory>Security</designationCategory>
         <staticSunShadowHeight>0.20</staticSunShadowHeight>
     </ThingDef>
 
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BaseWeaponTurret">
         <defName>EMTurret</defName>
         <label>EMRG turret</label>
         <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
         <graphicData>
             <texPath>Things/Building/Turret/EMRGTurret_Base</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -133,7 +123,7 @@
     </ThingDef>
 
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BaseWeaponTurret">
         <defName>CannisterTurret</defName>
         <label>Cannister turret</label>
         <thingClass>Building_TurretGun</thingClass>
@@ -205,7 +195,7 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef Name="BaseArtilleryBuilding_GT" ParentName="BuildingBase_GT" Abstract="True">
+    <ThingDef Name="BaseArtilleryBuilding_GT" ParentName="BaseWeaponTurret" Abstract="True">
         <thingClass>Building_TurretGun</thingClass>
         <graphicData>
             <texPath>Things/Building/Turret/AutoMortarBase</texPath>

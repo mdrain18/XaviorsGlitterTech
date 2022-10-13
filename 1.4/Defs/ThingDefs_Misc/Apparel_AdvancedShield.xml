@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef Name="ApparelShieldBase_GT" Abstract="True">
+    <ThingDef Name="ApparelShieldBase_GT" ParentName="ApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <category>Item</category>
         <selectable>True</selectable>
@@ -22,7 +22,7 @@
         <alwaysHaulable>True</alwaysHaulable>
         <tickerType>Never</tickerType>
         <thingCategories>
-            <li>Apparel</li>
+            <li>ApparelUtility</li>
         </thingCategories>
         <comps>
             <li>
@@ -38,7 +38,6 @@
     </ThingDef>
 
     <ThingDef ParentName="ApparelShieldBase_GT">
-        <thingClass>ShieldBelt</thingClass>
         <defName>Apparel_HC1Shield</defName>
         <label>HC-1 shield</label>
         <description>A high capacity energy shield device. The top teir class of personal shields, the mark 1 increases
@@ -57,6 +56,10 @@
         </statBases>
         <generateCommonality>1</generateCommonality>
         <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <careIfDamaged>false</careIfDamaged>
+            <wearPerDay>0</wearPerDay>
             <bodyPartGroups>
                 <li>Waist</li>
             </bodyPartGroups>
@@ -78,7 +81,6 @@
     </ThingDef>
 
     <ThingDef ParentName="ApparelShieldBase_GT">
-        <thingClass>ShieldBelt</thingClass>
         <defName>Apparel_OCShield</defName>
         <label>Orion Corp defense shield</label>
         <description>An Orion corp patented personal defense shield. Standard capacity, but recycles the shield much
@@ -97,6 +99,10 @@
         </statBases>
         <generateCommonality>1</generateCommonality>
         <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <careIfDamaged>false</careIfDamaged>
+            <wearPerDay>0</wearPerDay>
             <bodyPartGroups>
                 <li>Waist</li>
             </bodyPartGroups>

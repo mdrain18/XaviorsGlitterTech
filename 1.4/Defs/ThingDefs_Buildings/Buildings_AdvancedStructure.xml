@@ -3,7 +3,7 @@
 
     <!--========================= Doors =============================-->
 
-    <ThingDef ParentName="BuildingBase_GT" Name="DoorBase_GT" Abstract="True">
+    <ThingDef ParentName="BuildingBase" Name="DoorBase_GT" Abstract="True">
         <thingClass>Building_Door</thingClass>
         <category>Building</category>
         <altitudeLayer>DoorMoveable</altitudeLayer>
@@ -84,7 +84,7 @@
 
     <!--========================= Walls =============================-->
 
-    <ThingDef ParentName="BuildingBase_GT" Name="Wall_GT" Abstract="True">
+    <ThingDef ParentName="BuildingBase" Name="Wall_GT" Abstract="True">
         <defName>Wall</defName>
         <label>wall</label>
         <thingClass>Building</thingClass>

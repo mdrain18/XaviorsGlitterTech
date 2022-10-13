@@ -8,17 +8,13 @@
                 <li Class="ThinkNode_Subtree">
                     <treeDef>Downed</treeDef>
                 </li>
-
                 <li Class="ThinkNode_Subtree">
                     <treeDef>LordDuty</treeDef>
                 </li>
-
                 <li Class="JobGiver_WanderAnywhere">
                     <maxDanger>Deadly</maxDanger>
                 </li>
-
                 <li Class="JobGiver_IdleError"/>
-
             </subNodes>
         </thinkRoot>
     </ThinkTreeDef>

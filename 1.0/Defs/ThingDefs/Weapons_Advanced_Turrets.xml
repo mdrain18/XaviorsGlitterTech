@@ -1,514 +1,514 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!--		Bases		-->
+    <!--		Bases		-->
 
-	<ThingDef Name="BaseGun_GT" Abstract="True">
-		<category>Item</category>
-		<thingClass>ThingWithComps</thingClass>
-		<equipmentType>Primary</equipmentType>
-		<pathCost>10</pathCost>
-		<useHitPoints>True</useHitPoints>
-		<selectable>True</selectable>
-		<graphicData>
-			<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
-		</graphicData>
-		<drawGUIOverlay>true</drawGUIOverlay>
-		<statBases>
-			<MaxHitPoints>100</MaxHitPoints>
-			<Flammability>1.0</Flammability>
-			<Mass>1.2</Mass>
-			<DeteriorationRate>2</DeteriorationRate>
-			<SellPriceFactor>0.5</SellPriceFactor>
-		</statBases>
-		<altitudeLayer>Item</altitudeLayer>
-		<alwaysHaulable>True</alwaysHaulable>
-		<tickerType>Never</tickerType>
-		<techLevel>Industrial</techLevel>
-		<thingCategories>
-			<li>WeaponsRanged</li>
-		</thingCategories>
-		<inspectorTabs>
-			<li>ITab_Art</li>
-		</inspectorTabs>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
-			<li>
-				<compClass>CompEquippable</compClass>
-			</li>
-			<li>
-				<compClass>CompQuality</compClass>
-			</li>
-			<li Class="CompProperties_Art">
-				<nameMaker>NamerArtWeaponGun</nameMaker>
-				<descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
-				<minQualityForArtistic>Excellent</minQualityForArtistic>
-			</li>
-		</comps>
-	</ThingDef>
+    <ThingDef Name="BaseGun_GT" Abstract="True">
+        <category>Item</category>
+        <thingClass>ThingWithComps</thingClass>
+        <equipmentType>Primary</equipmentType>
+        <pathCost>10</pathCost>
+        <useHitPoints>True</useHitPoints>
+        <selectable>True</selectable>
+        <graphicData>
+            <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+        </graphicData>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <statBases>
+            <MaxHitPoints>100</MaxHitPoints>
+            <Flammability>1.0</Flammability>
+            <Mass>1.2</Mass>
+            <DeteriorationRate>2</DeteriorationRate>
+            <SellPriceFactor>0.5</SellPriceFactor>
+        </statBases>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>True</alwaysHaulable>
+        <tickerType>Never</tickerType>
+        <techLevel>Industrial</techLevel>
+        <thingCategories>
+            <li>WeaponsRanged</li>
+        </thingCategories>
+        <inspectorTabs>
+            <li>ITab_Art</li>
+        </inspectorTabs>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li>
+                <compClass>CompEquippable</compClass>
+            </li>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+    </ThingDef>
 
-	<ThingDef Name="BaseBullet_GT" Abstract="True">
-		<category>Projectile</category>
-		<tickerType>Normal</tickerType>
-		<altitudeLayer>Projectile</altitudeLayer>
-		<thingClass>Bullet</thingClass>
-		<label>bullet</label>
-		<useHitPoints>False</useHitPoints>
-		<neverMultiSelect>True</neverMultiSelect>
-		<graphicData>
-			<shaderType>Transparent</shaderType>
-		</graphicData>
-	</ThingDef>
+    <ThingDef Name="BaseBullet_GT" Abstract="True">
+        <category>Projectile</category>
+        <tickerType>Normal</tickerType>
+        <altitudeLayer>Projectile</altitudeLayer>
+        <thingClass>Bullet</thingClass>
+        <label>bullet</label>
+        <useHitPoints>False</useHitPoints>
+        <neverMultiSelect>True</neverMultiSelect>
+        <graphicData>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+    </ThingDef>
 
-	<ThingDef Name="BaseArtilleryWeapon_GT" Abstract="True">
-		<category>Item</category>
-		<thingClass>ThingWithComps</thingClass>
-		<label>artillery error</label>
-		<equipmentType>Primary</equipmentType>
-		<tickerType>Never</tickerType>
-		<techLevel>Industrial</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<menuHidden>True</menuHidden>
-		<tradeability>None</tradeability>
-		<weaponTags>
-			<li>Artillery</li>
-		</weaponTags>
-		<comps>
-			<li>
-				<compClass>CompEquippable</compClass>
-			</li>
-		</comps>
-	</ThingDef>
-
-
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_EMRGTurret</defName>
-		<label>Improvised turret bullet</label>
-		<graphicData>
-			<texPath>Things/Projectile/EM_Large</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>80</damageAmountBase>
-			<speed>200</speed>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseGun_GT">
-		<defName>Gun_EMRGTurret</defName>
-		<label>EMRG Turret Gun</label>
-		<graphicData>
-			<texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<menuHidden>true</menuHidden>
-		<description>Jury-rigged EMRG Rifle attached to a turret.</description>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<destroyOnDrop>false</destroyOnDrop>
-		<tradeability>None</tradeability>
-		<statBases>
-			<AccuracyTouch>0.90</AccuracyTouch>
-			<AccuracyShort>0.98</AccuracyShort>
-			<AccuracyMedium>0.98</AccuracyMedium>
-			<AccuracyLong>0.98</AccuracyLong>
-			<RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>EMRGTurretGun</li>
-		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_EMRGTurret</defaultProjectile>
-				<warmupTime>0.8</warmupTime>
-				<range>60</range>
-				<ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-				<burstShotCount>2</burstShotCount>
-				<soundCast>EM</soundCast>
-				<soundCastTail>GunTail_Heavy</soundCastTail>
-				<muzzleFlashScale>12</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
+    <ThingDef Name="BaseArtilleryWeapon_GT" Abstract="True">
+        <category>Item</category>
+        <thingClass>ThingWithComps</thingClass>
+        <label>artillery error</label>
+        <equipmentType>Primary</equipmentType>
+        <tickerType>Never</tickerType>
+        <techLevel>Industrial</techLevel>
+        <destroyOnDrop>True</destroyOnDrop>
+        <menuHidden>True</menuHidden>
+        <tradeability>None</tradeability>
+        <weaponTags>
+            <li>Artillery</li>
+        </weaponTags>
+        <comps>
+            <li>
+                <compClass>CompEquippable</compClass>
+            </li>
+        </comps>
+    </ThingDef>
 
 
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_CannisterTurret</defName>
-		<label>Improvised turret bullet</label>
-		<graphicData>
-			<texPath>Things/Projectile/Bullet_Shotgun</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<projectile>
-			<damageDef>Bullet</damageDef>
-			<damageAmountBase>35</damageAmountBase>
-			<speed>60</speed>
-		</projectile>
-	</ThingDef>
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_EMRGTurret</defName>
+        <label>Improvised turret bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/EM_Large</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>80</damageAmountBase>
+            <speed>200</speed>
+        </projectile>
+    </ThingDef>
 
-	<ThingDef ParentName="BaseGun_GT">
-		<defName>Gun_CannisterTurret</defName>
-		<label>Cannister Turret Gun</label>
-		<menuHidden>true</menuHidden>
-		<description>A cross between minigun and shotgun, attached to a turret.</description>
-		<graphicData>
-			<texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<soundInteract>Interact_Rifle</soundInteract>
-		<destroyOnDrop>false</destroyOnDrop>
-		<tradeability>None</tradeability>
-		<weaponTags>
-			<li>CannisterTurretGun</li>
-		</weaponTags>
-		<statBases>
-			<AccuracyTouch>0.35</AccuracyTouch>
-			<AccuracyShort>0.15</AccuracyShort>
-			<AccuracyMedium>0.8</AccuracyMedium>
-			<AccuracyLong>0.2</AccuracyLong>
-			<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
-		</statBases>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CannisterTurret</defaultProjectile>
-				<warmupTime>0.15</warmupTime>
-				<range>15</range>
-				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-				<soundCast>Shot_IncendiaryLauncher</soundCast>
-				<soundCastTail>GunTail_Medium</soundCastTail>
-				<muzzleFlashScale>12</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
-	<!-- ================= Bomb mortar ================= -->
-
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_AutoMortar</defName>
-		<label>explosive mortar shell</label>
-		<graphicData>
-			<texPath>Things/Projectile/ShellHighExplosive</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>Bomb</damageDef>
-			<damageAmountBase>80</damageAmountBase>
-			<speed>41</speed>
-			<explosionRadius>4.5</explosionRadius>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>MortarBomb_Explode</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-		</projectile>
-	</ThingDef>
-
-	<ThingDef ParentName="BaseArtilleryWeapon_GT">
-		<defName>Artillery_AutoMortar</defName>
-		<label>explosive mortar</label>
-		<description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
-		<techLevel>Spacer</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<menuHidden>True</menuHidden>
-		<tradeability>None</tradeability>
-		<statBases>
-			<MarketValue>1500</MarketValue>
-			<AccuracyTouch>0.79</AccuracyTouch>
-			<AccuracyShort>0.42</AccuracyShort>
-			<AccuracyMedium>0.18</AccuracyMedium>
-			<AccuracyLong>0.06</AccuracyLong>
-			<RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>Artillery</li>
-			<li>Artillery_BaseDestroyer</li>
-		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_AutoMortar</defaultProjectile>
-				<forcedMissRadius>8</forcedMissRadius>
-				<warmupTime>1.2</warmupTime>
-				<minRange>30</minRange>
-				<range>500</range>
-				<burstShotCount>1</burstShotCount>
-				<soundCast>Mortar_LaunchA</soundCast>
-				<muzzleFlashScale>16</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
+    <ThingDef ParentName="BaseGun_GT">
+        <defName>Gun_EMRGTurret</defName>
+        <label>EMRG Turret Gun</label>
+        <graphicData>
+            <texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <menuHidden>true</menuHidden>
+        <description>Jury-rigged EMRG Rifle attached to a turret.</description>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <destroyOnDrop>false</destroyOnDrop>
+        <tradeability>None</tradeability>
+        <statBases>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.98</AccuracyShort>
+            <AccuracyMedium>0.98</AccuracyMedium>
+            <AccuracyLong>0.98</AccuracyLong>
+            <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>EMRGTurretGun</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_EMRGTurret</defaultProjectile>
+                <warmupTime>0.8</warmupTime>
+                <range>60</range>
+                <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>EM</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
 
 
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_ClusterMortar</defName>
-		<label>explosive mortar shell</label>
-		<graphicData>
-			<texPath>Things/Projectile/ShellHighExplosive</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>Bomb</damageDef>
-			<damageAmountBase>30</damageAmountBase>
-			<speed>41</speed>
-			<explosionRadius>1.9</explosionRadius>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>MortarBomb_Explode</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-		</projectile>
-	</ThingDef>
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_CannisterTurret</defName>
+        <label>Improvised turret bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>35</damageAmountBase>
+            <speed>60</speed>
+        </projectile>
+    </ThingDef>
 
-	<ThingDef ParentName="BaseArtilleryWeapon_GT">
-		<defName>Artillery_ClusterMortar</defName>
-		<label>explosive mortar</label>
-		<description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
-		<techLevel>Spacer</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<menuHidden>True</menuHidden>
-		<tradeability>None</tradeability>
-		<statBases>
-			<MarketValue>1500</MarketValue>
-			<AccuracyTouch>0.79</AccuracyTouch>
-			<AccuracyShort>0.42</AccuracyShort>
-			<AccuracyMedium>0.18</AccuracyMedium>
-			<AccuracyLong>0.06</AccuracyLong>
-			<RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>Artillery</li>
-			<li>Artillery_BaseDestroyer</li>
-		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_ClusterMortar</defaultProjectile>
-				<forcedMissRadius>8</forcedMissRadius>
-				<warmupTime>1.2</warmupTime>
-				<minRange>30</minRange>
-				<range>500</range>
-				<burstShotCount>12</burstShotCount>
-				<soundCast>Mortar_LaunchA</soundCast>
-				<muzzleFlashScale>16</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
+    <ThingDef ParentName="BaseGun_GT">
+        <defName>Gun_CannisterTurret</defName>
+        <label>Cannister Turret Gun</label>
+        <menuHidden>true</menuHidden>
+        <description>A cross between minigun and shotgun, attached to a turret.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <destroyOnDrop>false</destroyOnDrop>
+        <tradeability>None</tradeability>
+        <weaponTags>
+            <li>CannisterTurretGun</li>
+        </weaponTags>
+        <statBases>
+            <AccuracyTouch>0.35</AccuracyTouch>
+            <AccuracyShort>0.15</AccuracyShort>
+            <AccuracyMedium>0.8</AccuracyMedium>
+            <AccuracyLong>0.2</AccuracyLong>
+            <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_CannisterTurret</defaultProjectile>
+                <warmupTime>0.15</warmupTime>
+                <range>15</range>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+    <!-- ================= Bomb mortar ================= -->
+
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_AutoMortar</defName>
+        <label>explosive mortar shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/ShellHighExplosive</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>80</damageAmountBase>
+            <speed>41</speed>
+            <explosionRadius>4.5</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon_GT">
+        <defName>Artillery_AutoMortar</defName>
+        <label>explosive mortar</label>
+        <description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
+        <techLevel>Spacer</techLevel>
+        <destroyOnDrop>True</destroyOnDrop>
+        <menuHidden>True</menuHidden>
+        <tradeability>None</tradeability>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+            <AccuracyTouch>0.79</AccuracyTouch>
+            <AccuracyShort>0.42</AccuracyShort>
+            <AccuracyMedium>0.18</AccuracyMedium>
+            <AccuracyLong>0.06</AccuracyLong>
+            <RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>Artillery</li>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_AutoMortar</defaultProjectile>
+                <forcedMissRadius>8</forcedMissRadius>
+                <warmupTime>1.2</warmupTime>
+                <minRange>30</minRange>
+                <range>500</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
 
 
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_EMPAMortar</defName>
-		<label>explosive mortar shell</label>
-		<graphicData>
-			<texPath>Things/Projectile/ShellEMP</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>EMP</damageDef>
-			<damageAmountBase>260</damageAmountBase>
-			<speed>65</speed>
-			<explosionRadius>3.9</explosionRadius>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>Explosion_EMP</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-		</projectile>
-	</ThingDef>
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_ClusterMortar</defName>
+        <label>explosive mortar shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/ShellHighExplosive</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>30</damageAmountBase>
+            <speed>41</speed>
+            <explosionRadius>1.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
 
-	<ThingDef ParentName="BaseArtilleryWeapon_GT">
-		<defName>Artillery_EMPAMortar</defName>
-		<label>explosive mortar</label>
-		<description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
-		<techLevel>Spacer</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<menuHidden>True</menuHidden>
-		<tradeability>None</tradeability>
-		<statBases>
-			<MarketValue>1500</MarketValue>
-			<AccuracyTouch>0.79</AccuracyTouch>
-			<AccuracyShort>0.42</AccuracyShort>
-			<AccuracyMedium>0.18</AccuracyMedium>
-			<AccuracyLong>0.06</AccuracyLong>
-			<RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>Artillery</li>
-			<li>Artillery_BaseDestroyer</li>
-		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_EMPAMortar</defaultProjectile>
-				<forcedMissRadius>8</forcedMissRadius>
-				<warmupTime>1.2</warmupTime>
-				<minRange>30</minRange>
-				<range>500</range>
-				<burstShotCount>12</burstShotCount>
-				<soundCast>Mortar_LaunchA</soundCast>
-				<muzzleFlashScale>16</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
+    <ThingDef ParentName="BaseArtilleryWeapon_GT">
+        <defName>Artillery_ClusterMortar</defName>
+        <label>explosive mortar</label>
+        <description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
+        <techLevel>Spacer</techLevel>
+        <destroyOnDrop>True</destroyOnDrop>
+        <menuHidden>True</menuHidden>
+        <tradeability>None</tradeability>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+            <AccuracyTouch>0.79</AccuracyTouch>
+            <AccuracyShort>0.42</AccuracyShort>
+            <AccuracyMedium>0.18</AccuracyMedium>
+            <AccuracyLong>0.06</AccuracyLong>
+            <RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>Artillery</li>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_ClusterMortar</defaultProjectile>
+                <forcedMissRadius>8</forcedMissRadius>
+                <warmupTime>1.2</warmupTime>
+                <minRange>30</minRange>
+                <range>500</range>
+                <burstShotCount>12</burstShotCount>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
 
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_MissileTurret</defName>
-		<label>explosive mortar shell</label>
-		<graphicData>
-			<texPath>Things/Projectile/Turret_Missile</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>Bomb</damageDef>
-			<damageAmountBase>40</damageAmountBase>
-			<speed>35</speed>
-			<explosionRadius>1.9</explosionRadius>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>MortarBomb_Explode</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-		</projectile>
-	</ThingDef>
 
-	<ThingDef ParentName="BaseArtilleryWeapon_GT">
-		<defName>Artillery_MissileTurret</defName>
-		<label>explosive mortar</label>
-		<description>Missile launcher. Launches a large number of missiles.</description>
-		<techLevel>Spacer</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<menuHidden>True</menuHidden>
-		<tradeability>None</tradeability>
-		<statBases>
-			<MarketValue>1500</MarketValue>
-			<AccuracyTouch>0.85</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>Artillery</li>
-			<li>Artillery_BaseDestroyer</li>
-		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_MissileTurret</defaultProjectile>
-				<forcedMissRadius>2</forcedMissRadius>
-				<warmupTime>0.5</warmupTime>
-				<minRange>15</minRange>
-				<range>500</range>
-				<burstShotCount>36</burstShotCount>
-				<soundCast>Missile_small</soundCast>
-				<muzzleFlashScale>16</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_EMPAMortar</defName>
+        <label>explosive mortar shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/ShellEMP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>EMP</damageDef>
+            <damageAmountBase>260</damageAmountBase>
+            <speed>65</speed>
+            <explosionRadius>3.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>Explosion_EMP</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
 
-	<ThingDef ParentName="BaseBullet_GT">
-		<defName>Bullet_CMissileTurret</defName>
-		<label>explosive mortar shell</label>
-		<graphicData>
-			<texPath>Things/Projectile/Turret_CMissile</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
-		</graphicData>
-		<thingClass>Projectile_Explosive</thingClass>
-		<projectile>
-			<damageDef>Bomb</damageDef>
-			<damageAmountBase>80</damageAmountBase>
-			<speed>35</speed>
-			<explosionRadius>25.9</explosionRadius>
-			<flyOverhead>true</flyOverhead>
-			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
-			<soundExplode>MortarBomb_Explode</soundExplode>
-			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
-			<soundAmbient>MortarRound_Ambient</soundAmbient>
-		</projectile>
-	</ThingDef>
+    <ThingDef ParentName="BaseArtilleryWeapon_GT">
+        <defName>Artillery_EMPAMortar</defName>
+        <label>explosive mortar</label>
+        <description>Mortar launcher. Lobs bombs over walls. Very inaccurate but long-ranged.</description>
+        <techLevel>Spacer</techLevel>
+        <destroyOnDrop>True</destroyOnDrop>
+        <menuHidden>True</menuHidden>
+        <tradeability>None</tradeability>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+            <AccuracyTouch>0.79</AccuracyTouch>
+            <AccuracyShort>0.42</AccuracyShort>
+            <AccuracyMedium>0.18</AccuracyMedium>
+            <AccuracyLong>0.06</AccuracyLong>
+            <RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>Artillery</li>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_EMPAMortar</defaultProjectile>
+                <forcedMissRadius>8</forcedMissRadius>
+                <warmupTime>1.2</warmupTime>
+                <minRange>30</minRange>
+                <range>500</range>
+                <burstShotCount>12</burstShotCount>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
 
-	<ThingDef ParentName="BaseArtilleryWeapon_GT">
-		<defName>Artillery_CMissileTurret</defName>
-		<label>explosive mortar</label>
-		<description>Missile launcher. Launches a large number of missiles.</description>
-		<techLevel>Spacer</techLevel>
-		<destroyOnDrop>True</destroyOnDrop>
-		<menuHidden>True</menuHidden>
-		<tradeability>None</tradeability>
-		<statBases>
-			<MarketValue>1500</MarketValue>
-			<AccuracyTouch>0.85</AccuracyTouch>
-			<AccuracyShort>0.75</AccuracyShort>
-			<AccuracyMedium>0.65</AccuracyMedium>
-			<AccuracyLong>0.55</AccuracyLong>
-			<RangedWeapon_Cooldown>80</RangedWeapon_Cooldown>
-		</statBases>
-		<weaponTags>
-			<li>Artillery</li>
-			<li>Artillery_BaseDestroyer</li>
-		</weaponTags>
-		<verbs>
-			<li>
-				<verbClass>Verb_Shoot</verbClass>
-				<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
-				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>Bullet_CMissileTurret</defaultProjectile>
-				<forcedMissRadius>2</forcedMissRadius>
-				<warmupTime>2.5</warmupTime>
-				<minRange>15</minRange>
-				<range>500</range>
-				<burstShotCount>1</burstShotCount>
-				<soundCast>Missile_large</soundCast>
-				<muzzleFlashScale>16</muzzleFlashScale>
-				<requireLineOfSight>false</requireLineOfSight>
-				<targetParams>
-					<canTargetLocations>true</canTargetLocations>
-				</targetParams>
-			</li>
-		</verbs>
-	</ThingDef>
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_MissileTurret</defName>
+        <label>explosive mortar shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/Turret_Missile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>40</damageAmountBase>
+            <speed>35</speed>
+            <explosionRadius>1.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon_GT">
+        <defName>Artillery_MissileTurret</defName>
+        <label>explosive mortar</label>
+        <description>Missile launcher. Launches a large number of missiles.</description>
+        <techLevel>Spacer</techLevel>
+        <destroyOnDrop>True</destroyOnDrop>
+        <menuHidden>True</menuHidden>
+        <tradeability>None</tradeability>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+            <AccuracyTouch>0.85</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>38</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>Artillery</li>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_MissileTurret</defaultProjectile>
+                <forcedMissRadius>2</forcedMissRadius>
+                <warmupTime>0.5</warmupTime>
+                <minRange>15</minRange>
+                <range>500</range>
+                <burstShotCount>36</burstShotCount>
+                <soundCast>Missile_small</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet_GT">
+        <defName>Bullet_CMissileTurret</defName>
+        <label>explosive mortar shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/Turret_CMissile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>80</damageAmountBase>
+            <speed>35</speed>
+            <explosionRadius>25.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon_GT">
+        <defName>Artillery_CMissileTurret</defName>
+        <label>explosive mortar</label>
+        <description>Missile launcher. Launches a large number of missiles.</description>
+        <techLevel>Spacer</techLevel>
+        <destroyOnDrop>True</destroyOnDrop>
+        <menuHidden>True</menuHidden>
+        <tradeability>None</tradeability>
+        <statBases>
+            <MarketValue>1500</MarketValue>
+            <AccuracyTouch>0.85</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.65</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>80</RangedWeapon_Cooldown>
+        </statBases>
+        <weaponTags>
+            <li>Artillery</li>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_CMissileTurret</defaultProjectile>
+                <forcedMissRadius>2</forcedMissRadius>
+                <warmupTime>2.5</warmupTime>
+                <minRange>15</minRange>
+                <range>500</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Missile_large</soundCast>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
 
 </Defs>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>EMPCharge</defName>
         <label>EMPD-1 charge</label>
         <thingClass>Building_BlastingCharge</thingClass>
@@ -58,7 +58,7 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>DepletedEMPCharge</defName>
         <label>Depleted EMPD-1 charge</label>
         <thingClass>Building_BlastingCharge</thingClass>
@@ -106,7 +106,7 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>FissionBomb</defName>
         <label>EMPD-1 charge</label>
         <thingClass>Building_BlastingCharge</thingClass>

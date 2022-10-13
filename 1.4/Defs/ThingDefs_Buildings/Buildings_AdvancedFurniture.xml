@@ -3,7 +3,7 @@
 
     <!--============================== Beds ==============================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="FurnitureBase">
         <defName>ambTable</defName>
         <label>Re-Ambulation Pod</label>
         <description>Warning this med-pod is calibrated for male patients only. This pod is designed for severely
@@ -86,7 +86,7 @@
     </ThingDef>
 
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="FurnitureBase">
         <defName>DynChair</defName>
         <label>Dynamic Relaxation Chair</label>
         <graphicData>
@@ -136,7 +136,7 @@
 
     <!-- ======================== Lighting ======================= -->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="LampBase">
         <defName>FloodLight</defName>
         <label>Flood light</label>
         <thingClass>Building</thingClass>
@@ -191,6 +191,5 @@
         <designationCategory>Furniture</designationCategory>
         <rotatable>false</rotatable>
     </ThingDef>
-
 
 </Defs>

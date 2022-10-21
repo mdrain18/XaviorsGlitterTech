@@ -10,7 +10,7 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>80</damageAmountBase>
+            <damageAmountBase>50</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
@@ -18,7 +18,7 @@
     <ThingDef ParentName="BaseGun_GT">
         <defName>Gun_EMRifle</defName>
         <label>EMRG-1</label>
-        <description>Electromagnetic Rail Gun. The lastest thing in long range combat. Extremely powerful.</description>
+        <description>Electromagnetic Rail Gun. The latest thing in long range combat. Extremely powerful.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/EMRG-1</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -27,9 +27,9 @@
 
         <statBases>
             <MarketValue>1400</MarketValue>
-            <AccuracyTouch>0.50</AccuracyTouch>
-            <AccuracyShort>0.86</AccuracyShort>
-            <AccuracyMedium>0.86</AccuracyMedium>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.75</AccuracyShort>
+            <AccuracyMedium>0.82</AccuracyMedium>
             <AccuracyLong>0.88</AccuracyLong>
             <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
         </statBases>

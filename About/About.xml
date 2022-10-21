@@ -11,20 +11,23 @@
     </supportedVersions>
     <packageId>Xavior.GlitterTech</packageId>
     <description>
-        (Unofficial Version for 1.4 and below) I am not the original author
         GlitterTech adds a ton of shiny new and futuristic items found on the richer developed Glitter worlds. But, this
         expensive and illegal tech attracts attention of Glitter world Commandos.
 
+        (Unofficial Version for 1.4 and below)
+        *I am not the original author*
         Original Mod: https://steamcommunity.com/sharedfiles/filedetails/?id=725576127
         Pulled and updated from: 725576127 mod folder
         Original Git Repo: https://github.com/sam23694/GlitterTech/tree/1.0.2059
         Current Mod Repo: https://github.com/mdrain18/XaviorsGlitterTech.git
 
         Updating Mod:
-        It can be said this mod is OP. I think it should be, however, in the spirt of being able to play how you want to
-        I am adding a few changes to this mod.
+        It can be said this mod is OP. I think it should be, however, in the spirit of being able to play how you want
+        to I am adding a few changes to this mod.
 
         1) Updating to 1.4 (in progress)
+            - Black Market Trader was removed, everything else works
+            - 1.4 ready without Black Market Trader
         2) Adding slider: this will increase everything by a multiplier. (in progress)
             1x: Default, which doesn't change anything
             2x: Max, doubles everything (not recommended) 
@@ -40,5 +43,16 @@
         Let me know in the "Changes" discussion what you want done with this mod and I will do my best to make it 
         happen. Link below:
         https://steamcommunity.com/workshop/filedetails/discussion/2558099206/3480742287613877229/
+
+        Release Notes:
+        1.4.01)
+            - Item values have been updated. Items are easier to craft, but are not as OP as they were before.
+                I'm sure this will need to be further balanced so let me know your thoughts.
+            - Updated to 1.4 (except Black Market Trader)
+                Black Market Trader - TraderKindDefs is throwing a no constructor error. Which means:
+                    1) I will have to write the constructor class
+                    2) RimWorld patches their code
+                    3) Or someone else will tell me I'm wrong and I need to do it a different way :)
+                Either way, it will get fixed in one of the next updates.
     </description>
 </ModMetaData>

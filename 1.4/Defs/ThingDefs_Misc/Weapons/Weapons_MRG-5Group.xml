@@ -10,7 +10,7 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>20</damageAmountBase>
+            <damageAmountBase>14</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
@@ -32,8 +32,8 @@
             <MarketValue>2300</MarketValue>
             <AccuracyTouch>0.85</AccuracyTouch>
             <AccuracyShort>0.90</AccuracyShort>
-            <AccuracyMedium>0.90</AccuracyMedium>
-            <AccuracyLong>0.65</AccuracyLong>
+            <AccuracyMedium>0.75</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
             <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
         </statBases>
         <weaponTags>
@@ -63,7 +63,7 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>35</damageAmountBase>
+            <damageAmountBase>20</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
@@ -82,10 +82,10 @@
 
         <statBases>
             <MarketValue>2600</MarketValue>
-            <AccuracyTouch>0.90</AccuracyTouch>
-            <AccuracyShort>0.95</AccuracyShort>
+            <AccuracyTouch>0.75</AccuracyTouch>
+            <AccuracyShort>0.85</AccuracyShort>
             <AccuracyMedium>0.90</AccuracyMedium>
-            <AccuracyLong>0.80</AccuracyLong>
+            <AccuracyLong>0.75</AccuracyLong>
             <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
         </statBases>
         <weaponTags>

@@ -11,7 +11,7 @@
         <projectile>
             <flyOverhead>false</flyOverhead>
             <damageDef>Flame</damageDef>
-            <damageAmountBase>15</damageAmountBase>
+            <damageAmountBase>10</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
@@ -66,7 +66,7 @@
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Flame</damageDef>
-            <damageAmountBase>50</damageAmountBase>
+            <damageAmountBase>25</damageAmountBase>
             <speed>200</speed>
             <explosionRadius>1.9</explosionRadius>
         </projectile>
@@ -89,9 +89,9 @@
         <statBases>
             <MarketValue>2200</MarketValue>
             <AccuracyTouch>0.90</AccuracyTouch>
-            <AccuracyShort>0.95</AccuracyShort>
-            <AccuracyMedium>0.90</AccuracyMedium>
-            <AccuracyLong>0.80</AccuracyLong>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.80</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
             <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
         </statBases>
         <weaponTags>
@@ -122,7 +122,7 @@
         </graphicData>
         <projectile>
             <damageDef>Flame</damageDef>
-            <damageAmountBase>18</damageAmountBase>
+            <damageAmountBase>10</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>

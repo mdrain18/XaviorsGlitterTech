@@ -1,13 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef Name="BuildingNaturalBase_GT" Abstract="True">
-        <category>Building</category>
-        <selectable>true</selectable>
-        <drawerType>MapMeshOnly</drawerType>
-        <filthLeaving>Filth_RubbleRock</filthLeaving>
-    </ThingDef>
-
     <ThingDef Name="RockBase_GT" ParentName="BuildingNaturalBase" Abstract="True">
         <thingClass>Mineable</thingClass>
         <graphicData>

@@ -47,8 +47,8 @@
             <StuffPower_Armor_Heat>1.35</StuffPower_Armor_Heat>
             <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
             <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>1.8</SharpDamageMultiplier>
-            <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
+            <SharpDamageMultiplier>1.6</SharpDamageMultiplier>
+            <BluntDamageMultiplier>1.3</BluntDamageMultiplier>
         </statBases>
         <thingCategories>
             <li>ResourcesRaw</li>
@@ -90,7 +90,7 @@
         <label>Alpha Poly</label>
         <description>The first iteration in artificially constructed, atomically assembled dense matter. This man made,
             and extremely rare material, only assembled in high end matter assemblers is good for building structures in
-            the chronospheres of stars.
+            the chromospheres of stars.
         </description>
         <graphicData>
             <texPath>Things/Item/Resource/APoly</texPath>
@@ -105,13 +105,13 @@
         <statBases>
             <MarketValue>117</MarketValue>
             <Mass>0.8</Mass>
-            <StuffPower_Armor_Sharp>2.5</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>2</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Sharp>2</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>1.8</StuffPower_Armor_Blunt>
             <StuffPower_Armor_Heat>3</StuffPower_Armor_Heat>
             <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
             <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>3</SharpDamageMultiplier>
-            <BluntDamageMultiplier>3.5</BluntDamageMultiplier>
+            <SharpDamageMultiplier>2</SharpDamageMultiplier>
+            <BluntDamageMultiplier>2</BluntDamageMultiplier>
         </statBases>
         <thingCategories>
             <li>ResourcesRaw</li>
@@ -148,7 +148,7 @@
         <label>Beta Poly</label>
         <description>The second iteration in artificially constructed, atomically assembled dense matter. This man made,
             and extremely rare material, is too expensive to be mass produced, and has only been used as material for
-            indestructable space suits, unstoppable kinetic slugs and containment for miniture black holes.
+            indestructible space suits, unstoppable kinetic slugs and containment for miniature black holes.
         </description>
         <graphicData>
             <texPath>Things/Item/Resource/BPoly</texPath>
@@ -163,13 +163,13 @@
         <statBases>
             <MarketValue>235</MarketValue>
             <Mass>1.2</Mass>
-            <StuffPower_Armor_Sharp>8</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>7</StuffPower_Armor_Blunt>
-            <StuffPower_Armor_Heat>8.5</StuffPower_Armor_Heat>
+            <StuffPower_Armor_Sharp>4</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>3.5</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>8</StuffPower_Armor_Heat>
             <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
             <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>8</SharpDamageMultiplier>
-            <BluntDamageMultiplier>8.5</BluntDamageMultiplier>
+            <SharpDamageMultiplier>4</SharpDamageMultiplier>
+            <BluntDamageMultiplier>4</BluntDamageMultiplier>
         </statBases>
         <thingCategories>
             <li>ResourcesRaw</li>
@@ -307,7 +307,7 @@
     <ThingDef ParentName="ResourceBase_GT">
         <defName>Serum</defName>
         <label>Serum</label>
-        <description>Fabricated serums, used as treatments on glitterworld planets, when body reconstruction is
+        <description>Fabricated serums, used as treatments on glitter-world planets, when body reconstruction is
             unavailable.
         </description>
         <graphicData>

@@ -17,7 +17,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_APB-1Pistol</defName>
         <label>APB-1 Pistol</label>
         <description>Anion Particle Beam Pistol mark 1. The compact counter part of the APB-1 Rifle, this pistol
@@ -77,6 +77,7 @@
                 <soundCast>PB</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
+                <forcedMissRadius>1.0</forcedMissRadius>
             </li>
         </verbs>
         <tools>
@@ -116,7 +117,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_APB-1Projector</defName>
         <label>APB-1 Projector</label>
         <description>Anion Particle Beam Projector mark 1. The latest thing in anti air and anti tank weaponry, this
@@ -194,6 +195,7 @@
                 <soundCast>PBP</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
+                <forcedMissRadius>1.0</forcedMissRadius>
             </li>
         </verbs>
     </ThingDef>
@@ -212,7 +214,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_APB-1Rifle</defName>
         <label>APB-1 Rifle</label>
         <description>Anion Particle Beam Rifle mark 1. The forefront of anti-personnel weaponry, this rifle projects

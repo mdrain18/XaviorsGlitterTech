@@ -15,7 +15,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_MRGPistol</defName>
         <label>MRG-5 Pistol</label>
         <description>Micro rail gun mark 5. The compact counter part of the MRG-5 Rifle, this pistol is the fifth
@@ -111,7 +111,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_MRGRifle</defName>
         <label>MRG-5 Rifle</label>
         <description>Micro rail gun mark 5. This Rifle is the fifth instalment of top of the line rail gun technologies.

@@ -1,24 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-    <ThingDef Name="BaseMeleeWeapon_Sharp_GT" ParentName="BaseMeleeWeapon" Abstract="True">
-        <recipeMaker>
-            <defaultIngredientFilter>
-                <categories>
-                    <li>Root</li>
-                </categories>
-                <disallowedThingDefs>
-                    <li>Silver</li>
-                    <li>Gold</li>
-                    <li>WoodLog</li>
-                </disallowedThingDefs>
-            </defaultIngredientFilter>
-        </recipeMaker>
-    </ThingDef>
 
-    <!-- ============================================================== -->
-
-    <ThingDef ParentName="BaseMeleeWeapon_Sharp_GT">
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
         <defName>MeleeWeapon_GTPacifier</defName>
         <label>Orion Corp pacifier</label>
         <description>A staff equipped with electrodes which blast targets with heat and electrity. Designed to enforce

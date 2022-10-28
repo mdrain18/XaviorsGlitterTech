@@ -15,7 +15,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_EMRifle</defName>
         <label>EMRG-1</label>
         <description>Electromagnetic Rail Gun. The latest thing in long range combat. Extremely powerful.</description>

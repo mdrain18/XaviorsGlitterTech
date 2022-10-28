@@ -15,7 +15,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_OCPDPistol</defName>
         <label>OC Defense Pistol</label>
         <description>Orion Corps line of personal defense weapons. This pistol is light weight and perfect for personal
@@ -111,7 +111,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_OCPDRifle</defName>
         <label>OC Defense Rifle</label>
         <description>Orion Corps line of personal defense weapons. This Rifle is light weight and perfect for personal
@@ -193,7 +193,7 @@
         </verbs>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun">
+    <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_OCRocket</defName>
         <label>Orion rocket launcher</label>
         <description>A standard issue Orion Corporation anti-tank weapon. Laser guide and much more accurate then

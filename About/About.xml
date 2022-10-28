@@ -49,15 +49,12 @@
         happen. Link below:
         https://steamcommunity.com/workshop/filedetails/discussion/2558099206/3480742287613877229/
 
-        Release Notes: 1.4.01
+        Release Notes: 1.4.02
             - Item values have been updated. Items are easier to craft, but are not as OP as they were before.
                 I'm sure this will need to be further balanced so let me know your thoughts.
+            - Blackmarket Trader fixed
             - Updated to 1.4: Except:
                 - Tanks: big problems here
                 - Factions are buggy
-                - Black Market Trader - TraderKindDefs is throwing a no constructor error. Which means:
-                    1) I will have to write the constructor class
-                    2) RimWorld patches their code
-                    3) Or someone else will tell me I'm wrong and I need to do it a different way :)
     </description>
 </ModMetaData>

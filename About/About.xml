@@ -25,34 +25,39 @@
         It can be said this mod is OP. I think it should be, however, in the spirit of being able to play how you want
         to I am adding a few changes to this mod.
 
-        1) Updating to 1.4 (in progress)
-            - Black Market Trader was removed, everything else works
-            - 1.4 ready without Black Market Trader
-        2) Adding slider: this will increase everything by a multiplier. (in progress)
+            1) Updating to 1.4 (in progress)
+                - Known issues
+                    - Tanks removed (working on this now)
+                        - which means its buggy as hell
+                    - Some problems with the factions (working on this now)
+                - Blackmarket trader is back
+                (let me know if there are problems)
+                - Made things less OP
+            2) Adding slider: this will increase everything by a multiplier. (in progress)
             1x: Default, which doesn't change anything
-            2x: Max, doubles everything (not recommended) 
-           .1x: Makes everything suck
-        3) Individual sliders: this will target specific items, like beta or alpha poly and allow you to configure
+            2x: Max, doubles everything (not recommended)
+            .1x: Makes everything suck
+            3) Individual sliders: this will target specific items, like beta or alpha poly and allow you to configure
             the individual stats of each item
-        4) Craft Glitter Tech: there is a mod for this already but I wanted to add the ability to this mod with the
+            4) Craft Glitter Tech: there is a mod for this already but I wanted to add the ability to this mod with the
             ability to turn it on or off. This will be different and require special items only
             found through questing. Similar to relics...
-        5) More..... STUFF! Starting with Glitter swords and Glitter psycasts... I think. Not sure if I will ever get
+            5) More..... STUFF! Starting with Glitter swords and Glitter psycasts... I think. Not sure if I will ever get
             here but I'm being optimistic
-        
-        Let me know in the "Changes" discussion what you want done with this mod and I will do my best to make it 
+
+        Let me know in the "Changes" discussion what you want done with this mod and I will do my best to make it
         happen. Link below:
         https://steamcommunity.com/workshop/filedetails/discussion/2558099206/3480742287613877229/
 
-        Release Notes:
-        1.4.01)
+        Release Notes: 1.4.01
             - Item values have been updated. Items are easier to craft, but are not as OP as they were before.
                 I'm sure this will need to be further balanced so let me know your thoughts.
-            - Updated to 1.4 (except Black Market Trader)
-                Black Market Trader - TraderKindDefs is throwing a no constructor error. Which means:
+            - Updated to 1.4: Except:
+                - Tanks: big problems here
+                - Factions are buggy
+                - Black Market Trader - TraderKindDefs is throwing a no constructor error. Which means:
                     1) I will have to write the constructor class
                     2) RimWorld patches their code
                     3) Or someone else will tell me I'm wrong and I need to do it a different way :)
-                Either way, it will get fixed in one of the next updates.
     </description>
 </ModMetaData>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="BaseBullet_GT">
+    <ThingDef ParentName="BaseBullet">
         <defName>Bullet_OCPistol</defName>
         <label>OC bullet</label>
         <graphicData>
@@ -15,18 +15,16 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_OCPDPistol</defName>
         <label>OC Defense Pistol</label>
         <description>Orion Corps line of personal defense weapons. This pistol is light weight and perfect for personal
-            defense in hostile environments.
-        </description>
+            defense in hostile environments.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/OrionCorp/OCDPistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
-
         <statBases>
             <MarketValue>800</MarketValue>
             <AccuracyTouch>0.95</AccuracyTouch>
@@ -34,10 +32,55 @@
             <AccuracyMedium>0.60</AccuracyMedium>
             <AccuracyLong>0.10</AccuracyLong>
             <RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>1.3</Mass>
         </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium>5</Titanium>
+            <Uranium>1</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
         <weaponTags>
             <li>OCDefense</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -54,7 +97,7 @@
         </verbs>
     </ThingDef>
 
-    <ThingDef ParentName="BaseBullet_GT">
+    <ThingDef ParentName="BaseBullet">
         <defName>Bullet_OCRifle</defName>
         <label>APB bullet</label>
         <graphicData>
@@ -68,18 +111,16 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_OCPDRifle</defName>
         <label>OC Defense Rifle</label>
         <description>Orion Corps line of personal defense weapons. This Rifle is light weight and perfect for personal
-            defense in hostile environments.
-        </description>
+            defense in hostile environments.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/OrionCorp/OCDRifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
-
         <statBases>
             <MarketValue>1000</MarketValue>
             <AccuracyTouch>0.95</AccuracyTouch>
@@ -87,10 +128,55 @@
             <AccuracyMedium>0.65</AccuracyMedium>
             <AccuracyLong>0.15</AccuracyLong>
             <RangedWeapon_Cooldown>0.40</RangedWeapon_Cooldown>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>3.1</Mass>
         </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Titanium>15</Titanium>
+            <Uranium>2</Uranium>
+            <MagneticCoil>2</MagneticCoil>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
         <weaponTags>
             <li>OCDefense</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -107,12 +193,11 @@
         </verbs>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_OCRocket</defName>
         <label>Orion rocket launcher</label>
         <description>A standard issue Orion Corporation anti-tank weapon. Laser guide and much more accurate then
-            standard rocket launchers
-        </description>
+            standard rocket launchers</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/RocketLauncher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -124,12 +209,55 @@
             <AccuracyMedium>0.92</AccuracyMedium>
             <AccuracyLong>0.88</AccuracyLong>
             <RangedWeapon_Cooldown>4.5</RangedWeapon_Cooldown>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>6</Mass>
         </statBases>
         <techLevel>Spacer</techLevel>
-        <destroyOnDrop>false</destroyOnDrop>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>40</Plasteel>
+            <Titanium>20</Titanium>
+            <Uranium>4</Uranium>
+            <MagneticCoil>2</MagneticCoil>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
         <weaponTags>
-            <li>OCHeavy</li>
+            <li>OCDefense</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <verbs>
             <li>
                 <verbClass>Verb_ShootOneUse</verbClass>

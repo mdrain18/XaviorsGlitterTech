@@ -4,6 +4,8 @@
     <ThingDef ParentName="BuildingBase">
         <defName>ImpactionCharge</defName>
         <label>Impaction charge</label>
+        <description>Detonates on command. Creates a directed blast of plasma, which impacts right into the bedrock.
+            Used for asteroid mining and accessing underground resources.</description>
         <graphicData>
             <texPath>Things/Building/Terraforming/ImpactionCharge</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -23,9 +25,6 @@
             <Flammability>1.0</Flammability>
         </statBases>
         <tickerType>Normal</tickerType>
-        <description>Detonates on command. Creates a directed blast of plasma, which impacts right into the bedrock.
-            Used for asteroid mining and accessing underground resources.
-        </description>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>8</glowRadius>
@@ -51,6 +50,5 @@
             <li>ElectroPlasmatics</li>
         </researchPrerequisites>
     </ThingDef>
-
 
 </Defs>

@@ -40,19 +40,41 @@
     <ThingDef ParentName="ApparelShieldBase_GT">
         <defName>Apparel_HC1Shield</defName>
         <label>HC-1 shield</label>
-        <description>A high capacity energy shield device. The top teir class of personal shields, the mark 1 increases
-            energy capacity by a factor of ten, but recycles the shield slower.
-        </description>
+        <description>A high capacity energy shield device. The top-tier class of personal shields, the mark 1 increases
+            energy capacity by a factor of ten, but recycles the shield slower.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <tickerType>Normal</tickerType>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <Steel>10</Steel>
+            <Plasteel>10</Plasteel>
+            <Titanium>10</Titanium>
+        </costList>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+            <researchPrerequisite>ShieldBelt</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
         <statBases>
             <MarketValue>2400</MarketValue>
-            <Mass>1</Mass>
+            <Mass>2</Mass>
             <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
             <EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
+            <WorkToMake>14000</WorkToMake>
         </statBases>
         <generateCommonality>1</generateCommonality>
         <apparel>
@@ -84,18 +106,40 @@
         <defName>Apparel_OCShield</defName>
         <label>Orion Corp defense shield</label>
         <description>An Orion corp patented personal defense shield. Standard capacity, but recycles the shield much
-            faster then all of the competitors.
-        </description>
+            faster then all of the competitors.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <tickerType>Normal</tickerType>
+        <costList>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <Steel>20</Steel>
+            <Plasteel>20</Plasteel>
+            <Titanium>5</Titanium>
+        </costList>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+            <researchPrerequisite>ShieldBelt</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
         <statBases>
             <MarketValue>2100</MarketValue>
             <Mass>1</Mass>
             <EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
             <EnergyShieldEnergyMax>1</EnergyShieldEnergyMax>
+            <WorkToMake>14000</WorkToMake>
         </statBases>
         <generateCommonality>1</generateCommonality>
         <apparel>
@@ -122,6 +166,5 @@
             </options>
         </colorGenerator>
     </ThingDef>
-
 
 </Defs>

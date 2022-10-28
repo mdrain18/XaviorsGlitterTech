@@ -3,7 +3,7 @@
 
     <!-- ================= Bomb mortar ================= -->
 
-    <ThingDef ParentName="BaseBullet_GT">
+    <ThingDef ParentName="BaseBullet">
         <defName>Bullet_OCTankShell</defName>
         <label>explosive mortar shell</label>
         <graphicData>
@@ -25,7 +25,7 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_OCTurret</defName>
         <label>inferno cannon</label>
         <description>Incendiary-shot mini-artillery device. Mechanoid-built.</description>

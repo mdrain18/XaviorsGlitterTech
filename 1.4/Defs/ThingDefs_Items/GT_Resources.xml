@@ -28,8 +28,7 @@
         <defName>Titanium</defName>
         <label>Titanium</label>
         <description>Titanium alloy. A complex mix of rare elements, making a very strong durable material resistant to
-            corrosion, and high velocity kinetics. Perfect for starships and Orbital space elevators...
-        </description>
+            corrosion, and high velocity kinetics. Perfect for starships and Orbital space elevators...</description>
         <graphicData>
             <texPath>Things/Item/Resource/Titanium</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -90,8 +89,7 @@
         <label>Alpha Poly</label>
         <description>The first iteration in artificially constructed, atomically assembled dense matter. This man made,
             and extremely rare material, only assembled in high end matter assemblers is good for building structures in
-            the chromospheres of stars.
-        </description>
+            the chromospheres of stars.</description>
         <graphicData>
             <texPath>Things/Item/Resource/APoly</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -148,8 +146,7 @@
         <label>Beta Poly</label>
         <description>The second iteration in artificially constructed, atomically assembled dense matter. This man made,
             and extremely rare material, is too expensive to be mass produced, and has only been used as material for
-            indestructible space suits, unstoppable kinetic slugs and containment for miniature black holes.
-        </description>
+            indestructible space suits, unstoppable kinetic slugs and containment for miniature black holes.</description>
         <graphicData>
             <texPath>Things/Item/Resource/BPoly</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -204,8 +201,7 @@
         <defName>MagneticCoil</defName>
         <label>Magnetic Coil</label>
         <description>An advanced magnetic coil. Beyond the fabrication skills of anyone but an Electromagnetic
-            physicist.
-        </description>
+            physicist.</description>
         <graphicData>
             <texPath>Things/Item/Resource/MagneticCoil</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -246,8 +242,7 @@
         <defName>ComputerComp</defName>
         <label>Computer components</label>
         <description>Advanced electronic circuit boards. Required by advanced machinery, when simple mechanics just
-            isn't enough.
-        </description>
+            isn't enough.</description>
         <graphicData>
             <texPath>Things/Item/Resource/ComputerComp</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -308,8 +303,7 @@
         <defName>Serum</defName>
         <label>Serum</label>
         <description>Fabricated serums, used as treatments on glitter-world planets, when body reconstruction is
-            unavailable.
-        </description>
+            unavailable.</description>
         <graphicData>
             <texPath>Things/Item/Resource/Serum</texPath>
             <graphicClass>Graphic_Single</graphicClass>

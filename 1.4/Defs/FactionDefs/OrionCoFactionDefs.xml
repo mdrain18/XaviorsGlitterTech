@@ -45,6 +45,13 @@
                 <categories>
                     <li>Outlander</li>
                 </categories>
+                <commonality>0.95</commonality>
+            </li>
+            <li>
+                <categories>
+                    <li>Offworld</li>
+                </categories>
+                <commonality>0.05</commonality>
             </li>
         </backstoryFilters>
         <earliestRaidDays>180</earliestRaidDays>

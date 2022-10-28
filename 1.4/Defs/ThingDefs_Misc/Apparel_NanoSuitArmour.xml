@@ -1,43 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef Name="ApparelBase_GT" ParentName="ApparelBase" Abstract="True">
-        <thingClass>Apparel</thingClass>
-        <category>Item</category>
-        <selectable>True</selectable>
-        <pathCost>10</pathCost>
-        <useHitPoints>True</useHitPoints>
-        <graphicData>
-            <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
-        </graphicData>
-        <drawGUIOverlay>true</drawGUIOverlay>
-        <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
-            <Flammability>1.0</Flammability>
-            <Mass>1</Mass>
-            <DeteriorationRate>2</DeteriorationRate>
-            <SellPriceFactor>0.5</SellPriceFactor>
-        </statBases>
-        <altitudeLayer>Item</altitudeLayer>
-        <alwaysHaulable>True</alwaysHaulable>
-        <tickerType>Never</tickerType>
-        <comps>
-            <li Class="CompProperties_Forbiddable"/>
-            <li>
-                <compClass>CompColorable</compClass>
-            </li>
-            <li>
-                <compClass>CompQuality</compClass>
-            </li>
-        </comps>
-    </ThingDef>
-
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelArmorPowerBase">
         <defName>Apparel_NanoSuit</defName>
         <label>Nano Suit</label>
-        <description>Powered armor augmented with Nano techonology usually reserved for commandos from advanced
-            glitterworld planets. Equiped with Electromagnetic barriers which will repluse most kinetic weapons fire.
-        </description>
+        <description>Powered armor augmented with Nano technology usually reserved for commandos from advanced
+            glitterworld planets. Equipped with Electromagnetic barriers which will repulse most kinetic weapons
+            fire.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSuit/Nano</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -50,13 +19,14 @@
             <ArmorRating_Heat>1</ArmorRating_Heat>
             <Insulation_Cold>45</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>1</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.05</MoveSpeed>
             <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
         </equippedStatOffsets>
         <thingCategories>
-            <li>Apparel</li>
+            <li>ApparelNoble</li>
         </thingCategories>
         <generateCommonality>1</generateCommonality>
         <apparel>
@@ -123,16 +93,18 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelArmorPowerBase">
         <defName>Apparel_NanoSuitHelmet</defName>
         <label>Nano Suit helmet</label>
-        <description>The Intergrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the
-            latest neural-cybernetic-counter-intrusion software(protection against psychic effects)
-        </description>
+        <description>The Integrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the
+            latest neural-cybernetic-counter-intrusion software(protection against psychic effects)</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSuitHelmet/NanoSuitHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <thingCategories>
+            <li>ApparelNoble</li>
+        </thingCategories>
         <statBases>
             <MaxHitPoints>600</MaxHitPoints>
             <MarketValue>1800</MarketValue>
@@ -141,15 +113,13 @@
             <ArmorRating_Heat>1</ArmorRating_Heat>
             <Insulation_Cold>45</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>1</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.10</MoveSpeed>
             <WorkSpeedGlobal>-0.10</WorkSpeedGlobal>
             <PsychicSensitivity>-0.95</PsychicSensitivity>
         </equippedStatOffsets>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
         <generateCommonality>1</generateCommonality>
         <apparel>
             <wornGraphicPath>Things/Pawn/Humanoid/Apparel/NanoSuitHelmet/NanoSuitHelmet</wornGraphicPath>
@@ -213,11 +183,10 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelArmorPowerBase">
         <defName>Apparel_Reactive</defName>
         <label>Reactive Suit</label>
-        <description>Powered reactive plating. Very heavy, but repels a large amout of incoming weapons fire.
-        </description>
+        <description>Powered reactive plating. Very heavy, but repels a large amount of incoming weapons fire.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/Reactive/Reactive</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -230,6 +199,7 @@
             <ArmorRating_Heat>0.1</ArmorRating_Heat>
             <Insulation_Cold>45</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>25</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.40</MoveSpeed>
@@ -277,18 +247,20 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelArmorPowerBase">
         <defName>Apparel_NanoSkin</defName>
         <label>Fibre Skin Suit</label>
         <description>Thin nano technology skin. Not as durable as a full nano-suit, but compact enough fit under
-            clothing and even a nano-suit. This armor is typically worn by the highest teir super soldiers under their
+            clothing and even a nano-suit. This armor is typically worn by the highest tier super soldiers under their
             suits or by high value targets, against assassination. Very expensive and rare, but speeds the wearer up,
-            and boosts protection stats. Best worn under a nanosuit and reactive armor.
-        </description>
+            and boosts protection stats. Best worn under a nano-suit and reactive armor.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSkin/NS</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <thingCategories>
+            <li>ApparelNoble</li>
+        </thingCategories>
         <statBases>
             <MaxHitPoints>600</MaxHitPoints>
             <MarketValue>2800</MarketValue>
@@ -297,14 +269,12 @@
             <ArmorRating_Heat>0.15</ArmorRating_Heat>
             <Insulation_Cold>45</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>1</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>0.60</MoveSpeed>
             <WorkSpeedGlobal>0.60</WorkSpeedGlobal>
         </equippedStatOffsets>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
         <generateCommonality>1</generateCommonality>
         <apparel>
             <wornGraphicPath>Things/Pawn/Humanoid/Apparel/NanoSkin/NS</wornGraphicPath>
@@ -313,10 +283,14 @@
             </layers>
             <tags>
                 <li>GlitterArmorSkin</li>
+                <li>Royal</li>
+                <li>RoyalTier5</li>
             </tags>
             <bodyPartGroups>
                 <li>Torso</li>
                 <li>Arms</li>
+                <li>Legs</li>
+                <li>Feet</li>
             </bodyPartGroups>
         </apparel>
         <colorGenerator Class="ColorGenerator_Options">
@@ -345,17 +319,18 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelArmorPowerBase">
         <defName>Apparel_NanoSpeed</defName>
         <label>Speed Skin Suit</label>
         <description>Thin nano technology skin. Similar construction to the fibre suit, but weaved from reactive metal
-            liquid crystal which fractally scales speed and movement. Increases speed substantially at the cost of
-            defensive capability.
-        </description>
+            liquid crystal which scales speed and movement. Increases speed substantially at the cost of defensive capability.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSkin/NS</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <thingCategories>
+            <li>ApparelNoble</li>
+        </thingCategories>
         <statBases>
             <MaxHitPoints>600</MaxHitPoints>
             <MarketValue>2800</MarketValue>
@@ -364,14 +339,12 @@
             <ArmorRating_Heat>0.05</ArmorRating_Heat>
             <Insulation_Cold>45</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>1</Mass>
         </statBases>
         <equippedStatOffsets>
-            <MoveSpeed>4.0</MoveSpeed>
-            <WorkSpeedGlobal>4.0</WorkSpeedGlobal>
+            <MoveSpeed>2.0</MoveSpeed>
+            <WorkSpeedGlobal>2.0</WorkSpeedGlobal>
         </equippedStatOffsets>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
         <generateCommonality>1</generateCommonality>
         <apparel>
             <wornGraphicPath>Things/Pawn/Humanoid/Apparel/NanoSkin/NS</wornGraphicPath>
@@ -380,10 +353,14 @@
             </layers>
             <tags>
                 <li>GlitterArmorSpeed</li>
+                <li>Royal</li>
+                <li>RoyalTier6</li>
             </tags>
             <bodyPartGroups>
                 <li>Torso</li>
                 <li>Arms</li>
+                <li>Legs</li>
+                <li>Feet</li>
             </bodyPartGroups>
         </apparel>
         <colorGenerator Class="ColorGenerator_Options">
@@ -396,4 +373,5 @@
             </options>
         </colorGenerator>
     </ThingDef>
+
 </Defs>

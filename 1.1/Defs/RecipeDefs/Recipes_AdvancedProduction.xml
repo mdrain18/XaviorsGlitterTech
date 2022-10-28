@@ -39,8 +39,7 @@
     <RecipeDef>
         <defName>ProduceAPoly</defName>
         <label>artificially assemble Alpha Poly</label>
-        <description>Use heat and strong electromagnets to assemble artifical elements from Titanium and Uranium
-        </description>
+        <description>Use heat and strong electromagnets to assemble artificial elements from Titanium and Uranium</description>
         <jobString>Fabricating Alpha Poly from Titanium.</jobString>
         <workAmount>1250</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -79,7 +78,7 @@
     <RecipeDef>
         <defName>ProduceBPoly</defName>
         <label>artificially assemble Beta Poly</label>
-        <description>Use heat and strong electromagnets to assemble artifical elements from Alpha Poly, Uranium, and
+        <description>Use heat and strong electromagnets to assemble artificial elements from Alpha Poly, Uranium, and
             Silicon
         </description>
         <jobString>Fabricating Beta Poly.</jobString>
@@ -165,7 +164,7 @@
         <workSkill>Crafting</workSkill>
     </RecipeDef>
 
-    <!-- ========================= Electrolyzer ==========================-->
+    <!-- ========================= Electrolyze ==========================-->
     <RecipeDef>
         <defName>ProduceSilicon</defName>
         <label>produce silicon from stone</label>

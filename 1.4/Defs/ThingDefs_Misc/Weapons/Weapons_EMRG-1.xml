@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="BaseBullet_GT">
+    <ThingDef ParentName="BaseBullet">
         <defName>Bullet_EMRifle</defName>
         <label>EM bullet</label>
         <graphicData>
@@ -10,12 +10,12 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
-            <damageAmountBase>50</damageAmountBase>
+            <damageAmountBase>40</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_EMRifle</defName>
         <label>EMRG-1</label>
         <description>Electromagnetic Rail Gun. The latest thing in long range combat. Extremely powerful.</description>
@@ -24,7 +24,6 @@
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
-
         <statBases>
             <MarketValue>1400</MarketValue>
             <AccuracyTouch>0.60</AccuracyTouch>
@@ -32,11 +31,55 @@
             <AccuracyMedium>0.82</AccuracyMedium>
             <AccuracyLong>0.88</AccuracyLong>
             <RangedWeapon_Cooldown>2.33</RangedWeapon_Cooldown>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>4.3</Mass>
         </statBases>
         <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>17</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>20</Plasteel>
+            <Titanium>10</Titanium>
+            <Uranium>4</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
         <weaponTags>
-            <li>GlitterTechEMRG</li>
+            <li>GlitterTech</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>

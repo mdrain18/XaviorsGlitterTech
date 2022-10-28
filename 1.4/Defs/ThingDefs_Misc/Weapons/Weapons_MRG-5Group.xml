@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="BaseBullet_GT">
+    <ThingDef ParentName="BaseBullet">
         <defName>Bullet_MRGPistol</defName>
         <label>MRG bullet</label>
         <graphicData>
@@ -15,19 +15,17 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_MRGPistol</defName>
         <label>MRG-5 Pistol</label>
         <description>Micro rail gun mark 5. The compact counter part of the MRG-5 Rifle, this pistol is the fifth
             instalment of top of the line rail gun technologies. Very accurate and powerful, this weapon will make
-            propellant weapons seem neolithic.
-        </description>
+            propellant weapons seem neolithic.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/MRG-5Pistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
-
         <statBases>
             <MarketValue>2300</MarketValue>
             <AccuracyTouch>0.85</AccuracyTouch>
@@ -35,10 +33,55 @@
             <AccuracyMedium>0.75</AccuracyMedium>
             <AccuracyLong>0.50</AccuracyLong>
             <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>1.3</Mass>
         </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium>5</Titanium>
+            <Uranium>1</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
         <weaponTags>
-            <li>GlitterTechEM</li>
+            <li>GlitterTech</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
@@ -54,7 +97,7 @@
     </ThingDef>
 
 
-    <ThingDef ParentName="BaseBullet_GT">
+    <ThingDef ParentName="BaseBullet">
         <defName>Bullet_MRGRifle</defName>
         <label>MRG bullet</label>
         <graphicData>
@@ -68,18 +111,16 @@
         </projectile>
     </ThingDef>
 
-    <ThingDef ParentName="BaseGun_GT">
+    <ThingDef ParentName="BaseGun">
         <defName>Gun_MRGRifle</defName>
         <label>MRG-5 Rifle</label>
         <description>Micro rail gun mark 5. This Rifle is the fifth instalment of top of the line rail gun technologies.
-            Very accurate and powerful, this weapon will make propellant weapons seem neolithic.
-        </description>
+            Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/MRG-5Rifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <soundInteract>Interact_ChargeRifle</soundInteract>
-
         <statBases>
             <MarketValue>2600</MarketValue>
             <AccuracyTouch>0.75</AccuracyTouch>
@@ -87,10 +128,55 @@
             <AccuracyMedium>0.90</AccuracyMedium>
             <AccuracyLong>0.75</AccuracyLong>
             <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+            <WorkToMake>18000</WorkToMake>
+            <Mass>3</Mass>
         </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>17</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>20</Plasteel>
+            <Titanium>10</Titanium>
+            <Uranium>4</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
         <weaponTags>
-            <li>GlitterTechEM</li>
+            <li>GlitterTech</li>
         </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>

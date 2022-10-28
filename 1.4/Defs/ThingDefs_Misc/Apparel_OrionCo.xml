@@ -3,58 +3,11 @@
 
     <!-- ============= Stuff-less apparel =================-->
 
-    <ThingDef ParentName="ApparelBase_GT">
-        <defName>Apparel_OCCombatVest</defName>
-        <label>Orion Combat vest</label>
-        <description>A standard issue Orion Corporation combat vest. Equiped with more advanced alloys then your usual
-            vest.
-        </description>
-        <graphicData>
-            <texPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <statBases>
-            <MaxHitPoints>200</MaxHitPoints>
-            <MarketValue>800</MarketValue>
-            <Mass>1</Mass>
-            <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
-            <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
-        </statBases>
-        <equippedStatOffsets>
-            <MoveSpeed>-0.02</MoveSpeed>
-        </equippedStatOffsets>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
-        <generateCommonality>1</generateCommonality>
-        <apparel>
-            <bodyPartGroups>
-                <li>Torso</li>
-            </bodyPartGroups>
-            <wornGraphicPath>Things/Pawn/Humanlike/Apparel/FlakVest/FlakVest</wornGraphicPath>
-            <layers>
-                <li>Middle</li>
-            </layers>
-            <tags>
-                <li>OCArmor</li>
-            </tags>
-        </apparel>
-        <colorGenerator Class="ColorGenerator_Options">
-            <options>
-                <li>
-                    <weight>6</weight>
-                    <only>RGBA(0.6,0.6,1,1)</only>
-                </li>
-            </options>
-        </colorGenerator>
-    </ThingDef>
-
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelBase">
         <defName>Apparel_OCHelmet</defName>
         <label>Orion Corporation helmet</label>
         <description>A standard issue Orion Corporation helmet. Other then the characteristic Orion blue, it is made of
-            more advanced materials then the standard helmet.
-        </description>
+            more advanced materials then the standard helmet.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanlike/Apparel/AdvancedHelmet/AdvancedHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -64,6 +17,7 @@
             <MarketValue>700</MarketValue>
             <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.35</ArmorRating_Sharp>
+            <Mass>2</Mass>
         </statBases>
         <equippedStatOffsets>
             <MoveSpeed>-0.02</MoveSpeed>
@@ -72,6 +26,11 @@
         <thingCategories>
             <li>Apparel</li>
         </thingCategories>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <Titanium>5</Titanium>
+        </costList>
         <generateCommonality>1</generateCommonality>
         <apparel>
             <bodyPartGroups>
@@ -95,24 +54,29 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelBase">
         <defName>Apparel_OCPants</defName>
-        <label>Orion Unfiorm pants</label>
+        <label>Orion Uniform pants</label>
         <description>A set of Orion pants.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanlike/Apparel/Pants/Pants</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
         <statBases>
             <MarketValue>800</MarketValue>
             <ArmorRating_Blunt>0.09</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.09</ArmorRating_Sharp>
             <Insulation_Cold>10</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>1</Mass>
         </statBases>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
         <generateCommonality>1</generateCommonality>
         <apparel>
             <bodyPartGroups>
@@ -135,7 +99,7 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelBase_GT">
+    <ThingDef ParentName="ApparelBase">
         <defName>Apparel_OCShirt</defName>
         <label>Orion Uniform Shirt</label>
         <description>A basic Orion shirt.</description>
@@ -143,16 +107,21 @@
             <texPath>Things/Pawn/Humanlike/Apparel/ShirtBasic/ShirtBasic</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
         <statBases>
             <MarketValue>800</MarketValue>
             <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
             <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
             <Insulation_Cold>10</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <Mass>1</Mass>
         </statBases>
-        <thingCategories>
-            <li>Apparel</li>
-        </thingCategories>
         <generateCommonality>1</generateCommonality>
         <apparel>
             <bodyPartGroups>

@@ -4,8 +4,7 @@
     <ResearchProjectDef>
         <defName>MetalFab</defName>
         <label>Metal Fabrication</label>
-        <description>Allows you to fabricate advanced metal walls. Specifically using complex materials like Titanium.
-        </description>
+        <description>Allows you to fabricate advanced metal walls. Specifically using complex materials like Titanium.</description>
         <baseCost>700</baseCost>
         <techLevel>Industrial</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
@@ -16,8 +15,7 @@
     <ResearchProjectDef>
         <defName>AdvancedArmor</defName>
         <label>Advanced Armour</label>
-        <description>Teaches you how to add very strong armour to your structures. Allows you to build Blast Doors.
-        </description>
+        <description>Teaches you how to add very strong armour to your structures. Allows you to build Blast Doors.</description>
         <baseCost>800</baseCost>
         <prerequisites>
             <li>MetalFab</li>
@@ -35,8 +33,7 @@
         <defName>TWindows</defName>
         <label>Wall Windows</label>
         <description>Allows you to build windows in titanium walls, to help light things up without compromising
-            starship hull integrity while traveling at FTL...
-        </description>
+            starship hull integrity while traveling at FTL...</description>
         <baseCost>250</baseCost>
         <prerequisites>
             <li>MetalFab</li>
@@ -83,8 +80,7 @@
         <defName>DynElect</defName>
         <label>Dynamic Electromagnetics</label>
         <description>Allows you to fabricate advanced buildings using electromagnetic components. This unlocks the upper
-            teir of power generation and technology found in every Glitter world installation.
-        </description>
+            tier of power generation and technology found in every Glitter world installation.</description>
         <baseCost>1800</baseCost>
         <prerequisites>
             <li>MetalFab</li>
@@ -101,9 +97,8 @@
     <ResearchProjectDef>
         <defName>ElectroPlasmatics</defName>
         <label>Electro plasmatics</label>
-        <description>Allows you to direct plasma using magnetic fields. Unlocks very high teir technology that wields
-            the extreme power of plasma.
-        </description>
+        <description>Allows you to direct plasma using magnetic fields. Unlocks very high tier technology that wields
+            the extreme power of plasma.</description>
         <baseCost>1900</baseCost>
         <prerequisites>
             <li>DynElect</li>
@@ -120,9 +115,8 @@
     <ResearchProjectDef>
         <defName>AdvancedFact</defName>
         <label>Advanced factorization</label>
-        <description>The first step in understanding the basics of advanced manufactoring methods, to give your colony
-            access to the latest assembly machinery.
-        </description>
+        <description>The first step in understanding the basics of advanced manufacturing methods, to give your colony
+            access to the latest assembly machinery.</description>
         <baseCost>1500</baseCost>
         <prerequisites>
             <li>ElectroPlasmatics</li>
@@ -140,8 +134,7 @@
         <defName>RoboticEngineering</defName>
         <label>Robotic Engineering</label>
         <description>Allows you to engineer state of the art intricate robotics, useful for complex precision assembling
-            machinery and most machinery found on Glitter worlds.
-        </description>
+            machinery and most machinery found on Glitter worlds.</description>
         <baseCost>1400</baseCost>
         <prerequisites>
             <li>AdvancedFact</li>
@@ -159,8 +152,7 @@
         <defName>Electrolysis</defName>
         <label>Electrolysis</label>
         <description>Allows you to construct machinery to perform electrolysis, to separate compounds into base
-            elements.
-        </description>
+            elements.</description>
         <baseCost>1200</baseCost>
         <prerequisites>
             <li>AdvancedFact</li>
@@ -178,8 +170,7 @@
         <defName>AtomicD</defName>
         <label>Atomic disassembly</label>
         <description>The first component to understanding how to fabricate atomic processes, specifically manipulating
-            the processes of dissembling matter on the sub-atomic level.
-        </description>
+            the processes of dissembling matter on the sub-atomic level.</description>
         <baseCost>2000</baseCost>
         <prerequisites>
             <li>AdvancedFact</li>
@@ -198,8 +189,7 @@
         <label>Atomic Assembly</label>
         <description>The last component to understanding how to fabricate atomic processes. This will give you a total
             understanding of how to manufacture matter on the sub-atomic level. While most processes are still out of
-            reach in terms of power requirements, there are a few choice elements industrially plausible.
-        </description>
+            reach in terms of power requirements, there are a few choice elements industrially plausible.</description>
         <baseCost>2000</baseCost>
         <prerequisites>
             <li>AtomicD</li>
@@ -217,8 +207,7 @@
         <defName>Pharmaceuticals</defName>
         <label>Pharmaceuticals</label>
         <description>Allows you to fabricate, mix and produce advanced medicines, rather then relying on natural, and
-            less effective herbal substitutes.
-        </description>
+            less effective herbal substitutes.</description>
         <baseCost>800</baseCost>
         <prerequisites>
             <li>ElectroPlasmatics</li>

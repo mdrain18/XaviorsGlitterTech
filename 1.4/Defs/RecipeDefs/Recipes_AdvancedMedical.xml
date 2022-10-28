@@ -308,7 +308,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>GTJaw</li>
+                        <li>GTDentures</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -316,13 +316,13 @@
         </ingredients>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>GTJaw</li>
+                <li>GTDentures</li>
             </thingDefs>
         </fixedIngredientFilter>
         <appliedOnFixedBodyParts>
             <li>Jaw</li>
         </appliedOnFixedBodyParts>
-        <addsHediff>GTJaw</addsHediff>
+        <addsHediff>GTDentures</addsHediff>
     </RecipeDef>
 
 </Defs>

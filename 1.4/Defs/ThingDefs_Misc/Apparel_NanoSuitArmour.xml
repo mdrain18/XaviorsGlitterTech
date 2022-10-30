@@ -93,7 +93,7 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelArmorPowerBase">
+    <ThingDef ParentName="ApparelArmorHelmetPowerBase">
         <defName>Apparel_NanoSuitHelmet</defName>
         <label>Nano Suit helmet</label>
         <description>The Integrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the

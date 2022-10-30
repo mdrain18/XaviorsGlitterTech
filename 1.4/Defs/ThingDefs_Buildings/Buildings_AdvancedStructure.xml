@@ -24,7 +24,7 @@
         <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
         <costList>
             <Steel>40</Steel>
-            <Titanium>10</Titanium>
+            <Titanium_GT>10</Titanium_GT>
             <MagneticCoil>1</MagneticCoil>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>

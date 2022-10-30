@@ -29,7 +29,7 @@
         <costList>
             <Steel>10</Steel>
             <Plasteel>20</Plasteel>
-            <Titanium>5</Titanium>
+            <Titanium_GT>5</Titanium_GT>
         </costList>
         <generateCommonality>1</generateCommonality>
         <apparel>

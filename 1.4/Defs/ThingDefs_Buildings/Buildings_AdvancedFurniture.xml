@@ -36,7 +36,7 @@
         </stuffCategories>
         <costStuffCount>80</costStuffCount>
         <costList>
-            <Titanium>80</Titanium>
+            <Titanium_GT>80</Titanium_GT>
             <MedicineUltratech>10</MedicineUltratech>
             <MagneticCoil>2</MagneticCoil>
             <ComputerComp>4</ComputerComp>
@@ -120,7 +120,7 @@
         </stuffCategories>
         <costStuffCount>100</costStuffCount>
         <costList>
-            <Titanium>40</Titanium>
+            <Titanium_GT>40</Titanium_GT>
             <ComputerComp>4</ComputerComp>
             <Uranium>1</Uranium>
             <ComponentIndustrial>2</ComponentIndustrial>
@@ -169,7 +169,7 @@
         <fillPercent>0.20</fillPercent>
         <description>Flood light illuminates a large area, but costs a bit more.</description>
         <costList>
-            <Titanium>15</Titanium>
+            <Titanium_GT>15</Titanium_GT>
             <Uranium>1</Uranium>
         </costList>
         <building>

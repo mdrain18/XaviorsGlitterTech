@@ -33,7 +33,7 @@
         </comps>
         <size>(1,1)</size>
         <costList>
-            <Titanium>35</Titanium>
+            <Titanium_GT>35</Titanium_GT>
             <MagneticCoil>4</MagneticCoil>
             <Uranium>1</Uranium>
         </costList>

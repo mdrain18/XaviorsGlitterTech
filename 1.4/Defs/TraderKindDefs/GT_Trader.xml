@@ -15,7 +15,7 @@
                 </countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
-                <thingDef>Titanium</thingDef>
+                <thingDef>Titanium_GT</thingDef>
                 <countRange>
                     <min>150</min>
                     <max>400</max>

@@ -72,7 +72,7 @@
             <Plasteel>60</Plasteel>
             <Silicon>25</Silicon>
             <Uranium>15</Uranium>
-            <Titanium>10</Titanium>
+            <Titanium_GT>10</Titanium_GT>
         </butcherProducts>
     </ThingDef>
 -->

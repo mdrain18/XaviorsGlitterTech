@@ -51,7 +51,7 @@
             <ComponentIndustrial>5</ComponentIndustrial>
             <Steel>10</Steel>
             <Plasteel>10</Plasteel>
-            <Titanium>10</Titanium>
+            <Titanium_GT>10</Titanium_GT>
         </costList>
         <recipeMaker>
             <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
@@ -116,7 +116,7 @@
             <ComponentIndustrial>5</ComponentIndustrial>
             <Steel>20</Steel>
             <Plasteel>20</Plasteel>
-            <Titanium>5</Titanium>
+            <Titanium_GT>5</Titanium_GT>
         </costList>
         <recipeMaker>
             <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>

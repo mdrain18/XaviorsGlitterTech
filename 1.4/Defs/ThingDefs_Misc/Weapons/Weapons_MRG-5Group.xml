@@ -49,7 +49,7 @@
         </recipeMaker>
         <costList>
             <Plasteel>10</Plasteel>
-            <Titanium>5</Titanium>
+            <Titanium_GT>5</Titanium_GT>
             <Uranium>1</Uranium>
             <MagneticCoil>1</MagneticCoil>
             <ComponentIndustrial>3</ComponentIndustrial>
@@ -144,7 +144,7 @@
         </recipeMaker>
         <costList>
             <Plasteel>20</Plasteel>
-            <Titanium>10</Titanium>
+            <Titanium_GT>10</Titanium_GT>
             <Uranium>4</Uranium>
             <MagneticCoil>1</MagneticCoil>
             <ComponentIndustrial>1</ComponentIndustrial>

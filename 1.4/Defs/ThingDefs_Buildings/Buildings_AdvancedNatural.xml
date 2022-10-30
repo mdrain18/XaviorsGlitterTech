@@ -53,7 +53,7 @@
         <description>Elemental titanium</description>
         <building>
             <isResourceRock>true</isResourceRock>
-            <mineableThing>Titanium</mineableThing>
+            <mineableThing>Titanium_GT</mineableThing>
             <mineableYield>16</mineableYield>
             <mineableScatterCommonality>0.1</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>10~60</mineableScatterLumpSizeRange>

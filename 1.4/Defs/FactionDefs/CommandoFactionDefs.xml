@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <FactionDef ParentName="FactionBase" Name="Commandos" Abstract="True">
+    <FactionDef ParentName="FactionBase">
+        <defName>Commandos</defName>
         <pawnSingular>commando</pawnSingular>
         <pawnsPlural>commandos</pawnsPlural>
         <categoryTag>Outlander</categoryTag>

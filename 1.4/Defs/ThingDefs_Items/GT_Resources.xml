@@ -3,28 +3,7 @@
 
     <!--=============== Titanium ====================-->
 
-    <ThingDef Name="ResourceBase_GT" Abstract="True">
-        <thingClass>ThingWithComps</thingClass>
-        <label>unspecified resource</label>
-        <category>Item</category>
-        <resourceReadoutPriority>Middle</resourceReadoutPriority>
-        <useHitPoints>true</useHitPoints>
-        <selectable>true</selectable>
-        <altitudeLayer>Item</altitudeLayer>
-        <stackLimit>75</stackLimit>
-        <statBases>
-            <Mass>0.01</Mass>
-        </statBases>
-        <comps>
-            <li Class="CompProperties_Forbiddable"/>
-        </comps>
-        <alwaysHaulable>true</alwaysHaulable>
-        <drawGUIOverlay>true</drawGUIOverlay>
-        <rotatable>false</rotatable>
-        <pathCost>15</pathCost>
-    </ThingDef>
-
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>Titanium</defName>
         <label>Titanium</label>
         <description>Titanium alloy. A complex mix of rare elements, making a very strong durable material resistant to
@@ -33,11 +12,10 @@
             <texPath>Things/Item/Resource/Titanium</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <resourceReadoutPriority>First</resourceReadoutPriority>
-        <soundInteract>Silver_Drop</soundInteract>
-        <soundDrop>Silver_Drop</soundDrop>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
         <useHitPoints>false</useHitPoints>
-        <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
+        <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
             <MarketValue>32</MarketValue>
             <Mass>0.15</Mass>
@@ -52,17 +30,17 @@
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
-        <deepCommonality>1</deepCommonality>
-        <deepCountPerPortion>5</deepCountPerPortion>
-        <deepLumpSizeRange>
-            <min>4</min>
-            <max>14</max>
-        </deepLumpSizeRange>
+        <deepCommonality>.5</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>4~14</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
         <stuffProps>
             <categories>
                 <li>Metallic</li>
             </categories>
+            <appearance>Metal</appearance>
             <color>(255,255,255)</color>
+            <commonality>0.05</commonality>
             <constructEffect>ConstructMetal</constructEffect>
             <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
             <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
@@ -73,10 +51,13 @@
                 <Beauty>3</Beauty>
                 <DoorOpenSpeed>3</DoorOpenSpeed>
                 <BedRestEffectiveness>1.5</BedRestEffectiveness>
-                <WorkToMake>10.0</WorkToMake>
+                <WorkToMake>4.0</WorkToMake>
+                <WorkToBuild>4.0</WorkToBuild>
                 <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
             </statFactors>
         </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
         <researchPrerequisites>
             <li>MetalFab</li>
         </researchPrerequisites>
@@ -84,7 +65,7 @@
 
     <!--=============== AlphaPoly ====================-->
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>AlphaPoly</defName>
         <label>Alpha Poly</label>
         <description>The first iteration in artificially constructed, atomically assembled dense matter. This man made,
@@ -94,12 +75,10 @@
             <texPath>Things/Item/Resource/APoly</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <resourceReadoutPriority>First</resourceReadoutPriority>
-        <soundInteract>Silver_Drop</soundInteract>
-        <soundDrop>Silver_Drop</soundDrop>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
         <useHitPoints>false</useHitPoints>
-        <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
-        <tradeability>None</tradeability>
+        <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
             <MarketValue>117</MarketValue>
             <Mass>0.8</Mass>
@@ -114,26 +93,35 @@
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
+        <deepCommonality>.05</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>2~10</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
         <stuffProps>
             <categories>
                 <li>Metallic</li>
             </categories>
+            <appearance>Metal</appearance>
             <color>(100,60,100)</color>
+            <commonality>0.05</commonality>
             <constructEffect>ConstructMetal</constructEffect>
             <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
-            <statOffsets>
-                <Beauty>16</Beauty>
-            </statOffsets>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
             <statFactors>
                 <MaxHitPoints>500</MaxHitPoints>
                 <Flammability>0</Flammability>
-                <Beauty>16</Beauty>
+                <Beauty>8</Beauty>
                 <DoorOpenSpeed>5</DoorOpenSpeed>
                 <BedRestEffectiveness>3.0</BedRestEffectiveness>
-                <WorkToMake>15.0</WorkToMake>
-                <MeleeWeapon_CooldownMultiplier>1.0</MeleeWeapon_CooldownMultiplier>
+                <WorkToMake>8.0</WorkToMake>
+                <WorkToBuild>8.0</WorkToBuild>
+                <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
             </statFactors>
         </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
         <researchPrerequisites>
             <li>MetalFab</li>
         </researchPrerequisites>
@@ -141,7 +129,7 @@
 
     <!--=============== BetaPoly ====================-->
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>BetaPoly</defName>
         <label>Beta Poly</label>
         <description>The second iteration in artificially constructed, atomically assembled dense matter. This man made,
@@ -151,12 +139,10 @@
             <texPath>Things/Item/Resource/BPoly</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
-        <resourceReadoutPriority>First</resourceReadoutPriority>
-        <soundInteract>Silver_Drop</soundInteract>
-        <soundDrop>Silver_Drop</soundDrop>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
         <useHitPoints>false</useHitPoints>
-        <resourceReadoutAlwaysShow>true</resourceReadoutAlwaysShow>
-        <tradeability>None</tradeability>
+        <healthAffectsPrice>false</healthAffectsPrice>
         <statBases>
             <MarketValue>235</MarketValue>
             <Mass>1.2</Mass>
@@ -171,13 +157,22 @@
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
+        <deepCommonality>.01</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>2~10</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
         <stuffProps>
             <categories>
                 <li>Metallic</li>
             </categories>
-            <color>(100,60,60)</color>
+            <appearance>Metal</appearance>
+            <commonality>0.005</commonality>
             <constructEffect>ConstructMetal</constructEffect>
+            <color>(100,60,60)</color>
             <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
             <statOffsets>
                 <Beauty>20</Beauty>
             </statOffsets>
@@ -190,6 +185,8 @@
                 <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
             </statFactors>
         </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
         <researchPrerequisites>
             <li>MetalFab</li>
         </researchPrerequisites>
@@ -197,7 +194,7 @@
 
     <!--=============== Components ====================-->
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>MagneticCoil</defName>
         <label>Magnetic Coil</label>
         <description>An advanced magnetic coil. Beyond the fabrication skills of anyone but an Electromagnetic
@@ -218,7 +215,7 @@
         </thingCategories>
     </ThingDef>
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>Silicon</defName>
         <label>Silicon</label>
         <description>Raw elemental Silicon, used in most electronic components.</description>
@@ -238,7 +235,7 @@
         </thingCategories>
     </ThingDef>
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>ComputerComp</defName>
         <label>Computer components</label>
         <description>Advanced electronic circuit boards. Required by advanced machinery, when simple mechanics just
@@ -259,7 +256,7 @@
         </thingCategories>
     </ThingDef>
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>Ethanol</defName>
         <label>Ethanol</label>
         <description>Pure ethanol, strong alcohol used in Medicines and on most weekends...</description>
@@ -279,7 +276,7 @@
         </thingCategories>
     </ThingDef>
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>Bandage</defName>
         <label>Bandages</label>
         <description>Cloth bandages, essential for binding wounds to reduce blood loss.</description>
@@ -299,7 +296,7 @@
         </thingCategories>
     </ThingDef>
 
-    <ThingDef ParentName="ResourceBase_GT">
+    <ThingDef ParentName="ResourceBase">
         <defName>Serum</defName>
         <label>Serum</label>
         <description>Fabricated serums, used as treatments on glitter-world planets, when body reconstruction is

@@ -106,7 +106,7 @@
                     <OCSoldier>60</OCSoldier>
                     <OCPeaceKeeper>20</OCPeaceKeeper>
                     <OCHeavy>15</OCHeavy>
-                    <OCTank>5</OCTank>
+                    <!--<OCTank>5</OCTank>-->
                     <OCDirector>20</OCDirector>
                     <Town_Councilman>10</Town_Councilman>
                 </options>
@@ -149,7 +149,7 @@
                     <OCSoldier>60</OCSoldier>
                     <OCPeaceKeeper>20</OCPeaceKeeper>
                     <OCHeavy>15</OCHeavy>
-                    <OCTank>5</OCTank>
+                    <!--<OCTank>5</OCTank>-->
                     <OCDirector>20</OCDirector>
                 </options>
             </li>

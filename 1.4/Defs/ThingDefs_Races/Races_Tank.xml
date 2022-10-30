@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
+<Defs><!--
 
     <ThingDef ParentName="BasePawn" Name="BaseGTVehicle" Abstract="True">
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
@@ -75,5 +75,5 @@
             <Titanium>10</Titanium>
         </butcherProducts>
     </ThingDef>
-
+-->
 </Defs>

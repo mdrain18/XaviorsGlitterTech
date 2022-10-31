@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!--=============== Titanium ====================-->
+    <!--=============== Titanium_GT ====================-->
 
     <ThingDef Name="ResourceBase_GT" Abstract="True">
         <thingClass>ThingWithComps</thingClass>
@@ -25,13 +25,13 @@
     </ThingDef>
 
     <ThingDef ParentName="ResourceBase_GT">
-        <defName>Titanium</defName>
+        <defName>Titanium_GT</defName>
         <label>Titanium</label>
         <description>Titanium alloy. A complex mix of rare elements, making a very strong durable material resistant to
             corrosion, and high velocity kinetics. Perfect for starships and Orbital space elevators...
         </description>
         <graphicData>
-            <texPath>Things/Item/Resource/Titanium</texPath>
+            <texPath>Things/Item/Resource/Titanium_GT</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <resourceReadoutPriority>First</resourceReadoutPriority>

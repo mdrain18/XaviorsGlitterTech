@@ -33,7 +33,7 @@
         <size>(6,6)</size>
         <costList>
             <Steel>640</Steel>
-            <Titanium>80</Titanium>
+            <Titanium_GT>80</Titanium_GT>
             <Uranium>12</Uranium>
             <MagneticCoil>8</MagneticCoil>
             <ComponentIndustrial>8</ComponentIndustrial>
@@ -104,7 +104,7 @@
         <size>(9,9)</size>
         <costList>
             <Steel>2400</Steel>
-            <Titanium>320</Titanium>
+            <Titanium_GT>320</Titanium_GT>
             <Uranium>14</Uranium>
             <MagneticCoil>48</MagneticCoil>
             <ComponentIndustrial>24</ComponentIndustrial>
@@ -251,7 +251,7 @@
         <placingDraggableDimensions>1</placingDraggableDimensions>
         <costList>
             <Steel>5</Steel>
-            <Titanium>1</Titanium>
+            <Titanium_GT>1</Titanium_GT>
             <Silicon>2</Silicon>
         </costList>
         <comps>

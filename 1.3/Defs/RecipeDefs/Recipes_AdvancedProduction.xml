@@ -50,7 +50,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Titanium</li>
+                        <li>Titanium_GT</li>
                     </thingDefs>
                 </filter>
                 <count>50</count>
@@ -69,7 +69,7 @@
         </products>
         <fixedIngredientFilter>
             <thingDefs>
-                <li>Titanium</li>
+                <li>Titanium_GT</li>
                 <li>Uranium</li>
             </thingDefs>
         </fixedIngredientFilter>
@@ -147,7 +147,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Titanium</li>
+                        <li>Titanium_GT</li>
                     </thingDefs>
                 </filter>
                 <count>1</count>
@@ -159,7 +159,7 @@
         <fixedIngredientFilter>
             <thingDefs>
                 <li>Silicon</li>
-                <li>Titanium</li>
+                <li>Titanium_GT</li>
             </thingDefs>
         </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>
@@ -216,7 +216,7 @@
             </li>
         </ingredients>
         <products>
-            <Titanium>1</Titanium>
+            <Titanium_GT>1</Titanium_GT>
             <Silicon>15</Silicon>
         </products>
         <fixedIngredientFilter>
@@ -366,7 +366,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Titanium</li>
+                        <li>Titanium_GT</li>
                     </thingDefs>
                 </filter>
                 <count>20</count>
@@ -378,7 +378,7 @@
         <fixedIngredientFilter>
             <thingDefs>
                 <li>ComputerComp</li>
-                <li>Titanium</li>
+                <li>Titanium_GT</li>
             </thingDefs>
         </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>

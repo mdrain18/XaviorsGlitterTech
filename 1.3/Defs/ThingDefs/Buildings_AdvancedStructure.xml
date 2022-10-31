@@ -65,7 +65,7 @@
         </graphicData>
         <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
         <costList>
-            <Titanium>100</Titanium>
+            <Titanium_GT>100</Titanium_GT>
             <MagneticCoil>1</MagneticCoil>
             <ComponentIndustrial>4</ComponentIndustrial>
         </costList>
@@ -171,7 +171,7 @@
             <Flammability>1.0</Flammability>
         </statBases>
         <costList>
-            <Titanium>10</Titanium>
+            <Titanium_GT>10</Titanium_GT>
         </costList>
         <blockLight>false</blockLight>
         <researchPrerequisites>
@@ -201,7 +201,7 @@
             <Flammability>1.0</Flammability>
         </statBases>
         <costList>
-            <Titanium>10</Titanium>
+            <Titanium_GT>10</Titanium_GT>
         </costList>
         <comps>
             <li Class="CompProperties_Power">

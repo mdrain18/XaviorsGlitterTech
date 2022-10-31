@@ -20,7 +20,7 @@
         </graphicData>
         <costList>
             <Steel>120</Steel>
-            <Titanium>40</Titanium>
+            <Titanium_GT>40</Titanium_GT>
             <Silicon>40</Silicon>
             <ComputerComp>5</ComputerComp>
             <Ethanol>10</Ethanol>
@@ -100,7 +100,7 @@
         </graphicData>
         <costList>
             <Steel>650</Steel>
-            <Titanium>150</Titanium>
+            <Titanium_GT>150</Titanium_GT>
             <Uranium>5</Uranium>
             <MagneticCoil>12</MagneticCoil>
             <ComputerComp>35</ComputerComp>
@@ -174,7 +174,7 @@
         <constructEffect>ConstructMetal</constructEffect>
         <costList>
             <Steel>540</Steel>
-            <Titanium>120</Titanium>
+            <Titanium_GT>120</Titanium_GT>
             <ComputerComp>10</ComputerComp>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
@@ -245,7 +245,7 @@
         <constructEffect>ConstructMetal</constructEffect>
         <costList>
             <Steel>480</Steel>
-            <Titanium>120</Titanium>
+            <Titanium_GT>120</Titanium_GT>
             <ComputerComp>12</ComputerComp>
             <ComponentIndustrial>12</ComponentIndustrial>
         </costList>

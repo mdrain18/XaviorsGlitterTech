@@ -114,7 +114,7 @@
         </stuffCategories>
         <costStuffCount>80</costStuffCount>
         <costList>
-            <Titanium>55</Titanium>
+            <Titanium_GT>55</Titanium_GT>
             <ComputerComp>2</ComputerComp>
             <Gun_EMRifle>1</Gun_EMRifle>
             <ComponentIndustrial>3</ComponentIndustrial>
@@ -186,7 +186,7 @@
         <costStuffCount>80</costStuffCount>
         <costList>
             <Steel>25</Steel>
-            <Titanium>40</Titanium>
+            <Titanium_GT>40</Titanium_GT>
             <Silicon>20</Silicon>
             <ComputerComp>2</ComputerComp>
             <ComponentIndustrial>3</ComponentIndustrial>
@@ -233,7 +233,7 @@
         </stuffCategories>
         <costStuffCount>100</costStuffCount>
         <costList>
-            <Titanium>80</Titanium>
+            <Titanium_GT>80</Titanium_GT>
             <ComputerComp>12</ComputerComp>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
@@ -325,7 +325,7 @@
         <size>(3,3)</size>
         <costStuffCount>100</costStuffCount>
         <costList>
-            <Titanium>120</Titanium>
+            <Titanium_GT>120</Titanium_GT>
             <ComputerComp>24</ComputerComp>
             <Silicon>12</Silicon>
             <MagneticCoil>4</MagneticCoil>
@@ -351,7 +351,7 @@
         <size>(3,3)</size>
         <costStuffCount>100</costStuffCount>
         <costList>
-            <Titanium>140</Titanium>
+            <Titanium_GT>140</Titanium_GT>
             <ComputerComp>24</ComputerComp>
             <Silicon>24</Silicon>
             <MagneticCoil>6</MagneticCoil>

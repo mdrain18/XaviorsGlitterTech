@@ -1,33 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <RecipeDef Abstract="True" Name="GTSurgery">
-        <effectWorking>Surgery</effectWorking>
-        <soundWorking>Recipe_Surgery</soundWorking>
-        <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
-        <workSkill>Medicine</workSkill>
-        <workSkillLearnFactor>16</workSkillLearnFactor>
-        <recipeUsers>
-            <li>Human</li>
-        </recipeUsers>
-    </RecipeDef>
-
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTEar</defName>
         <label>install advanced bionic ear</label>
         <description>Installs advanced bionic ear.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing advanced bionic ear.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -38,9 +18,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTEar</li>
             </thingDefs>
@@ -51,22 +28,13 @@
         <addsHediff>GTEar</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTEye</defName>
         <label>install advanced bionic eye</label>
         <description>Installs advanced bionic eye.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing advanced bionic eye.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -77,9 +45,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTEye</li>
             </thingDefs>
@@ -90,22 +55,13 @@
         <addsHediff>GTEye</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTArm</defName>
         <label>install advanced bionic arm</label>
         <description>Installs advanced bionic arm.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing advanced bionic arm.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -116,9 +72,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTArm</li>
             </thingDefs>
@@ -129,22 +82,13 @@
         <addsHediff>GTArm</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTHand</defName>
         <label>install advanced bionic hand</label>
         <description>Installs advanced bionic hand.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing advanced bionic hand.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -155,9 +99,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTHand</li>
             </thingDefs>
@@ -168,22 +109,13 @@
         <addsHediff>GTHand</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTLeg</defName>
         <label>install advanced bionic leg</label>
         <description>Installs advanced bionic leg.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing advanced bionic leg.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -194,9 +126,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTLeg</li>
             </thingDefs>
@@ -207,22 +136,13 @@
         <addsHediff>GTLeg</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTFoot</defName>
         <label>install advanced bionic foot</label>
         <description>Installs advanced bionic foot.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing advanced bionic foot.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -233,9 +153,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTFoot</li>
             </thingDefs>
@@ -246,22 +163,13 @@
         <addsHediff>GTFoot</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTHeart</defName>
         <label>install cybernetic heart</label>
         <description>Installs cybernetic heart.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing cybernetic heart.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -272,9 +180,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTHeart</li>
             </thingDefs>
@@ -285,22 +190,13 @@
         <addsHediff>GTHeart</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTLung</defName>
         <label>install cybernetic lung</label>
         <description>Installs cybernetic lung.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing cybernetic lung.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -311,9 +207,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTLung</li>
             </thingDefs>
@@ -324,22 +217,13 @@
         <addsHediff>GTLung</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTKidney</defName>
         <label>install cybernetic kidney</label>
         <description>Installs cybernetic kidney.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing cybernetic kidney.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -350,9 +234,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTKidney</li>
             </thingDefs>
@@ -363,22 +244,13 @@
         <addsHediff>GTKidney</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTLiver</defName>
         <label>install cybernetic liver</label>
         <description>Installs cybernetic liver.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing cybernetic liver.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -389,9 +261,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTLiver</li>
             </thingDefs>
@@ -402,22 +271,13 @@
         <addsHediff>GTLiver</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTStomach</defName>
         <label>install cybernetic stomach</label>
         <description>Installs cybernetic stomach.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing cybernetic stomach.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -428,9 +288,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTStomach</li>
             </thingDefs>
@@ -441,22 +298,13 @@
         <addsHediff>GTStomach</addsHediff>
     </RecipeDef>
 
-    <RecipeDef ParentName="GTSurgery">
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
         <defName>InstallGTDentures</defName>
         <label>install cybernetic dentures</label>
         <description>Installs cybernetic dentures.</description>
         <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing cybernetic dentures.</jobString>
-        <workAmount>2500</workAmount>
         <ingredients>
-            <li>
-                <filter>
-                    <categories>
-                        <li>Medicine</li>
-                    </categories>
-                </filter>
-                <count>1</count>
-            </li>
             <li>
                 <filter>
                     <thingDefs>
@@ -467,9 +315,6 @@
             </li>
         </ingredients>
         <fixedIngredientFilter>
-            <categories>
-                <li>Medicine</li>
-            </categories>
             <thingDefs>
                 <li>GTDentures</li>
             </thingDefs>

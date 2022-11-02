@@ -3,10 +3,12 @@
 
     <!--==================================PowerSource=====================================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>XenonIonTurbine</defName>
         <label>Xenon-Ion Turbine</label>
         <thingClass>Building</thingClass>
+        <description>Produces electricity by collecting trace Xenon from water and Ionizing it into plasma. Must be
+            placed on a geyser.</description>
         <graphicData>
             <texPath>Things/Building/Power/XenonIonTurbine</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -27,9 +29,6 @@
             <Beauty>-20</Beauty>
         </statBases>
         <tickerType>Normal</tickerType>
-        <description>Produces electricity by collecting trace Xenon from water and Ionizing it into plasma. Must be
-            placed on a geyser.
-        </description>
         <size>(6,6)</size>
         <costList>
             <Steel>640</Steel>
@@ -62,7 +61,6 @@
         <building>
             <ai_chillDestination>false</ai_chillDestination>
             <soundAmbient>XITurbine</soundAmbient>
-
         </building>
         <constructEffect>ConstructMetal</constructEffect>
         <placeWorkers>
@@ -73,10 +71,13 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>PlasmaReactor</defName>
         <label>Plasma Fusion Reactor</label>
         <thingClass>Building</thingClass>
+        <description>Produces electricity by maintaining an electromagnetic funnel of super heated plasma. Similar to
+            the process within a star, except smaller, hotter and more efficient. The heat reached is so intense it
+            requires lining by near indestructible materials.</description>
         <graphicData>
             <texPath>Things/Building/Power/PlasmaReactor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -91,16 +92,12 @@
         <fillPercent>1</fillPercent>
         <blockLight>true</blockLight>
         <statBases>
-            <MaxHitPoints>2500</MaxHitPoints>
-            <WorkToBuild>25000</WorkToBuild>
+            <MaxHitPoints>5000</MaxHitPoints>
+            <WorkToBuild>15000</WorkToBuild>
             <Flammability>1.0</Flammability>
             <Beauty>-10</Beauty>
         </statBases>
         <tickerType>Normal</tickerType>
-        <description>Produces electricity by maintaining an electromagnetic funnel of super heated plasma. Similar to
-            the process within a star, except smaller, hotter and more efficient. The heat reached is so intense it
-            requires lining by near indestructable materials.
-        </description>
         <size>(9,9)</size>
         <costList>
             <Steel>2400</Steel>
@@ -135,7 +132,6 @@
         <building>
             <ai_chillDestination>false</ai_chillDestination>
             <soundAmbient>PlasmaTurbine</soundAmbient>
-
         </building>
         <constructEffect>ConstructMetal</constructEffect>
         <researchPrerequisites>
@@ -145,10 +141,12 @@
 
     <!--==================================Batteries=====================================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>FissionBattery</defName>
         <label>Battery</label>
         <thingClass>Building_Battery</thingClass>
+        <description>Stores electricity and recycles charge using fission processes. Slightly more efficient and stores
+            four times as much. Warning - charged batteries tend to explode when heated or wet.</description>
         <graphicData>
             <texPath>Things/Building/Power/FissionBattery</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -177,13 +175,9 @@
             <Flammability>2.0</Flammability>
             <Beauty>-6</Beauty>
         </statBases>
-        <description>Stores electricity and recycles charge using fission processes. Slightly more efficient and stores
-            four times as much. Warning - charged batteries tend to explode when heated or wet.
-        </description>
         <size>(2,2)</size>
         <building>
             <ai_chillDestination>false</ai_chillDestination>
-
         </building>
         <costList>
             <Steel>150</Steel>
@@ -193,8 +187,8 @@
         </costList>
         <comps>
             <li Class="CompProperties_Battery">
-                <storedEnergyMax>4000</storedEnergyMax>
-                <efficiency>0.7</efficiency>
+                <storedEnergyMax>6000</storedEnergyMax>
+                <efficiency>0.9</efficiency>
                 <shortCircuitInRain>true</shortCircuitInRain>
                 <transmitsPower>true</transmitsPower>
             </li>
@@ -213,10 +207,11 @@
         </researchPrerequisites>
     </ThingDef>
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>HeavyPowerConduit</defName>
         <label>heavy power conduit</label>
         <thingClass>Building</thingClass>
+        <description>A set of heavy electrical cables, very strong and non-flammable</description>
         <category>Building</category>
         <graphicData>
             <texPath>Things/Building/Linked/PowerConduit_Atlas</texPath>
@@ -247,7 +242,6 @@
             <Flammability>0</Flammability>
             <Beauty>-6</Beauty>
         </statBases>
-        <description>A set of heavy electrical cables, very strong and non-flammable</description>
         <placingDraggableDimensions>1</placingDraggableDimensions>
         <costList>
             <Steel>5</Steel>

@@ -6,8 +6,7 @@
         <defName>OCExo</defName>
         <label>Orion Exoskeleton</label>
         <description>A standard issue Orion Corporation exoskeleton. Equiped by most Orion security forces, this all
-            purpose exoskeleton gives them a cheap and capable edge against their competitors.
-        </description>
+            purpose exoskeleton gives them a cheap and capable edge against their competitors.</description>
         <graphicData>
             <texPath>Things/Item/Health/HealthItem</texPath>
             <graphicClass>Graphic_Single</graphicClass>

@@ -2,7 +2,7 @@
 <Defs>
     <!-- ========================= Work tables ==========================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>PharmaTable</defName>
         <label>pharmaceutical table</label>
         <thingClass>Building_WorkTable_HeatPush</thingClass>
@@ -80,13 +80,12 @@
     </ThingDef>
 
     <!-- ========================= Matter fabricator ==========================-->
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>Matterfab</defName>
         <label>Matter fabricator</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>The forefront of quantum thermodynamics and plasma spectrometry, this machine disassembles elements
-            into base subatomic particles and re-assembles them into powerful artificial elements.
-        </description>
+            into base subatomic particles and re-assembles them into powerful artificial elements.</description>
         <graphicData>
             <texPath>Things/Building/Production/MatterFab</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -153,13 +152,12 @@
 
     <!-- ========================= Electrolyzer ==========================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>Electrolyzer</defName>
         <label>Electrolyzer</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>A machine that induces electrolysis, separating elements by applying a direct electric current and
-            driving non-spontaneous chemical reactions. Produces manufactored materials.
-        </description>
+            driving non-spontaneous chemical reactions. Produces manufactored materials.</description>
         <graphicData>
             <texPath>Things/Building/Production/Electrolyzer</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -224,13 +222,12 @@
 
     <!-- ========================= Robotic assembler ==========================-->
 
-    <ThingDef ParentName="BuildingBase_GT">
+    <ThingDef ParentName="BuildingBase">
         <defName>RobAssem</defName>
         <label>Robotic Assembler</label>
         <thingClass>Building_WorkTable</thingClass>
         <description>A machine that applies state of the art robotics, not jerry rigged with scrap metal, to construct
-            machine Component too intricate for simple human hands.
-        </description>
+            machine Component too intricate for simple human hands.</description>
         <graphicData>
             <texPath>Things/Building/Production/RobAssem</texPath>
             <graphicClass>Graphic_Single</graphicClass>

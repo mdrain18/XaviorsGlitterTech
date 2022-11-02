@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Defs>
+<Defs><!--
 
     <SoundDef>
         <defName>Pawn_Engine_Rev</defName>
@@ -48,5 +48,5 @@
             </li>
         </subSounds>
     </SoundDef>
-
+-->
 </Defs>

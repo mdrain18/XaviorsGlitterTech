@@ -3,7 +3,7 @@
 
     <PawnKindDef Name="ComBase" Abstract="True">
         <race>Human</race>
-        <defaultFactionType>Commando</defaultFactionType>
+        <defaultFactionType>Commandos</defaultFactionType>
         <chemicalAddictionChance>0.7</chemicalAddictionChance>
         <backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
         <maxGenerationAge>48</maxGenerationAge>
@@ -92,8 +92,8 @@
         </apparelMoney>
         <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
         <weaponMoney>
-            <min>1800</min>
-            <max>2200</max>
+            <min>2200</min>
+            <max>2400</max>
         </weaponMoney>
         <weaponTags>
             <li>GlitterTech</li>
@@ -135,8 +135,8 @@
         </apparelMoney>
         <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
         <weaponMoney>
-            <min>1500</min>
-            <max>2200</max>
+            <min>2200</min>
+            <max>2400</max>
         </weaponMoney>
         <weaponTags>
             <li>GlitterTech</li>

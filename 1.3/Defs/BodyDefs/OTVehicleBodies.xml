@@ -1,12 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
-<!--
-	Each coverage value is relative to its parent.
-	Remaining body part coverage (100% minus coverage of all child nodes) is a chance to hit exactly this part.
-	Damage "starts" at corePart, and then "goes deeper" until it hits remaining body part coverage or leaf node - this body part is then hit.
--->
-
-<Defs>
+<Defs><!--
 
     <BodyDef>
         <defName>TankChassis</defName>
@@ -109,5 +103,5 @@
             </parts>
         </corePart>
     </BodyDef>
-
+-->
 </Defs>

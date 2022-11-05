@@ -2,7 +2,7 @@
 <Defs>
     <!-- artificial - bionics -->
 
-    <ThingDef ParentName="BodyPartArtificialBase_GT">
+    <ThingDef ParentName="BodyPartBionicBase">
         <defName>OCExo</defName>
         <label>Orion Exoskeleton</label>
         <description>A standard issue Orion Corporation exoskeleton. Equiped by most Orion security forces, this all
@@ -11,7 +11,9 @@
             <texPath>Things/Item/Health/HealthItem</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
+            <Mass>0.3</Mass>
             <MarketValue>4500</MarketValue>
         </statBases>
         <techHediffsTags>

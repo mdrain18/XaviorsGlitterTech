@@ -47,7 +47,6 @@
             <recipeUsers Inherit="False">
                 <li>FabricationBench</li>
             </recipeUsers>
-            <displayPriority>200</displayPriority>
         </recipeMaker>
         <costList>
             <Plasteel>20</Plasteel>
@@ -148,7 +147,6 @@
             <recipeUsers Inherit="False">
                 <li>FabricationBench</li>
             </recipeUsers>
-            <displayPriority>200</displayPriority>
         </recipeMaker>
         <costList>
             <Plasteel>40</Plasteel>
@@ -244,7 +242,6 @@
             <recipeUsers Inherit="False">
                 <li>FabricationBench</li>
             </recipeUsers>
-            <displayPriority>200</displayPriority>
         </recipeMaker>
         <costList>
             <Plasteel>30</Plasteel>

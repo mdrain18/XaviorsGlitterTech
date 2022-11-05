@@ -43,7 +43,6 @@
             <recipeUsers Inherit="False">
                 <li>FabricationBench</li>
             </recipeUsers>
-            <displayPriority>200</displayPriority>
         </recipeMaker>
         <costList>
             <Plasteel>20</Plasteel>

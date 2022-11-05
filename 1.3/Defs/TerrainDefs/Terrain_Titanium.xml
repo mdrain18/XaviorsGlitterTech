@@ -7,8 +7,6 @@
         <renderPrecedence>240</renderPrecedence>
         <description>Tiles, for that Glitter world look.</description>
         <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
-        <pollutionTintColor>(0.95, 0.95, 0.93, 1)</pollutionTintColor>
-        <isPaintable>true</isPaintable>
         <edgeType>Hard</edgeType>
         <constructEffect>ConstructMetal</constructEffect>
         <researchPrerequisites>
@@ -18,7 +16,6 @@
             <li>FineFloor</li>
         </tags>
         <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
-        <uiOrder>2080</uiOrder>
     </TerrainDef>
 
     <TerrainDef ParentName="GTTile">
@@ -28,7 +25,6 @@
         <statBases>
             <WorkToBuild>300</WorkToBuild>
             <Beauty>5</Beauty>
-            <CleaningTimeFactor>0.8</CleaningTimeFactor>
         </statBases>
         <costList>
             <Titanium_GT>3</Titanium_GT>
@@ -43,7 +39,6 @@
         <statBases>
             <WorkToBuild>400</WorkToBuild>
             <Beauty>8</Beauty>
-            <CleaningTimeFactor>0.5</CleaningTimeFactor>
         </statBases>
         <costList>
             <AlphaPoly>3</AlphaPoly>
@@ -58,7 +53,6 @@
         <statBases>
             <WorkToBuild>500</WorkToBuild>
             <Beauty>10</Beauty>
-            <CleaningTimeFactor>0.3</CleaningTimeFactor>
         </statBases>
         <costList>
             <BetaPoly>3</BetaPoly>

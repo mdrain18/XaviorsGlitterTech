@@ -143,28 +143,10 @@
             </li>
 
             <!-- Weapons -->
-            <li Class="StockGenerator_MarketValue">
-                <tradeTag>WeaponRanged</tradeTag>
-                <countRange>3~6</countRange>
-            </li>
             <li Class="StockGenerator_Category">
                 <categoryDef>WeaponsMelee</categoryDef>
                 <thingDefCountRange>3~4</thingDefCountRange>
                 <countRange>1~2</countRange>
-            </li>
-
-            <!-- Apparel -->
-            <li Class="StockGenerator_MarketValue">
-                <tradeTag>BasicClothing</tradeTag>
-                <countRange>8~12</countRange>
-            </li>
-            <li Class="StockGenerator_MarketValue">
-                <tradeTag>Clothing</tradeTag>
-                <countRange>2~4</countRange>
-            </li>
-            <li Class="StockGenerator_MarketValue">
-                <tradeTag>Armor</tradeTag>
-                <countRange>2~4</countRange>
             </li>
 
             <!-- Implants -->
@@ -179,10 +161,6 @@
                 <categoryDef>BuildingsFurniture</categoryDef>
                 <thingDefCountRange>3~4</thingDefCountRange>
                 <countRange>1~2</countRange>
-            </li>
-            <li Class="StockGenerator_MarketValue">
-                <tradeTag>Art</tradeTag>
-                <countRange>5~10</countRange>
             </li>
             <li Class="StockGenerator_Tag">
                 <tradeTag>Television</tradeTag>

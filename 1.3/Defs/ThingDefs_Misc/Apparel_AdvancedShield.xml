@@ -67,7 +67,6 @@
             <skillRequirements>
                 <Crafting>18</Crafting>
             </skillRequirements>
-            <displayPriority>300</displayPriority>
         </recipeMaker>
         <statBases>
             <MarketValue>2400</MarketValue>
@@ -132,7 +131,6 @@
             <skillRequirements>
                 <Crafting>12</Crafting>
             </skillRequirements>
-            <displayPriority>300</displayPriority>
         </recipeMaker>
         <statBases>
             <MarketValue>2100</MarketValue>

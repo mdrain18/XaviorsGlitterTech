@@ -11,6 +11,12 @@
             <texPath>Things/Item/Health/HealthItem</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>50</Plasteel>
+            <AlphaPoly>10</AlphaPoly>
+            <ComputerComp>1</ComputerComp>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>

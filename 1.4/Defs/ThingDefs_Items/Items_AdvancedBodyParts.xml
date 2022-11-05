@@ -10,6 +10,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -29,6 +35,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -49,6 +61,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -68,6 +86,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -87,6 +111,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -106,6 +136,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -125,6 +161,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -144,6 +186,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -163,6 +211,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -182,6 +236,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -201,6 +261,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>
@@ -220,6 +286,12 @@
             <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
         <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
         <statBases>
             <Mass>0.3</Mass>

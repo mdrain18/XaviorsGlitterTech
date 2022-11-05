@@ -6,8 +6,8 @@
         <pawnSingular>Orion Corp Soldier</pawnSingular>
         <pawnsPlural>Orion Corp Soldiers</pawnsPlural>
         <categoryTag>Outlander</categoryTag>
-        <listOrderPriority>30</listOrderPriority>
-        <settlementGenerationWeight>0.2</settlementGenerationWeight>
+        <listOrderPriority>31</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
         <canMakeRandomly>true</canMakeRandomly>
         <fixedName>Orion Installation</fixedName>

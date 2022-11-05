@@ -18,6 +18,9 @@
         <techLevel>Spacer</techLevel>
         <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
         <allowedCultures><li>Rustican</li></allowedCultures>
+        <classicIdeo>true</classicIdeo>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>10</configurationListOrderPriority>
         <disallowedMemes>
             <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>

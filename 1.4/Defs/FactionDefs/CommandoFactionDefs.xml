@@ -13,11 +13,14 @@
         <canSiege>false</canSiege>
         <canStageAttacks>true</canStageAttacks>
         <leaderTitle>general</leaderTitle>
-        <factionIconPath>World/WorldObjects/Expanding/PirateOutpost</factionIconPath>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
         <techLevel>Spacer</techLevel>
         <factionNameMaker>NamerFactionOutlander</factionNameMaker>
         <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
         <allowedCultures><li>Rustican</li></allowedCultures>
+        <classicIdeo>true</classicIdeo>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>10</configurationListOrderPriority>
         <disallowedMemes>
             <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>

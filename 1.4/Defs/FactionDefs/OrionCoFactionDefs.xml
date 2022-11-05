@@ -3,6 +3,15 @@
 
     <FactionDef ParentName="FactionBase">
         <defName>OrionCo</defName>
+        <label>Orion Corp Soldiers</label>
+        <description>These people have lived here for decades or centuries, but have kept most of the technology
+            that brought them to this world. They usually work with advanced machinery and defend themselves with
+            advanced weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.
+            \n\nThis particular group holds civil behavior in high regard.</description>
+        <colorSpectrum>
+            <li>(0.35, 0.60, 0.20)</li>
+            <li>(0.45, 0.60, 0.10)</li>
+        </colorSpectrum>
         <pawnSingular>Orion Corp Soldier</pawnSingular>
         <pawnsPlural>Orion Corp Soldiers</pawnsPlural>
         <categoryTag>Outlander</categoryTag>

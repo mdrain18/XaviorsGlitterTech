@@ -1,7 +1,85 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <ThingDef ParentName="ApparelArmorPowerBase">
+    <!-- ==================================== Base =====================================-->
+    <ThingDef Name="ApparelArmorPowerBase_GT" ParentName="ArmorMachineableBase" Abstract="True">
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+            <researchPrerequisite>PoweredArmor</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>7</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>FabricationBench</li>
+            </recipeUsers>
+        </recipeMaker>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <generateCommonality>2</generateCommonality>
+        <statBases>
+            <WorkToMake>60000</WorkToMake>
+            <MaxHitPoints>340</MaxHitPoints>
+            <Mass>12</Mass>
+            <Flammability>0.4</Flammability>
+            <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.54</ArmorRating_Heat>
+            <Insulation_Cold>34</Insulation_Cold>
+            <Insulation_Heat>10</Insulation_Heat>
+            <EquipDelay>14</EquipDelay>
+        </statBases>
+        <equippedStatOffsets>
+            <MoveSpeed>-0.4</MoveSpeed>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <thingCategories>
+            <li>ApparelArmor</li>
+        </thingCategories>
+        <tradeTags>
+            <li>HiTechArmor</li>
+            <li>Armor</li>
+        </tradeTags>
+        <costList>
+            <ComponentSpacer>2</ComponentSpacer>
+            <ComputerComp>5</ComputerComp>
+            <Plasteel>25</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <Uranium>20</Uranium>
+        </costList>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.9,0.9,0.9)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.33,0.33,0.33)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.65,0.65,0.65)</only>
+                </li>
+                <li>
+                    <weight>6</weight>
+                    <min>(0.3,0.3,0.3)</min>
+                    <max>(0.5,0.5,0.5)</max>
+                </li>
+            </options>
+        </colorGenerator>
+        <comps>
+            <li Class="CompProperties_Biocodable"/>
+        </comps>
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+    </ThingDef>
+
+    <!-- ==================================== Nano =====================================-->
+    <ThingDef ParentName="ApparelArmorPowerBase_GT">
         <defName>Apparel_NanoSuit</defName>
         <label>Nano Suit</label>
         <description>Powered armor augmented with Nano technology usually reserved for commandos from advanced
@@ -183,7 +261,7 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelArmorPowerBase">
+    <ThingDef ParentName="ApparelArmorPowerBase_GT">
         <defName>Apparel_Reactive</defName>
         <label>Reactive Suit</label>
         <description>Powered reactive plating. Very heavy, but repels a large amount of incoming weapons fire.</description>
@@ -247,7 +325,7 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelArmorPowerBase">
+    <ThingDef ParentName="ApparelArmorPowerBase_GT">
         <defName>Apparel_NanoSkin</defName>
         <label>Fibre Skin Suit</label>
         <description>Thin nano technology skin. Not as durable as a full nano-suit, but compact enough fit under
@@ -319,11 +397,12 @@
         </colorGenerator>
     </ThingDef>
 
-    <ThingDef ParentName="ApparelArmorPowerBase">
+    <ThingDef ParentName="ApparelArmorPowerBase_GT">
         <defName>Apparel_NanoSpeed</defName>
         <label>Speed Skin Suit</label>
         <description>Thin nano technology skin. Similar construction to the fibre suit, but weaved from reactive metal
-            liquid crystal which scales speed and movement. Increases speed substantially at the cost of defensive capability.</description>
+            liquid crystal which scales speed and movement. Increases speed substantially at the cost of defensive
+            capability.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSkin/NS</texPath>
             <graphicClass>Graphic_Single</graphicClass>

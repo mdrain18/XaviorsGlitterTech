@@ -191,6 +191,7 @@
             <ArmorRating_Heat>1</ArmorRating_Heat>
             <Insulation_Cold>45</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
+            <EquipDelay>2</EquipDelay>
             <Mass>1</Mass>
         </statBases>
         <equippedStatOffsets>
@@ -201,15 +202,9 @@
         <generateCommonality>1</generateCommonality>
         <apparel>
             <wornGraphicPath>Things/Pawn/Humanoid/Apparel/NanoSuitHelmet/NanoSuitHelmet</wornGraphicPath>
-            <layers>
-                <li>Overhead</li>
-            </layers>
-            <tags>
+            <defaultOutfitTags>
                 <li>GlitterHelmet</li>
-            </tags>
-            <bodyPartGroups>
-                <li>FullHead</li>
-            </bodyPartGroups>
+            </defaultOutfitTags>
         </apparel>
         <colorGenerator Class="ColorGenerator_Options">
             <options>

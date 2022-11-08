@@ -1,13 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <RecipeDef ParentName="SurgeryFlesh">
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
         <defName>InstallOCExo</defName>
         <label>Install Orion Exoskeleton</label>
         <description>Installs Orion Exoskeleton.</description>
-        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
         <jobString>Installing Orion Exoskeleton.</jobString>
-        <workAmount>4500</workAmount>
         <ingredients>
             <li>
                 <filter>

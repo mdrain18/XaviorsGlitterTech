@@ -417,9 +417,9 @@
         <designationHotKey>Misc4</designationHotKey>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
             <turretGunDef>Auto_Artillery_Mortar</turretGunDef>
             <buildingTags>
-                <ai_combatDangerous>true</ai_combatDangerous>
                 <li>Artillery_BaseDestroyer</li>
             </buildingTags>
         </building>
@@ -520,9 +520,9 @@
         <designationHotKey>Misc4</designationHotKey>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
             <turretGunDef>Auto_Cluster_Mortar</turretGunDef>
             <buildingTags>
-                <ai_combatDangerous>true</ai_combatDangerous>
                 <li>Artillery_BaseDestroyer</li>
             </buildingTags>
         </building>

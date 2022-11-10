@@ -60,8 +60,8 @@
     <ThingDef ParentName="ApparelShieldBase_GT">
         <defName>Apparel_HC1Shield</defName>
         <label>HC-1 shield</label>
-        <description>A high capacity energy shield device. The top-tier class of personal shields, the mark 1 increases
-            energy capacity by a factor of ten, but recycles the shield slower.</description>
+        <description>A high capacity energy shield device.
+            The top-tier class of personal shields, the mark 1 increases energy capacity by a factor of ten, but recycles the shield slower.</description>
         <costList>
             <ComponentIndustrial>5</ComponentIndustrial>
             <Steel>10</Steel>

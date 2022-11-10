@@ -99,6 +99,9 @@
         </placeWorkers>
         <designationHotKey>Misc3</designationHotKey>
         <uiIconScale>0.95</uiIconScale>
+        <researchPrerequisites>
+            <li>EMRGDefense</li>
+        </researchPrerequisites>
     </ThingDef>
 
     <!-- EMTurret -->
@@ -137,9 +140,6 @@
             <turretGunDef>Gun_EMRGTurret</turretGunDef>
             <turretBurstCooldownTime>5</turretBurstCooldownTime>
         </building>
-        <researchPrerequisites>
-            <li>EMRGDefense</li>
-        </researchPrerequisites>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
@@ -228,9 +228,6 @@
             <turretGunDef>Gun_CanisterTurret</turretGunDef>
             <turretBurstCooldownTime>10</turretBurstCooldownTime>
         </building>
-        <researchPrerequisites>
-            <li>EMRGDefense</li>
-        </researchPrerequisites>
     </ThingDef>
 
     <ThingDef ParentName="BaseBullet">
@@ -295,6 +292,16 @@
         <fillPercent>0.4</fillPercent>
         <tickerType>Normal</tickerType>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Security</designationCategory>
+        <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+        <statBases>
+            <MaxHitPoints>600</MaxHitPoints>
+            <WorkToBuild>15000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>30</Mass>
+            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
+            <Beauty>-20</Beauty>
+        </statBases>
         <comps>
             <li Class="CompProperties_Forbiddable"/>
             <li Class="CompProperties_Explosive">
@@ -310,6 +317,9 @@
             </li>
         </damageMultipliers>
         <uiIconPath>Things/Building/Security/TurretMortar_MenuIcon</uiIconPath>
+        <researchPrerequisites>
+            <li>AdvancedFact</li>
+        </researchPrerequisites>
     </ThingDef>
 
     <!-- AutoMortar -->
@@ -338,13 +348,6 @@
             <ComputerComp>12</ComputerComp>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <statBases>
-            <MaxHitPoints>600</MaxHitPoints>
-            <Flammability>0</Flammability>
-            <Mass>30</Mass>
-            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
-            <Beauty>-20</Beauty>
-        </statBases>
         <building>
             <combatPower>220</combatPower>
             <turretGunDef>Auto_Artillery_Mortar</turretGunDef>
@@ -388,7 +391,7 @@
     <!-- ClusterMortar -->
     <ThingDef ParentName="AutoMortarBase_GT">
         <defName>ClusterMortar</defName>
-        <label>auto mortar</label>
+        <label>auto cluster mortar</label>
         <description>Modified and improved on from the Mech's auto mortar.
             A cluster automatic mortar turret which fires 5 shells at once at targets by itself.
             Explodes when damaged.</description>
@@ -411,13 +414,6 @@
             <ComputerComp>12</ComputerComp>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <statBases>
-            <MaxHitPoints>600</MaxHitPoints>
-            <Flammability>0</Flammability>
-            <Mass>30</Mass>
-            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
-            <Beauty>-20</Beauty>
-        </statBases>
         <building>
             <combatPower>220</combatPower>
             <turretGunDef>Auto_Cluster_Mortar</turretGunDef>
@@ -484,13 +480,6 @@
             <ComputerComp>12</ComputerComp>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <statBases>
-            <MaxHitPoints>600</MaxHitPoints>
-            <Flammability>0</Flammability>
-            <Mass>30</Mass>
-            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
-            <Beauty>-20</Beauty>
-        </statBases>
         <building>
             <combatPower>220</combatPower>
             <turretGunDef>Auto_EMP_Mortar</turretGunDef>
@@ -580,13 +569,6 @@
             <AlphaPoly>1</AlphaPoly>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <statBases>
-            <MaxHitPoints>600</MaxHitPoints>
-            <Flammability>0</Flammability>
-            <Mass>30</Mass>
-            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
-            <Beauty>-20</Beauty>
-        </statBases>
         <building>
             <combatPower>220</combatPower>
             <turretGunDef>Gun_RocketswarmLauncher_GT</turretGunDef>
@@ -678,16 +660,9 @@
             <AlphaPoly>1</AlphaPoly>
             <ComponentIndustrial>6</ComponentIndustrial>
         </costList>
-        <statBases>
-            <MaxHitPoints>600</MaxHitPoints>
-            <Flammability>0</Flammability>
-            <Mass>30</Mass>
-            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
-            <Beauty>-20</Beauty>
-        </statBases>
         <building>
             <combatPower>220</combatPower>
-            <turretGunDef>Gun_RocketswarmLauncher_GT</turretGunDef>
+            <turretGunDef>Gun_CMissileTurret</turretGunDef>
             <turretBurstWarmupTime>0</turretBurstWarmupTime>
             <turretBurstCooldownTime>50.0</turretBurstCooldownTime>
             <turretInitialCooldownTime>70</turretInitialCooldownTime>
@@ -731,7 +706,7 @@
         <verbs>
             <li>
                 <verbClass>Verb_Shoot</verbClass>
-                <defaultProjectile>Proj_Rocket_GT</defaultProjectile>
+                <defaultProjectile>Bullet_CMissileTurret</defaultProjectile>
                 <forcedMissRadius>3</forcedMissRadius>
                 <ai_AvoidFriendlyFireRadius>25</ai_AvoidFriendlyFireRadius>
                 <warmupTime>4</warmupTime>

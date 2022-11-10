@@ -18,7 +18,7 @@
             <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
-            <effectWorking>Fabrication</effectWorking>
+            <effectWorking>Smith</effectWorking>
             <soundWorking>Recipe_Machining</soundWorking>
             <recipeUsers>
                 <li>FabricationBench</li>

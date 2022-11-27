@@ -2,7 +2,7 @@
 <Defs>
 
     <RecipeDef>
-		<defName>Make_OCExo</defName>
+		<defName>Make_OCExo_GT</defName>
 		<label>Make Orion Exoskeleton</label>
 		<description>Make Orion Exoskeleton</description>
 		<jobString>Making Orion Exoskeleton</jobString>

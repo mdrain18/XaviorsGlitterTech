@@ -268,7 +268,7 @@
         <soundInteract>Standard_Drop</soundInteract>
         <soundDrop>Standard_Drop</soundDrop>
         <statBases>
-            <MarketValue>250</MarketValue>
+            <MarketValue>25</MarketValue>
             <Mass>0.6</Mass>
             <Flammability>1.0</Flammability>
         </statBases>

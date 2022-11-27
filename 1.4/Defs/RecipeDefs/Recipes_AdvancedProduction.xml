@@ -231,7 +231,7 @@
         <label>produce Ethanol from Berries</label>
         <description>produce Ethanol from Berries</description>
         <jobString>Producing Ethanol from Berries</jobString>
-        <workAmount>400</workAmount>
+        <workAmount>800</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>

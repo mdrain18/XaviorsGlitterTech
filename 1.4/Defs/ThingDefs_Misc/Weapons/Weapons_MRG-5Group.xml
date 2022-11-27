@@ -143,11 +143,12 @@
             <displayPriority>200</displayPriority>
         </recipeMaker>
         <costList>
-            <Plasteel>20</Plasteel>
-            <Titanium_GT>10</Titanium_GT>
+            <AlphaPoly>2</AlphaPoly>
+            <Titanium_GT>160</Titanium_GT>
             <Uranium>4</Uranium>
             <MagneticCoil>1</MagneticCoil>
-            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComputerComp>1</ComputerComp>
+            <Silicon>30</Silicon>
         </costList>
         <weaponTags>
             <li>GlitterTech</li>

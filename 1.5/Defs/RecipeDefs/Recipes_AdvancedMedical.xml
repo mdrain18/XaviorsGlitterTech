@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTEar</defName>
+        <label>install advanced bionic ear</label>
+        <description>Installs advanced bionic ear.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic ear.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTEar</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTEar</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Ear</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTEar</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTEye</defName>
+        <label>install advanced bionic eye</label>
+        <description>Installs advanced bionic eye.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic eye.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTEye</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTEye</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTEye</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTArm</defName>
+        <label>install advanced bionic arm</label>
+        <description>Installs advanced bionic arm.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic arm.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTArm</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTHand</defName>
+        <label>install advanced bionic hand</label>
+        <description>Installs advanced bionic hand.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic hand.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTHand</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTHand</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Hand</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTHand</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTLeg</defName>
+        <label>install advanced bionic leg</label>
+        <description>Installs advanced bionic leg.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic leg.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTLeg</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLeg</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Leg</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLeg</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTFoot</defName>
+        <label>install advanced bionic foot</label>
+        <description>Installs advanced bionic foot.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing advanced bionic foot.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTFoot</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTFoot</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Foot</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTFoot</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTHeart</defName>
+        <label>install cybernetic heart</label>
+        <description>Installs cybernetic heart.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing cybernetic heart.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTHeart</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTHeart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTHeart</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTLung</defName>
+        <label>install cybernetic lung</label>
+        <description>Installs cybernetic lung.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing cybernetic lung.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTLung</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLung</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Lung</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLung</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTKidney</defName>
+        <label>install cybernetic kidney</label>
+        <description>Installs cybernetic kidney.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing cybernetic kidney.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTKidney</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTKidney</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Kidney</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTKidney</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTLiver</defName>
+        <label>install cybernetic liver</label>
+        <description>Installs cybernetic liver.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing cybernetic liver.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTLiver</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLiver</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Liver</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLiver</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTStomach</defName>
+        <label>install cybernetic stomach</label>
+        <description>Installs cybernetic stomach.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing cybernetic stomach.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTStomach</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTStomach</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Stomach</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTStomach</addsHediff>
+    </RecipeDef>
+
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallGTDentures</defName>
+        <label>install cybernetic dentures</label>
+        <description>Installs cybernetic dentures.</description>
+        <workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+        <jobString>Installing cybernetic dentures.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTDentures</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTDentures</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Jaw</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTDentures</addsHediff>
+    </RecipeDef>
+
+</Defs>

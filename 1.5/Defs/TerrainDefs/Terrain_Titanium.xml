@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ================= Tile ================= -->
+
+    <TerrainDef ParentName="TileMetalBase" Name="GTTile" Abstract="True">
+        <renderPrecedence>240</renderPrecedence>
+        <description>Tiles, for that Glitter world look.</description>
+        <texturePath>Terrain/Surfaces/GenericFloorTile</texturePath>
+        <pollutionTintColor>(0.95, 0.95, 0.93, 1)</pollutionTintColor>
+        <isPaintable>true</isPaintable>
+        <edgeType>Hard</edgeType>
+        <constructEffect>ConstructMetal</constructEffect>
+        <researchPrerequisites>
+            <li>MetalFab</li>
+        </researchPrerequisites>
+        <tags>
+            <li>FineFloor</li>
+        </tags>
+        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <uiOrder>2080</uiOrder>
+    </TerrainDef>
+
+    <TerrainDef ParentName="GTTile">
+        <defName>TitaniumTile</defName>
+        <label>Titanium tile</label>
+        <description>Titanium tiles, for that Glitter world look.</description>
+        <statBases>
+            <WorkToBuild>300</WorkToBuild>
+            <Beauty>5</Beauty>
+            <CleaningTimeFactor>0.8</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <Titanium_GT>3</Titanium_GT>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="GTTile">
+        <defName>AlphaTile</defName>
+        <label>Alpha-Poly tile</label>
+        <description>Alpha-Poly tiles, for that alien spaceship look.</description>
+        <color>(100,60,100)</color>
+        <statBases>
+            <WorkToBuild>400</WorkToBuild>
+            <Beauty>8</Beauty>
+            <CleaningTimeFactor>0.5</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <AlphaPoly>3</AlphaPoly>
+        </costList>
+    </TerrainDef>
+
+    <TerrainDef ParentName="GTTile">
+        <defName>BetaTile</defName>
+        <label>Beta-Poly tile</label>
+        <description>Beta-Poly tiles, for that alien spaceship look.</description>
+        <color>(100,60,60)</color>
+        <statBases>
+            <WorkToBuild>500</WorkToBuild>
+            <Beauty>10</Beauty>
+            <CleaningTimeFactor>0.3</CleaningTimeFactor>
+        </statBases>
+        <costList>
+            <BetaPoly>3</BetaPoly>
+        </costList>
+    </TerrainDef>
+
+</Defs>

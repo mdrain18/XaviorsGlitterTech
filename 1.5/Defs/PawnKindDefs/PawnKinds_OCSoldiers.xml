@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <PawnKindDef Name="OCBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionType>OrionCo</defaultFactionType>
+        <backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
+        <maxGenerationAge>50</maxGenerationAge>
+        <invNutrition>0</invNutrition>
+        <itemQuality>Superior</itemQuality>
+        <gearHealthRange>
+            <min>0.4</min>
+            <max>1.5</max>
+        </gearHealthRange>
+        <apparelTags>
+            <li>OCFatigues</li>
+            <li>OCArmor</li>
+        </apparelTags>
+        <apparelMoney>
+            <min>4000</min>
+            <max>4000</max>
+        </apparelMoney>
+        <apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
+        <techHediffsMoney>
+            <min>4500</min>
+            <max>4500</max>
+        </techHediffsMoney>
+        <techHediffsTags>
+            <li>OCBodyParts</li>
+        </techHediffsTags>
+        <techHediffsChance>0.9</techHediffsChance>
+        <combatEnhancingDrugsCount>
+            <min>0</min>
+            <max>2</max>
+        </combatEnhancingDrugsCount>
+        <initialWillRange>
+            3~4
+        </initialWillRange>
+        <initialResistanceRange>
+            12~17
+        </initialResistanceRange>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="OCBase">
+        <defName>OCSoldier</defName>
+        <label>Orion Corp Soldier</label>
+        <combatPower>150</combatPower>
+        <weaponMoney>
+            <min>800</min>
+            <max>1200</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>OCDefense</li>
+        </weaponTags>
+        <inventoryOptions>
+            <skipChance>0.4</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <countRange>
+                        <min>1</min>
+                        <max>4</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="OCBase">
+        <defName>OCHeavy</defName>
+        <label>Orion Corp Demolitionist</label>
+        <combatPower>170</combatPower>
+        <weaponMoney>
+            <min>900</min>
+            <max>900</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>OCHeavy</li>
+        </weaponTags>
+        <inventoryOptions>
+            <skipChance>0.4</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <countRange>
+                        <min>1</min>
+                        <max>4</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="OCBase">
+        <defName>OCPeaceKeeper</defName>
+        <label>Orion Corp Peace Keeper</label>
+        <combatPower>150</combatPower>
+        <apparelTags>
+            <li>OCShield</li>
+            <li>OCFatigues</li>
+            <li>OCArmor</li>
+        </apparelTags>
+        <apparelMoney>
+            <min>6100</min>
+            <max>6100</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>4000</min>
+            <max>4000</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>OCMelee</li>
+        </weaponTags>
+        <inventoryOptions>
+            <skipChance>0.4</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <countRange>
+                        <min>1</min>
+                        <max>4</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="OCBase">
+        <defName>OCDirector</defName>
+        <label>Orion Corp Director</label>
+        <combatPower>50</combatPower>
+        <apparelTags>
+            <li>OCFatigues</li>
+        </apparelTags>
+        <apparelMoney>
+            <min>1600</min>
+            <max>1600</max>
+        </apparelMoney>
+        <weaponMoney>
+            <min>2300</min>
+            <max>2300</max>
+        </weaponMoney>
+        <factionLeader>true</factionLeader>
+        <weaponTags>
+            <li>GlitterTechEM</li>
+        </weaponTags>
+        <inventoryOptions>
+            <skipChance>0.4</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <countRange>
+                        <min>1</min>
+                        <max>4</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+    </PawnKindDef>
+
+</Defs>

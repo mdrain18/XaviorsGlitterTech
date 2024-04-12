@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--========================= Doors =============================-->
+
+    <ThingDef ParentName="DoorBase">
+        <defName>BlastDoor</defName>
+        <label>Blast Door</label>
+        <description>Divides rooms. Powered operation and incredibly strong. Designed to withstand Orbital Kinetic
+            Bombardment...</description>
+        <statBases>
+            <MaxHitPoints>1500</MaxHitPoints>
+            <WorkToBuild>2200</WorkToBuild>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Building/Door/Autodoor_Mover</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <damageData>
+                <!--  no damage marks because they don't move with the door
+                <rect>(0,0.1,1,0.8)</rect>-->
+                <enabled>false</enabled>
+            </damageData>
+        </graphicData>
+        <uiIconPath>Things/Building/Door/Autodoor_MenuIcon</uiIconPath>
+        <costList>
+            <Steel>40</Steel>
+            <Titanium_GT>10</Titanium_GT>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <costStuffCount>120</costStuffCount>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>80</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <researchPrerequisites>
+            <li>AdvancedArmor</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!--========================= Walls =============================-->
+
+    <ThingDef ParentName="Wall">
+        <defName>WallWindow</defName>
+        <label>Wall window</label>
+        <description>A wall with a bullet proof window and power conduit.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/Window_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <linkType>CornerFiller</linkType>
+            <linkFlags>
+                <li>Wall</li>
+                <li>Rock</li>
+            </linkFlags>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/Window_MenuIcon</uiIconPath>
+        <costStuffCount>8</costStuffCount>
+        <blockLight>false</blockLight>
+        <researchPrerequisites>
+            <li>TWindows</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!--========================= Lights in Walls =============================-->
+
+    <ThingDef ParentName="Wall" Name="WallLight_GT">
+        <defName>WallLight_White</defName>
+        <label>Wall light</label>
+        <description>A Wall with a light, for those awkward hallways where lamps just don't fit.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/Light_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <linkType>CornerFiller</linkType>
+            <linkFlags>
+                <li>Wall</li>
+                <li>Rock</li>
+            </linkFlags>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/Light_MenuIcon</uiIconPath>
+        <statBases>
+            <MaxHitPoints>1225</MaxHitPoints>
+            <WorkToBuild>150</WorkToBuild>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <costStuffCount>12</costStuffCount>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>30</basePowerConsumption>
+                <transmitsPower>true</transmitsPower>
+            </li>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(217,217,217,0)</glowColor>
+            </li>
+        </comps>
+        <researchPrerequisites>
+            <li>TLights</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!-- Wall light Colors -->
+    <ThingDef ParentName="WallLight_GT">
+        <defName>WallLight_Red</defName>
+        <label>Wall red light</label>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(217,0,0,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="WallLight_GT">
+        <defName>WallLight_Green</defName>
+        <label>Wall green light</label>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(0,217,0,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="WallLight_GT">
+        <defName>WallLight_Blue</defName>
+        <label>Wall blue light</label>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(0,0,217,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="WallLight_GT">
+        <defName>WallLight_Yellow</defName>
+        <label>Wall yellow light</label>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(217,217,0,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="WallLight_GT">
+        <defName>WallLight_Purple</defName>
+        <label>Wall purple light</label>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(217,0,217,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef ParentName="WallLight_GT">
+        <defName>WallLight_Cyan</defName>
+        <label>Wall cyan light</label>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(0,217,217,0)</glowColor>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

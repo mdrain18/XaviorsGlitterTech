@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- artificial - bionics -->
+
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>OCExo</defName>
+        <label>Orion Exoskeleton</label>
+        <description>A standard issue Orion Corporation exoskeleton. Equiped by most Orion security forces, this all
+            purpose exoskeleton gives them a cheap and capable edge against their competitors.</description>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+            <Plasteel>50</Plasteel>
+            <AlphaPoly>10</AlphaPoly>
+            <ComputerComp>1</ComputerComp>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>4500</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>OCBodyParts</li>
+        </techHediffsTags>
+    </ThingDef>
+
+</Defs>

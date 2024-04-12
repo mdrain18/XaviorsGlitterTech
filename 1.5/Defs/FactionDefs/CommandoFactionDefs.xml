@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <FactionDef ParentName="FactionBase">
+        <defName>Commandos</defName>
+        <label>Civil Commandos</label>
+        <description>These people have lived here for decades or centuries, but have kept most of the technology
+            that brought them to this world. They usually work with advanced machinery and defend themselves with
+            advanced weapons.\n\nThey are concerned with the practical matters of trade, trust, and survival.
+            \n\nThis particular group holds civil behavior in high regard.</description>
+        <colorSpectrum>
+            <li>(0.35, 0.30, 0.20)</li>
+            <li>(0.45, 0.40, 0.10)</li>
+        </colorSpectrum>
+        <pawnSingular>commando</pawnSingular>
+        <pawnsPlural>commandos</pawnsPlural>
+        <categoryTag>Outlander</categoryTag>
+        <listOrderPriority>30</listOrderPriority>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canSiege>false</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <leaderTitle>general</leaderTitle>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <techLevel>Spacer</techLevel>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <allowedCultures><li>Rustican</li></allowedCultures>
+        <classicIdeo>true</classicIdeo>
+        <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>10</configurationListOrderPriority>
+        <disallowedMemes>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+        </disallowedMemes>
+        <structureMemeWeights>
+            <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+            <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+            <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+            <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+            <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
+            <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
+            <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+            <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+        </structureMemeWeights>
+        <xenotypeSet>
+            <xenotypeChances>
+                <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.05</Hussar>
+                <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.05</Dirtmole>
+                <Genie MayRequire="Ludeon.RimWorld.Biotech">0.025</Genie>
+                <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.025</Neanderthal>
+            </xenotypeChances>
+        </xenotypeSet>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Pirate</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+        <earliestRaidDays>180</earliestRaidDays>
+        <caravanTraderKinds>
+            <li>Caravan_Outlander_BulkGoods</li>
+            <li>Caravan_Outlander_CombatSupplier</li>
+            <li>Caravan_Outlander_Exotic</li>
+            <li>Caravan_Outlander_PirateMerchant</li>
+        </caravanTraderKinds>
+        <visitorTraderKinds>
+            <li>Visitor_Outlander_Standard</li>
+        </visitorTraderKinds>
+        <baseTraderKinds>
+            <li>Base_Outlander_Standard</li>
+        </baseTraderKinds>
+        <allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
+        <raidLootMaker>OutlanderRaidLootMaker</raidLootMaker>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(300, 0)</li>
+                <li>(700, 0)</li>
+                <li>(1400, 1)</li>
+                <li>(2800, 2)</li>
+                <li>(4000, 2.6)</li>
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <raidLootValueFromPointsCurve>
+            <points>
+                <li>(35, 8)</li>
+                <li>(100, 60)</li>
+                <li>(1000, 250)</li>
+                <li>(2000, 400)</li>
+                <li>(4000, 800)</li>
+            </points>
+        </raidLootValueFromPointsCurve>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(0,35)</li>
+                <li>(70, 50)</li>
+                <li>(700, 100)</li>
+                <li>(1300, 200)</li>
+                <li>(2600, 500)</li>
+                <li>(4000, 2000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <pawnGroupMakers>
+            <li>
+                <!-- Normal fights, standard mix -->
+                <kindDef>Combat</kindDef>
+                <options>
+                    <Villager>5</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Commando>20</Commando>
+                    <CommandoH>10</CommandoH>
+                    <CommandoScout>5</CommandoScout>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li>
+                <kindDef>Peaceful</kindDef>
+                <options>
+                    <Villager>20</Villager>
+                    <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+                    <Town_Guard>10</Town_Guard>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <Town_Trader>1</Town_Trader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <Villager>3</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Commando>20</Commando>
+                    <CommandoH>10</CommandoH>
+                    <CommandoScout>5</CommandoScout>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <Villager>10</Villager>
+                    <Town_Guard>10</Town_Guard>
+                    <Commando>20</Commando>
+                    <CommandoH>10</CommandoH>
+                    <CommandoScout>5</CommandoScout>
+                    <Town_Councilman>10</Town_Councilman>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Miners</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Miner>1</Miner>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Hunters</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Hunter>1</Hunter>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Loggers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Logger>1</Logger>
+                </options>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">
+                <kindDef>Farmers</kindDef>
+                <commonality>1</commonality>
+                <options>
+                    <Farmer>1</Farmer>
+                </options>
+            </li>
+        </pawnGroupMakers>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    </FactionDef>
+    
+</Defs>

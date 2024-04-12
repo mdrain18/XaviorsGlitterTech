@@ -34,6 +34,7 @@
         <deepCountPerPortion>10</deepCountPerPortion>
         <deepLumpSizeRange>4~14</deepLumpSizeRange>
         <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
         <stuffProps>
             <categories>
                 <li>Metallic</li>
@@ -267,7 +268,7 @@
         <soundInteract>Standard_Drop</soundInteract>
         <soundDrop>Standard_Drop</soundDrop>
         <statBases>
-            <MarketValue>250</MarketValue>
+            <MarketValue>25</MarketValue>
             <Mass>0.6</Mass>
             <Flammability>1.0</Flammability>
         </statBases>

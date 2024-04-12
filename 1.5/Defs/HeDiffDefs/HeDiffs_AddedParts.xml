@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Added body parts -->
+
+    <HediffDef Name="AddedBodyPartBase_GT" ParentName="AddedBodyPartBase" Abstract="True">
+        <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTHeart</defName>
+        <label>Cybernetic heart</label>
+        <description>An installed advanced bionic heart</description>
+        <spawnThingOnRemoved>GTHeart</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTLung</defName>
+        <label>Cybernetic lung</label>
+        <description>An installed advanced bionic lung</description>
+        <spawnThingOnRemoved>GTLung</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Breathing</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTKidney</defName>
+        <label>Cybernetic kidney</label>
+        <description>An installed advanced bionic kidney</description>
+        <spawnThingOnRemoved>GTKidney</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTLiver</defName>
+        <label>Cybernetic liver</label>
+        <description>An installed advanced bionic liver</description>
+        <spawnThingOnRemoved>GTLiver</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>1</offset>
+                    </li>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTStomach</defName>
+        <label>Cybernetic stomach</label>
+        <description>An installed advanced bionic stomach</description>
+        <spawnThingOnRemoved>GTStomach</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Eating</capacity>
+                        <offset>1</offset>
+                    </li>
+                    <li>
+                        <capacity>Metabolism</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTDentures</defName>
+        <label>Advanced bionic dentures</label>
+        <description>Installed advanced bionic dentures</description>
+        <spawnThingOnRemoved>GTDentures</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Eating</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTArm</defName>
+        <label>Advanced bionic arm</label>
+        <description>An installed advanced bionic arm</description>
+        <spawnThingOnRemoved>GTArm</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <verbs>
+                    <li>
+                        <verbClass>Verb_MeleeAttackDamage</verbClass>
+                        <defaultCooldownTime>1.0</defaultCooldownTime>
+                        <meleeDamageBaseAmount>20</meleeDamageBaseAmount>
+                        <meleeDamageDef>Blunt</meleeDamageDef>
+                    </li>
+                </verbs>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTHand</defName>
+        <label>Advanced bionic hand</label>
+        <description>An installed advanced bionic hand</description>
+        <spawnThingOnRemoved>GTHand</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <verbs>
+                    <li>
+                        <verbClass>Verb_MeleeAttackDamage</verbClass>
+                        <defaultCooldownTime>1.0</defaultCooldownTime>
+                        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+                        <meleeDamageDef>Blunt</meleeDamageDef>
+                    </li>
+                </verbs>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTLeg</defName>
+        <label>Advanced bionic leg</label>
+        <description>An installed advanced bionic leg</description>
+        <spawnThingOnRemoved>GTLeg</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTFoot</defName>
+        <label>Advanced bionic foot</label>
+        <description>An installed advanced bionic foot</description>
+        <spawnThingOnRemoved>GTFoot</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTEye</defName>
+        <label>Advanced bionic eye</label>
+        <description>An installed advanced bionic eye</description>
+        <spawnThingOnRemoved>GTEye</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2.0</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef ParentName="AddedBodyPartBase_GT">
+        <defName>GTEar</defName>
+        <label>Advanced bionic ear</label>
+        <description>An installed advanced bionic ear</description>
+        <spawnThingOnRemoved>GTEar</spawnThingOnRemoved>
+        <addedPartProps>
+
+            <solid>true</solid>
+            <partEfficiency>2.0</partEfficiency>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

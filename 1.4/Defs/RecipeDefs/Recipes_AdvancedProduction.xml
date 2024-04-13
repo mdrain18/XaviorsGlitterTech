@@ -349,7 +349,7 @@
         <label>Assemble magnetic coils</label>
         <description>Assemble magnetic coils</description>
         <jobString>Assembling Magnetic coils</jobString>
-        <workAmount>1200</workAmount>
+        <workAmount>2000</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -372,7 +372,7 @@
             </li>
         </ingredients>
         <products>
-            <MagneticCoil>1</MagneticCoil>
+            <MagneticCoil>2</MagneticCoil>
         </products>
         <fixedIngredientFilter>
             <thingDefs>

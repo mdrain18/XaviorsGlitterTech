@@ -11,7 +11,7 @@
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Flame</damageDef>
-            <damageAmountBase>15</damageAmountBase>
+            <damageAmountBase>10</damageAmountBase>
             <speed>200</speed>
             <explosionRadius>1.3</explosionRadius>
         </projectile>
@@ -111,7 +111,7 @@
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>
             <damageDef>Flame</damageDef>
-            <damageAmountBase>25</damageAmountBase>
+            <damageAmountBase>18</damageAmountBase>
             <speed>200</speed>
             <explosionRadius>1.9</explosionRadius>
         </projectile>

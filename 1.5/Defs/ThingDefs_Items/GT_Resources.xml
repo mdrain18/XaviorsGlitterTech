@@ -1,75 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-    <!--=============== Titanium_GT ====================-->
+	<!--=============== Titanium_GT ====================-->
+	<ThingDef ParentName="ResourceBase">
+		<defName>Titanium_GT</defName>
+		<label>Titanium</label>
+		<description>Titanium alloy. A complex mix of rare elements, making a very strong durable material resistant to corrosion, and high velocity kinetics. Perfect for star ships and Orbital space elevators...</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Titanium_GT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MarketValue>32</MarketValue>
+			<Mass>0.15</Mass>
+			<StuffPower_Armor_Sharp>1.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.35</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.6</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.3</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>.5</deepCommonality>
+		<deepCountPerPortion>10</deepCountPerPortion>
+		<deepLumpSizeRange>4~14</deepLumpSizeRange>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<appearance>Metal</appearance>
+			<color>(255,255,255)</color>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+			<statOffsets>
+				<Beauty>6</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>3.5</MaxHitPoints>
+				<Flammability>0</Flammability>
+				<Beauty>3</Beauty>
+				<DoorOpenSpeed>3</DoorOpenSpeed>
+				<BedRestEffectiveness>1.5</BedRestEffectiveness>
+				<WorkToMake>3.0</WorkToMake>
+				<WorkToBuild>3.0</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<researchPrerequisites>
+			<li>MetalFab</li>
+		</researchPrerequisites>
+	</ThingDef>
 
-    <ThingDef ParentName="ResourceBase">
-        <defName>Titanium_GT</defName>
-        <label>Titanium</label>
-        <description>Titanium alloy. A complex mix of rare elements, making a very strong durable material resistant to
-            corrosion, and high velocity kinetics. Perfect for starships and Orbital space elevators...</description>
-        <graphicData>
-            <texPath>Things/Item/Resource/Titanium_GT</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <soundInteract>Metal_Drop</soundInteract>
-        <soundDrop>Metal_Drop</soundDrop>
-        <useHitPoints>false</useHitPoints>
-        <healthAffectsPrice>false</healthAffectsPrice>
-        <statBases>
-            <MarketValue>32</MarketValue>
-            <Mass>0.15</Mass>
-            <StuffPower_Armor_Sharp>1.9</StuffPower_Armor_Sharp>
-            <StuffPower_Armor_Blunt>1</StuffPower_Armor_Blunt>
-            <StuffPower_Armor_Heat>1.35</StuffPower_Armor_Heat>
-            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
-            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-            <SharpDamageMultiplier>1.6</SharpDamageMultiplier>
-            <BluntDamageMultiplier>1.3</BluntDamageMultiplier>
-        </statBases>
-        <thingCategories>
-            <li>ResourcesRaw</li>
-        </thingCategories>
-        <deepCommonality>.5</deepCommonality>
-        <deepCountPerPortion>10</deepCountPerPortion>
-        <deepLumpSizeRange>4~14</deepLumpSizeRange>
-        <burnableByRecipe>false</burnableByRecipe>
-        <smeltable>true</smeltable>
-        <stuffProps>
-            <categories>
-                <li>Metallic</li>
-            </categories>
-            <appearance>Metal</appearance>
-            <color>(255,255,255)</color>
-            <commonality>0.05</commonality>
-            <constructEffect>ConstructMetal</constructEffect>
-            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-            <statOffsets>
-                <Beauty>6</Beauty>
-            </statOffsets>
-            <statFactors>
-                <MaxHitPoints>3.5</MaxHitPoints>
-                <Flammability>0</Flammability>
-                <Beauty>3</Beauty>
-                <DoorOpenSpeed>3</DoorOpenSpeed>
-                <BedRestEffectiveness>1.5</BedRestEffectiveness>
-                <WorkToMake>3.0</WorkToMake>
-                <WorkToBuild>3.0</WorkToBuild>
-                <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
-            </statFactors>
-        </stuffProps>
-        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-        <allowedArchonexusCount>80</allowedArchonexusCount>
-        <researchPrerequisites>
-            <li>MetalFab</li>
-        </researchPrerequisites>
-    </ThingDef>
-
-    <!--=============== AlphaPoly ====================-->
-
+<!--=============== AlphaPoly ====================-->
     <ThingDef ParentName="ResourceBase">
         <defName>AlphaPoly</defName>
         <label>Alpha Poly</label>
@@ -134,7 +131,6 @@
     </ThingDef>
 
     <!--=============== BetaPoly ====================-->
-
     <ThingDef ParentName="ResourceBase">
         <defName>BetaPoly</defName>
         <label>Beta Poly</label>
@@ -245,8 +241,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>ComputerComp</defName>
         <label>Computer components</label>
-        <description>Advanced electronic circuit boards. Required by advanced machinery, when simple mechanics just
-            isn't enough.</description>
+        <description>Advanced electronic circuit boards. Required by advanced machinery, when simple mechanics just isn't enough.</description>
         <graphicData>
             <texPath>Things/Item/Resource/ComputerComp</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -306,8 +301,7 @@
     <ThingDef ParentName="ResourceBase">
         <defName>Serum</defName>
         <label>Serum</label>
-        <description>Fabricated serums, used as treatments on glitter-world planets, when body reconstruction is
-            unavailable.</description>
+        <description>Fabricated serums, used as treatments on glitter-world planets, when body reconstruction is unavailable.</description>
         <graphicData>
             <texPath>Things/Item/Resource/Serum</texPath>
             <graphicClass>Graphic_Single</graphicClass>

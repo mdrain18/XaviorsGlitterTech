@@ -17,7 +17,7 @@
         <tags>
             <li>FineFloor</li>
         </tags>
-        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <uiOrder>2080</uiOrder>
     </TerrainDef>
 

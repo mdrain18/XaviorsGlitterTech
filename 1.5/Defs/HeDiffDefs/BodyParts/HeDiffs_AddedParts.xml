@@ -2,12 +2,12 @@
 <Defs>
     <!-- Added body parts -->
 
-    <HediffDef Name="AddedBodyPartBase_GT" ParentName="AddedBodyPartBase" Abstract="True">
+    <HediffDef Name="ArtificialPart_GT" ParentName="ArtificialPart" Abstract="True">
         <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
         <isBad>false</isBad>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTHeart</defName>
         <label>Cybernetic heart</label>
         <description>An installed advanced bionic heart</description>
@@ -29,7 +29,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTLung</defName>
         <label>Cybernetic lung</label>
         <description>An installed advanced bionic lung</description>
@@ -51,7 +51,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTKidney</defName>
         <label>Cybernetic kidney</label>
         <description>An installed advanced bionic kidney</description>
@@ -73,7 +73,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTLiver</defName>
         <label>Cybernetic liver</label>
         <description>An installed advanced bionic liver</description>
@@ -99,7 +99,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTStomach</defName>
         <label>Cybernetic stomach</label>
         <description>An installed advanced bionic stomach</description>
@@ -125,7 +125,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTDentures</defName>
         <label>Advanced bionic dentures</label>
         <description>Installed advanced bionic dentures</description>
@@ -147,7 +147,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTArm</defName>
         <label>Advanced bionic arm</label>
         <description>An installed advanced bionic arm</description>
@@ -181,7 +181,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTHand</defName>
         <label>Advanced bionic hand</label>
         <description>An installed advanced bionic hand</description>
@@ -215,7 +215,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTLeg</defName>
         <label>Advanced bionic leg</label>
         <description>An installed advanced bionic leg</description>
@@ -237,7 +237,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTFoot</defName>
         <label>Advanced bionic foot</label>
         <description>An installed advanced bionic foot</description>
@@ -259,7 +259,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTEye</defName>
         <label>Advanced bionic eye</label>
         <description>An installed advanced bionic eye</description>
@@ -281,7 +281,7 @@
         </stages>
     </HediffDef>
 
-    <HediffDef ParentName="AddedBodyPartBase_GT">
+    <HediffDef ParentName="ArtificialPart_GT">
         <defName>GTEar</defName>
         <label>Advanced bionic ear</label>
         <description>An installed advanced bionic ear</description>

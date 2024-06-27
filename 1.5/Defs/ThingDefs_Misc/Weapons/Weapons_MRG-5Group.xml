@@ -54,6 +54,7 @@
         </costList>
         <weaponTags>
             <li>GlitterTech</li>
+            <li>SpacerGun</li>
         </weaponTags>
         <tradeTags>
             <li>WeaponRanged</li>
@@ -86,7 +87,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_MRGPistol</defaultProjectile>
                 <warmupTime>0.20</warmupTime>
-                <range>13</range>
+                <range>15</range>
                 <soundCast>EM_small</soundCast>
                 <soundCastTail>GunTail_Light</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
@@ -149,6 +150,7 @@
         </costList>
         <weaponTags>
             <li>GlitterTech</li>
+            <li>SpacerGun</li>
         </weaponTags>
         <tradeTags>
             <li>WeaponRanged</li>

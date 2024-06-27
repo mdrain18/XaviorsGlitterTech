@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<IncidentDef>
+		<defName>BattleoftheThreeArmys</defName>
+		<label>large battle</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>IncidentWorker_ThreeWayBattle</workerClass>
+		<letterLabel>Battle of the Three Armies</letterLabel>
+		<letterText>
+			A massive three-way battle has erupted near your base! /n/nFactions from the Orion Corp, Civil Commandos, and the Empire have clashed in a struggle for supremacy. /n/nBrace yourselves and prepare for the onslaught as these powerful factions engage in a deadly conflict right on your doorstep!
+		</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>0.0</baseChance>
+		<baseChanceWithRoyalty>0.5</baseChanceWithRoyalty>
+		<minThreatPoints>500</minThreatPoints>
+		<pointsScaleable>true</pointsScaleable>
+		<category>ThreatBig</category>
+	</IncidentDef>
+</Defs>

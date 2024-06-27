@@ -2,7 +2,7 @@
 <Defs>
     <!-- Added body parts -->
 
-    <HediffDef Name="ArtificialPart_GT" ParentName="ArtificialPart" Abstract="True">
+    <HediffDef Name="ArtificialPart_GT" ParentName="AddedBodyPartBase" Abstract="True">
         <defaultLabelColor>(0.5, 0.5, 0.9)</defaultLabelColor>
         <isBad>false</isBad>
     </HediffDef>

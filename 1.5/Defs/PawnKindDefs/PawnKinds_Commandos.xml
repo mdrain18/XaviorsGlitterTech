@@ -4,100 +4,54 @@
     <PawnKindDef Name="ComBase" Abstract="True">
         <race>Human</race>
         <defaultFactionType>Commandos</defaultFactionType>
-        <chemicalAddictionChance>0.7</chemicalAddictionChance>
-        <backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
         <maxGenerationAge>48</maxGenerationAge>
-        <invNutrition>2</invNutrition>
+        <backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
         <itemQuality>Superior</itemQuality>
-        <gearHealthRange>
-            <min>1</min>
-            <max>1.8</max>
-        </gearHealthRange>
-        <techHediffsMoney>
-            <min>3400</min>
-            <max>3400</max>
-        </techHediffsMoney>
+        <factionLeader>true</factionLeader>
+        <styleItemTags>
+          <li>
+            <tag>Soldier</tag>
+            <baseWeight>1</baseWeight>
+            <weightFactor>1</weightFactor>
+          </li>
+        </styleItemTags>
+        <chemicalAddictionChance>0.1</chemicalAddictionChance>
+        <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+        <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+        <invNutrition>2.55</invNutrition>
+        <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+        <apparelMoney>1250~2500</apparelMoney>
+        <apparelTags>
+          <li>IndustrialBasic</li>
+          <li>IndustrialAdvanced</li>
+          <li>IndustrialMilitaryBasic</li>
+          <li>IndustrialMilitaryAdvanced</li>
+          <li>GlitterArmor</li>
+          <li>GlitterHelmet</li>
+        </apparelTags>
+        <apparelDisallowTags>
+          <li>Western</li>
+        </apparelDisallowTags>
+        <specificApparelRequirements>
+          <li>
+            <bodyPartGroup>Torso</bodyPartGroup>
+            <apparelLayer>OnSkin</apparelLayer>
+            <stuff>Cloth</stuff>
+          </li>
+          <li>
+            <bodyPartGroup>Legs</bodyPartGroup>
+            <apparelLayer>OnSkin</apparelLayer>
+            <stuff>Cloth</stuff>
+          </li>
+        </specificApparelRequirements>
         <techHediffsTags>
             <li>AdvancedGTLimb</li>
             <li>AdvancedWeapon</li>
+            <li>OCBodyParts</li>
         </techHediffsTags>
-        <techHediffsChance>1.0</techHediffsChance>
-        <combatEnhancingDrugsCount>
-            <min>1</min>
-            <max>2</max>
-        </combatEnhancingDrugsCount>
+        <techHediffsChance>0.3</techHediffsChance>
+        <techHediffsMoney>1000~1500</techHediffsMoney>
         <biocodeWeaponChance>0.5</biocodeWeaponChance>
-        <initialWillRange>
-            3~4
-        </initialWillRange>
-        <initialResistanceRange>
-            12~17
-        </initialResistanceRange>
-    </PawnKindDef>
-
-    <PawnKindDef ParentName="ComBase">
-        <defName>Commando</defName>
-        <label>Commando</label>
-        <combatPower>170</combatPower>
-        <apparelTags>
-            <li>GlitterArmor</li>
-            <li>GlitterHelmet</li>
-        </apparelTags>
-        <apparelMoney>
-            <min>6800</min>
-            <max>6800</max>
-        </apparelMoney>
-        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-        <weaponMoney>
-            <min>1800</min>
-            <max>2200</max>
-        </weaponMoney>
-        <factionLeader>true</factionLeader>
-        <weaponTags>
-            <li>GlitterTech</li>
-        </weaponTags>
-        <inventoryOptions>
-            <skipChance>0.4</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>Silver</thingDef>
-                    <countRange>
-                        <min>250</min>
-                        <max>500</max>
-                    </countRange>
-                </li>
-                <li>
-                    <thingDef>MedicineIndustrial</thingDef>
-                    <countRange>
-                        <min>1</min>
-                        <max>4</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
-    </PawnKindDef>
-
-    <PawnKindDef ParentName="ComBase">
-        <defName>CommandoH</defName>
-        <label>Commando Heavy</label>
-        <combatPower>180</combatPower>
-        <apparelTags>
-            <li>GlitterArmor</li>
-            <li>GlitterHelmet</li>
-            <li>GlitterArmorR</li>
-        </apparelTags>
-        <apparelMoney>
-            <min>8600</min>
-            <max>8600</max>
-        </apparelMoney>
-        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-        <weaponMoney>
-            <min>2200</min>
-            <max>2400</max>
-        </weaponMoney>
-        <weaponTags>
-            <li>GlitterTech</li>
-        </weaponTags>
         <inventoryOptions>
             <skipChance>0.4</skipChance>
             <subOptionsChooseOne>
@@ -117,50 +71,80 @@
                 </li>
             </subOptionsChooseOne>
         </inventoryOptions>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>15~24</initialResistanceRange>
+        <useFactionXenotypes>false</useFactionXenotypes>
+        <xenotypeSet>
+          <xenotypeChances>
+            <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+            <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+            <Genie MayRequire="Ludeon.RimWorld.Biotech">0.03</Genie>
+          </xenotypeChances>
+        </xenotypeSet>
     </PawnKindDef>
 
     <PawnKindDef ParentName="ComBase">
-        <defName>CommandoScout</defName>
-        <label>Commando Scout</label>
-        <race>Human</race>
-        <combatPower>170</combatPower>
-        <apparelTags>
-            <li>GlitterArmor</li>
-            <li>GlitterHelmet</li>
-            <li>GlitterArmorSpeed</li>
-        </apparelTags>
-        <apparelMoney>
-            <min>9600</min>
-            <max>9600</max>
-        </apparelMoney>
+        <defName>Commando</defName>
+        <label>Commando</label>
+        <combatPower>90</combatPower>
+        <apparelMoney>5000~8000</apparelMoney>
         <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <weaponMoney>
+            <min>1800</min>
+            <max>2200</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>GlitterTech</li>
+        </weaponTags>
+        <skills>
+          <li>
+            <skill>Shooting</skill>
+            <range>4~10</range>
+          </li>
+        </skills>
+        <disallowedTraits>
+          <li>Brawler</li>
+        </disallowedTraits>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ComBase">
+        <defName>CommandoH</defName>
+        <label>Commando Heavy</label>
+        <combatPower>120</combatPower>
         <weaponMoney>
             <min>2200</min>
             <max>2400</max>
         </weaponMoney>
         <weaponTags>
             <li>GlitterTech</li>
-            <li>GlitterTechEMRG</li>
         </weaponTags>
-        <inventoryOptions>
-            <skipChance>0.4</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>Silver</thingDef>
-                    <countRange>
-                        <min>250</min>
-                        <max>500</max>
-                    </countRange>
-                </li>
-                <li>
-                    <thingDef>MedicineIndustrial</thingDef>
-                    <countRange>
-                        <min>1</min>
-                        <max>4</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
+        <skills>
+          <li>
+            <skill>Shooting</skill>
+            <range>8~13</range>
+          </li>
+        </skills>
+        <initialWillRange>3~5</initialWillRange>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="ComBase">
+        <defName>CommandoScout</defName>
+        <label>Commando Scout</label>
+        <race>Human</race>
+        <combatPower>95</combatPower>
+        <weaponMoney>
+            <min>2200</min>
+            <max>2400</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>GlitterTech</li>
+        </weaponTags>
+        <skills>
+          <li>
+            <skill>Shooting</skill>
+            <range>8~13</range>
+          </li>
+        </skills>
     </PawnKindDef>
 
 </Defs>

@@ -20,9 +20,7 @@
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_APB-1Pistol</defName>
         <label>APB-1 Pistol</label>
-        <description>Anion Particle Beam Pistol mark 1. The compact counter part of the APB-1 Rifle, this pistol
-            projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling
-            matter on the atomic level. Accurate and powerful, this weapon will ignite most targets.</description>
+        <description>Anion Particle Beam Pistol mark 1. The compact counter part of the APB-1 Rifle, this pistol projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will ignite most targets.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/APB-1Pistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -58,6 +56,7 @@
         </costList>
         <weaponTags>
             <li>GlitterTech</li>
+            <li>SpacerGun</li>
         </weaponTags>
         <tradeTags>
             <li>WeaponRanged</li>
@@ -71,7 +70,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_APBPistol</defaultProjectile>
                 <warmupTime>0.1</warmupTime>
-                <range>30</range>
+                <range>18</range>
                 <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
                 <burstShotCount>2</burstShotCount>
                 <soundCast>PB</soundCast>
@@ -120,10 +119,7 @@
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_APB-1Projector</defName>
         <label>APB-1 Projector</label>
-        <description>Anion Particle Beam Projector mark 1. The latest thing in anti air and anti tank weaponry, this
-            projector literally projects anions through Hydrogen, creating a neutrally charged kinetic projectile
-            capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will create a
-            destructive blast.</description>
+        <description>Anion Particle Beam Projector mark 1. The latest thing in anti air and anti tank weaponry, this projector literally projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will create a destructive blast.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/APB-1Proj</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -159,6 +155,7 @@
         </costList>
         <weaponTags>
             <li>GlitterTech</li>
+            <li>SpacerGun</li>
         </weaponTags>
         <tradeTags>
             <li>WeaponRanged</li>
@@ -191,7 +188,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_APBProjector</defaultProjectile>
                 <warmupTime>0.8</warmupTime>
-                <range>80</range>
+                <range>45</range>
                 <soundCast>PBP</soundCast>
                 <soundCastTail>GunTail_Heavy</soundCastTail>
                 <muzzleFlashScale>9</muzzleFlashScale>
@@ -217,9 +214,7 @@
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_APB-1Rifle</defName>
         <label>APB-1 Rifle</label>
-        <description>Anion Particle Beam Rifle mark 1. The forefront of anti-personnel weaponry, this rifle projects
-            anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on
-            the atomic level. Accurate and powerful, this weapon will ignite most targets.</description>
+        <description>Anion Particle Beam Rifle mark 1. The forefront of anti-personnel weaponry, this rifle projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will ignite most targets.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/APB-1Rifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -255,6 +250,7 @@
         </costList>
         <weaponTags>
             <li>GlitterTech</li>
+            <li>SpacerGun</li>
         </weaponTags>
         <tradeTags>
             <li>WeaponRanged</li>
@@ -268,7 +264,7 @@
                 <hasStandardCommand>true</hasStandardCommand>
                 <defaultProjectile>Bullet_APBRifle</defaultProjectile>
                 <warmupTime>0.4</warmupTime>
-                <range>35</range>
+                <range>30</range>
                 <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
                 <burstShotCount>4</burstShotCount>
                 <soundCast>PB</soundCast>

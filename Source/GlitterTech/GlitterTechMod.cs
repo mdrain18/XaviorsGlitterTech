@@ -24,7 +24,18 @@ namespace GlitterTech
             Listing_Standard ls = new Listing_Standard();
             ls.Begin(inRect);
 
-            // Creating a slider in the settings window
+            // Checkbox for enabling/disabling the incident
+            ls.CheckboxLabeled("Enable Three-Way Battle Incident", ref settings.enableThreeWayBattle, "Toggle the three-way battle incident on or off.");
+
+            // Slider for the wealth threshold
+            ls.Label($"Wealth Threshold: {settings.wealthThreshold:0} (default is 50000)");
+            settings.wealthThreshold = ls.Slider(settings.wealthThreshold, 5000f, 100000f);
+
+            // Slider for the points multiplier
+            ls.Label($"Points Multiplier: {settings.pointsMultiplier:0.00} (default is 0.75)");
+            settings.pointsMultiplier = ls.Slider(settings.pointsMultiplier, 0.1f, 3.0f);
+
+            // Slider for the resource stat multiplier
             ls.Label($"Resource Stat Multiplier: {settings.statMultiplier:P0} (default is 100%)");
             settings.statMultiplier = ls.Slider(settings.statMultiplier, 0.01f, 2.00f);
 

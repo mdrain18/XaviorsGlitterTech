@@ -4,47 +4,91 @@
     <PawnKindDef Name="OCBase" Abstract="True">
         <race>Human</race>
         <defaultFactionType>OrionCo</defaultFactionType>
+        <maxGenerationAge>48</maxGenerationAge>
         <backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
-        <maxGenerationAge>50</maxGenerationAge>
-        <invNutrition>0</invNutrition>
         <itemQuality>Superior</itemQuality>
-        <gearHealthRange>
-            <min>0.4</min>
-            <max>1.5</max>
-        </gearHealthRange>
+        <factionLeader>true</factionLeader>
+        <styleItemTags>
+          <li>
+            <tag>Soldier</tag>
+            <baseWeight>1</baseWeight>
+            <weightFactor>1</weightFactor>
+          </li>
+        </styleItemTags>
+        <chemicalAddictionChance>0.1</chemicalAddictionChance>
+        <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+        <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+        <invNutrition>2.55</invNutrition>
+        <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+        <apparelMoney>1250~2500</apparelMoney>
         <apparelTags>
-            <li>OCFatigues</li>
-            <li>OCArmor</li>
+          <li>IndustrialBasic</li>
+          <li>IndustrialAdvanced</li>
+          <li>IndustrialMilitaryBasic</li>
+          <li>IndustrialMilitaryAdvanced</li>
+          <li>GlitterArmor</li>
+          <li>GlitterHelmet</li>
         </apparelTags>
-        <apparelMoney>
-            <min>4000</min>
-            <max>4000</max>
-        </apparelMoney>
-        <apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
-        <techHediffsMoney>
-            <min>4500</min>
-            <max>4500</max>
-        </techHediffsMoney>
+        <apparelDisallowTags>
+          <li>Western</li>
+        </apparelDisallowTags>
+        <specificApparelRequirements>
+          <li>
+            <bodyPartGroup>Torso</bodyPartGroup>
+            <apparelLayer>OnSkin</apparelLayer>
+            <stuff>Cloth</stuff>
+          </li>
+          <li>
+            <bodyPartGroup>Legs</bodyPartGroup>
+            <apparelLayer>OnSkin</apparelLayer>
+            <stuff>Cloth</stuff>
+          </li>
+        </specificApparelRequirements>
         <techHediffsTags>
+            <li>AdvancedGTLimb</li>
+            <li>AdvancedWeapon</li>
             <li>OCBodyParts</li>
         </techHediffsTags>
-        <techHediffsChance>0.9</techHediffsChance>
-        <combatEnhancingDrugsCount>
-            <min>0</min>
-            <max>2</max>
-        </combatEnhancingDrugsCount>
-        <initialWillRange>
-            3~4
-        </initialWillRange>
-        <initialResistanceRange>
-            12~17
-        </initialResistanceRange>
+        <techHediffsChance>0.3</techHediffsChance>
+        <techHediffsMoney>1000~1500</techHediffsMoney>
+        <biocodeWeaponChance>0.5</biocodeWeaponChance>
+        <inventoryOptions>
+            <skipChance>0.4</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>Silver</thingDef>
+                    <countRange>
+                        <min>250</min>
+                        <max>500</max>
+                    </countRange>
+                </li>
+                <li>
+                    <thingDef>MedicineUltratech</thingDef>
+                    <countRange>
+                        <min>1</min>
+                        <max>4</max>
+                    </countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+        <initialWillRange>2~4</initialWillRange>
+        <initialResistanceRange>15~24</initialResistanceRange>
+        <useFactionXenotypes>false</useFactionXenotypes>
+        <xenotypeSet>
+          <xenotypeChances>
+            <Neanderthal MayRequire="Ludeon.RimWorld.Biotech">0.03</Neanderthal>
+            <Hussar MayRequire="Ludeon.RimWorld.Biotech">0.25</Hussar>
+            <Genie MayRequire="Ludeon.RimWorld.Biotech">0.03</Genie>
+          </xenotypeChances>
+        </xenotypeSet>
     </PawnKindDef>
 
     <PawnKindDef ParentName="OCBase">
         <defName>OCSoldier</defName>
         <label>Orion Corp Soldier</label>
-        <combatPower>150</combatPower>
+        <combatPower>65</combatPower>
+        <apparelMoney>5000~8000</apparelMoney>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
         <weaponMoney>
             <min>800</min>
             <max>1200</max>
@@ -52,58 +96,51 @@
         <weaponTags>
             <li>OCDefense</li>
         </weaponTags>
-        <inventoryOptions>
-            <skipChance>0.4</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>MedicineIndustrial</thingDef>
-                    <countRange>
-                        <min>1</min>
-                        <max>4</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
+        <skills>
+          <li>
+            <skill>Shooting</skill>
+            <range>4~10</range>
+          </li>
+        </skills>
+        <disallowedTraits>
+          <li>Brawler</li>
+        </disallowedTraits>
     </PawnKindDef>
 
     <PawnKindDef ParentName="OCBase">
         <defName>OCHeavy</defName>
         <label>Orion Corp Demolitionist</label>
-        <combatPower>170</combatPower>
+        <combatPower>105</combatPower>
+        <apparelMoney>5000~8000</apparelMoney>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
         <weaponMoney>
-            <min>900</min>
-            <max>900</max>
+            <min>800</min>
+            <max>1200</max>
         </weaponMoney>
         <weaponTags>
             <li>OCHeavy</li>
         </weaponTags>
-        <inventoryOptions>
-            <skipChance>0.4</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>MedicineIndustrial</thingDef>
-                    <countRange>
-                        <min>1</min>
-                        <max>4</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
+        <skills>
+          <li>
+            <skill>Shooting</skill>
+            <range>8~13</range>
+          </li>
+        </skills>
+        <disallowedTraits>
+          <li>Brawler</li>
+        </disallowedTraits>
     </PawnKindDef>
 
     <PawnKindDef ParentName="OCBase">
         <defName>OCPeaceKeeper</defName>
         <label>Orion Corp Peace Keeper</label>
-        <combatPower>150</combatPower>
+        <combatPower>70</combatPower>
         <apparelTags>
             <li>OCShield</li>
             <li>OCFatigues</li>
             <li>OCArmor</li>
         </apparelTags>
-        <apparelMoney>
-            <min>6100</min>
-            <max>6100</max>
-        </apparelMoney>
+        <apparelMoney>5000~8000</apparelMoney>
         <weaponMoney>
             <min>4000</min>
             <max>4000</max>
@@ -111,18 +148,12 @@
         <weaponTags>
             <li>OCMelee</li>
         </weaponTags>
-        <inventoryOptions>
-            <skipChance>0.4</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>MedicineIndustrial</thingDef>
-                    <countRange>
-                        <min>1</min>
-                        <max>4</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
+        <skills>
+          <li>
+            <skill>Melee</skill>
+            <range>8~13</range>
+          </li>
+        </skills>
     </PawnKindDef>
 
     <PawnKindDef ParentName="OCBase">
@@ -132,10 +163,7 @@
         <apparelTags>
             <li>OCFatigues</li>
         </apparelTags>
-        <apparelMoney>
-            <min>1600</min>
-            <max>1600</max>
-        </apparelMoney>
+        <apparelMoney>5000~8000</apparelMoney>
         <weaponMoney>
             <min>2300</min>
             <max>2300</max>
@@ -144,18 +172,6 @@
         <weaponTags>
             <li>GlitterTechEM</li>
         </weaponTags>
-        <inventoryOptions>
-            <skipChance>0.4</skipChance>
-            <subOptionsChooseOne>
-                <li>
-                    <thingDef>MedicineIndustrial</thingDef>
-                    <countRange>
-                        <min>1</min>
-                        <max>4</max>
-                    </countRange>
-                </li>
-            </subOptionsChooseOne>
-        </inventoryOptions>
     </PawnKindDef>
 
 </Defs>

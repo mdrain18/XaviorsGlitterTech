@@ -2,7 +2,7 @@
 <Defs>
 	<!-- Added body parts -->
 	<!-- Orion Corp Exoskeleton -->
-	<HediffDef ParentName="AddedBodyPartBase">
+	<HediffDef ParentName="ArtificialPart_GT">
 		<defName>OCExo</defName>
 		<label>Orion Exoskeleton</label>
 		<labelNoun>an Orion Exoskeleton</labelNoun>

@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IncidentWorker_ThreeWayBattle.cs" />
     <Compile Include="GlitterTechSettings.cs" />
     <Compile Include="GlitterTechMod.cs" />
     <Compile Include="Patches\GT_ResourceStatAdjustmentsPatch.cs" />

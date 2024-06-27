@@ -184,7 +184,7 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <defaultProjectile>Bullet_EMRGTurret</defaultProjectile>
                 <warmupTime>0</warmupTime>
-                <range>60</range>
+                <range>45</range>
                 <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
                 <burstShotCount>2</burstShotCount>
                 <soundCast>EM</soundCast>
@@ -268,7 +268,7 @@
                 <verbClass>Verb_Shoot</verbClass>
                 <defaultProjectile>Bullet_CanisterTurret</defaultProjectile>
                 <warmupTime>0.15</warmupTime>
-                <range>20</range>
+                <range>30</range>
                 <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
                 <burstShotCount>15</burstShotCount>
                 <soundCast>Shot_IncendiaryLauncher</soundCast>

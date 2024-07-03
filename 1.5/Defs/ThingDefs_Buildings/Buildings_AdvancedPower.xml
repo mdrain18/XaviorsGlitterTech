@@ -75,9 +75,7 @@
         <defName>PlasmaReactor</defName>
         <label>Plasma Fusion Reactor</label>
         <thingClass>Building</thingClass>
-        <description>Produces electricity by maintaining an electromagnetic funnel of super heated plasma. Similar to
-            the process within a star, except smaller, hotter and more efficient. The heat reached is so intense it
-            requires lining by near indestructible materials.</description>
+        <description>Produces electricity by maintaining an electromagnetic funnel of super heated plasma. Similar to the process within a star, except smaller, hotter and more efficient. The heat reached is so intense it requires lining by near indestructible materials.</description>
         <graphicData>
             <texPath>Things/Building/Power/PlasmaReactor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -145,8 +143,7 @@
         <defName>FissionBattery</defName>
         <label>Battery</label>
         <thingClass>Building_Battery</thingClass>
-        <description>Stores electricity and recycles charge using fission processes. Slightly more efficient and stores
-            four times as much. Warning - charged batteries tend to explode when heated or wet.</description>
+        <description>Stores electricity and recycles charge using fission processes. Slightly more efficient and stores four times as much. Warning - charged batteries tend to explode when heated or wet.</description>
         <graphicData>
             <texPath>Things/Building/Power/FissionBattery</texPath>
             <graphicClass>Graphic_Single</graphicClass>

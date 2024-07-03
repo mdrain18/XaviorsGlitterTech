@@ -56,7 +56,8 @@
     <Compile Include="IncidentWorker_ThreeWayBattle.cs" />
     <Compile Include="GlitterTechSettings.cs" />
     <Compile Include="GlitterTechMod.cs" />
-    <Compile Include="Patches\GT_ResourceStatAdjustmentsPatch.cs" />
+    <Compile Include="Patches\ResourceYieldPatch.cs" />
+    <Compile Include="Patches\StatBasesPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

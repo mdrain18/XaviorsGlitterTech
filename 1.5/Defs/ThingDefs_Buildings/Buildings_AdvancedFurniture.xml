@@ -6,9 +6,7 @@
     <ThingDef ParentName="FurnitureBase">
         <defName>ambTable</defName>
         <label>Re-Ambulation Pod</label>
-        <description>Warning this med-pod is calibrated for male patients only. This pod is designed for severely
-            injured patents. By injecting bio-discardable re-constructive nano machines into the blood stream this table
-            will fix most wounds over time, but some wounds will still require a doctor.</description>
+        <description>Warning this med-pod is calibrated for male patients only. This pod is designed for severely injured patents. By injecting bio-discardable re-constructive nano machines into the blood stream this table will fix most wounds over time, but some wounds will still require a doctor.</description>
         <thingClass>Building_Bed</thingClass>
         <graphicData>
             <texPath>Things/Building/Furniture/Bed/HospitalBed</texPath>
@@ -88,8 +86,7 @@
     <ThingDef ParentName="FurnitureBase">
         <defName>DynChair</defName>
         <label>Dynamic Relaxation Chair</label>
-        <description>A large, chair that dynamically reforms to not only comfort each person, but sense areas of
-            specific discomfort and provide mild or intensive massaging. All it needs is a bar fridge...</description>
+        <description>A large, chair that dynamically reforms to not only comfort each person, but sense areas of specific discomfort and provide mild or intensive massaging. All it needs is a bar fridge...</description>
         <graphicData>
             <texPath>Things/Building/Furniture/Armchair</texPath>
             <graphicClass>Graphic_Multi</graphicClass>
@@ -132,66 +129,5 @@
             <isSittable>true</isSittable>
         </building>
     </ThingDef>
-
-    <!-- ======================== Lighting ======================= -->
-
-    <!-- Duplicate Error
-
-    <ThingDef ParentName="LampBase">
-        <defName>FloodLight</defName>
-        <label>Flood light</label>
-        <thingClass>Building</thingClass>
-        <category>Building</category>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <thingCategories>
-            <li>BuildingsFurniture</li>
-        </thingCategories>
-        <graphicData>
-            <texPath>Things/Building/Furniture/LampStanding</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shadowData>
-                <volume>(0.3, 0.6, 0.3)</volume>
-                <offset>(0,0,-0.1)</offset>
-            </shadowData>
-            <damageData>
-                <rect>(0.2,0.2,0.6,0.6)</rect>
-            </damageData>
-        </graphicData>
-        <altitudeLayer>Building</altitudeLayer>
-        <passability>PassThroughOnly</passability>
-        <statBases>
-            <MaxHitPoints>50</MaxHitPoints>
-            <WorkToBuild>115</WorkToBuild>
-            <Mass>50</Mass>
-            <Flammability>1.0</Flammability>
-        </statBases>
-        <selectable>true</selectable>
-        <fillPercent>0.20</fillPercent>
-        <description>Flood light illuminates a large area, but costs a bit more.</description>
-        <costList>
-            <Titanium_GT>15</Titanium_GT>
-            <Uranium>1</Uranium>
-        </costList>
-        <building>
-            <ai_chillDestination>false</ai_chillDestination>
-        </building>
-        <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-        <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-        <comps>
-            <li Class="CompProperties_Power">
-                <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>650</basePowerConsumption>
-                <shortCircuitInRain>false</shortCircuitInRain>
-            </li>
-            <li Class="CompProperties_Flickable"/>
-            <li Class="CompProperties_Glower">
-                <glowRadius>24</glowRadius>
-                <glowColor>(208,217,217,0)</glowColor>
-            </li>
-        </comps>
-        <designationCategory>Furniture</designationCategory>
-        <rotatable>false</rotatable>
-    </ThingDef>
-    -->
 
 </Defs>

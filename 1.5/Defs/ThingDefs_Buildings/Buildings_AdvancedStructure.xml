@@ -6,8 +6,7 @@
     <ThingDef ParentName="DoorBase">
         <defName>BlastDoor</defName>
         <label>Blast Door</label>
-        <description>Divides rooms. Powered operation and incredibly strong. Designed to withstand Orbital Kinetic
-            Bombardment...</description>
+        <description>Divides rooms. Powered operation and incredibly strong. Designed to withstand Orbital Kinetic Bombardment...</description>
         <statBases>
             <MaxHitPoints>1500</MaxHitPoints>
             <WorkToBuild>2200</WorkToBuild>
@@ -16,8 +15,6 @@
             <texPath>Things/Building/Door/Autodoor_Mover</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <damageData>
-                <!--  no damage marks because they don't move with the door
-                <rect>(0,0.1,1,0.8)</rect>-->
                 <enabled>false</enabled>
             </damageData>
         </graphicData>

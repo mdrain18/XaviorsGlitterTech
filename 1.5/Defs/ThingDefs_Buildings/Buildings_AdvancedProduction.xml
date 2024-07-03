@@ -91,8 +91,7 @@
     <ThingDef ParentName="BenchBase">
         <defName>Matterfab</defName>
         <label>Matter fabricator</label>
-        <description>The forefront of quantum thermodynamics and plasma spectrometry, this machine disassembles elements
-            into base subatomic particles and re-assembles them into powerful artificial elements.</description>
+        <description>The forefront of quantum thermodynamics and plasma spectrometry, this machine disassembles elements into base subatomic particles and re-assembles them into powerful artificial elements.</description>
         <thingClass>Building_WorkTable</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -179,8 +178,7 @@
     <ThingDef ParentName="BenchBase">
         <defName>Electrolyzer</defName>
         <label>Electrolyzer</label>
-        <description>A machine that induces electrolysis, separating elements by applying a direct electric current and
-            driving non-spontaneous chemical reactions. Produces manufactored materials.</description>
+        <description>A machine that induces electrolysis, separating elements by applying a direct electric current and driving non-spontaneous chemical reactions. Produces manufactored materials.</description>
         <thingClass>Building_WorkTable</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -265,8 +263,7 @@
     <ThingDef ParentName="BenchBase">
         <defName>RobAssem</defName>
         <label>Robotic Assembler</label>
-        <description>A machine that applies state of the art robotics, not jerry rigged with scrap metal, to construct
-            machine Component too intricate for simple human hands.</description>
+        <description>A machine that applies state of the art robotics, not jerry rigged with scrap metal, to construct machine Component too intricate for simple human hands.</description>
         <thingClass>Building_WorkTable</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -278,7 +275,7 @@
         </statBases>
         <minifiedDef />
         <thingCategories Inherit="false" />
-        <size>(3,2)</size>
+        <size>(5,2)</size>
         <costList>
             <Steel>480</Steel>
             <Titanium_GT>120</Titanium_GT>

@@ -4,18 +4,14 @@ using Verse;
 
 namespace GlitterTech
 {
-    // Main class for the GlitterTech mod
-    class GlitterTechMod : Mod
+    public class GlitterTechMod : Mod
     {
         public static GlitterTechSettings settings;
 
         public GlitterTechMod(ModContentPack content) : base(content)
         {
-            // Initializing Harmony with a unique ID
-            var harmony = new Harmony("com.xavior.glittertech");
-            harmony.PatchAll(System.Reflection.Assembly.GetExecutingAssembly());
-
-            // Load settings
+            var harmony = new Harmony("rimworld.xavior.glittertech");
+            harmony.PatchAll();
             settings = GetSettings<GlitterTechSettings>();
         }
 
@@ -24,20 +20,34 @@ namespace GlitterTech
             Listing_Standard ls = new Listing_Standard();
             ls.Begin(inRect);
 
-            // Checkbox for enabling/disabling the incident
-            ls.CheckboxLabeled("Enable Three-Way Battle Incident", ref settings.enableThreeWayBattle, "Toggle the three-way battle incident on or off.");
+            // Incident settings
+            ls.Label("Incident Settings");
+            ls.GapLine();
 
-            // Slider for the wealth threshold
+            ls.CheckboxLabeled("Enable Three-Way Battle Incident", ref settings.enableThreeWayBattle, "Toggle the three-way battle incident on or off.");
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Enable or disable the three-way battle incident.");
+
             ls.Label($"Wealth Threshold: {settings.wealthThreshold:0} (default is 50000)");
             settings.wealthThreshold = ls.Slider(settings.wealthThreshold, 5000f, 100000f);
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Set the wealth threshold required to trigger the incident.");
 
-            // Slider for the points multiplier
             ls.Label($"Points Multiplier: {settings.pointsMultiplier:0.00} (default is 0.75)");
             settings.pointsMultiplier = ls.Slider(settings.pointsMultiplier, 0.1f, 3.0f);
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the points used to generate raid groups in the incident. Higher = more pawns");
 
-            // Slider for the resource stat multiplier
-            ls.Label($"Resource Stat Multiplier: {settings.statMultiplier:P0} (default is 100%)");
+            ls.Gap(24f); // Add some gap between the sections
+
+            // Resource settings
+            ls.Label("Resource Settings");
+            ls.GapLine();
+
+            ls.Label($"Resource Yield Multiplier: {settings.resourceMultiplier:0.00} (default is 1.00)");
+            settings.resourceMultiplier = ls.Slider(settings.resourceMultiplier, 0.01f, 2.00f);
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the yield of titanium when mined.");
+
+            ls.Label($"Stat Multiplier: {settings.statMultiplier:0.00} (default is 1.00)");
             settings.statMultiplier = ls.Slider(settings.statMultiplier, 0.01f, 2.00f);
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the stat bases of all Titanium, Alpha Poly, and Beta Poly.");
 
             ls.End();
             base.DoSettingsWindowContents(inRect);

@@ -5,9 +5,7 @@
         <defName>EMPCharge</defName>
         <label>EMPD-1 charge</label>
         <thingClass>Building_BlastingCharge</thingClass>
-        <description>EMP Defense charge that detonates on command. Creates a powerful blast of electromagnetic energy,
-            which blankets a large radius. Used for defense against robotic threats, and sometimes makes humans run in
-            terror.</description>
+        <description>EMP Defense charge that detonates on command. Creates a powerful blast of electromagnetic energy, which blankets a large radius. Used for defense against robotic threats, and sometimes makes humans run in terror.</description>
         <graphicData>
             <texPath>Things/Building/Terraforming/ImpactionCharge</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -108,9 +106,7 @@
     <ThingDef ParentName="BuildingBase">
         <defName>FissionBomb</defName>
         <label>EMPD-1 charge</label>
-        <description>EMP Defense charge that detonates on command. Creates a powerful blast of electromagnetic energy,
-            which blankets a large radius. Used for defense against robotic threats, and sometimes makes humans run in
-            terror.</description>
+        <description>EMP Defense charge that detonates on command. Creates a powerful blast of electromagnetic energy, which blankets a large radius. Used for defense against robotic threats, and sometimes makes humans run in terror.</description>
         <thingClass>Building_BlastingCharge</thingClass>
         <graphicData>
             <texPath>Things/Building/Terraforming/ImpactionCharge</texPath>

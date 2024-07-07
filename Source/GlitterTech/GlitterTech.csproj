@@ -56,6 +56,7 @@
     <Compile Include="IncidentWorker_ThreeWayBattle.cs" />
     <Compile Include="GlitterTechSettings.cs" />
     <Compile Include="GlitterTechMod.cs" />
+    <Compile Include="Patches\GlitterTechPatcher.cs" />
     <Compile Include="Patches\ResourceYieldPatch.cs" />
     <Compile Include="Patches\StatBasesPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

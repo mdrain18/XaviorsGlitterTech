@@ -10,9 +10,8 @@ namespace GlitterTech
 
         public GlitterTechMod(ModContentPack content) : base(content)
         {
-            var harmony = new Harmony("rimworld.xavior.glittertech");
-            harmony.PatchAll();
             settings = GetSettings<GlitterTechSettings>();
+            ApplyPatches();
         }
 
         public override void DoSettingsWindowContents(Rect inRect)
@@ -33,7 +32,7 @@ namespace GlitterTech
 
             ls.Label($"Points Multiplier: {settings.pointsMultiplier:0.00} (default is 0.75)");
             settings.pointsMultiplier = ls.Slider(settings.pointsMultiplier, 0.1f, 3.0f);
-            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the points used to generate raid groups in the incident. Higher = more pawns");
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the points used to generate raid groups in the incident.");
 
             ls.Gap(24f); // Add some gap between the sections
 
@@ -45,12 +44,38 @@ namespace GlitterTech
             settings.resourceMultiplier = ls.Slider(settings.resourceMultiplier, 0.01f, 2.00f);
             TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the yield of titanium when mined.");
 
+            // Stat bases settings
+            ls.Label("Stat Bases Settings");
+            ls.GapLine();
+
             ls.Label($"Stat Multiplier: {settings.statMultiplier:0.00} (default is 1.00)");
             settings.statMultiplier = ls.Slider(settings.statMultiplier, 0.01f, 2.00f);
-            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the stat bases of all Titanium, Alpha Poly, and Beta Poly.");
+            TooltipHandler.TipRegion(ls.GetRect(24f), "Multiplier for the stat bases of titanium, alpha poly, and beta poly.");
+
+            if (ls.ButtonText("Apply Changes"))
+            {
+                ApplyPatches();
+            }
 
             ls.End();
             base.DoSettingsWindowContents(inRect);
+        }
+
+        private static void ApplyPatches()
+        {
+            foreach (ThingDef def in DefDatabase<ThingDef>.AllDefsListForReading)
+            {
+                if (def.defName == "Titanium_GT" || def.defName == "AlphaPoly" || def.defName == "BetaPoly")
+                {
+                    StatBasesPatch.ModifySpecificStats(def, settings.statMultiplier);
+                }
+
+                if (def.defName == "MineableTitanium")
+                {
+                    ResourceYieldPatch.SaveOriginalValues(def);
+                    ResourceYieldPatch.ModifyYield(def.building, settings.resourceMultiplier);
+                }
+            }
         }
 
         public override string SettingsCategory()

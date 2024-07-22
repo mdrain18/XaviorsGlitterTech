@@ -48,6 +48,7 @@
             <li>BuildBandages</li>
             <li>BuildMedicine</li>
             <li>ProduceSerum</li>
+            <li>ProduceGlitterworldMedicine</li>
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/TablePharmaceutical</texPath>
@@ -133,6 +134,7 @@
         <recipes>
             <li>ProduceAPoly</li>
             <li>ProduceBPoly</li>
+            <li>ProduceTitanium</li>
             <li>ProducePlasteel</li>
         </recipes>
         <graphicData>
@@ -178,7 +180,7 @@
     <ThingDef ParentName="BenchBase">
         <defName>Electrolyzer</defName>
         <label>Electrolyzer</label>
-        <description>A machine that induces electrolysis, separating elements by applying a direct electric current and driving non-spontaneous chemical reactions. Produces manufactored materials.</description>
+        <description>A machine that induces electrolysis, separating elements by applying a direct electric current and driving non-spontaneous chemical reactions. Produces manufactured materials.</description>
         <thingClass>Building_WorkTable</thingClass>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
@@ -218,7 +220,7 @@
         <recipes>
             <li>ProduceSilicon</li>
             <li>ProduceEthanol</li>
-            <li>ProduceTitanium</li>
+            <li>ProduceHyperweave</li>
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/Electrolyzer</texPath>
@@ -303,7 +305,6 @@
         <recipes>
             <li>BuildComputerComp</li>
             <li>BuildMagneticCoil</li>
-            <li>BuildGlitterworldMedicine</li>
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/RobAssem</texPath>

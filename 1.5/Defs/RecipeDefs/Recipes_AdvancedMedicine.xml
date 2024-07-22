@@ -80,7 +80,7 @@
     </RecipeDef>
 
     <RecipeDef>
-        <defName>BuildGlitterworldMedicine</defName>
+        <defName>ProduceGlitterworldMedicine</defName>
         <label>Produce glitterworld Medicine</label>
         <description>Produce glitterworld Medicine</description>
         <jobString>Producing glitterworld Medicine</jobString>
@@ -116,14 +116,6 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>Bandage</li>
-                    </thingDefs>
-                </filter>
-                <count>5</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
                         <li>Serum</li>
                     </thingDefs>
                 </filter>
@@ -138,7 +130,6 @@
                 <li>MedicineIndustrial</li>
                 <li>MedicineHerbal</li>
                 <li>Ethanol</li>
-                <li>Bandage</li>
                 <li>Serum</li>
             </thingDefs>
         </fixedIngredientFilter>

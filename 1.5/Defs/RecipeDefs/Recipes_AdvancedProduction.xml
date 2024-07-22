@@ -39,8 +39,7 @@
     <RecipeDef>
         <defName>ProduceAPoly</defName>
         <label>artificially assemble Alpha Poly</label>
-        <description>Use heat and strong electromagnets to assemble artifical elements from Titanium and
-            Uranium</description>
+        <description>Use heat and strong electromagnets to assemble artificial elements from Titanium and Uranium</description>
         <jobString>Fabricating Alpha Poly from Titanium.</jobString>
         <workAmount>6500</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -79,8 +78,7 @@
     <RecipeDef>
         <defName>ProduceBPoly</defName>
         <label>artificially assemble Beta Poly</label>
-        <description>Use heat and strong electromagnets to assemble artifical elements from Alpha Poly, Uranium and
-            Silicon</description>
+        <description>Use heat and strong electromagnets to assemble artificial elements from Alpha Poly, Uranium and Silicon</description>
         <jobString>Fabricating Beta Poly.</jobString>
         <workAmount>12000</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -164,6 +162,45 @@
         <workSkill>Crafting</workSkill>
     </RecipeDef>
 
+    <RecipeDef>
+        <defName>ProduceHyperweave</defName>
+        <label>Produce Hyperweave</label>
+        <description>Produce Hyperweave from AlphaPoly and Devilstrand.</description>
+        <jobString>Producing Hyperweave</jobString>
+        <workAmount>5000</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AlphaPoly</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>DevilstrandCloth</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <Hyperweave>10</Hyperweave>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>AlphaPoly</li>
+                <li>DevilstrandCloth</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
     <!-- ========================= Electrolyzer ==========================-->
     <RecipeDef>
         <defName>ProduceSilicon</defName>
@@ -229,7 +266,7 @@
     <RecipeDef>
         <defName>ProduceEthanol</defName>
         <label>produce Ethanol from Berries</label>
-        <description>produce Ethanol from Berries</description>
+        <description>Produce Ethanol from Berries</description>
         <jobString>Producing Ethanol from Berries</jobString>
         <workAmount>800</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
@@ -259,7 +296,7 @@
     <RecipeDef>
         <defName>ProduceSerum</defName>
         <label>fabricate Serum</label>
-        <description>fabricate Serum</description>
+        <description>Fabricate Serum</description>
         <jobString>fabricating Serum</jobString>
         <workAmount>2000</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>

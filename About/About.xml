@@ -31,18 +31,15 @@
 
         Updating Mod:
         
-        It can be said this mod is OP. I think it should be, however, in the spirit of being able to play how you want
-        to I am adding a few changes to this mod.
+        It can be said this mod is OP. I think it should be, however, in the spirit of being able to play how you want to I am adding a few changes to this mod.
 
-        1) Updating to 1.5 (in progress)
-        - Starts without any errors
-        - I'm still testing (let me know if there are problems)
-        2) Completed resources
-        3) Individual sliders: this will target specific items, like beta or alpha poly and allow you to configure
-        the individual stats of each item (not sure if I actually want to do this...)
-        4) Craft Glitter Tech: there is a mod for this already but I wanted to add the ability to this mod with the
-        ability to turn it on or off. This will be different and require special items only
-        found through questing. Similar to relics...
+        Currently: Working on getting this CE compatible but I need help with testing to see what needs to be patched
+        1) Add some Anomaly specific items... ideas are welcome :)
+        2) Glitter tech incidents and quests
+            - Archotech quest: three abandon glitter tech outposts which have consoles that need to be decrypted. Each gives you 1/3 of the location, collect all three and you will get the location of the archotech factory, which is hidden deep into a side of a mountain. Once there, there will be several boxes with archotech prosthetics, psylinks (if you have the DLC), Archite capsules (if you have the DLC),  
+        3) Glitter Tech Weapons and Armor Expanded
+        4) Craft Glitter Tech Weapons and Armor Expanded:
+            - I'm thinking of adding special items which can only be found via quests
         5) More..... STUFF! Starting with Glitter swords and Glitter psycasts... I think. Not sure if I will ever get
         here but I'm being optimistic
 
@@ -53,6 +50,10 @@
         Release Notes: 1.5.40602
         - Updated to work with release
         - Added Resource Slider - this will change the stat values of the three resources of this mod based on what the slider is set to
+        - Added Titanium yield setting slider
+        - Added three army incident where Commandos and OC's fight the Empire!
+            (includes settings for changing various parts of the incident)
+
         
         Release Notes: 1.4.04
         - Titanium is now Titanium_GT which should fix problems with other metal mods that have titanium in them

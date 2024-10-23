@@ -58,6 +58,22 @@
         <descriptionHyperlinks>
             <RecipeDef>InstallOCExo</RecipeDef>
         </descriptionHyperlinks>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
         <costList>
             <Plasteel>50</Plasteel>
             <AlphaPoly>10</AlphaPoly>

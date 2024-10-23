@@ -28,7 +28,7 @@
 		<thingCategories>
 			<li>ResourcesRaw</li>
 		</thingCategories>
-		<deepCommonality>.5</deepCommonality>
+		<deepCommonality>.1</deepCommonality>
 		<deepCountPerPortion>10</deepCountPerPortion>
 		<deepLumpSizeRange>4~14</deepLumpSizeRange>
 		<burnableByRecipe>false</burnableByRecipe>
@@ -93,7 +93,7 @@
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
-        <deepCommonality>.05</deepCommonality>
+        <deepCommonality>.01</deepCommonality>
         <deepCountPerPortion>10</deepCountPerPortion>
         <deepLumpSizeRange>2~10</deepLumpSizeRange>
         <burnableByRecipe>false</burnableByRecipe>
@@ -155,7 +155,7 @@
         <thingCategories>
             <li>ResourcesRaw</li>
         </thingCategories>
-        <deepCommonality>.01</deepCommonality>
+        <deepCommonality>.001</deepCommonality>
         <deepCountPerPortion>10</deepCountPerPortion>
         <deepLumpSizeRange>2~10</deepLumpSizeRange>
         <burnableByRecipe>false</burnableByRecipe>

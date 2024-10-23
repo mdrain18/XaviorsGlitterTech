@@ -24,12 +24,7 @@
         </equippedStatOffsets>
         <thingCategories>
             <li>Apparel</li>
-        </thingCategories>
-        <costList>
-            <Steel>10</Steel>
-            <Plasteel>20</Plasteel>
-            <Titanium_GT>5</Titanium_GT>
-        </costList>
+        </thingCategories>        
         <generateCommonality>1</generateCommonality>
         <apparel>
             <bodyPartGroups>
@@ -43,6 +38,11 @@
                 <li>OCArmor</li>
             </tags>
         </apparel>
+        <costList>
+            <Steel>10</Steel>
+            <Plasteel>20</Plasteel>
+            <Titanium_GT>5</Titanium_GT>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>

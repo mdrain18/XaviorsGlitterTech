@@ -18,8 +18,7 @@
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_OCPDPistol</defName>
         <label>OC Defense Pistol</label>
-        <description>Orion Corps line of personal defense weapons. This pistol is light weight and perfect for personal
-            defense in hostile environments.</description>
+        <description>Orion Corps line of personal defense weapons. This pistol is light weight and perfect for personal defense in hostile environments.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/OrionCorp/OCDPistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -42,7 +41,7 @@
                 <Crafting>15</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>
@@ -114,8 +113,7 @@
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_OCPDRifle</defName>
         <label>OC Defense Rifle</label>
-        <description>Orion Corps line of personal defense weapons. This Rifle is light weight and perfect for personal
-            defense in hostile environments.</description>
+        <description>Orion Corps line of personal defense weapons. This Rifle is light weight and perfect for personal defense in hostile environments.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/OrionCorp/OCDRifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -138,7 +136,7 @@
                 <Crafting>18</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>
@@ -196,8 +194,7 @@
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_OCRocket</defName>
         <label>Orion rocket launcher</label>
-        <description>A standard issue Orion Corporation anti-tank weapon. Laser guide and much more accurate then
-            standard rocket launchers</description>
+        <description>A standard issue Orion Corporation anti-tank weapon. Laser guide and much more accurate then standard rocket launchers</description>
         <graphicData>
             <texPath>Things/Item/Equipment/WeaponRanged/RocketLauncher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -219,7 +216,7 @@
                 <Crafting>18</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>

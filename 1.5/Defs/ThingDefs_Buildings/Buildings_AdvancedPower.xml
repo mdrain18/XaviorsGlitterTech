@@ -46,12 +46,11 @@
             <li Class="CompProperties_Breakdownable"/>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(0,162,255,0)</glowColor>
+                <glowColor>(217,112,33,0)</glowColor>
             </li>
             <li Class="CompProperties_HeatPusher">
                 <compClass>CompHeatPusher</compClass>
-                <heatPerSecond>48</heatPerSecond>
-                <heatPushMaxTemperature>28</heatPushMaxTemperature>
+                <heatPerSecond>100</heatPerSecond>
             </li>
         </comps>
         <rotatable>false</rotatable>
@@ -114,12 +113,11 @@
             </li>
             <li Class="CompProperties_Glower">
                 <glowRadius>24</glowRadius>
-                <glowColor>(255,255,0,0)</glowColor>
+                <glowColor>(217,112,33,110)</glowColor>
             </li>
             <li Class="CompProperties_HeatPusher">
                 <compClass>CompHeatPusher</compClass>
-                <heatPerSecond>100</heatPerSecond>
-                <heatPushMaxTemperature>35</heatPushMaxTemperature>
+                <heatPerSecond>60</heatPerSecond>
             </li>
             <li Class="CompProperties_Breakdownable"/>
         </comps>
@@ -191,7 +189,7 @@
             </li>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(0,162,255,0)</glowColor>
+                <glowColor>(0,162,255,110)</glowColor>
             </li>
             <li Class="CompProperties_Breakdownable"/>
         </comps>

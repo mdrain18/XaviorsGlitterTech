@@ -149,6 +149,14 @@
                 </filter>
                 <count>2</count>
             </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
         </ingredients>
         <products>
             <Plasteel>40</Plasteel>
@@ -157,6 +165,7 @@
             <thingDefs>
                 <li>Silicon</li>
                 <li>Titanium_GT</li>
+                <li>Uranium</li>
             </thingDefs>
         </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>
@@ -222,13 +231,43 @@
             </li>
         </ingredients>
         <products>
-            <Silicon>3</Silicon>
+            <Silicon>6</Silicon>
         </products>
         <fixedIngredientFilter>
             <categories>
                 <li>StoneBlocks</li>
             </categories>
         </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceCondensedSteel</defName>
+        <label>produce plasteel from steel</label>
+        <description>Produce plasteel from steel</description>
+        <jobString>Producing plasteel from steel</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Steel</li>
+              </thingDefs>
+            </filter>
+            <count>30</count>
+          </li>
+        </ingredients>
+        <fixedIngredientFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Plasteel>6</Plasteel>
+        </products>
         <workSkill>Crafting</workSkill>
     </RecipeDef>
 
@@ -293,53 +332,6 @@
         <workSkill>Crafting</workSkill>
     </RecipeDef>
 
-    <RecipeDef>
-        <defName>ProduceSerum</defName>
-        <label>fabricate Serum</label>
-        <description>Fabricate Serum</description>
-        <jobString>fabricating Serum</jobString>
-        <workAmount>2000</workAmount>
-        <workSpeedStat>SmeltingSpeed</workSpeedStat>
-        <effectWorking>Smelt</effectWorking>
-        <soundWorking>Recipe_Smelt</soundWorking>
-        <ingredients>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Uranium</li>
-                    </thingDefs>
-                </filter>
-                <count>1</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Ethanol</li>
-                    </thingDefs>
-                </filter>
-                <count>10</count>
-            </li>
-            <li>
-                <filter>
-                    <thingDefs>
-                        <li>Silicon</li>
-                    </thingDefs>
-                </filter>
-                <count>5</count>
-            </li>
-        </ingredients>
-        <products>
-            <Serum>10</Serum>
-        </products>
-        <fixedIngredientFilter>
-            <thingDefs>
-                <li>Uranium</li>
-                <li>Ethanol</li>
-                <li>Silicon</li>
-            </thingDefs>
-        </fixedIngredientFilter>
-        <workSkill>Crafting</workSkill>
-    </RecipeDef>
 
     <!-- ========================= Robotic Assembler ==========================-->
     <RecipeDef>
@@ -409,7 +401,7 @@
             </li>
         </ingredients>
         <products>
-            <MagneticCoil>1</MagneticCoil>
+            <MagneticCoil>2</MagneticCoil>
         </products>
         <fixedIngredientFilter>
             <thingDefs>

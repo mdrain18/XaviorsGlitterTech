@@ -53,13 +53,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvancedDeepDrillComp.cs" />
     <Compile Include="IncidentWorker_ThreeWayBattle.cs" />
     <Compile Include="GlitterTechSettings.cs" />
     <Compile Include="GlitterTechMod.cs" />
+    <Compile Include="JobDefOf.cs" />
     <Compile Include="Patches\GlitterTechPatcher.cs" />
     <Compile Include="Patches\ResourceYieldPatch.cs" />
     <Compile Include="Patches\StatBasesPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkGiver_OperateAdvancedDeepDrill.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

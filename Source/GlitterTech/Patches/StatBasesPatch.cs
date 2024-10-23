@@ -28,7 +28,7 @@ namespace GlitterTech
                 foreach (var statBase in thingDef.statBases)
                 {
                     statBaseValues[statBase.stat] = statBase.value;
-                    Log.Message($"Saving original stat base value for {thingDef.defName} - {statBase.stat.defName}: {statBase.value}");
+                    //Log.Message($"Saving original stat base value for {thingDef.defName} - {statBase.stat.defName}: {statBase.value}");
                 }
                 originalStatBases[thingDef.defName] = statBaseValues;
             }
@@ -39,7 +39,7 @@ namespace GlitterTech
                 foreach (var statFactor in thingDef.stuffProps.statFactors)
                 {
                     statFactorValues[statFactor.stat] = statFactor.value;
-                    Log.Message($"Saving original stat factor value for {thingDef.defName} - {statFactor.stat.defName}: {statFactor.value}");
+                    //Log.Message($"Saving original stat factor value for {thingDef.defName} - {statFactor.stat.defName}: {statFactor.value}");
                 }
                 originalStatFactors[thingDef.defName] = statFactorValues;
             }
@@ -54,7 +54,7 @@ namespace GlitterTech
                     if (originalBaseValues.TryGetValue(statBase.stat, out var originalValue))
                     {
                         statBase.value = originalValue * multiplier;
-                        Log.Message($"Modifying stat base for {thingDef.defName} - {statBase.stat.defName}: original = {originalValue}, multiplier = {multiplier}, new = {statBase.value}");
+                        //Log.Message($"Modifying stat base for {thingDef.defName} - {statBase.stat.defName}: original = {originalValue}, multiplier = {multiplier}, new = {statBase.value}");
                     }
                 }
             }
@@ -70,7 +70,7 @@ namespace GlitterTech
                     if (originalFactorValues.TryGetValue(statFactor.stat, out var originalValue))
                     {
                         statFactor.value = originalValue * multiplier;
-                        Log.Message($"Modifying stat factor for {thingDef.defName} - {statFactor.stat.defName}: original = {originalValue}, multiplier = {multiplier}, new = {statFactor.value}");
+                        //Log.Message($"Modifying stat factor for {thingDef.defName} - {statFactor.stat.defName}: original = {originalValue}, multiplier = {multiplier}, new = {statFactor.value}");
                     }
                 }
             }

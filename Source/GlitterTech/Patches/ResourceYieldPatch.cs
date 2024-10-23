@@ -28,7 +28,7 @@ namespace GlitterTech
                 if (originalMineableYield.TryGetValue(buildingProps.mineableThing.defName, out var originalValue))
                 {
                     int newYield = (int)Math.Round(originalValue * multiplier, MidpointRounding.AwayFromZero);
-                    Log.Message($"Modifying yield for {buildingProps.mineableThing.defName}: original = {originalValue}, multiplier = {multiplier}, new = {newYield}");
+                    //Log.Message($"Modifying yield for {buildingProps.mineableThing.defName}: original = {originalValue}, multiplier = {multiplier}, new = {newYield}");
                     buildingProps.mineableYield = newYield;
                 }
                 else
@@ -44,7 +44,7 @@ namespace GlitterTech
             {
                 if (!originalMineableYield.ContainsKey(thingDef.building.mineableThing.defName))
                 {
-                    Log.Message($"Saving original mineable yield for: {thingDef.building.mineableThing.defName}, yield = {thingDef.building.mineableYield}");
+                    //Log.Message($"Saving original mineable yield for: {thingDef.building.mineableThing.defName}, yield = {thingDef.building.mineableYield}");
                     originalMineableYield[thingDef.building.mineableThing.defName] = thingDef.building.mineableYield;
                 }
             }

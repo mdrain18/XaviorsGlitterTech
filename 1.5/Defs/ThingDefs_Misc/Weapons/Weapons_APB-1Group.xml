@@ -43,7 +43,7 @@
                 <Crafting>15</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>
@@ -142,7 +142,7 @@
                 <Crafting>18</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>
@@ -237,7 +237,7 @@
                 <Crafting>17</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
             <displayPriority>200</displayPriority>
         </recipeMaker>

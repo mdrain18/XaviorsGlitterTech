@@ -221,6 +221,7 @@
             <li>ProduceSilicon</li>
             <li>ProduceEthanol</li>
             <li>ProduceHyperweave</li>
+            <li>ProduceCondensedSteel</li>    
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/Electrolyzer</texPath>

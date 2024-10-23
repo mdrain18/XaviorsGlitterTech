@@ -50,5 +50,22 @@
         <verb>produce</verb>
         <gerund>producing</gerund>
     </WorkGiverDef>
+    
+    <WorkGiverDef>
+        <defName>OperateAdvancedDeepDrill</defName>
+        <label>operate advanced deep drill</label>
+        <giverClass>GlitterTech.WorkGiver_OperateAdvancedDeepDrill</giverClass> 
+        <workType>Mining</workType>
+        <priorityInType>60</priorityInType>
+        <verb>operate</verb>
+        <gerund>operating</gerund>
+        <requiredCapacities>
+          <li>Manipulation</li>
+        </requiredCapacities>
+        <canBeDoneByMechs>false</canBeDoneByMechs>
+        <canBeDoneByMutants>false</canBeDoneByMutants>
+    </WorkGiverDef>
 
+
+    
 </Defs>

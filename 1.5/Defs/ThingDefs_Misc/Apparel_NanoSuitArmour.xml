@@ -8,10 +8,10 @@
             <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
             <researchPrerequisite>PoweredArmor</researchPrerequisite>
             <skillRequirements>
-                <Crafting>7</Crafting>
+                <Crafting>12</Crafting>
             </skillRequirements>
             <recipeUsers Inherit="False">
-                <li>FabricationBench</li>
+                <li>RobAssem</li>
             </recipeUsers>
         </recipeMaker>
         <graphicData>
@@ -42,13 +42,6 @@
             <li>HiTechArmor</li>
             <li>Armor</li>
         </tradeTags>
-        <costList>
-            <ComponentSpacer>2</ComponentSpacer>
-            <ComputerComp>5</ComputerComp>
-            <Plasteel>25</Plasteel>
-            <Titanium_GT>10</Titanium_GT>
-            <Uranium>20</Uranium>
-        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -119,6 +112,13 @@
                 <li>Legs</li>
             </bodyPartGroups>
         </apparel>
+        <costList>
+            <AlphaPoly>2</AlphaPoly>
+            <ComputerComp>10</ComputerComp>
+            <Plasteel>25</Plasteel>
+            <Titanium_GT>150</Titanium_GT>
+            <Silicon>10</Silicon>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -172,8 +172,7 @@
     <ThingDef ParentName="ApparelArmorHelmetPowerBase">
         <defName>Apparel_NanoSuitHelmet</defName>
         <label>Nano Suit helmet</label>
-        <description>The Integrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the
-            latest neural-cybernetic-counter-intrusion software(protection against psychic effects)</description>
+        <description>The Integrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the latest neural-cybernetic-counter-intrusion software (protection against psychic effects)</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSuitHelmet/NanoSuitHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -204,6 +203,13 @@
                 <li>GlitterHelmet</li>
             </defaultOutfitTags>
         </apparel>
+        <costList>
+            <AlphaPoly>1</AlphaPoly>
+            <ComputerComp>5</ComputerComp>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>50</Titanium_GT>
+            <Silicon>5</Silicon>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -292,6 +298,13 @@
                 <li>Torso</li>
             </bodyPartGroups>
         </apparel>
+        <costList>
+            <AlphaPoly>4</AlphaPoly>
+            <ComputerComp>10</ComputerComp>
+            <Plasteel>25</Plasteel>
+            <Titanium_GT>100</Titanium_GT>
+            <Silicon>10</Silicon>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -361,6 +374,10 @@
                 <li>Feet</li>
             </bodyPartGroups>
         </apparel>
+        <costList>
+            <AlphaPoly>5</AlphaPoly>
+            <Cloth>50</Cloth>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -430,6 +447,10 @@
                 <li>Feet</li>
             </bodyPartGroups>
         </apparel>
+        <costList>
+            <BetaPoly>5</BetaPoly>
+            <Cloth>50</Cloth>
+        </costList>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>

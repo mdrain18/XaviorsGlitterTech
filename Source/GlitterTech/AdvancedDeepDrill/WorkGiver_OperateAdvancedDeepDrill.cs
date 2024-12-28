@@ -30,7 +30,7 @@ namespace GlitterTech
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return JobMaker.MakeJob(JobDefOf.OperateDeepDrill, t, 1500, true);
+            return JobMaker.MakeJob(DefDatabase<JobDef>.GetNamed("OperateAdvancedDeepDrill"), t, 1500, true);
         }
     }
 }

@@ -1,5 +1,0 @@
-D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\Assemblies\GlitterTech.dll
-D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.csproj.AssemblyReference.cache
-D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.csproj.CoreCompileInputs.cache
-D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.dll
-D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Assemblies\GlitterTech.dll

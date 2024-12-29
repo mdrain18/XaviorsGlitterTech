@@ -98,7 +98,7 @@
             <MagneticCoil>2</MagneticCoil>
         </costList>
         <placeWorkers>
-            <li>PlaceWorker_DeepDrill</li>
+            <li>GlitterTech.PlaceWorker_AdvancedDeepDrill</li>
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
         </placeWorkers>
         <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
@@ -119,10 +119,11 @@
                 <compClass>CompPowerTrader</compClass>
                 <basePowerConsumption>600</basePowerConsumption>
             </li>
-            <li Class="CompProperties_DeepDrill" />
             <li Class="CompProperties_CreatesInfestations" />
-            <li Class="CompProperties">
-                <compClass>GlitterTech.AdvancedDeepDrillComp</compClass>
+            <li Class="GlitterTech.CompProperties_AdvancedDeepDrill">
+				<SpeedMultiplier>2.0</SpeedMultiplier>
+				<YieldMultiplier>1.5</YieldMultiplier>
+				<WorkPerPortionBase>10000</WorkPerPortionBase>
             </li>
         </comps>
     </ThingDef>

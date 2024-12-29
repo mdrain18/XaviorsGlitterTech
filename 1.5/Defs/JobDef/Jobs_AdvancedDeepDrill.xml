@@ -4,7 +4,7 @@
   <JobDef>
     <defName>OperateAdvancedDeepDrill</defName>
     <label>operate advanced deep drill</label>
-    <driverClass>RimWorld.JobDriver_OperateDeepDrill</driverClass>
+    <driverClass>JobDriver_OperateDeepDrill</driverClass>
     <reportString>Operating the advanced deep drill.</reportString>
     <alwaysShowWeapon>false</alwaysShowWeapon>
     <casualInterruptible>true</casualInterruptible>

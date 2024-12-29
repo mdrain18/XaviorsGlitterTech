@@ -54,7 +54,7 @@
     <WorkGiverDef>
         <defName>OperateAdvancedDeepDrill</defName>
         <label>operate advanced deep drill</label>
-        <giverClass>GlitterTech.WorkGiver_OperateAdvancedDeepDrill</giverClass> 
+        <giverClass>GlitterTech.WorkGiver_AdvancedDeepDrill</giverClass> 
         <workType>Mining</workType>
         <priorityInType>60</priorityInType>
         <verb>operate</verb>

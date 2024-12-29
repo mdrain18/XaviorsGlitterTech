@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+using HarmonyLib;
 using RimWorld;
 using Verse;
 
@@ -12,7 +11,7 @@ namespace GlitterTech
 		public float SpeedMultiplier = 2.0f; // 2x speed
 		public float YieldMultiplier = 1.5f; // 1.5x yield
 		public float WorkPerPortionBase = 10000f; // Base work needed per portion
-		public float AdvancedDrillRadius = 7.8f; // Extended drilling radius
+		// just use BuildableDef.specialDisplayRadius for radius
 
 		public CompProperties_AdvancedDeepDrill()
 		{
@@ -20,7 +19,7 @@ namespace GlitterTech
 		}
 	}
 
-	public class AdvancedDeepDrillComp : ThingComp
+	public class AdvancedDeepDrillComp : CompDeepDrill
 	{
 		public CompProperties_AdvancedDeepDrill Props
 		{
@@ -32,38 +31,7 @@ namespace GlitterTech
 
 		private int numCellsToScan = int.MaxValue;
 
-		public int NumCellsToScan => numCellsToScan != int.MaxValue ? numCellsToScan : numCellsToScan = GenRadial.NumCellsInRadius(Props.AdvancedDrillRadius);
-
-
-		private CompPowerTrader powerComp;
-
-		private float portionProgress;
-
-		private float portionYieldPct;
-
-		private int lastUsedTick = int.MinValue;
-
-
-		public float ProgressToNextPortionPercent => portionProgress / 10000f;
-
-		public override void PostSpawnSetup(bool respawningAfterLoad)
-		{
-			powerComp = parent.TryGetComp<CompPowerTrader>();
-		}
-
-		public override void PostExposeData()
-		{
-			Scribe_Values.Look(ref portionProgress, "portionProgress", 0f);
-			Scribe_Values.Look(ref portionYieldPct, "portionYieldPct", 0f);
-			Scribe_Values.Look(ref lastUsedTick, "lastUsedTick", 0);
-		}
-
-		public override void PostDeSpawn(Map map)
-		{
-			portionProgress = 0f;
-			portionYieldPct = 0f;
-			lastUsedTick = int.MinValue;
-		}
+		public int NumCellsToScan => numCellsToScan != int.MaxValue ? numCellsToScan : numCellsToScan = GenRadial.NumCellsInRadius(parent.def.specialDisplayRadius);
 
 		public override IEnumerable<Gizmo> CompGetGizmosExtra()
 		{
@@ -74,36 +42,19 @@ namespace GlitterTech
 			if (DebugSettings.ShowDevGizmos)
 			{
 				Command_Action command_Action = new Command_Action();
-				command_Action.defaultLabel = "DEV: Produce portion (100% yield)";
+				command_Action.defaultLabel = "DEV: Mine all (100% yield)";
 				command_Action.action = delegate
 				{
-					TryProducePortion(1f);
+					while (GetNextResource(out _, out _, out _))
+					{
+						TryProducePortion(1f);
+					}
 				};
 				yield return command_Action;
 			}
 		}
 
-		public override string CompInspectStringExtra()
-		{
-			if (parent.Spawned)
-			{
-				GetNextResource(out var resDef, out var _, out var _);
-				if (resDef == null)
-				{
-					return "DeepDrillNoResources".Translate();
-				}
-				return $"{"ResourceBelow".Translate()}: {resDef.LabelCap}\n{"ProgressToNextPortion".Translate()}:{ProgressToNextPortionPercent.ToStringPercent("F0")}";
-			}
-			return null;
-		}
-
-		public bool CanDrillNow()
-		{
-			GetNextResource(out var resDef, out var _, out var _);
-			return (powerComp == null || powerComp.PowerOn) && resDef != null;
-		}
-
-		public void DrillWorkDone(Pawn driller)
+		public void DrillWorkDonePatch(Pawn driller)
 		{
 			float statValue = driller.GetStatValue(StatDefOf.DeepDrillingSpeed) * Props.SpeedMultiplier;
 			portionProgress += statValue; // YieldPct should use both multiplier to get the correct yield.
@@ -117,35 +68,7 @@ namespace GlitterTech
 			}
 		}
 
-		public bool GetNextResource(out ThingDef resDef, out int countPresent, out IntVec3 cell)
-		{
-			return GetNextResource(NumCellsToScan, parent.Position, parent.Map, out resDef, out countPresent, out cell);
-		}
-
-		public static bool GetNextResource(int numCellsToScan, IntVec3 p, Map map, out ThingDef resDef, out int countPresent, out IntVec3 cell)
-		{
-			for (int i = 0; i < numCellsToScan; i++)
-			{
-				IntVec3 intVec = p + GenRadial.RadialPattern[i];
-				if (intVec.InBounds(map))
-				{
-					ThingDef thingDef = map.deepResourceGrid.ThingDefAt(intVec);
-					if (thingDef != null)
-					{
-						resDef = thingDef;
-						countPresent = map.deepResourceGrid.CountAt(intVec);
-						cell = intVec;
-						return true;
-					}
-				}
-			}
-			resDef = DeepDrillUtility.GetBaseResource(map, p);
-			countPresent = int.MaxValue;
-			cell = p;
-			return false;
-		}
-
-		private void TryProducePortion(float yieldPct, Pawn driller = null)
+		public void TryProducePortionPatch(float yieldPct, Pawn driller)
 		{
 			bool valuable = GetNextResource(out var resDef, out var countPresent, out var cell);
 			if (resDef == null)
@@ -174,6 +97,77 @@ namespace GlitterTech
 				Messages.Message("DeepDrillExhausted".Translate(Find.ActiveLanguageWorker.Pluralize(DeepDrillUtility.GetBaseResource(parent.Map, parent.Position).label)), parent, MessageTypeDefOf.TaskCompletion);
 				parent.SetForbidden(true);
 			}
+		}
+
+		public bool GetNextResourcePatch(out ThingDef resDef, out int countPresent, out IntVec3 cell)
+		{
+			return GetNextResource(NumCellsToScan, parent.Position, parent.Map, out resDef, out countPresent, out cell);
+		}
+
+		public static bool GetNextResource(int numCellsToScan, IntVec3 p, Map map, out ThingDef resDef, out int countPresent, out IntVec3 cell)
+		{
+			for (int i = 0; i < numCellsToScan; i++)
+			{
+				IntVec3 intVec = p + GenRadial.RadialPattern[i];
+				if (intVec.InBounds(map))
+				{
+					ThingDef thingDef = map.deepResourceGrid.ThingDefAt(intVec);
+					if (thingDef != null)
+					{
+						resDef = thingDef;
+						countPresent = map.deepResourceGrid.CountAt(intVec);
+						cell = intVec;
+						return true;
+					}
+				}
+			}
+			resDef = DeepDrillUtility.GetBaseResource(map, p);
+			countPresent = int.MaxValue;
+			cell = p;
+			return false;
+		}
+
+	}
+
+	[HarmonyPatch(typeof(CompDeepDrill), nameof(CompDeepDrill.DrillWorkDone))]
+	public class DrillWorkDonePatch
+	{
+		static bool Prefix(CompDeepDrill __instance, Pawn driller)
+		{
+			if (__instance is AdvancedDeepDrillComp e)
+			{
+				e.DrillWorkDonePatch(driller);
+				return false;
+			}
+			return true;
+		}
+	}
+
+	[HarmonyPatch(typeof(CompDeepDrill), nameof(CompDeepDrill.TryProducePortion))]
+	public class TryProducePortionPatch
+	{
+		static bool Prefix(CompDeepDrill __instance, float yieldPct, Pawn driller)
+		{
+			if (__instance is AdvancedDeepDrillComp e)
+			{
+				e.TryProducePortionPatch(yieldPct, driller);
+				return false;
+			}
+			return true;
+		}
+	}
+
+	[HarmonyPatch(typeof(CompDeepDrill), nameof(CompDeepDrill.GetNextResource))]
+	public class GetNextResourcePatch
+	{
+		static bool Prefix(CompDeepDrill __instance, ref bool __result, ref ThingDef resDef, ref int countPresent, ref IntVec3 cell)
+		{
+			if (__instance is AdvancedDeepDrillComp e)
+			{
+				__result = e.GetNextResourcePatch(out resDef, out countPresent, out cell);
+				return false;
+			}
+			return true;
 		}
 	}
 }

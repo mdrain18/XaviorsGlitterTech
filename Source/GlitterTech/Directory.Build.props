@@ -5,7 +5,7 @@
 		<AssemblyName>GlitterTech</AssemblyName>
 		<Version>1.0.0.0</Version>
 		<Authors>Xavior</Authors>
-    	<Deterministic>true</Deterministic>
+		<Deterministic>true</Deterministic>
 		<TargetFramework>net472</TargetFramework>
 		<LangVersion>preview</LangVersion>
 		<PlatformTarget>AnyCPU</PlatformTarget>
@@ -22,4 +22,13 @@
 		<MSBuildProjectExtensionsPath>obj/$(MSBuildProjectName)/$(Configuration)/</MSBuildProjectExtensionsPath>
 		<DefaultItemExcludes>$(DefaultItemExcludes);obj/**/*.*;Properties/**/*.*</DefaultItemExcludes>
 	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Krafs.Publicizer" Version="2.*" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompDeepDrill.portionProgress" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompDeepDrill.portionYieldPct" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompDeepDrill.lastUsedTick" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompDeepDrill.DrillWorkDone" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompDeepDrill.GetNextResource" />
+		<Publicize Include="Assembly-CSharp:RimWorld.CompDeepDrill.TryProducePortion" />
+	</ItemGroup>
 </Project>

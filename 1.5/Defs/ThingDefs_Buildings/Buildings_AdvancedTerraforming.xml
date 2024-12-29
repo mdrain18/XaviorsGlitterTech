@@ -124,7 +124,6 @@
 				<SpeedMultiplier>2.0</SpeedMultiplier>
 				<YieldMultiplier>1.5</YieldMultiplier>
 				<WorkPerPortionBase>10000</WorkPerPortionBase>
-				<AdvancedDrillRadius>7.8</AdvancedDrillRadius>
             </li>
         </comps>
     </ThingDef>

@@ -14,23 +14,18 @@ namespace GlitterTech
         public override bool HasJobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
             if (t.Faction != pawn.Faction)
-            {
                 return false;
-            }
 
-            Building building = t as Building;
-            if (building == null || building.IsForbidden(pawn) || !pawn.CanReserve(building))
-            {
+            if (t.IsForbidden(pawn) || !pawn.CanReserve(t))
                 return false;
-            }
 
-            var comp = building.TryGetComp<AdvancedDeepDrillComp>();
+            var comp = t.TryGetComp<AdvancedDeepDrillComp>();
             return comp != null && comp.CanDrillNow();
         }
 
         public override Job JobOnThing(Pawn pawn, Thing t, bool forced = false)
         {
-            return JobMaker.MakeJob(JobDefOf.OperateDeepDrill, t, 1500, true);
+            return JobMaker.MakeJob(GlitterTechJobDefOf.OperateAdvancedDeepDrill, t, 1500, true);
         }
     }
 }

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 using RimWorld;
 using Verse;
@@ -11,34 +9,20 @@ namespace GlitterTech
     {
         private CompDeepDrill baseComp;
 
-        private const float SpeedMultiplier = 2.0f; // 2x speed
-        private const float YieldMultiplier = 1.5f; // 1.5x yield
-        private const float WorkPerPortionBase = 10000f; // Base work needed per portion
-        private const int AdvancedDrillRadius = 7; // Extended drilling radius
+        private const float SpeedMultiplier = 2.0f;
+        private const float YieldMultiplier = 1.5f;
+        private const float WorkPerPortionBase = 10000f;
+        private const float AdvancedDrillRadius = 7.0f; // FIXED to float
 
         private FieldInfo portionProgressField;
         private FieldInfo portionYieldPctField;
-        private FieldInfo lastUsedTickField;
         private MethodInfo tryProducePortionMethod;
-
-        public bool CanDrillNow()
-        {
-            var powerComp = this.parent.TryGetComp<CompPowerTrader>();
-            return (powerComp == null || powerComp.PowerOn) && (GetBaseResource(this.parent.Map, this.parent.Position) != null || ValuableResourcesPresent());
-        }
-
-        public bool ValuableResourcesPresent()
-        {
-            ThingDef thingDef;
-            int countPresent;
-            IntVec3 cell;
-            return GetNextResource(this.parent.Position, this.parent.Map, out thingDef, out countPresent, out cell);
-        }
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
             baseComp = parent.GetComp<CompDeepDrill>();
+
             if (baseComp == null)
             {
                 Log.Error("AdvancedDeepDrillComp requires a CompDeepDrill to be present on the same Thing.");
@@ -48,123 +32,82 @@ namespace GlitterTech
             Type baseType = typeof(CompDeepDrill);
             portionProgressField = baseType.GetField("portionProgress", BindingFlags.NonPublic | BindingFlags.Instance);
             portionYieldPctField = baseType.GetField("portionYieldPct", BindingFlags.NonPublic | BindingFlags.Instance);
-            lastUsedTickField = baseType.GetField("lastUsedTick", BindingFlags.NonPublic | BindingFlags.Instance);
             tryProducePortionMethod = baseType.GetMethod("TryProducePortion", BindingFlags.NonPublic | BindingFlags.Instance);
         }
 
-        private float PortionProgress
+        public override void PostExposeData()
         {
-            get => (float)portionProgressField.GetValue(baseComp);
-            set => portionProgressField.SetValue(baseComp, value);
-        }
-
-        private float PortionYieldPct
-        {
-            get => (float)portionYieldPctField.GetValue(baseComp);
-            set => portionYieldPctField.SetValue(baseComp, value);
-        }
-
-        private int LastUsedTick
-        {
-            get => (int)lastUsedTickField.GetValue(baseComp);
-            set => lastUsedTickField.SetValue(baseComp, value);
-        }
-
-        private void TryProducePortion(float yieldPct, Pawn driller)
-        {
-            tryProducePortionMethod.Invoke(baseComp, new object[] { yieldPct, driller });
-        }
-
-        public void CustomDrillWorkDone(Pawn driller)
-        {
-            if (baseComp == null)
+            base.PostExposeData();
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                Log.Error("CompDeepDrill is null in AdvancedDeepDrillComp.");
-                return;
-            }
-
-            float baseSpeed = driller.GetStatValue(StatDefOf.DeepDrillingSpeed, true);
-            PortionProgress += baseSpeed * SpeedMultiplier; 
-            PortionYieldPct += (baseSpeed * driller.GetStatValue(StatDefOf.MiningYield, true) / 10000f) * YieldMultiplier; 
-            LastUsedTick = Find.TickManager.TicksGame;
-
-            if (PortionProgress >= WorkPerPortionBase)
-            {
-                TryProducePortion(PortionYieldPct, driller);
-                PortionProgress = 0f;
-                PortionYieldPct = 0f;
+                PostSpawnSetup(false); // ensures reflection rehooks after reinstall/minify
             }
         }
 
-
-        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        public bool CanDrillNow()
         {
-            foreach (Gizmo gizmo in base.CompGetGizmosExtra())
-            {
-                yield return gizmo;
-            }
+            var powerComp = this.parent.TryGetComp<CompPowerTrader>();
+            return (powerComp == null || powerComp.PowerOn) && ValuableResourcesPresent();
+        }
 
-            if (DebugSettings.ShowDevGizmos)
+        private bool ValuableResourcesPresent()
+        {
+            ThingDef resource;
+            int count;
+            IntVec3 cell;
+            return GetNextResource(parent.Position, parent.Map, out resource, out count, out cell);
+        }
+
+        private bool GetNextResource(IntVec3 center, Map map, out ThingDef resDef, out int countPresent, out IntVec3 cell)
+        {
+            int cellsToCheck = GenRadial.NumCellsInRadius(AdvancedDrillRadius);
+            for (int i = 0; i < cellsToCheck; i++)
             {
-                yield return new Command_Action
+                IntVec3 c = center + GenRadial.RadialPattern[i];
+                if (c.InBounds(map))
                 {
-                    defaultLabel = "DEV: Produce portion (100% yield)",
-                    action = () => CustomDrillWorkDone(null) // For testing purposes, you can pass null or a test pawn
-                };
-            }
-        }
-
-        public override string CompInspectStringExtra()
-        {
-            if (baseComp == null || !parent.Spawned)
-            {
-                return null;
-            }
-
-            if (GetNextResource(this.parent.Position, this.parent.Map, out ThingDef thingDef, out int countPresent, out IntVec3 cell))
-            {
-                return $"ResourceBelow: {thingDef.LabelCap}\nProgressToNextPortion: {(PortionProgress / WorkPerPortionBase).ToStringPercent("F0")}";
-            }
-
-            return "DeepDrillNoResources".Translate();
-        }
-
-
-        private bool GetNextResource(IntVec3 p, Map map, out ThingDef resDef, out int countPresent, out IntVec3 cell)
-        {
-            for (int i = 0; i < GenRadial.NumCellsInRadius(AdvancedDrillRadius); i++)
-            {
-                IntVec3 intVec = p + GenRadial.RadialPattern[i];
-                if (intVec.InBounds(map))
-                {
-                    ThingDef thingDef = map.deepResourceGrid.ThingDefAt(intVec);
-                    if (thingDef != null)
+                    ThingDef rockDef = map.deepResourceGrid.ThingDefAt(c);
+                    if (rockDef != null)
                     {
-                        resDef = thingDef;
-                        countPresent = map.deepResourceGrid.CountAt(intVec);
-                        cell = intVec;
+                        resDef = rockDef;
+                        countPresent = map.deepResourceGrid.CountAt(c);
+                        cell = c;
                         return true;
                     }
                 }
             }
-            resDef = GetBaseResource(map, p);
-            countPresent = int.MaxValue;
-            cell = p;
+            resDef = null;
+            countPresent = 0;
+            cell = IntVec3.Invalid;
             return false;
         }
 
-        private ThingDef GetBaseResource(Map map, IntVec3 cell)
+        public void DrillTick(Pawn operatorPawn)
         {
-            if (!map.Biome.hasBedrock)
+            if (baseComp == null) return;
+
+            float workSpeed = operatorPawn.GetStatValue(StatDefOf.MiningSpeed) * SpeedMultiplier;
+            float currentProgress = (float)portionProgressField.GetValue(baseComp);
+
+            currentProgress += workSpeed;
+
+            float adjustedWorkNeeded = WorkPerPortionBase / YieldMultiplier;
+
+            if (currentProgress >= adjustedWorkNeeded)
             {
-                return null;
+                tryProducePortionMethod.Invoke(baseComp, new object[] { 1f, operatorPawn }); // FIXED order
+                currentProgress = 0;
             }
-            Rand.PushState();
-            Rand.Seed = cell.GetHashCode();
-            ThingDef result = (from rock in Find.World.NaturalRockTypesIn(map.Tile)
-                               select rock.building.mineableThing).RandomElement();
-            Rand.PopState();
-            return result;
+
+            portionProgressField.SetValue(baseComp, currentProgress);
+        }
+
+        public float GetDrillProgressPercent()
+        {
+            if (baseComp == null) return 0f;
+            float currentProgress = (float)portionProgressField.GetValue(baseComp);
+            float adjustedWorkNeeded = WorkPerPortionBase / YieldMultiplier;
+            return Math.Min(currentProgress / adjustedWorkNeeded, 1f);
         }
     }
 }

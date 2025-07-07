@@ -41,7 +41,7 @@
         <label>artificially assemble Alpha Poly</label>
         <description>Use heat and strong electromagnets to assemble artificial elements from Titanium and Uranium</description>
         <jobString>Fabricating Alpha Poly from Titanium.</jobString>
-        <workAmount>6500</workAmount>
+        <workAmount>650</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -80,7 +80,7 @@
         <label>artificially assemble Beta Poly</label>
         <description>Use heat and strong electromagnets to assemble artificial elements from Alpha Poly, Uranium and Silicon</description>
         <jobString>Fabricating Beta Poly.</jobString>
-        <workAmount>12000</workAmount>
+        <workAmount>1000</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -128,7 +128,7 @@
         <label>produce plasteel</label>
         <description>Produce plasteel</description>
         <jobString>Producing plasteel</jobString>
-        <workAmount>1000</workAmount>
+        <workAmount>100</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -176,7 +176,7 @@
         <label>Produce Hyperweave</label>
         <description>Produce Hyperweave from AlphaPoly and Devilstrand.</description>
         <jobString>Producing Hyperweave</jobString>
-        <workAmount>5000</workAmount>
+        <workAmount>1000</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -216,7 +216,7 @@
         <label>produce silicon from stone</label>
         <description>Produce silicon from stone</description>
         <jobString>Producing Silicon from stone</jobString>
-        <workAmount>400</workAmount>
+        <workAmount>300</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -276,7 +276,7 @@
         <label>produce titanium from plasteel</label>
         <description>Produce titanium from plasteel</description>
         <jobString>Producing titanium from plasteel</jobString>
-        <workAmount>1000</workAmount>
+        <workAmount>200</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
@@ -307,7 +307,7 @@
         <label>produce Ethanol from Berries</label>
         <description>Produce Ethanol from Berries</description>
         <jobString>Producing Ethanol from Berries</jobString>
-        <workAmount>800</workAmount>
+        <workAmount>400</workAmount>
         <workSpeedStat>SmeltingSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>

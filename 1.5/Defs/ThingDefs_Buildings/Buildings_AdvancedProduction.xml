@@ -121,7 +121,7 @@
             </li>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>6500</basePowerConsumption>
+                <basePowerConsumption>10000</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
             <li Class="CompProperties_Glower">
@@ -207,7 +207,7 @@
             </li>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>1100</basePowerConsumption>
+                <basePowerConsumption>1700</basePowerConsumption>
                 <shortCircuitInRain>true</shortCircuitInRain>
             </li>
             <li Class="CompProperties_Glower">

@@ -9,7 +9,8 @@ namespace GlitterTech
         public float wealthThreshold = 50000f;
         public float pointsMultiplier = 0.75f;
         public float resourceMultiplier = 1f;
-        public float statMultiplier = 1f;  
+        public float statMultiplier = 1f;
+        public bool activateNoSurgeryVersion = false;
 
         public override void ExposeData()
         {
@@ -17,7 +18,8 @@ namespace GlitterTech
             Scribe_Values.Look(ref wealthThreshold, "wealthThreshold", 50000f);
             Scribe_Values.Look(ref pointsMultiplier, "pointsMultiplier", 0.75f);
             Scribe_Values.Look(ref resourceMultiplier, "resourceMultiplier", 1f);
-            Scribe_Values.Look(ref statMultiplier, "statMultiplier", 1f);  
+            Scribe_Values.Look(ref statMultiplier, "statMultiplier", 1f);
+            Scribe_Values.Look(ref activateNoSurgeryVersion, "activateNoSurgeryVersion", false);
             base.ExposeData();
         }
     }

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_MRGPistol</defName>
+        <label>MRG bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/MRGP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>14</damageAmountBase>
+            <speed>200</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>Gun_MRGPistol</defName>
+        <label>MRG-5 Pistol</label>
+        <description>Micro rail gun mark 5. The compact counter part of the MRG-5 Rifle, this pistol is the fifth installment of top of the line rail gun technologies. Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/misc/MRG-5Pistol</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <MarketValue>2300</MarketValue>
+            <AccuracyTouch>0.85</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.75</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>1.3</Mass>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>5</Titanium_GT>
+            <Uranium>1</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>GlitterTech</li>
+            <li>SpacerGun</li>
+        </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_MRGPistol</defaultProjectile>
+                <warmupTime>0.20</warmupTime>
+                <range>15</range>
+                <soundCast>EM_small</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_MRGRifle</defName>
+        <label>MRG bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/MRGP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <speed>200</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>Gun_MRGRifle</defName>
+        <label>MRG-5 Rifle</label>
+        <description>Micro rail gun mark 5. This Rifle is the fifth installment of top of the line rail gun technologies. Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/misc/MRG-5Rifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <MarketValue>2600</MarketValue>
+            <AccuracyTouch>0.75</AccuracyTouch>
+            <AccuracyShort>0.85</AccuracyShort>
+            <AccuracyMedium>0.90</AccuracyMedium>
+            <AccuracyLong>0.75</AccuracyLong>
+            <RangedWeapon_Cooldown>0.9</RangedWeapon_Cooldown>
+            <WorkToMake>18000</WorkToMake>
+            <Mass>3</Mass>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>17</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <AlphaPoly>2</AlphaPoly>
+            <Titanium_GT>160</Titanium_GT>
+            <Uranium>4</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComputerComp>1</ComputerComp>
+            <Silicon>30</Silicon>
+        </costList>
+        <weaponTags>
+            <li>GlitterTech</li>
+            <li>SpacerGun</li>
+        </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+        </tools>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_MRGRifle</defaultProjectile>
+                <warmupTime>0.5</warmupTime>
+                <range>35</range>
+                <burstShotCount>3</burstShotCount>
+                <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                <soundCast>EM_small</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+
+</Defs>

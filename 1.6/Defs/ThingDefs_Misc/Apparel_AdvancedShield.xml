@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef Name="ApparelShieldBase_GT" ParentName="ApparelBase" Abstract="True">
+        <thingClass>Apparel</thingClass>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tickerType>Normal</tickerType>
+        <techLevel>Spacer</techLevel>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+            <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+        <thingCategories>
+            <li>ApparelUtility</li>
+        </thingCategories>
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <careIfDamaged>false</careIfDamaged>
+            <wearPerDay>0</wearPerDay>
+            <bodyPartGroups>
+                <li>Waist</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Belt</li>
+            </layers>
+            <tags>
+                <li>BeltDefense</li>
+            </tags>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        </apparel>
+        <comps>
+            <li Class="CompProperties_Shield" />
+        </comps>
+        <allowedArchonexusCount>1</allowedArchonexusCount>
+        <tradeTags>
+            <li>Armor</li>
+        </tradeTags>
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelShieldBase_GT">
+        <defName>Apparel_HC1Shield</defName>
+        <label>HC-1 shield</label>
+        <description>A high-capacity energy shield device. The top-tier class of personal shields, the mark 1 increases energy capacity by a factor of ten but recycles the shield slower.</description>
+        
+        <statBases>
+            <MarketValue>2400</MarketValue>
+            <Mass>2</Mass>
+            <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
+            <WorkToMake>14000</WorkToMake>
+        </statBases>
+
+        <!-- Cost list is required for this ThingDef to work with the crafting recipe -->
+        <costList>
+            <BetaPoly>1</BetaPoly>
+            <Uranium>5</Uranium>
+            <Silicon>30</Silicon>
+            <ComputerComp>5</ComputerComp>
+        </costList>
+        
+        <minifiedDef>MinifiedThing</minifiedDef>
+
+        <!-- Color generation for the shield -->
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.8,0.8,0.8,1)</only>
+                </li>
+            </options>
+        </colorGenerator>    
+    </ThingDef>
+
+    <ThingDef ParentName="ApparelShieldBase_GT">
+        <defName>Apparel_OCShield</defName>
+        <label>Orion Corp defense shield</label>
+        <description>An Orion corp patented personal defense shield. Standard capacity, but recycles the shield much faster than all of the competitors.</description>
+        <tickerType>Normal</tickerType>
+        <statBases>
+            <MarketValue>2100</MarketValue>
+            <Mass>1</Mass>
+            <EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+            <WorkToMake>14000</WorkToMake>
+        </statBases>
+
+        <!-- Cost list is required for this ThingDef to work with the crafting recipe -->
+        <costList>
+            <AlphaPoly>5</AlphaPoly>
+            <Uranium>5</Uranium>
+            <Silicon>10</Silicon>
+            <ComputerComp>10</ComputerComp>
+        </costList>
+    
+        <minifiedDef>MinifiedThing</minifiedDef>
+
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.6,0.6,1,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Injuries -->
+
+    <HediffDef ParentName="InjuryBase">
+        <defName>Stab</defName>
+        <label>stab</label>
+        <labelNoun>a stab wound</labelNoun>
+        <description>A stabbing wound.</description>
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <labelTendedWell>bandaged</labelTendedWell>
+                <labelTendedWellInner>sutured</labelTendedWellInner>
+                <labelSolidTendedWell>set</labelSolidTendedWell>
+            </li>
+            <li Class="HediffCompProperties_Infecter">
+                <infectionChance>0.15</infectionChance>
+            </li>
+            <li Class="HediffCompProperties_GetsPermanent">
+                <permanentLabel>stab scar</permanentLabel>
+            </li>
+        </comps>
+        <injuryProps>
+            <painPerSeverity>0.0125</painPerSeverity>
+            <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+            <bleedRate>0.1</bleedRate>
+            <canMerge>true</canMerge>
+            <destroyedLabel>Cut of</destroyedLabel>
+        </injuryProps>
+    </HediffDef>
+
+    <HediffDef ParentName="InjuryBase">
+        <defName>HeatStab</defName>
+        <label>stab</label>
+        <description>A heat stab</description>
+        <comps>
+            <li Class="HediffCompProperties_TendDuration">
+                <labelTendedWell>bandaged</labelTendedWell>
+                <labelTendedWellInner>sutured</labelTendedWellInner>
+                <labelSolidTendedWell>set</labelSolidTendedWell>
+            </li>
+            <li Class="HediffCompProperties_Infecter">
+                <infectionChance>0.50</infectionChance>
+            </li>
+            <li Class="HediffCompProperties_GetsPermanent">
+                <permanentLabel>stab scar</permanentLabel>
+            </li>
+        </comps>
+        <injuryProps>
+            <painPerSeverity>3</painPerSeverity>
+            <averagePainPerSeverityPermanent>0.5</averagePainPerSeverityPermanent>
+            <bleedRate>0.2</bleedRate>
+            <canMerge>false</canMerge>
+            <destroyedLabel>Melted off</destroyedLabel>
+            <destroyedOutLabel>Melted out</destroyedOutLabel>
+        </injuryProps>
+    </HediffDef>
+
+</Defs>

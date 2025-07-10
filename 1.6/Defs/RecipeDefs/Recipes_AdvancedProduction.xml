@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef>
+        <defName>SearchComponents</defName>
+        <label>search components</label>
+        <description>Search through the multitude of miscellaneous parts for a rare computer component.</description>
+        <jobString>Searching components for computer components</jobString>
+        <workAmount>2500</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <effectWorking>Cook</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <recipeUsers>
+            <li>TableMachining</li>
+        </recipeUsers>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <ComponentIndustrial>9</ComponentIndustrial>
+            <ComputerComp>1</ComputerComp>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <!-- ========================= Polys ==========================-->
+    <RecipeDef>
+        <defName>ProduceAPoly</defName>
+        <label>artificially assemble Alpha Poly</label>
+        <description>Use heat and strong electromagnets to assemble artificial elements from Titanium and Uranium</description>
+        <jobString>Fabricating Alpha Poly from Titanium.</jobString>
+        <workAmount>650</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Titanium_GT</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <AlphaPoly>10</AlphaPoly>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Titanium_GT</li>
+                <li>Uranium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceBPoly</defName>
+        <label>artificially assemble Beta Poly</label>
+        <description>Use heat and strong electromagnets to assemble artificial elements from Alpha Poly, Uranium and Silicon</description>
+        <jobString>Fabricating Beta Poly.</jobString>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AlphaPoly</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silicon</li>
+                    </thingDefs>
+                </filter>
+                <count>60</count>
+            </li>
+        </ingredients>
+        <products>
+            <BetaPoly>10</BetaPoly>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>AlphaPoly</li>
+                <li>Uranium</li>
+                <li>Silicon</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProducePlasteel</defName>
+        <label>produce plasteel</label>
+        <description>Produce plasteel</description>
+        <jobString>Producing plasteel</jobString>
+        <workAmount>100</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silicon</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Titanium_GT</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <Plasteel>40</Plasteel>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Silicon</li>
+                <li>Titanium_GT</li>
+                <li>Uranium</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceHyperweave</defName>
+        <label>Produce Hyperweave</label>
+        <description>Produce Hyperweave from AlphaPoly and Devilstrand.</description>
+        <jobString>Producing Hyperweave</jobString>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>AlphaPoly</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>DevilstrandCloth</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+        </ingredients>
+        <products>
+            <Hyperweave>10</Hyperweave>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>AlphaPoly</li>
+                <li>DevilstrandCloth</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <!-- ========================= Electrolyzer ==========================-->
+    <RecipeDef>
+        <defName>ProduceSilicon</defName>
+        <label>produce silicon from stone</label>
+        <description>Produce silicon from stone</description>
+        <jobString>Producing Silicon from stone</jobString>
+        <workAmount>300</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>StoneBlocks</li>
+                    </categories>
+                </filter>
+                <count>30</count>
+            </li>
+        </ingredients>
+        <products>
+            <Silicon>6</Silicon>
+        </products>
+        <fixedIngredientFilter>
+            <categories>
+                <li>StoneBlocks</li>
+            </categories>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceCondensedSteel</defName>
+        <label>produce plasteel from steel</label>
+        <description>Produce plasteel from steel</description>
+        <jobString>Producing plasteel from steel</jobString>
+        <workAmount>500</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+          <li>
+            <filter>
+              <thingDefs>
+                <li>Steel</li>
+              </thingDefs>
+            </filter>
+            <count>30</count>
+          </li>
+        </ingredients>
+        <fixedIngredientFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Plasteel>6</Plasteel>
+        </products>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceTitanium</defName>
+        <label>produce titanium from plasteel</label>
+        <description>Produce titanium from plasteel</description>
+        <jobString>Producing titanium from plasteel</jobString>
+        <workAmount>200</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>40</count>
+            </li>
+        </ingredients>
+        <products>
+            <Titanium_GT>2</Titanium_GT>
+            <Silicon>20</Silicon>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Plasteel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceEthanol</defName>
+        <label>produce Ethanol from Berries</label>
+        <description>Produce Ethanol from Berries</description>
+        <jobString>Producing Ethanol from Berries</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>RawBerries</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <products>
+            <Ethanol>5</Ethanol>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>RawBerries</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+
+    <!-- ========================= Robotic Assembler ==========================-->
+    <RecipeDef>
+        <defName>BuildComputerComp</defName>
+        <label>Assemble computer components</label>
+        <description>Assemble computer components</description>
+        <jobString>Assembling computer components</jobString>
+        <workAmount>1000</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silicon</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <products>
+            <ComputerComp>5</ComputerComp>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Gold</li>
+                <li>Silicon</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>BuildMagneticCoil</defName>
+        <label>Assemble magnetic coils</label>
+        <description>Assemble magnetic coils</description>
+        <jobString>Assembling Magnetic coils</jobString>
+        <workAmount>1200</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComputerComp</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Titanium_GT</li>
+                    </thingDefs>
+                </filter>
+                <count>20</count>
+            </li>
+        </ingredients>
+        <products>
+            <MagneticCoil>2</MagneticCoil>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>ComputerComp</li>
+                <li>Titanium_GT</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+</Defs>

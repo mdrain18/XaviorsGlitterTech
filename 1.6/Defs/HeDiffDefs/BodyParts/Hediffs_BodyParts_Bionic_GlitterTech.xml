@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Added body parts -->
+    <!-- Parent Bases -->
+    <HediffDef Name="GlitterTechBionicBase" Abstract="True" ParentName="AddedBodyPartBase">
+        <label>GlitterTech bionic part</label>
+        <description>A base for all GlitterTech bionic parts.</description>
+    </HediffDef>
+
+    <ThingDef Name="GlitterTechBionicItemBase" Abstract="True" ParentName="BodyPartBionicImperialBase">
+        <label>GlitterTech bionic item</label>
+    </ThingDef>
+
+    <RecipeDef Name="GlitterTechSurgeryBase" Abstract="True" ParentName="SurgeryInstallImplantBase">
+        <label>GlitterTech install surgery</label>
+    </RecipeDef>
+
+
+    <!-- Orion Corp Exoskeleton -->
+    <HediffDef ParentName="AddedBodyPartBase">
+        <defName>OCExo</defName>
+        <label>Orion Exoskeleton</label>
+        <labelNoun>an Orion Exoskeleton</labelNoun>
+        <description>Installed Orion Corp Exoskeleton. Enhances strength and dexterity significantly, providing an edge in both combat and labor.</description>
+        <descriptionHyperlinks>
+            <ThingDef>OCExo</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>OCExo</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.5</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.5</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDPS>5.0</MeleeDPS>
+                </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>exo punch</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>12</power>
+                        <cooldownTime>1.5</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <ThingDef ParentName="BodyPartBionicBase">
+        <defName>OCExo</defName>
+        <label>Orion Exoskeleton</label>
+        <description>A standard issue Orion Corporation exoskeleton. Equipped by most Orion security forces, this all-purpose exoskeleton gives them a cheap and capable edge against their competitors.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallOCExo</RecipeDef>
+        </descriptionHyperlinks>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>50</Plasteel>
+            <AlphaPoly>10</AlphaPoly>
+            <ComputerComp>1</ComputerComp>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2</Mass>
+            <MarketValue>2500</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>OCBodyParts</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+        <defName>InstallOCExo</defName>
+        <label>Install Orion Exoskeleton</label>
+        <description>Installs Orion Exoskeleton.</description>
+        <descriptionHyperlinks>
+            <ThingDef>OCExo</ThingDef>
+            <HediffDef>OCExo</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing Orion Exoskeleton.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>OCExo</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>OCExo</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>OCExo</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Ear -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTEar</defName>
+        <label>Advanced bionic ear</label>
+        <labelNoun>an advanced bionic ear</labelNoun>
+        <description>The advanced version of the bionic ear. The second generation of bionic upgrades, typically reserved for top brass military forces, which allow the user to hear the slightest inflections of someone else's voice which gives them a leg up in negotiations. Users have even said after having the ear installed, individuals with annoying voices seemed to suddenly sound less annoying...</description>
+        <descriptionHyperlinks><ThingDef>GTEar</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTEar</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <SocialImpact>0.05</SocialImpact>
+                    <TradePriceImprovement>0.10</TradePriceImprovement>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTEar</defName>
+        <label>Advanced bionic ear</label>
+        <description>The advanced version of the bionic ear. The second generation of bionic upgrades, typically reserved for top brass military forces.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTEar</RecipeDef></descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>2000</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>AdvancedGTLimb</li>
+        </techHediffsTags>
+    </ThingDef>
+
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTEar</defName>
+        <label>install advanced bionic ear</label>
+        <description>Install an advanced bionic ear.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEar</ThingDef>
+            <HediffDef>GTEar</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic ear.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTEar</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTEar</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Ear</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTEar</addsHediff>
+    </RecipeDef>
+
+
+    <!-- Advanced Bionic Eye -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTEye</defName>
+        <label>Advanced bionic eye</label>
+        <labelNoun>an advanced bionic eye</labelNoun>
+        <description>The advanced version of the bionic eye. The second generation of bionic upgrades, typically reserved for top brass military forces, increasing their shooting accuracy and time it takes to aim.</description>
+        <descriptionHyperlinks><ThingDef>GTEye</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTEye</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+                    <AimingDelayFactor>-0.1</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <renderNodeProperties>
+          <li Class="PawnRenderNodeProperties_Eye">
+            <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+            <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+            <parentTagDef>Head</parentTagDef>
+            <drawSize>0.15</drawSize>
+            <drawData>
+              <defaultData>
+                <layer>56</layer>
+                <offset>(0, 0, -0.25)</offset>
+              </defaultData>
+              <dataWest>
+                <flip>true</flip>
+              </dataWest>
+            </drawData>
+          </li>
+        </renderNodeProperties>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTEye</defName>
+        <label>Advanced bionic eye</label>
+        <description>The advanced version of the bionic eye. The second generation of bionic upgrades, typically reserved for top brass military forces, increasing their shooting accuracy and time it takes to aim.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTEye</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>3400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTEye</defName>
+        <label>install advanced bionic eye</label>
+        <description>Install an advanced bionic eye.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEye</ThingDef>
+            <HediffDef>GTEye</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic eye.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTEye</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTEye</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTEye</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Arm -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTArm</defName>
+        <label>Advanced bionic arm</label>
+        <labelNoun>an advanced bionic arm</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible strength. You may destroy your opponents' limbs in a fist fight...not recommended for wardens.</description>
+        <descriptionHyperlinks><ThingDef>GTArm</ThingDef></descriptionHyperlinks>
+        <comps>
+          <li Class="HediffCompProperties_VerbGiver">
+            <tools>
+              <li>
+                <label>fist</label>
+                <capacities>
+                  <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+                <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+              </li>
+            </tools>
+          </li>
+        </comps>
+        <spawnThingOnRemoved>GTArm</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.3</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDPS>5.0</MeleeDPS>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTArm</defName>
+        <label>Advanced bionic arm</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible strength. You may destroy your opponents' limbs in a fist fight...not recommended for wardens.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTArm</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>2400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTArm</defName>
+        <label>install advanced bionic arm</label>
+        <description>Install an advanced bionic arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTArm</ThingDef>
+            <HediffDef>GTArm</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic arm.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTArm</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Leg -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTLeg</defName>
+        <label>Advanced bionic leg</label>
+        <labelNoun>an advanced bionic leg</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Enhances speed, strength, and stability. You can run faster, jump higher, and kick harder.</description>
+        <descriptionHyperlinks><ThingDef>GTLeg</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTLeg</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.5</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTLeg</defName>
+        <label>Advanced bionic leg</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Enhances speed, strength, and stability. You can run faster, jump higher, and kick harder.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTLeg</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTLeg</defName>
+        <label>install advanced bionic leg</label>
+        <description>Install an advanced bionic leg.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTLeg</ThingDef>
+            <HediffDef>GTLeg</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic leg.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTLeg</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLeg</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Leg</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLeg</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Spine -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTSpine</defName>
+        <label>Advanced bionic spine</label>
+        <labelNoun>an advanced bionic spine</labelNoun>
+        <description>The second generation of bionic upgrades. A flexible spine replacement that enhances movement capabilities and provides improved stability.</description>
+        <descriptionHyperlinks><ThingDef>GTSpine</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTSpine</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.5</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTSpine</defName>
+        <label>Advanced bionic spine</label>
+        <description>The second generation of bionic upgrades. A flexible spine replacement that enhances movement capabilities and provides improved stability.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTSpine</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <Titanium_GT>20</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTSpine</defName>
+        <label>install advanced bionic spine</label>
+        <description>Install an advanced bionic spine.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTSpine</ThingDef>
+            <HediffDef>GTSpine</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic spine.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTSpine</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTSpine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTSpine</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Heart -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTHeart</defName>
+        <label>Advanced bionic heart</label>
+        <labelNoun>an advanced bionic heart</labelNoun>
+        <description>The second generation of bionic upgrades. A high-performance heart replacement that significantly improves blood circulation and stamina.</description>
+        <descriptionHyperlinks><ThingDef>GTHeart</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTHeart</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <RestRateMultiplier>0.1</RestRateMultiplier>
+                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.8</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTHeart</defName>
+        <label>Advanced bionic heart</label>
+        <description>The second generation of bionic upgrades. A high-performance heart replacement that significantly improves blood circulation and stamina.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTHeart</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <Titanium_GT>20</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.0</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTHeart</defName>
+        <label>install advanced bionic heart</label>
+        <description>Install an advanced bionic heart.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTHeart</ThingDef>
+            <HediffDef>GTHeart</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic heart.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTHeart</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTHeart</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Heart</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTHeart</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Lung -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTLung</defName>
+        <label>Advanced bionic lung</label>
+        <labelNoun>an advanced bionic lung</labelNoun>
+        <description>The second generation of bionic upgrades. An efficient lung replacement that improves oxygen filtration and absorption while increasing overall stamina.</description>
+        <descriptionHyperlinks><ThingDef>GTLung</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTLung</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <RestRateMultiplier>0.15</RestRateMultiplier>
+                    <ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+                </statOffsets>
+                <statFactors>
+                    <RestFallRateFactor>0.8</RestFallRateFactor>
+                </statFactors>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTLung</defName>
+        <label>Advanced bionic lung</label>
+        <description>The second generation of bionic upgrades. An efficient lung replacement that improves oxygen filtration and absorption while increasing overall stamina.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTLung</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTLung</defName>
+        <label>install advanced bionic lung</label>
+        <description>Install an advanced bionic lung.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTLung</ThingDef>
+            <HediffDef>GTLung</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic lung.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTLung</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLung</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Lung</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLung</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Kidney -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTKidney</defName>
+        <label>Advanced bionic kidney</label>
+        <labelNoun>an advanced bionic kidney</labelNoun>
+        <description>The second generation of bionic upgrades. A highly efficient kidney replacement that significantly improves filtration and overall health.</description>
+        <descriptionHyperlinks><ThingDef>GTKidney</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTKidney</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.2</ImmunityGainSpeed>
+                    <ToxicResistance>0.3</ToxicResistance>
+                    <MaxHitPoints>1.1</MaxHitPoints>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.5</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTKidney</defName>
+        <label>Advanced bionic kidney</label>
+        <description>The second generation of bionic upgrades. A highly efficient kidney replacement that significantly improves filtration and overall health.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTKidney</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTKidney</defName>
+        <label>install advanced bionic kidney</label>
+        <description>Install an advanced bionic kidney.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTKidney</ThingDef>
+            <HediffDef>GTKidney</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic kidney.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTKidney</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTKidney</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Kidney</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTKidney</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Liver -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTLiver</defName>
+        <label>Advanced bionic liver</label>
+        <labelNoun>an advanced bionic liver</labelNoun>
+        <description>The second generation of bionic upgrades. A high-performance liver replacement that significantly improves detoxification and overall health.</description>
+        <descriptionHyperlinks><ThingDef>GTLiver</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTLiver</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ImmunityGainSpeed>0.1</ImmunityGainSpeed>
+                    <ToxicResistance>0.4</ToxicResistance>
+                    <MaxHitPoints>1.1</MaxHitPoints>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTLiver</defName>
+        <label>Advanced bionic liver</label>
+        <description>The second generation of bionic upgrades. A high-performance liver replacement that significantly improves detoxification and overall health.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTLiver</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTLiver</defName>
+        <label>install advanced bionic liver</label>
+        <description>Install an advanced bionic liver.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTLiver</ThingDef>
+            <HediffDef>GTLiver</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic liver.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTLiver</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLiver</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Liver</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLiver</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Stomach -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTStomach</defName>
+        <label>Advanced bionic stomach</label>
+        <labelNoun>an advanced bionic stomach</labelNoun>
+        <description>The second generation of bionic upgrades. A high-performance stomach replacement that significantly improves digestion and overall health.</description>
+        <descriptionHyperlinks><ThingDef>GTStomach</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTStomach</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <makeImmuneTo>
+                  <li>GutWorms</li>
+                </makeImmuneTo>
+                <hungerRateFactor>0.75</hungerRateFactor>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <comps>
+          <li Class="HediffCompProperties_ReactOnDamage">
+            <damageDefIncoming>EMP</damageDefIncoming>
+            <vomit>true</vomit>
+          </li>
+        </comps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTStomach</defName>
+        <label>Advanced bionic stomach</label>
+        <description>The second generation of bionic upgrades. A high-performance stomach replacement that significantly improves digestion and overall health.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTStomach</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTStomach</defName>
+        <label>install advanced bionic stomach</label>
+        <description>Install an advanced bionic stomach.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTStomach</ThingDef>
+            <HediffDef>GTStomach</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic stomach.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTStomach</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTStomach</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Stomach</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTStomach</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Hand -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTHand</defName>
+        <label>Advanced bionic hand</label>
+        <labelNoun>an advanced bionic hand</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible dexterity and strength.</description>
+        <descriptionHyperlinks><ThingDef>GTHand</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTHand</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTHand</defName>
+        <label>Advanced bionic hand</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible dexterity and strength.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTHand</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>8</Plasteel>
+            <Titanium_GT>12</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTHand</defName>
+        <label>install advanced bionic hand</label>
+        <description>Install an advanced bionic hand.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTHand</ThingDef>
+            <HediffDef>GTHand</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic hand.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTHand</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTHand</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Hand</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTHand</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Foot -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTFoot</defName>
+        <label>Advanced bionic foot</label>
+        <labelNoun>an advanced bionic foot</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible balance and strength.</description>
+        <descriptionHyperlinks><ThingDef>GTFoot</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTFoot</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.5</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTFoot</defName>
+        <label>Advanced bionic foot</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible balance and strength.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTFoot</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>8</Plasteel>
+            <Titanium_GT>12</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTFoot</defName>
+        <label>install advanced bionic foot</label>
+        <description>Install an advanced bionic foot.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTFoot</ThingDef>
+            <HediffDef>GTFoot</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic foot.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTFoot</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTFoot</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Foot</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTFoot</addsHediff>
+    </RecipeDef>
+
+    <!-- Advanced Bionic Dentures -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTDentures</defName>
+        <label>Advanced bionic dentures</label>
+        <labelNoun>an advanced set of bionic dentures</labelNoun>
+        <description>The second generation of bionic upgrades. A set of advanced dentures that significantly improve chewing and overall oral health.</description>
+        <descriptionHyperlinks><ThingDef>GTDentures</ThingDef></descriptionHyperlinks>
+        <spawnThingOnRemoved>GTDentures</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <EatingSpeed>0.4</EatingSpeed>
+                    <SocialImpact>0.1</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTDentures</defName>
+        <label>Advanced bionic dentures</label>
+        <description>The second generation of bionic upgrades. A set of advanced dentures that significantly improve chewing and overall oral health.</description>
+        <descriptionHyperlinks><RecipeDef>InstallGTDentures</RecipeDef></descriptionHyperlinks>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>8</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+        <statBases>
+            <Mass>0.5</Mass>
+            <MarketValue>2100</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTDentures</defName>
+        <label>install advanced bionic dentures</label>
+        <description>Install an advanced set of bionic dentures.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTDentures</ThingDef>
+            <HediffDef>GTDentures</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic dentures.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTDentures</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTDentures</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Jaw</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTDentures</addsHediff>
+    </RecipeDef>
+
+</Defs>

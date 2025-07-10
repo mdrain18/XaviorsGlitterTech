@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RecipeDef>
+        <defName>BuildBandages</defName>
+        <label>Produce bandages</label>
+        <description>Produce bandages</description>
+        <jobString>Producing bandages</jobString>
+        <workAmount>400</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Cloth</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <Bandage>1</Bandage>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Cloth</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceSerum</defName>
+        <label>fabricate Serum</label>
+        <description>Fabricate Serum</description>
+        <jobString>fabricating Serum</jobString>
+        <workAmount>2000</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Ethanol</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silicon</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <Serum>10</Serum>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Uranium</li>
+                <li>Ethanol</li>
+                <li>Silicon</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>BuildMedicine</defName>
+        <label>Produce Medicine</label>
+        <description>Produce Medicine</description>
+        <jobString>Producing Medicine</jobString>
+        <workAmount>1800</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineHerbal</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Ethanol</li>
+                    </thingDefs>
+                </filter>
+                <count>6</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Bandage</li>
+                    </thingDefs>
+                </filter>
+                <count>5</count>
+            </li>
+        </ingredients>
+        <products>
+            <MedicineIndustrial>1</MedicineIndustrial>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineHerbal</li>
+                <li>Ethanol</li>
+                <li>Bandage</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+
+    <RecipeDef>
+        <defName>ProduceGlitterworldMedicine</defName>
+        <label>Produce glitterworld Medicine</label>
+        <description>Produce glitterworld Medicine</description>
+        <jobString>Producing glitterworld Medicine</jobString>
+        <workAmount>3200</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>MedicineHerbal</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Ethanol</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Serum</li>
+                    </thingDefs>
+                </filter>
+                <count>2</count>
+            </li>
+        </ingredients>
+        <products>
+            <MedicineUltratech>1</MedicineUltratech>
+        </products>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>MedicineIndustrial</li>
+                <li>MedicineHerbal</li>
+                <li>Ethanol</li>
+                <li>Serum</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <workSkill>Crafting</workSkill>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--============================== Beds ==============================-->
+
+    <ThingDef ParentName="FurnitureBase">
+        <defName>ambTable</defName>
+        <label>Re-Ambulation Pod</label>
+        <description>Warning this med-pod is calibrated for male patients only. This pod is designed for severely injured patents. By injecting bio-discardable re-constructive nano machines into the blood stream this table will fix most wounds over time, but some wounds will still require a doctor.</description>
+        <thingClass>Building_Bed</thingClass>
+        <graphicData>
+            <texPath>Things/Building/Furniture/Bed/HospitalBed</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+            <WorkToBuild>3200</WorkToBuild>
+            <Mass>35</Mass>
+            <Flammability>1.0</Flammability>
+            <Comfort>1</Comfort>
+            <BedRestEffectiveness>1.5</BedRestEffectiveness>
+            <ImmunityGainSpeedFactor>3</ImmunityGainSpeedFactor>
+            <MedicalTendQualityOffset>3</MedicalTendQualityOffset>
+            <SurgerySuccessChanceFactor>3</SurgerySuccessChanceFactor>
+        </statBases>
+        <size>(1,2)</size>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costStuffCount>80</costStuffCount>
+        <costList>
+            <Titanium_GT>80</Titanium_GT>
+            <MedicineUltratech>10</MedicineUltratech>
+            <MagneticCoil>2</MagneticCoil>
+            <ComputerComp>4</ComputerComp>
+            <Serum>1</Serum>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <building>
+            <bed_showSleeperBody>true</bed_showSleeperBody>
+            <bed_healPerDay>200</bed_healPerDay>
+            <bed_defaultMedical>true</bed_defaultMedical>
+        </building>
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>350</basePowerConsumption>
+                <shortCircuitInRain>false</shortCircuitInRain>
+            </li>
+            <li Class="CompProperties_AffectedByFacilities">
+                <linkableFacilities>
+                    <li>VitalsMonitor</li>
+                </linkableFacilities>
+            </li>
+            <li Class="CompProperties_AssignableToPawn">
+                <drawAssignmentOverlay>false</drawAssignmentOverlay>
+                <compClass>CompAssignableToPawn_Bed</compClass>
+            </li>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <fillPercent>0.4</fillPercent>
+        <pathCost>60</pathCost>
+        <leaveResourcesWhenKilled>True</leaveResourcesWhenKilled>
+        <staticSunShadowHeight>0.17</staticSunShadowHeight>
+        <castEdgeShadows>True</castEdgeShadows>
+        <passability>PassThroughOnly</passability>
+        <researchPrerequisites>
+            <li>Pharmaceuticals</li>
+        </researchPrerequisites>
+        <placeWorkers>
+            <li>PlaceWorker_ShowFacilitiesConnections</li>
+        </placeWorkers>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <designationCategory>Furniture</designationCategory>
+    </ThingDef>
+
+
+    <ThingDef ParentName="FurnitureBase">
+        <defName>DynChair</defName>
+        <label>Dynamic Relaxation Chair</label>
+        <description>A large, chair that dynamically reforms to not only comfort each person, but sense areas of specific discomfort and provide mild or intensive massaging. All it needs is a bar fridge...</description>
+        <graphicData>
+            <texPath>Things/Building/Furniture/Armchair</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <shadowData>
+                <volume>(0.6, 0.6, 0.6)</volume>
+            </shadowData>
+            <damageData>
+                <rectN>(0,0,1,0.703125)</rectN>
+                <rectS>(0.09375,0,0.84375,1)</rectS>
+                <rectE>(0,0,0.84375,0.625)</rectE>
+                <rectW>(0.15625,0,0.84375,0.625)</rectW>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <statBases>
+            <MaxHitPoints>140</MaxHitPoints>
+            <WorkToBuild>5000</WorkToBuild>
+            <Mass>5</Mass>
+            <Flammability>1.0</Flammability>
+            <Beauty>10</Beauty>
+            <Comfort>8</Comfort>
+        </statBases>
+        <socialPropernessMatters>true</socialPropernessMatters>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+        </stuffCategories>
+        <costStuffCount>100</costStuffCount>
+        <costList>
+            <Titanium_GT>40</Titanium_GT>
+            <ComputerComp>4</ComputerComp>
+            <Uranium>1</Uranium>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <pathCost>30</pathCost>
+        <fillPercent>0.40</fillPercent>
+        <designationCategory>Furniture</designationCategory>
+        <building>
+            <isSittable>true</isSittable>
+        </building>
+    </ThingDef>
+
+</Defs>

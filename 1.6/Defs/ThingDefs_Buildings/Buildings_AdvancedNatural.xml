@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="RockBase">
+        <defName>MineableTitanium</defName>
+        <label>compacted titanium</label>
+        <description>Ancient buried space ship crash site. Rich in titanium.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <color>(89,83,68)</color>
+            <colorTwo>(240,240,240)</colorTwo>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>10000</MaxHitPoints>
+        </statBases>
+        <building>
+            <isResourceRock>true</isResourceRock>
+            <mineableThing>Titanium_GT</mineableThing>
+            <mineableYield>20</mineableYield>
+            <mineableScatterCommonality>0.1</mineableScatterCommonality>
+            <mineableScatterLumpSizeRange>10~60</mineableScatterLumpSizeRange>
+            <veinMineable>true</veinMineable>
+        </building>
+    </ThingDef>
+
+</Defs>

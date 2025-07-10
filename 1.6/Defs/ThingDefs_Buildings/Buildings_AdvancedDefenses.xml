@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>Shield</defName>
+        <label>Shield</label>
+        <description>Excellent cover from gunfire.</description>
+        <thingClass>Building</thingClass>
+        <category>Building</category>
+        <replaceTags>
+            <li>Barricade</li>
+        </replaceTags>
+        <graphicData>
+            <texPath>Things/Building/Linked/Shield_Atlas</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <linkType>Basic</linkType>
+            <linkFlags>
+                <li>Wall</li>
+            </linkFlags>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/Shield_MenuIcon</uiIconPath>
+        <uiIconScale>1.2</uiIconScale>
+        <altitudeLayer>Building</altitudeLayer>
+        <pathCost>42</pathCost>
+        <pathCostIgnoreRepeat>true</pathCostIgnoreRepeat>
+        <passability>PassThroughOnly</passability>
+        <castEdgeShadows>true</castEdgeShadows>
+        <fillPercent>0.55</fillPercent>
+        <canOverlapZones>false</canOverlapZones>
+        <uiOrder>10</uiOrder>
+        <statBases>
+            <MaxHitPoints>500</MaxHitPoints>
+            <Beauty>-3</Beauty>
+            <WorkToBuild>360</WorkToBuild>
+            <Flammability>0</Flammability>
+        </statBases>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <isInert>true</isInert>
+            <isFence>true</isFence>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <paintable>true</paintable>
+        </building>
+        <drawStyleCategory>Defenses</drawStyleCategory>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <costStuffCount>6</costStuffCount>
+        <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+        <rotatable>false</rotatable>
+        <selectable>true</selectable>
+        <neverMultiSelect>true</neverMultiSelect>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Security</designationCategory>
+        <staticSunShadowHeight>0.20</staticSunShadowHeight>
+    </ThingDef>
+
+    <!--=============== Turret Base ===============-->
+
+    <ThingDef ParentName="BuildingBase" Name="AutocannonTurret_GT" Abstract="True">
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/Turret/EMRGTurret_Base</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3, 3)</drawSize>
+            <drawOffset>(0,0,-0.1)</drawOffset>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(1.5,0.35,1.4)</volume>
+                <offset>(0,0,-0.05)</offset>
+            </shadowData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <stealable>false</stealable>
+        <rotatable>false</rotatable>
+        <size>(2,2)</size>
+        <statBases>
+            <MaxHitPoints>600</MaxHitPoints>
+            <WorkToBuild>15000</WorkToBuild>
+            <Flammability>1.0</Flammability>
+            <Mass>100</Mass>
+            <Beauty>-30</Beauty>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.5</fillPercent>
+        <hasTooltip>true</hasTooltip>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Security</designationCategory>
+        <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+        <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
+            <turretTopDrawSize>2.7</turretTopDrawSize>
+            <turretTopOffset>(0, 0.05)</turretTopOffset>
+        </building>
+        <placeWorkers>
+            <li>PlaceWorker_TurretTop</li>
+            <li>PlaceWorker_ShowTurretRadius</li>
+        </placeWorkers>
+        <designationHotKey>Misc3</designationHotKey>
+        <uiIconScale>0.95</uiIconScale>
+        <researchPrerequisites>
+            <li>EMRGDefense</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!-- EMTurret -->
+    <ThingDef ParentName="AutocannonTurret_GT">
+        <defName>EMTurret</defName>
+        <label>EMRG turret</label>
+        <description>An EMRG rifle mounted on a sentry gun assembly that automatically fires at nearby enemies.
+            Explodes when damaged.</description>
+        <uiIconPath>Things/Building/Security/TurretAutocannon_MenuIcon</uiIconPath>
+        <statBases>
+            <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+        </statBases>
+        <costList>
+            <Titanium_GT>55</Titanium_GT>
+            <ComputerComp>2</ComputerComp>
+            <Gun_EMRifle>1</Gun_EMRifle>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <wickTicks>240</wickTicks>
+                <explosiveRadius>2.9</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <chanceNeverExplodeFromDamage>0.5</chanceNeverExplodeFromDamage>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>500</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <building>
+            <turretGunDef>Gun_EMRGTurret</turretGunDef>
+            <turretBurstCooldownTime>5</turretBurstCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_EMRGTurret</defName>
+        <label>Improvised turret bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/EM_Large</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>80</damageAmountBase>
+            <speed>200</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Gun_EMRGTurret</defName>
+        <label>EMRG Turret Gun</label>
+        <description>Jury-rigged EMRG Rifle attached to a turret.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <statBases>
+            <AccuracyTouch>0.50</AccuracyTouch>
+            <AccuracyShort>0.68</AccuracyShort>
+            <AccuracyMedium>0.98</AccuracyMedium>
+            <AccuracyLong>0.98</AccuracyLong>
+            <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Mass>40</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <weaponTags>
+            <li>EMRGTurretGun</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_EMRGTurret</defaultProjectile>
+                <warmupTime>0</warmupTime>
+                <range>45</range>
+                <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>EM</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- CanisterTurret -->
+    <ThingDef ParentName="AutocannonTurret_GT">
+        <defName>CanisterTurret</defName>
+        <label>Canister turret</label>
+        <description>A powerful canister turret that automatically fires at nearby enemies.
+            Good for cramped quarters, explodes when damaged.</description>
+        <uiIconPath>Things/Building/Turret/EMRGTurret_Top</uiIconPath>
+        <statBases>
+            <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+        </statBases>
+        <costList>
+            <Titanium_GT>55</Titanium_GT>
+            <ComputerComp>2</ComputerComp>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Explosive">
+                <explosiveRadius>2.9</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+                <chanceNeverExplodeFromDamage>0.2</chanceNeverExplodeFromDamage>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>500</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <building>
+            <turretGunDef>Gun_CanisterTurret</turretGunDef>
+            <turretBurstCooldownTime>10</turretBurstCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_CanisterTurret</defName>
+        <label>Improvised turret bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <speed>90</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Gun_CanisterTurret</defName>
+        <label>Canister Turret Gun</label>
+        <description>A cross between minigun and shotgun, attached to a turret.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <statBases>
+            <AccuracyTouch>0.55</AccuracyTouch>
+            <AccuracyShort>0.45</AccuracyShort>
+            <AccuracyMedium>0.35</AccuracyMedium>
+            <AccuracyLong>0.25</AccuracyLong>
+            <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Mass>40</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_CanisterTurret</defaultProjectile>
+                <warmupTime>0.15</warmupTime>
+                <range>30</range>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <burstShotCount>15</burstShotCount>
+                <soundCast>Shot_IncendiaryLauncher</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!--=============== Mortar turret ===============-->
+
+    <ThingDef ParentName="BuildingBase" Name="AutoMortarBase_GT" Abstract="True">
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <receivesSignals>true</receivesSignals>
+        <altitudeLayer>Building</altitudeLayer>
+        <stealable>false</stealable>
+        <size>(2,2)</size>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.4</fillPercent>
+        <tickerType>Normal</tickerType>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Security</designationCategory>
+        <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
+        <statBases>
+            <MaxHitPoints>600</MaxHitPoints>
+            <WorkToBuild>15000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>30</Mass>
+            <ShootingAccuracyTurret>0.9</ShootingAccuracyTurret>
+            <Beauty>-20</Beauty>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Explosive">
+                <wickTicks>240</wickTicks>
+                <explosiveRadius>4.9</explosiveRadius>
+                <explosiveDamageType>Bomb</explosiveDamageType>
+            </li>
+        </comps>
+        <damageMultipliers>
+            <li>
+                <damageDef>Flame</damageDef>
+                <multiplier>0</multiplier>
+            </li>
+        </damageMultipliers>
+        <uiIconPath>Things/Building/Security/TurretMortar_MenuIcon</uiIconPath>
+        <researchPrerequisites>
+            <li>AdvancedFact</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!-- AutoMortar -->
+    <ThingDef ParentName="AutoMortarBase_GT">
+        <defName>AutoMortar_GT</defName>
+        <label>auto mortar</label>
+        <description>Modified and improved on from the Mech's auto mortar.
+            An automatic mortar turret which fires at targets by itself.
+            Explodes when damaged.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarBase</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,-0.16)</drawOffset>
+            <damageData>
+                <rect>(0.3,0.3,1.4,1.4)</rect>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <costList>
+            <Titanium_GT>80</Titanium_GT>
+            <Plasteel>10</Plasteel>
+            <ComputerComp>12</ComputerComp>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <building>
+            <combatPower>220</combatPower>
+            <turretGunDef>Auto_Artillery_Mortar</turretGunDef>
+            <turretBurstWarmupTime>4.0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>25.0</turretBurstCooldownTime>
+            <turretInitialCooldownTime>50</turretInitialCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>Auto_Artillery_Mortar</defName>
+        <label>auto-mortar</label>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarTop</texPath>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <weaponTags>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_Shell_HighExplosive</defaultProjectile>
+                <forcedMissRadius>10</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+                <warmupTime>4</warmupTime>
+                <minRange>29.9</minRange>
+                <range>500</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- ClusterMortar -->
+    <ThingDef ParentName="AutoMortarBase_GT">
+        <defName>ClusterMortar</defName>
+        <label>auto cluster mortar</label>
+        <description>Modified and improved on from the Mech's auto mortar.
+            A cluster automatic mortar turret which fires 5 shells at once at targets by itself.
+            Explodes when damaged.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarBase</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,-0.16)</drawOffset>
+            <damageData>
+                <rect>(0.3,0.3,1.4,1.4)</rect>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <costList>
+            <Titanium_GT>80</Titanium_GT>
+            <Plasteel>10</Plasteel>
+            <ComputerComp>12</ComputerComp>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <building>
+            <combatPower>220</combatPower>
+            <turretGunDef>Auto_Cluster_Mortar</turretGunDef>
+            <turretBurstWarmupTime>4.0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>45.0</turretBurstCooldownTime>
+            <turretInitialCooldownTime>50</turretInitialCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>Auto_Cluster_Mortar</defName>
+        <label>auto-mortar</label>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarTop</texPath>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <weaponTags>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_Shell_HighExplosive</defaultProjectile>
+                <forcedMissRadius>10</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+                <warmupTime>4</warmupTime>
+                <minRange>29.9</minRange>
+                <range>500</range>
+                <burstShotCount>5</burstShotCount>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- EMPAMortar -->
+    <ThingDef ParentName="AutoMortarBase_GT">
+        <defName>EMPAMortar</defName>
+        <label>auto mortar</label>
+        <description>Modified and improved on from the Mech's auto mortar.
+            An EMP automatic mortar turret which fires an EMP shell at targets by itself.
+            Explodes when damaged.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarBase</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,-0.16)</drawOffset>
+            <damageData>
+                <rect>(0.3,0.3,1.4,1.4)</rect>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <costList>
+            <Titanium_GT>80</Titanium_GT>
+            <Plasteel>10</Plasteel>
+            <ComputerComp>12</ComputerComp>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <building>
+            <combatPower>220</combatPower>
+            <turretGunDef>Auto_EMP_Mortar</turretGunDef>
+            <turretBurstWarmupTime>2.0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>15.0</turretBurstCooldownTime>
+            <turretInitialCooldownTime>50</turretInitialCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_EMPAMortar</defName>
+        <label>explosive mortar shell</label>
+        <graphicData>
+            <texPath>Things/Projectile/ShellEMP</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>EMP</damageDef>
+            <damageAmountBase>260</damageAmountBase>
+            <speed>65</speed>
+            <explosionRadius>6.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>Explosion_EMP</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>Auto_EMP_Mortar</defName>
+        <label>auto-mortar</label>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarTop</texPath>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <weaponTags>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_EMPAMortar</defaultProjectile>
+                <forcedMissRadius>10</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+                <warmupTime>4</warmupTime>
+                <minRange>29.9</minRange>
+                <range>500</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Mortar_LaunchA</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>16</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- MissileTurret -->
+    <ThingDef ParentName="AutoMortarBase_GT">
+        <defName>MissileSwarmTurret</defName>
+        <label>Long range missile turret</label>
+        <description>An automatic Missile turret. Fires missiles, accurate and powerful.
+            Explodes when damaged</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarBase</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,-0.16)</drawOffset>
+            <damageData>
+                <rect>(0.3,0.3,1.4,1.4)</rect>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <costList>
+            <Titanium_GT>140</Titanium_GT>
+            <ComputerComp>24</ComputerComp>
+            <Silicon>24</Silicon>
+            <MagneticCoil>6</MagneticCoil>
+            <AlphaPoly>1</AlphaPoly>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <building>
+            <combatPower>220</combatPower>
+            <turretGunDef>Gun_RocketswarmLauncher_GT</turretGunDef>
+            <turretBurstWarmupTime>0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>35.0</turretBurstCooldownTime>
+            <turretInitialCooldownTime>50</turretInitialCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Proj_Rocket_GT</defName>
+        <label>rockets</label>
+        <description>A string of 15 rockets.</description>
+        <graphicData>
+            <texPath>Things/Projectile/Turret_Missile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <speed>65</speed>
+            <explosionRadius>6.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>Explosion_Rocket</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>Gun_RocketswarmLauncher_GT</defName>
+        <label>rocket-swarm tube</label>
+        <description>A rocket-swarm tube of the type usually mounted on a rocket-swarm launcher turret.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMissileTop</texPath>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <weaponTags>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Proj_Rocket_GT</defaultProjectile>
+                <forcedMissRadius>3</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+                <warmupTime>4</warmupTime>
+                <minRange>29.9</minRange>
+                <range>500</range>
+                <burstShotCount>15</burstShotCount>
+                <soundCast>RocketswarmLauncher_Fire</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <!-- CMissileTurret -->
+    <ThingDef ParentName="AutoMortarBase_GT">
+        <defName>CruiseMissileTurret</defName>
+        <label>Cruise missile turret</label>
+        <description>An automatic Cruise Missile turret. Fires a single very large missile.
+            Explodes when damaged</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoMortarBase</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,-0.16)</drawOffset>
+            <damageData>
+                <rect>(0.3,0.3,1.4,1.4)</rect>
+            </damageData>
+            <shadowData>
+                <offset>(-0.13,-0.87,-0.1)</offset>
+                <volume>(0.5,0.4,1.05)</volume>
+            </shadowData>
+        </graphicData>
+        <costList>
+            <Titanium_GT>140</Titanium_GT>
+            <ComputerComp>24</ComputerComp>
+            <Silicon>24</Silicon>
+            <MagneticCoil>6</MagneticCoil>
+            <AlphaPoly>1</AlphaPoly>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+        <building>
+            <combatPower>220</combatPower>
+            <turretGunDef>Gun_CMissileTurret</turretGunDef>
+            <turretBurstWarmupTime>0</turretBurstWarmupTime>
+            <turretBurstCooldownTime>50.0</turretBurstCooldownTime>
+            <turretInitialCooldownTime>70</turretInitialCooldownTime>
+        </building>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_CMissileTurret</defName>
+        <label>rockets</label>
+        <description>A very large rocket.</description>
+        <graphicData>
+            <texPath>Things/Projectile/Turret_CMissile</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>100</damageAmountBase>
+            <speed>65</speed>
+            <explosionRadius>20.9</explosionRadius>
+            <flyOverhead>true</flyOverhead>
+            <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+            <soundExplode>Explosion_Rocket</soundExplode>
+            <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+            <soundAmbient>MortarRound_Ambient</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseArtilleryWeapon">
+        <defName>Gun_CMissileTurret</defName>
+        <label>rocket-swarm tube</label>
+        <description>A large rocket silo.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/AutoCMissileTop</texPath>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <weaponTags>
+            <li>Artillery_BaseDestroyer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_CMissileTurret</defaultProjectile>
+                <forcedMissRadius>3</forcedMissRadius>
+                <ai_AvoidFriendlyFireRadius>25</ai_AvoidFriendlyFireRadius>
+                <warmupTime>4</warmupTime>
+                <minRange>29.9</minRange>
+                <range>500</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>RocketswarmLauncher_Fire</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <requireLineOfSight>false</requireLineOfSight>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+    </ThingDef>
+
+</Defs>

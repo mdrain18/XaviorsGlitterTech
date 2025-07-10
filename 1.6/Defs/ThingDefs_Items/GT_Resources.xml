@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--=============== Titanium_GT ====================-->
+	<ThingDef ParentName="ResourceBase">
+		<defName>Titanium_GT</defName>
+		<label>Titanium</label>
+		<description>Titanium alloy. A complex mix of rare elements, making a very strong, durable, and light material resistant to corrosion, and high velocity kinetics. Perfect for star ships and Orbital space elevators...</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Titanium_GT</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Metal_Drop</soundInteract>
+		<soundDrop>Metal_Drop</soundDrop>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<statBases>
+			<MarketValue>32</MarketValue>
+			<Mass>0.15</Mass>
+			<StuffPower_Armor_Sharp>1.9</StuffPower_Armor_Sharp>
+			<StuffPower_Armor_Blunt>1</StuffPower_Armor_Blunt>
+			<StuffPower_Armor_Heat>1.35</StuffPower_Armor_Heat>
+			<StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+			<StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+			<SharpDamageMultiplier>1.6</SharpDamageMultiplier>
+			<BluntDamageMultiplier>1.3</BluntDamageMultiplier>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>.1</deepCommonality>
+		<deepCountPerPortion>10</deepCountPerPortion>
+		<deepLumpSizeRange>4~14</deepLumpSizeRange>
+		<burnableByRecipe>false</burnableByRecipe>
+		<smeltable>true</smeltable>
+		<stuffProps>
+			<categories>
+				<li>Metallic</li>
+			</categories>
+			<appearance>Metal</appearance>
+			<color>(255,255,255)</color>
+			<commonality>0.05</commonality>
+			<constructEffect>ConstructMetal</constructEffect>
+			<soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+			<soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+			<statOffsets>
+				<Beauty>6</Beauty>
+			</statOffsets>
+			<statFactors>
+				<MaxHitPoints>3.5</MaxHitPoints>
+				<Flammability>0</Flammability>
+				<Beauty>3</Beauty>
+				<DoorOpenSpeed>3</DoorOpenSpeed>
+				<BedRestEffectiveness>1.5</BedRestEffectiveness>
+				<WorkToMake>3.0</WorkToMake>
+				<WorkToBuild>3.0</WorkToBuild>
+				<MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+			</statFactors>
+		</stuffProps>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+		<researchPrerequisites>
+			<li>MetalFab</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+<!--=============== AlphaPoly ====================-->
+    <ThingDef ParentName="ResourceBase">
+        <defName>AlphaPoly</defName>
+        <label>Alpha Poly</label>
+        <description>The first iteration in artificially constructed, atomically assembled dense matter. This man made, and extremely rare material, only assembled in high end matter assemblers is good for building structures in the chromospheres of stars.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/APoly</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>117</MarketValue>
+            <Mass>0.8</Mass>
+            <StuffPower_Armor_Sharp>2</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>1.8</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>3</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>4</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>2</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>2</SharpDamageMultiplier>
+            <BluntDamageMultiplier>2</BluntDamageMultiplier>
+        </statBases>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <deepCommonality>.01</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>2~10</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <color>(100,60,100)</color>
+            <commonality>0.05</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>6</MaxHitPoints>
+                <Flammability>0</Flammability>
+                <Beauty>8</Beauty>
+                <DoorOpenSpeed>5</DoorOpenSpeed>
+                <BedRestEffectiveness>3.0</BedRestEffectiveness>
+                <WorkToMake>8.0</WorkToMake>
+                <WorkToBuild>8.0</WorkToBuild>
+                <MeleeWeapon_CooldownMultiplier>0.8</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+        <researchPrerequisites>
+            <li>MetalFab</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!--=============== BetaPoly ====================-->
+    <ThingDef ParentName="ResourceBase">
+        <defName>BetaPoly</defName>
+        <label>Beta Poly</label>
+        <description>The second iteration in artificially constructed, atomically assembled dense matter. This man made, and extremely rare material, is too expensive to be mass produced, and has only been used as material for indestructible space suits, unstoppable kinetic slugs and containment for miniature black holes.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/BPoly</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>235</MarketValue>
+            <Mass>1.2</Mass>
+            <StuffPower_Armor_Sharp>4</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>3.5</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>8</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>8</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>4</SharpDamageMultiplier>
+            <BluntDamageMultiplier>4</BluntDamageMultiplier>
+        </statBases>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <deepCommonality>.001</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>2~10</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <commonality>0.005</commonality>
+            <color>(100,60,60)</color>
+            <constructEffect>ConstructMetal</constructEffect>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statOffsets>
+                <Beauty>20</Beauty>
+            </statOffsets>
+            <statFactors>
+                <MaxHitPoints>10</MaxHitPoints>
+                <Flammability>0</Flammability>
+                <Beauty>10</Beauty>
+                <WorkToMake>10</WorkToMake>
+                <BedRestEffectiveness>5.0</BedRestEffectiveness>
+                <DoorOpenSpeed>8</DoorOpenSpeed>
+                <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
+        <researchPrerequisites>
+            <li>MetalFab</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <!--=============== Components ====================-->
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>MagneticCoil</defName>
+        <label>Magnetic Coil</label>
+        <description>An advanced magnetic coil. Beyond the fabrication skills of anyone but an Electromagnetic
+            physicist.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/MagneticCoil</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>450</MarketValue>
+            <Mass>0.6</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>Silicon</defName>
+        <label>Silicon</label>
+        <description>Raw elemental Silicon, used in most electronic components.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Silicon</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>1</MarketValue>
+            <Mass>0.2</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>ComputerComp</defName>
+        <label>Computer components</label>
+        <description>Advanced electronic circuit boards. Required by advanced machinery, when simple mechanics just isn't enough.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/ComputerComp</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <statBases>
+            <MarketValue>95</MarketValue>
+            <Mass>0.6</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>Ethanol</defName>
+        <label>Ethanol</label>
+        <description>Pure ethanol, strong alcohol used in Medicines and on most weekends...</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Ethanol</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <statBases>
+            <MarketValue>25</MarketValue>
+            <Mass>0.6</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>Bandage</defName>
+        <label>Bandages</label>
+        <description>Cloth bandages, essential for binding wounds to reduce blood loss.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Bandage</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <statBases>
+            <MarketValue>250</MarketValue>
+            <Mass>0.1</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef ParentName="ResourceBase">
+        <defName>Serum</defName>
+        <label>Serum</label>
+        <description>Fabricated serums, used as treatments on glitter-world planets, when body reconstruction is unavailable.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Serum</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+        <statBases>
+            <MarketValue>250</MarketValue>
+            <Mass>0.6</Mass>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+    </ThingDef>
+
+</Defs>

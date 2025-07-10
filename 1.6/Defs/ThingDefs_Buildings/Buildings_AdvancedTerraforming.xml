@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>ImpactionCharge</defName>
+        <label>Impaction charge</label>
+        <description>Detonates on command. Creates a directed blast of plasma, which impacts right into the bedrock. Used for asteroid mining and accessing underground resources.</description>
+        <graphicData>
+            <texPath>Things/Building/Terraforming/ImpactionCharge</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1,1)</drawSize>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <statBases>
+            <MaxHitPoints>50</MaxHitPoints>
+            <WorkToBuild>800</WorkToBuild>
+            <Flammability>1.0</Flammability>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <comps>
+            <li Class="CompProperties_Glower">
+                <glowRadius>8</glowRadius>
+                <glowColor>(255,255,0,0)</glowColor>
+            </li>
+        </comps>
+        <size>(1,1)</size>
+        <costList>
+            <Titanium_GT>35</Titanium_GT>
+            <MagneticCoil>4</MagneticCoil>
+            <Uranium>1</Uranium>
+        </costList>
+        <building>
+            <isInert>true</isInert>
+            <ai_chillDestination>false</ai_chillDestination>
+        </building>
+        <killedLeavings>
+            <SteamGeyser>1</SteamGeyser>
+        </killedLeavings>
+        <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+        <designationCategory>Security</designationCategory>
+        <researchPrerequisites>
+            <li>ElectroPlasmatics</li>
+        </researchPrerequisites>
+    </ThingDef>
+
+    <ThingDef ParentName="BuildingBase">
+        <defName>AdvancedDeepDrill</defName>
+        <label>advanced deep drill</label>
+        <description>An advanced deep drill that uses titanium drill bits and advanced drilling techniques. It drills faster, pulls resources from a larger area, but consumes more power and costs more to build.</description>
+        <graphicData>
+            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Production/AdvancedDeepDrill</texPath>
+            <drawSize>(6, 6)</drawSize>
+            <shadowData>
+                <volume>(0.78, 0.795, 0.135)</volume>
+                <offset>(0,0,-0.645)</offset>
+            </shadowData>
+        </graphicData>
+        <size>(3, 3)</size>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>PassThroughOnly</passability>
+        <pathCost>50</pathCost>
+        <fillPercent>0.5</fillPercent>
+        <hasInteractionCell>true</hasInteractionCell>
+        <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+        <designationCategory>Production</designationCategory>
+        <specialDisplayRadius>7.8</specialDisplayRadius>
+        <rotatable>false</rotatable>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <uiIconOffset>(0, 0.03)</uiIconOffset>
+        <uiIconScale>0.85</uiIconScale>
+        <minifiedDef>MinifiedThing</minifiedDef>
+        <building>
+            <uninstallWork>1800</uninstallWork>
+            <buildingTags>
+                <li>Production</li>
+            </buildingTags>
+            <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+        </building>
+        <thingCategories>
+            <li>BuildingsProduction</li>
+        </thingCategories>
+        <costList>
+            <Steel>200</Steel>
+            <Plasteel>50</Plasteel>
+            <Titanium_GT>35</Titanium_GT>
+            <ComponentIndustrial>5</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer> 
+            <ComputerComp>5</ComputerComp>
+            <MagneticCoil>2</MagneticCoil>
+        </costList>
+        <placeWorkers>
+            <li>PlaceWorker_DeepDrill</li>
+            <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+        </placeWorkers>
+        <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+        <researchPrerequisites>
+            <li>Research_AdvancedDeepDrill</li>
+        </researchPrerequisites>
+        <statBases>
+            <MaxHitPoints>900</MaxHitPoints>
+            <WorkToBuild>20000</WorkToBuild>
+            <Flammability>0.5</Flammability>
+            <Beauty>-25</Beauty>
+            <Mass>70</Mass>
+        </statBases>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>400</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_DeepDrill" />
+            <li Class="CompProperties_CreatesInfestations" />
+            <li Class="CompProperties">
+                <compClass>GlitterTech.AdvancedDeepDrillComp</compClass>
+            </li>
+        </comps>
+    </ThingDef>
+
+
+
+</Defs>

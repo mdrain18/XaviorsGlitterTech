@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>OperateAdvancedDeepDrill</defName>
+    <driverClass>GlitterTech.JobDriver_OperateAdvancedDeepDrill</driverClass>
+    <reportString>operating the advanced deep drill.</reportString>
+    <casualInterruptible>true</casualInterruptible>
+    <label>operate advanced deep drill</label>
+    <alwaysShowWeapon>false</alwaysShowWeapon>
+    <collideWithPawns>false</collideWithPawns>
+  </JobDef>
+
+</Defs>

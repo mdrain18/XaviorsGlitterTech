@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_APBPistol</defName>
+        <label>APB bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/APBProj</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>15</damageAmountBase>
+            <speed>200</speed>
+            <explosionRadius>1.3</explosionRadius>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>Gun_APB-1Pistol</defName>
+        <label>APB-1 Pistol</label>
+        <description>Anion Particle Beam Pistol mark 1. The compact counter part of the APB-1 Rifle, this pistol projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will ignite most targets.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/misc/APB-1Pistol</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <AccuracyTouch>0.45</AccuracyTouch>
+            <AccuracyShort>0.35</AccuracyShort>
+            <AccuracyMedium>0.20</AccuracyMedium>
+            <AccuracyLong>0.10</AccuracyLong>
+            <RangedWeapon_Cooldown>0.50</RangedWeapon_Cooldown>
+            <MarketValue>1600</MarketValue>
+            <WorkToMake>12000</WorkToMake>
+            <Mass>2.3</Mass>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>20</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <Uranium>2</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>GlitterTech</li>
+            <li>SpacerGun</li>
+        </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_APBPistol</defaultProjectile>
+                <warmupTime>0.1</warmupTime>
+                <range>18</range>
+                <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                <burstShotCount>2</burstShotCount>
+                <soundCast>PB</soundCast>
+                <soundCastTail>GunTail_Light</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <forcedMissRadius>1.0</forcedMissRadius>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_APBProjector</defName>
+        <label>APB bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/APBProj</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>25</damageAmountBase>
+            <speed>200</speed>
+            <explosionRadius>1.9</explosionRadius>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>Gun_APB-1Projector</defName>
+        <label>APB-1 Projector</label>
+        <description>Anion Particle Beam Projector mark 1. The latest thing in anti air and anti tank weaponry, this projector literally projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will create a destructive blast.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/misc/APB-1Proj</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <MarketValue>2200</MarketValue>
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.80</AccuracyMedium>
+            <AccuracyLong>0.50</AccuracyLong>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>6</Mass>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>18</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>40</Plasteel>
+            <Titanium_GT>20</Titanium_GT>
+            <Uranium>4</Uranium>
+            <MagneticCoil>2</MagneticCoil>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>GlitterTech</li>
+            <li>SpacerGun</li>
+        </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_APBProjector</defaultProjectile>
+                <warmupTime>0.8</warmupTime>
+                <range>45</range>
+                <soundCast>PBP</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+                <forcedMissRadius>1.0</forcedMissRadius>
+            </li>
+        </verbs>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_APBRifle</defName>
+        <label>APB bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/APBR</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Flame</damageDef>
+            <damageAmountBase>10</damageAmountBase>
+            <speed>200</speed>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseGunWithQuality">
+        <defName>Gun_APB-1Rifle</defName>
+        <label>APB-1 Rifle</label>
+        <description>Anion Particle Beam Rifle mark 1. The forefront of anti-personnel weaponry, this rifle projects anions through Hydrogen, creating a neutrally charged kinetic projectile capable of disassembling matter on the atomic level. Accurate and powerful, this weapon will ignite most targets.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/misc/APB-1Rifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+        <statBases>
+            <MarketValue>1900</MarketValue>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.45</AccuracyShort>
+            <AccuracyMedium>0.25</AccuracyMedium>
+            <AccuracyLong>0.15</AccuracyLong>
+            <RangedWeapon_Cooldown>0.5</RangedWeapon_Cooldown>
+            <WorkToMake>17000</WorkToMake>
+            <Mass>4.3</Mass>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <recipeMaker>
+            <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>17</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+            <displayPriority>200</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <Uranium>4</Uranium>
+            <MagneticCoil>1</MagneticCoil>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>GlitterTech</li>
+            <li>SpacerGun</li>
+        </weaponTags>
+        <tradeTags>
+            <li>WeaponRanged</li>
+        </tradeTags>
+        <weaponClasses>
+            <li>RangedLight</li>
+        </weaponClasses>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_APBRifle</defaultProjectile>
+                <warmupTime>0.4</warmupTime>
+                <range>30</range>
+                <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                <burstShotCount>4</burstShotCount>
+                <soundCast>PB</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

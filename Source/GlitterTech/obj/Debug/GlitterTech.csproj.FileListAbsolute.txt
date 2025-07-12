@@ -3,3 +3,8 @@ D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\ob
 D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.csproj.CoreCompileInputs.cache
 D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.dll
 D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Assemblies\GlitterTech.dll
+D:\Steam\steamapps\common\RimWorld\Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterT.43724D2E.Up2Date
+D:\Development\Rimworld_Mods\XaviorsGlitterTech\Assemblies\GlitterTech.dll
+D:\Development\Rimworld_Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.csproj.AssemblyReference.cache
+D:\Development\Rimworld_Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.csproj.CoreCompileInputs.cache
+D:\Development\Rimworld_Mods\XaviorsGlitterTech\Source\GlitterTech\obj\Debug\GlitterTech.dll

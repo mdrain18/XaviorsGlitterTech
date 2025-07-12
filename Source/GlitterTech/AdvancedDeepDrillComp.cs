@@ -12,7 +12,7 @@ namespace GlitterTech
         private const float SpeedMultiplier = 2.0f;
         private const float YieldMultiplier = 1.5f;
         private const float WorkPerPortionBase = 10000f;
-        private const float AdvancedDrillRadius = 7.0f; // FIXED to float
+        private const float AdvancedDrillRadius = 7.0f;
 
         private FieldInfo portionProgressField;
         private FieldInfo portionYieldPctField;
@@ -40,7 +40,7 @@ namespace GlitterTech
             base.PostExposeData();
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                PostSpawnSetup(false); // ensures reflection rehooks after reinstall/minify
+                PostSpawnSetup(false);
             }
         }
 

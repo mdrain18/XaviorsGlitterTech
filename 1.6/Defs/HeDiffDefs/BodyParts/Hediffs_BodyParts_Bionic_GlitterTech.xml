@@ -9,6 +9,7 @@
 
     <ThingDef Name="GlitterTechBionicItemBase" Abstract="True" ParentName="BodyPartBionicImperialBase">
         <label>GlitterTech bionic item</label>
+        <description>A base for all GlitterTech bionic parts.</description>
     </ThingDef>
 
     <RecipeDef Name="GlitterTechSurgeryBase" Abstract="True" ParentName="SurgeryInstallImplantBase">
@@ -333,6 +334,7 @@
         </appliedOnFixedBodyParts>
         <addsHediff>GTEye</addsHediff>
     </RecipeDef>
+
 
     <!-- Advanced Bionic Arm -->
     <!-- HediffDef -->

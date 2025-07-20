@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- Bullet for MRG-5 Pistol -->
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_MRGPistol</defName>
         <label>MRG bullet</label>
@@ -10,15 +11,17 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
+            <stoppingPower>0.6</stoppingPower>
             <damageAmountBase>14</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
 
+    <!-- MRG-5 Pistol -->
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_MRGPistol</defName>
         <label>MRG-5 Pistol</label>
-        <description>Micro rail gun mark 5. The compact counter part of the MRG-5 Rifle, this pistol is the fifth installment of top of the line rail gun technologies. Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
+        <description>Micro rail gun mark 5. The compact counterpart of the MRG-5 Rifle, this pistol is the fifth installment of top-of-the-line rail gun technologies. Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/MRG-5Pistol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -95,7 +98,7 @@
         </verbs>
     </ThingDef>
 
-
+    <!-- Bullet for MRG-5 Rifle -->
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_MRGRifle</defName>
         <label>MRG bullet</label>
@@ -105,15 +108,17 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
+            <stoppingPower>1.2</stoppingPower>
             <damageAmountBase>12</damageAmountBase>
             <speed>200</speed>
         </projectile>
     </ThingDef>
 
+    <!-- MRG-5 Rifle -->
     <ThingDef ParentName="BaseGunWithQuality">
         <defName>Gun_MRGRifle</defName>
         <label>MRG-5 Rifle</label>
-        <description>Micro rail gun mark 5. This Rifle is the fifth installment of top of the line rail gun technologies. Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
+        <description>Micro rail gun mark 5. This rifle is the fifth installment of top-of-the-line rail gun technologies. Very accurate and powerful, this weapon will make propellant weapons seem neolithic.</description>
         <graphicData>
             <texPath>Things/Item/Equipment/misc/MRG-5Rifle</texPath>
             <graphicClass>Graphic_Single</graphicClass>

@@ -203,6 +203,7 @@
             </li>
             <li Class="CompProperties_Breakdownable"/>
         </comps>
+        <rotatable>false</rotatable>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <designationCategory>Power</designationCategory>
         <staticSunShadowHeight>0.5</staticSunShadowHeight>

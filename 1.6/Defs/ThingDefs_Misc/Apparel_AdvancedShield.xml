@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+    <!-- ==================================== Base =====================================-->
     <ThingDef Name="ApparelShieldBase_GT" ParentName="ApparelBase" Abstract="True">
         <thingClass>Apparel</thingClass>
         <graphicData>
@@ -9,6 +10,12 @@
         </graphicData>
         <tickerType>Normal</tickerType>
         <techLevel>Spacer</techLevel>
+        <statBases>
+            <Mass>2</Mass>
+            <WorkToMake>14000</WorkToMake>
+            <Flammability>0.4</Flammability>
+            <EquipDelay>2</EquipDelay>
+        </statBases>
         <thingSetMakerTags>
             <li>RewardStandardMidFreq</li>
             <li>RewardStandardQualitySuper</li>
@@ -57,30 +64,23 @@
         </tradeTags>
     </ThingDef>
 
+    <!-- HC-1 Shield -->
     <ThingDef ParentName="ApparelShieldBase_GT">
         <defName>Apparel_HC1Shield</defName>
         <label>HC-1 shield</label>
         <description>A high-capacity energy shield device. The top-tier class of personal shields, the mark 1 increases energy capacity by a factor of ten but recycles the shield slower.</description>
-        
         <statBases>
             <MarketValue>2400</MarketValue>
-            <Mass>2</Mass>
             <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
             <EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
-            <WorkToMake>14000</WorkToMake>
         </statBases>
-
-        <!-- Cost list is required for this ThingDef to work with the crafting recipe -->
         <costList>
             <BetaPoly>1</BetaPoly>
             <Uranium>5</Uranium>
             <Silicon>30</Silicon>
             <ComputerComp>5</ComputerComp>
         </costList>
-        
         <minifiedDef>MinifiedThing</minifiedDef>
-
-        <!-- Color generation for the shield -->
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -88,32 +88,26 @@
                     <only>RGBA(0.8,0.8,0.8,1)</only>
                 </li>
             </options>
-        </colorGenerator>    
+        </colorGenerator>
     </ThingDef>
 
+    <!-- Orion Corp Shield -->
     <ThingDef ParentName="ApparelShieldBase_GT">
         <defName>Apparel_OCShield</defName>
         <label>Orion Corp defense shield</label>
         <description>An Orion corp patented personal defense shield. Standard capacity, but recycles the shield much faster than all of the competitors.</description>
-        <tickerType>Normal</tickerType>
         <statBases>
             <MarketValue>2100</MarketValue>
-            <Mass>1</Mass>
             <EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
             <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
-            <WorkToMake>14000</WorkToMake>
         </statBases>
-
-        <!-- Cost list is required for this ThingDef to work with the crafting recipe -->
         <costList>
             <AlphaPoly>5</AlphaPoly>
             <Uranium>5</Uranium>
             <Silicon>10</Silicon>
             <ComputerComp>10</ComputerComp>
         </costList>
-    
         <minifiedDef>MinifiedThing</minifiedDef>
-
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>

@@ -10,6 +10,7 @@
         </graphicData>
         <projectile>
             <damageDef>Bullet</damageDef>
+            <stoppingPower>1.8</stoppingPower>
             <damageAmountBase>40</damageAmountBase>
             <speed>200</speed>
         </projectile>

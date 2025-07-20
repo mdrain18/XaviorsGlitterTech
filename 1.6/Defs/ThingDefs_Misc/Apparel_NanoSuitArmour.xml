@@ -22,18 +22,17 @@
         <statBases>
             <WorkToMake>60000</WorkToMake>
             <MaxHitPoints>340</MaxHitPoints>
-            <Mass>12</Mass>
             <Flammability>0.4</Flammability>
             <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
             <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
             <ArmorRating_Heat>0.54</ArmorRating_Heat>
             <Insulation_Cold>34</Insulation_Cold>
             <Insulation_Heat>10</Insulation_Heat>
-            <EquipDelay>14</EquipDelay>
+            <EquipDelay>10</EquipDelay>
         </statBases>
         <equippedStatOffsets>
-            <MoveSpeed>-0.4</MoveSpeed>
-            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
+            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.6</VacuumResistance>
         </equippedStatOffsets>
         <thingCategories>
             <li>ApparelArmor</li>
@@ -279,8 +278,8 @@
             <Mass>25</Mass>
         </statBases>
         <equippedStatOffsets>
-            <MoveSpeed>-0.40</MoveSpeed>
-            <WorkSpeedGlobal>-0.40</WorkSpeedGlobal>
+            <MoveSpeed>-0.20</MoveSpeed>
+            <WorkSpeedGlobal>-0.20</WorkSpeedGlobal>
         </equippedStatOffsets>
         <thingCategories>
             <li>Apparel</li>

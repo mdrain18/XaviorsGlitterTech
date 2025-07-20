@@ -60,6 +60,9 @@
 
         Release Notes: 1.6.4514
         - Updated to 1.6 version of the game.
+        - Added support for new 1.6 tags like VacuumResistance and terrain affordance.
+        - Introduced stopping power to bullets
+        
 
         Release Notes: 1.5.40602
         - Updated to work with release

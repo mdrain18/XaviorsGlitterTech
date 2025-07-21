@@ -118,4 +118,50 @@
         </colorGenerator>
     </ThingDef>
 
+    <!-- Gamma Shield -->
+    <ThingDef ParentName="ApparelShieldBase_GT">
+      <defName>Apparel_GammaShieldBelt</defName>
+      <label>gamma shield belt</label>
+      <description>A state-of-the-art shield belt that can deflect gamma rays from Odyssey sources.</description>
+      <!--<MayRequire>ludeon.rimworld.odyssey</MayRequire> -->
+      <statBases>
+        <MarketValue>5600</MarketValue>
+        <EnergyShieldRechargeRate>1.2</EnergyShieldRechargeRate>
+        <EnergyShieldEnergyMax>4</EnergyShieldEnergyMax>
+      </statBases>
+      <costList>
+        <AlphaPoly>20</AlphaPoly>
+        <Titanium_GT>15</Titanium_GT>
+        <ComponentSpacer>6</ComponentSpacer>
+        <ComputerComp>10</ComputerComp>
+        <MagneticCoil>2</MagneticCoil>
+      </costList>
+      <recipeMaker>
+        <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Machining</soundWorking>
+        <recipeUsers>
+          <li>RobAssem</li>
+        </recipeUsers>
+        <skillRequirements>
+          <Crafting>15</Crafting>
+        </skillRequirements>
+        <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+      </recipeMaker>
+      <minifiedDef>MinifiedThing</minifiedDef>
+      <colorGenerator Class="ColorGenerator_Options">
+        <options>
+          <li>
+            <weight>10</weight>
+            <only>RGBA(0.3,1,1,1)</only>
+          </li>
+        </options>
+      </colorGenerator>
+      <comps>
+        <!--<li Class="GammaShield.CompProperties_GammaShield" /> -->
+      </comps>
+    </ThingDef>
+
 </Defs>

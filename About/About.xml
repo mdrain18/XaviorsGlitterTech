@@ -60,9 +60,11 @@
 
         Release Notes: 1.6.4514
         - Updated to 1.6 version of the game.
+        - Incorporated the "No Surgery" mod as a checkbox into this one. Please let me know if there is any issues with this. 
+        - Added airtight tags to Titanium, Alpha and Beta Polys
         - Added support for new 1.6 tags like VacuumResistance and terrain affordance.
         - Introduced stopping power to bullets
-        
+
 
         Release Notes: 1.5.40602
         - Updated to work with release

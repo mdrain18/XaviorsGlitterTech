@@ -7,18 +7,18 @@
         <description>A base for all GlitterTech bionic parts.</description>
     </HediffDef>
 
-    <ThingDef Name="GlitterTechBionicItemBase" Abstract="True" ParentName="BodyPartBionicImperialBase">
+    <ThingDef Name="GlitterTechBionicItemBase" Abstract="True" ParentName="BodyPartBionicBase">
         <label>GlitterTech bionic item</label>
         <description>A base for all GlitterTech bionic parts.</description>
     </ThingDef>
 
-    <RecipeDef Name="GlitterTechSurgeryBase" Abstract="True" ParentName="SurgeryInstallImplantBase">
+    <RecipeDef Name="GlitterTechSurgeryBase" Abstract="True" ParentName="SurgeryInstallBodyPartArtificialBase">
         <label>GlitterTech install surgery</label>
     </RecipeDef>
 
 
     <!-- Orion Corp Exoskeleton -->
-    <HediffDef ParentName="AddedBodyPartBase">
+    <HediffDef ParentName="GlitterTechBionicBase">
         <defName>OCExo</defName>
         <label>Orion Exoskeleton</label>
         <labelNoun>an Orion Exoskeleton</labelNoun>
@@ -67,7 +67,7 @@
         </comps>
     </HediffDef>
 
-    <ThingDef ParentName="BodyPartBionicBase">
+    <ThingDef ParentName="GlitterTechBionicItemBase">
         <defName>OCExo</defName>
         <label>Orion Exoskeleton</label>
         <description>A standard issue Orion Corporation exoskeleton. Equipped by most Orion security forces, this all-purpose exoskeleton gives them a cheap and capable edge against their competitors.</description>
@@ -108,7 +108,7 @@
         </techHediffsTags>
     </ThingDef>
 
-    <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
         <defName>InstallOCExo</defName>
         <label>Install Orion Exoskeleton</label>
         <description>Installs Orion Exoskeleton.</description>

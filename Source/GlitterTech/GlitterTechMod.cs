@@ -37,14 +37,16 @@ namespace GlitterTech
             ls.Gap(24f);
             ls.Label("Resource Settings");
             ls.GapLine();
-            ls.Label($"Resource Yield Multiplier: {settings.resourceMultiplier:0.00}");
-            settings.resourceMultiplier = ls.Slider(settings.resourceMultiplier, 0.01f, 2.00f);
+            ls.Label($"Resource Yield Multiplier: {settings.resourceMultiplier:0.0}");
+            settings.resourceMultiplier = Mathf.Round(ls.Slider(settings.resourceMultiplier, 0.2f, 5.0f) * 5f) / 5f;
 
+            ls.Gap(12f);
             ls.Label("Stat Bases Settings");
             ls.GapLine();
-            ls.Label($"Stat Multiplier: {settings.statMultiplier:0.00}");
-            settings.statMultiplier = ls.Slider(settings.statMultiplier, 0.01f, 2.00f);
+            ls.Label($"Stat Multiplier: {settings.statMultiplier:0.0}");
+            settings.statMultiplier = Mathf.Round(ls.Slider(settings.statMultiplier, 0.2f, 5.0f) * 5f) / 5f;
 
+            ls.Gap(24f);
             if (ls.ButtonText("Apply Changes"))
             {
                 ApplyPatches();
@@ -60,6 +62,7 @@ namespace GlitterTech
             {
                 if (def.defName == "Titanium_GT" || def.defName == "AlphaPoly" || def.defName == "BetaPoly")
                 {
+                    StatBasesPatch.SaveOriginalValues(def); // Add this to ensure values are saved again
                     StatBasesPatch.ModifySpecificStats(def, settings.statMultiplier);
                 }
 

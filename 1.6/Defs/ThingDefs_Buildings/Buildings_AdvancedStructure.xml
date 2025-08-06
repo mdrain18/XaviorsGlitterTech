@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <!--========================= Doors =============================-->
-
     <ThingDef ParentName="DoorBase">
         <defName>BlastDoor</defName>
-        <label>Blast Door</label>
+        <label>Blast door</label>
         <description>Divides rooms. Powered operation and incredibly strong. Designed to withstand Orbital Kinetic Bombardment...</description>
         <statBases>
             <MaxHitPoints>1500</MaxHitPoints>
@@ -37,13 +35,156 @@
             <li>AdvancedArmor</li>
         </researchPrerequisites>
     </ThingDef>
-
+    <!--==========================================================-->
+    <ThingDef ParentName="DoorBase" MayRequire="Ludeon.RimWorld.Anomaly">
+        <defName>AdvancedSecurityDoor</defName>
+        <label>advanced security door</label>
+        <description>An ultratech security door built with advanced materials. It opens faster and provides superior durability while maintaining airtightness. Uses enhanced components and specialized coils for operation.</description>
+        <thingClass>Building_MultiTileDoor</thingClass>
+        <statBases>
+            <WorkToBuild>9000</WorkToBuild>
+            <MaxHitPoints>2000</MaxHitPoints>
+            <Flammability>0</Flammability>
+        </statBases>
+        <size>(2, 1)</size>
+        <rotatable>true</rotatable>
+        <graphicData>
+            <texPath>Things/Building/SecurityDoor/SecurityDoor2x1_Underlayer_Mover</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <damageData>
+                <enabled>false</enabled>
+            </damageData>
+            <color>(180,180,180)</color>
+        </graphicData>
+        <uiIconPath>Things/Building/SecurityDoor/SecurityDoor_MenuIcon_south</uiIconPath>
+        <uiIconColor>(180,180,180)</uiIconColor>
+        <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+        <costList>
+            <Plasteel>30</Plasteel>
+            <Titanium_GT>20</Titanium_GT>
+            <MagneticCoil>2</MagneticCoil>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <stuffCategories Inherit="False"/>
+        <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <building>
+            <poweredDoorOpenSpeedFactor>6</poweredDoorOpenSpeedFactor>
+            <unpoweredDoorOpenSpeedFactor>2</unpoweredDoorOpenSpeedFactor>
+            <unpoweredDoorCloseSpeedFactor>2</unpoweredDoorCloseSpeedFactor>
+            <isAirtight>true</isAirtight>
+            <blueprintClass>Blueprint_Build</blueprintClass>
+            <blueprintGraphicData>
+                <texPath>Things/Building/SecurityDoor/SecurityDoor_MenuIcon</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <shaderType>EdgeDetect</shaderType>
+                <drawSize>(2.6, 3.1)</drawSize>
+            </blueprintGraphicData>
+            <isSupportDoor>true</isSupportDoor>
+            <doorTopGraphic>
+                <texPath>Things/Building/SecurityDoor/SecurityDoor2x1_Top</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>(3,2.4)</drawSize>
+                <color>(180,180,180)</color>
+            </doorTopGraphic>
+            <doorSupportGraphic>
+                <texPath>Things/Building/SecurityDoor/SecurityDoor2x1_Support</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>(3,2.4)</drawSize>
+                <color>(180,180,180)</color>
+            </doorSupportGraphic>
+            <upperMoverGraphic>
+                <texPath>Things/Building/SecurityDoor/SecurityDoor2x1_Upper_Mover</texPath>
+                <graphicClass>Graphic_Single</graphicClass>
+                <color>(180,180,180)</color>
+            </upperMoverGraphic>
+            <soundDoorOpenPowered>SecurityDoor_Open</soundDoorOpenPowered>
+            <soundDoorClosePowered>SecurityDoor_BeginClosing</soundDoorClosePowered>
+            <soundDoorOpenManual>SecurityDoor_Open</soundDoorOpenManual>
+            <soundDoorCloseManual>SecurityDoor_BeginClosing</soundDoorCloseManual>
+            <soundDoorCloseEnd>SecurityDoor_EndClosing</soundDoorCloseEnd>
+        </building>
+        <designationHotKey>Misc2</designationHotKey>
+        <researchPrerequisites>
+            <li>SecurityDoor</li>
+            <li>AdvancedFabrication</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <placeWorkers>
+            <li>PlaceWorker_MultiCellDoor</li>
+        </placeWorkers>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>75</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Styleable"/>
+        </comps>
+    </ThingDef>
+    <!--==========================================================-->
+    <!--
+    <ThingDef ParentName="DoorBase">
+        <defName>LargerOrnateDoor</defName>
+        <label>ornate door</label>
+        <description>Divides rooms. An intricately-carved door, decorated with gold. This large, heavy door requires adjacent walls to function.</description>
+        <thingClass>Building_MultiTileDoor</thingClass>
+        <statBases>
+            <WorkToBuild>15000</WorkToBuild>
+            <MaxHitPoints>250</MaxHitPoints>
+            <Beauty>45</Beauty>
+        </statBases>
+        <graphicData>
+            <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Mover</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>CutoutComplex</shaderType>
+            <damageData>
+                <enabled>false</enabled>
+            </damageData>
+        </graphicData>
+        <uiIconPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon_south</uiIconPath>
+        <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+        <size>(3, 1)</size>
+        <rotatable>true</rotatable>
+        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <costStuffCount>120</costStuffCount>
+        <costList>
+            <Gold>70</Gold>
+        </costList>
+        <building>
+            <blueprintClass>Blueprint_Build</blueprintClass>
+            <blueprintGraphicData>
+                <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <shaderType>EdgeDetect</shaderType>
+                <drawSize>(2.6, 3.1)</drawSize>
+            </blueprintGraphicData>
+            <isSupportDoor>true</isSupportDoor>
+            <doorTopGraphic>
+                <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Top</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>(4.4, 3.1)</drawSize>
+            </doorTopGraphic>
+            <doorSupportGraphic>
+                <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Support</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <drawSize>(4.4, 3.1)</drawSize>
+            </doorSupportGraphic>
+        </building>
+        <researchPrerequisites>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <designationHotKey>Misc3</designationHotKey>
+        <placeWorkers>
+            <li>PlaceWorker_MultiCellDoor</li>
+        </placeWorkers>
+    </ThingDef>
+    -->
     <!--========================= Walls =============================-->
-
     <ThingDef ParentName="Wall">
         <defName>WallWindow</defName>
         <label>Wall window</label>
-        <description>A wall with a bullet proof window and power conduit.</description>
+        <description>A wall with a bullet proof window.</description>
         <graphicData>
             <texPath>Things/Building/Linked/Window_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -60,11 +201,79 @@
             <li>TWindows</li>
         </researchPrerequisites>
     </ThingDef>
-
+    <!--========================= Powered Walls =============================-->
+    <ThingDef Name="PoweredWall" ParentName="Wall">
+        <defName>PoweredWall</defName>
+        <label>Powered Wall</label>
+        <description>A wall with a power conduit.</description>
+        <graphicData>
+            <texPath>Things/Building/Linked/Wall</texPath>
+            <graphicClass>Graphic_Appearances</graphicClass>
+            <linkType>CornerFiller</linkType>
+            <linkFlags>
+                <li>Wall</li>
+                <li>Rock</li>
+            </linkFlags>
+            <damageData>
+                <cornerTL>Damage/Corner</cornerTL>
+                <cornerTR>Damage/Corner</cornerTR>
+                <cornerBL>Damage/Corner</cornerBL>
+                <cornerBR>Damage/Corner</cornerBR>
+                <edgeTop>Damage/Edge</edgeTop>
+                <edgeBot>Damage/Edge</edgeBot>
+                <edgeLeft>Damage/Edge</edgeLeft>
+                <edgeRight>Damage/Edge</edgeRight>
+            </damageData>
+        </graphicData>
+        <uiIconPath>Things/Building/Linked/Window_MenuIcon</uiIconPath>
+        <costStuffCount>5</costStuffCount>
+        <costList>
+            <Steel>1</Steel>
+        </costList>
+        <stuffCategories>
+            <li>Metallic</li>
+            <li>Woody</li>
+            <li>Stony</li>
+        </stuffCategories>
+        <building>
+            <isPowerConduit>true</isPowerConduit>
+            <paintable>true</paintable>
+            <isInert>true</isInert>
+            <isWall>true</isWall>
+            <isPlaceOverableWall>true</isPlaceOverableWall>
+            <ai_chillDestination>false</ai_chillDestination>
+            <supportsWallAttachments>true</supportsWallAttachments>
+            <isStuffableAirtight>true</isStuffableAirtight>
+            <blueprintGraphicData>
+                <texPath>Things/Building/Linked/Wall_Blueprint_Atlas</texPath>
+            </blueprintGraphicData>
+            <relatedBuildCommands>
+                <li>Door</li>
+                <li>Autodoor</li>
+                <li>OrnateDoor</li>
+                <li MayRequire="Ludeon.RimWorld.Anomaly">SecurityDoor</li>
+                <li MayRequire="Ludeon.RimWorld.Odyssey">VacBarrier</li>
+                <li>Cooler</li>
+                <li>Vent</li>
+            </relatedBuildCommands>
+        </building>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTransmitter</compClass>
+                <transmitsPower>true</transmitsPower>
+            </li>
+        </comps>
+        <placeWorkers>
+            <li>PlaceWorker_Conduit</li>
+        </placeWorkers>
+        <blockLight>true</blockLight>
+        <researchPrerequisites>
+            <li>Electricity</li>
+        </researchPrerequisites>
+    </ThingDef>
     <!--========================= Lights in Walls =============================-->
-
-    <ThingDef ParentName="Wall" Name="WallLight_GT">
-        <defName>WallLight_White</defName>
+    <ThingDef Name="WallLight_Base" ParentName="PoweredWall">
+        <defName>WallLight_Base</defName>
         <label>Wall light</label>
         <description>A Wall with a light, for those awkward hallways where lamps just don't fit.</description>
         <graphicData>
@@ -87,83 +296,97 @@
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
                 <basePowerConsumption>30</basePowerConsumption>
+                <powerUpgrades>
+                    <li>
+                        <researchProject>ColoredLights</researchProject>
+                        <factor>0.5</factor>
+                    </li>
+                    <li>
+                        <researchProject>PowerEfficiency_II</researchProject>
+                        <factor>0.333</factor>
+                    </li>
+                </powerUpgrades>
+            </li>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTransmitter</compClass>
                 <transmitsPower>true</transmitsPower>
             </li>
+            <li Class="CompProperties_Styleable"/>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(217,217,217,0)</glowColor>
+                <glowColor>(214,148,94,255)</glowColor>
+                <colorPickerEnabled>true</colorPickerEnabled>
+                <darklightToggle>true</darklightToggle>
             </li>
         </comps>
         <researchPrerequisites>
             <li>TLights</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!-- Wall light Colors -->
-    <ThingDef ParentName="WallLight_GT">
+    <ThingDef ParentName="WallLight_Base">
         <defName>WallLight_Red</defName>
         <label>Wall red light</label>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(217,0,0,0)</glowColor>
+                <glowColor>(217,0,0,255)</glowColor>
             </li>
         </comps>
     </ThingDef>
-
-    <ThingDef ParentName="WallLight_GT">
+    <!--==========================================================-->
+    <ThingDef ParentName="WallLight_Base">
         <defName>WallLight_Green</defName>
         <label>Wall green light</label>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(0,217,0,0)</glowColor>
+                <glowColor>(0,217,0,255)</glowColor>
             </li>
         </comps>
     </ThingDef>
-
-    <ThingDef ParentName="WallLight_GT">
+    <!--==========================================================-->
+    <ThingDef ParentName="WallLight_Base">
         <defName>WallLight_Blue</defName>
         <label>Wall blue light</label>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(0,0,217,0)</glowColor>
+                <glowColor>(0,0,217,255)</glowColor>
             </li>
         </comps>
     </ThingDef>
-
-    <ThingDef ParentName="WallLight_GT">
+    <!--==========================================================-->
+    <ThingDef ParentName="WallLight_Base">
         <defName>WallLight_Yellow</defName>
         <label>Wall yellow light</label>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(217,217,0,0)</glowColor>
+                <glowColor>(217,217,0,255)</glowColor>
             </li>
         </comps>
     </ThingDef>
-
-    <ThingDef ParentName="WallLight_GT">
+    <!--==========================================================-->
+    <ThingDef ParentName="WallLight_Base">
         <defName>WallLight_Purple</defName>
         <label>Wall purple light</label>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(217,0,217,0)</glowColor>
+                <glowColor>(217,0,217,255)</glowColor>
             </li>
         </comps>
     </ThingDef>
-
-    <ThingDef ParentName="WallLight_GT">
+    <!--==========================================================-->
+    <ThingDef ParentName="WallLight_Base">
         <defName>WallLight_Cyan</defName>
         <label>Wall cyan light</label>
         <comps>
             <li Class="CompProperties_Glower">
                 <glowRadius>12</glowRadius>
-                <glowColor>(0,217,217,0)</glowColor>
+                <glowColor>(0,217,217,255)</glowColor>
             </li>
         </comps>
     </ThingDef>
-
 </Defs>

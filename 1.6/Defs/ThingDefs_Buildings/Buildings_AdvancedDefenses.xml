@@ -61,7 +61,7 @@
 
     <!--=============== Turret Base ===============-->
 
-    <ThingDef ParentName="BuildingBase" Name="AutocannonTurret_GT" Abstract="True">
+    <ThingDef ParentName="AutocannonTurret" Name="AutocannonTurret_GT" Abstract="True">
         <thingClass>Building_TurretGun</thingClass>
         <drawerType>MapMeshAndRealTime</drawerType>
         <graphicData>
@@ -77,10 +77,6 @@
                 <offset>(0,0,-0.05)</offset>
             </shadowData>
         </graphicData>
-        <altitudeLayer>Building</altitudeLayer>
-        <stealable>false</stealable>
-        <rotatable>false</rotatable>
-        <size>(2,2)</size>
         <statBases>
             <MaxHitPoints>600</MaxHitPoints>
             <WorkToBuild>15000</WorkToBuild>
@@ -88,25 +84,7 @@
             <Mass>100</Mass>
             <Beauty>-30</Beauty>
         </statBases>
-        <tickerType>Normal</tickerType>
-        <passability>PassThroughOnly</passability>
-        <pathCost>50</pathCost>
-        <fillPercent>0.5</fillPercent>
-        <hasTooltip>true</hasTooltip>
-        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-        <designationCategory>Security</designationCategory>
         <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
-        <building>
-            <ai_combatDangerous>true</ai_combatDangerous>
-            <turretTopDrawSize>2.7</turretTopDrawSize>
-            <turretTopOffset>(0, 0.05)</turretTopOffset>
-        </building>
-        <placeWorkers>
-            <li>PlaceWorker_TurretTop</li>
-            <li>PlaceWorker_ShowTurretRadius</li>
-        </placeWorkers>
-        <designationHotKey>Misc3</designationHotKey>
-        <uiIconScale>0.95</uiIconScale>
         <researchPrerequisites>
             <li>EMRGDefense</li>
         </researchPrerequisites>
@@ -116,8 +94,7 @@
     <ThingDef ParentName="AutocannonTurret_GT">
         <defName>EMTurret</defName>
         <label>EMRG turret</label>
-        <description>An EMRG rifle mounted on a sentry gun assembly that automatically fires at nearby enemies.
-            Explodes when damaged.</description>
+        <description>An EMRG rifle mounted on a sentry gun assembly that automatically fires at nearby enemies.\nExplodes when damaged.</description>
         <uiIconPath>Things/Building/Security/TurretAutocannon_MenuIcon</uiIconPath>
         <statBases>
             <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
@@ -206,8 +183,7 @@
     <ThingDef ParentName="AutocannonTurret_GT">
         <defName>CanisterTurret</defName>
         <label>Canister turret</label>
-        <description>A powerful canister turret that automatically fires at nearby enemies.
-            Good for cramped quarters, explodes when damaged.</description>
+        <description>A powerful canister turret that automatically fires at nearby enemies.\nGood for cramped quarters.\nExplodes when damaged.</description>
         <uiIconPath>Things/Building/Turret/EMRGTurret_Top</uiIconPath>
         <statBases>
             <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>

@@ -38,6 +38,7 @@
         <techLevel>Spacer</techLevel>
         <recipeMaker>
             <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <workSkill>Crafting</workSkill>
             <skillRequirements>
                 <Crafting>15</Crafting>
             </skillRequirements>
@@ -134,6 +135,7 @@
         <techLevel>Spacer</techLevel>
         <recipeMaker>
             <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <workSkill>Crafting</workSkill>
             <skillRequirements>
                 <Crafting>18</Crafting>
             </skillRequirements>
@@ -214,6 +216,7 @@
         <techLevel>Spacer</techLevel>
         <recipeMaker>
             <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <workSkill>Crafting</workSkill>
             <skillRequirements>
                 <Crafting>18</Crafting>
             </skillRequirements>

@@ -63,7 +63,7 @@
                 <offset>(0,0,-0.645)</offset>
             </shadowData>
         </graphicData>
-        <size>(3, 3)</size>
+        <size>(3.5, 3.5)</size>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <pathCost>50</pathCost>
@@ -117,7 +117,7 @@
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>400</basePowerConsumption>
+                <basePowerConsumption>500</basePowerConsumption>
             </li>
             <li Class="CompProperties_DeepDrill" />
             <li Class="CompProperties_CreatesInfestations" />

@@ -95,7 +95,7 @@ namespace GlitterTech
 
             if (currentProgress >= adjustedWorkNeeded)
             {
-                tryProducePortionMethod.Invoke(baseComp, new object[] { 1f, operatorPawn }); // FIXED order
+                tryProducePortionMethod.Invoke(baseComp, new object[] { 1f, operatorPawn });
                 currentProgress = 0;
             }
 

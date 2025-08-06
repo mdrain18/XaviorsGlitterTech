@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <!-- ============= Fabricating ============= -->
-    <WorkGiverDef Name="GTWorkGiver" Abstract="True">
+    <WorkGiverDef Abstract="True" Name="GTWorkGiver">
         <giverClass>WorkGiver_DoBill</giverClass>
         <workType>Crafting</workType>
         <priorityInType>90</priorityInType>
@@ -10,7 +9,6 @@
             <li>Manipulation</li>
         </requiredCapacities>
     </WorkGiverDef>
-
     <WorkGiverDef ParentName="GTWorkGiver">
         <defName>DoBillsMatterfab</defName>
         <label>operate Matter Fabricator</label>
@@ -20,7 +18,6 @@
         <verb>fabricate</verb>
         <gerund>fabricating</gerund>
     </WorkGiverDef>
-
     <WorkGiverDef ParentName="GTWorkGiver">
         <defName>DoBillsElectrolysis</defName>
         <label>operate electrolyzer</label>
@@ -30,7 +27,6 @@
         <verb>electrolyze</verb>
         <gerund>electrolyzing</gerund>
     </WorkGiverDef>
-
     <WorkGiverDef ParentName="GTWorkGiver">
         <defName>DoBillsRobassem</defName>
         <label>operate Robotic Assembler</label>
@@ -40,7 +36,6 @@
         <verb>assemble</verb>
         <gerund>assembling</gerund>
     </WorkGiverDef>
-
     <WorkGiverDef ParentName="GTWorkGiver">
         <defName>DoBillsPharma</defName>
         <label>operate Pharmaceutical table</label>
@@ -50,21 +45,17 @@
         <verb>produce</verb>
         <gerund>producing</gerund>
     </WorkGiverDef>
-    
     <WorkGiverDef>
         <defName>OperateAdvancedDeepDrill</defName>
         <label>operate advanced deep drill</label>
-        <giverClass>GlitterTech.WorkGiver_OperateAdvancedDeepDrill</giverClass> 
+        <giverClass>GlitterTech.WorkGiver_OperateAdvancedDeepDrill</giverClass>
         <workType>Mining</workType>
-        <priorityInType>60</priorityInType>
+        <priorityInType>40</priorityInType>
         <verb>drill</verb>
         <gerund>drilling</gerund>
         <requiredCapacities>
-          <li>Manipulation</li>
+            <li>Manipulation</li>
         </requiredCapacities>
         <canBeDoneByMechs>true</canBeDoneByMechs>
     </WorkGiverDef>
-
-
-    
 </Defs>

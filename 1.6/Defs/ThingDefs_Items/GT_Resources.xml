@@ -1,188 +1,185 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-	<!--=============== Titanium_GT ====================-->
-	<ThingDef ParentName="ResourceBase">
-      <defName>Titanium_GT</defName>
-      <label>titanium</label>
-      <description>Titanium alloy. A complex mix of rare elements, making a very strong, durable, and light material resistant to corrosion, and high velocity kinetics. Perfect for star ships and orbital space elevators...</description>
-      <graphicData>
-        <texPath>Things/Item/Resource/Titanium_GT</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <soundInteract>Metal_Drop</soundInteract>
-      <soundDrop>Metal_Drop</soundDrop>
-      <useHitPoints>false</useHitPoints>
-      <healthAffectsPrice>false</healthAffectsPrice>
-      <statBases>
-        <MarketValue>32</MarketValue>
-        <Mass>0.15</Mass>
-        <StuffPower_Armor_Sharp>1.9</StuffPower_Armor_Sharp>
-        <StuffPower_Armor_Blunt>1</StuffPower_Armor_Blunt>
-        <StuffPower_Armor_Heat>1.35</StuffPower_Armor_Heat>
-        <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
-        <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-        <SharpDamageMultiplier>1.6</SharpDamageMultiplier>
-        <BluntDamageMultiplier>1.3</BluntDamageMultiplier>
-      </statBases>
-      <thingCategories>
-        <li>ResourcesRaw</li>
-      </thingCategories>
-      <deepCommonality>0.1</deepCommonality>
-      <deepCountPerPortion>10</deepCountPerPortion>
-      <deepLumpSizeRange>4~14</deepLumpSizeRange>
-      <burnableByRecipe>false</burnableByRecipe>
-      <smeltable>true</smeltable>
-      <stuffProps>
-        <categories>
-          <li>Metallic</li>
-        </categories>
-        <appearance>Metal</appearance>
-        <color>(255,255,255)</color>
-        <commonality>0.05</commonality>
-        <constructEffect>ConstructMetal</constructEffect>
-        <isAirtight>true</isAirtight> <!-- IMPORTANT FOR 1.6 -->
-        <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-        <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-        <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-        <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-        <statOffsets>
-          <Beauty>6</Beauty>
-        </statOffsets>
-        <statFactors>
-          <MaxHitPoints>3.5</MaxHitPoints>
-          <Flammability>0</Flammability>
-          <Beauty>3</Beauty>
-          <DoorOpenSpeed>3</DoorOpenSpeed>
-          <BedRestEffectiveness>1.5</BedRestEffectiveness>
-          <WorkToMake>3.0</WorkToMake>
-          <WorkToBuild>3.0</WorkToBuild>
-        </statFactors>
-      </stuffProps>
-      <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-      <allowedArchonexusCount>80</allowedArchonexusCount>
-    </ThingDef>
-
-
-<!--=============== AlphaPoly ====================-->
+    <!--=============== Titanium_GT ====================-->
     <ThingDef ParentName="ResourceBase">
-      <defName>AlphaPoly</defName>
-      <label>alpha-poly</label>
-      <description>Hyper-advanced molecular composite only producible in orbital nano-forges. Alpha-poly is virtually indestructible and nearly immune to environmental extremes.</description>
-      <graphicData>
-        <texPath>Things/Item/Resource/APoly</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <soundInteract>Metal_Drop</soundInteract>
-      <soundDrop>Metal_Drop</soundDrop>
-      <useHitPoints>false</useHitPoints>
-      <healthAffectsPrice>false</healthAffectsPrice>
-      <statBases>
-        <MarketValue>320</MarketValue>
-        <Mass>0.05</Mass>
-        <StuffPower_Armor_Sharp>5.0</StuffPower_Armor_Sharp>
-        <StuffPower_Armor_Blunt>3.0</StuffPower_Armor_Blunt>
-        <StuffPower_Armor_Heat>4.0</StuffPower_Armor_Heat>
-        <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
-        <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-        <SharpDamageMultiplier>3.0</SharpDamageMultiplier>
-        <BluntDamageMultiplier>2.5</BluntDamageMultiplier>
-      </statBases>
-      <thingCategories>
-        <li>ResourcesRaw</li>
-      </thingCategories>
-      <burnableByRecipe>false</burnableByRecipe>
-      <smeltable>false</smeltable>
-      <stuffProps>
-        <categories>
-          <li>Metallic</li>
-        </categories>
-        <appearance>Metal</appearance>
-        <color>(255,240,150)</color>
-        <commonality>0.005</commonality>
-        <constructEffect>ConstructMetal</constructEffect>
-        <isAirtight>true</isAirtight>
-        <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-        <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-        <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-        <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-        <statFactors>
-          <MaxHitPoints>12.0</MaxHitPoints>
-          <Flammability>0</Flammability>
-          <Beauty>5</Beauty>
-          <DoorOpenSpeed>4.0</DoorOpenSpeed>
-          <BedRestEffectiveness>2.0</BedRestEffectiveness>
-          <WorkToMake>8.0</WorkToMake>
-          <WorkToBuild>8.0</WorkToBuild>
-          <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
-        </statFactors>
-      </stuffProps>
-      <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-      <allowedArchonexusCount>20</allowedArchonexusCount>
+        <defName>Titanium_GT</defName>
+        <label>titanium</label>
+        <description>Titanium alloy. A complex mix of rare elements, making a very strong, durable, and light material resistant to corrosion, and high velocity kinetics. Perfect for star ships and orbital space elevators...</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Titanium_GT</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>22</MarketValue>
+            <Mass>0.15</Mass>
+            <StuffPower_Armor_Sharp>1.9</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>1</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>1.35</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>3</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>1.6</SharpDamageMultiplier>
+            <BluntDamageMultiplier>1.3</BluntDamageMultiplier>
+        </statBases>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <deepCommonality>0.3</deepCommonality>
+        <deepCountPerPortion>20</deepCountPerPortion>
+        <deepLumpSizeRange>6~14</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>true</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <color>(255,255,255)</color>
+            <commonality>0.05</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <!-- IMPORTANT FOR 1.6 -->
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>3.5</MaxHitPoints>
+                <Flammability>0</Flammability>
+                <Beauty>3</Beauty>
+                <DoorOpenSpeed>2</DoorOpenSpeed>
+                <BedRestEffectiveness>1.5</BedRestEffectiveness>
+                <WorkToMake>3.0</WorkToMake>
+                <WorkToBuild>3.0</WorkToBuild>
+                <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>80</allowedArchonexusCount>
     </ThingDef>
-
-
+    <!--=============== AlphaPoly ====================-->
+    <ThingDef ParentName="ResourceBase">
+        <defName>AlphaPoly</defName>
+        <label>alpha-poly</label>
+        <description>Hyper-advanced molecular composite only producible in orbital nano-forges. Alpha-poly is virtually indestructible and nearly immune to environmental extremes.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/APoly</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>85</MarketValue>
+            <Mass>0.1</Mass>
+            <StuffPower_Armor_Sharp>3.0</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>1.8</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>2.2</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>2.0</SharpDamageMultiplier>
+            <BluntDamageMultiplier>1.7</BluntDamageMultiplier>
+        </statBases>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <deepCommonality>0.05</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>4~8</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>false</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+                <li>Fabric</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <color>(200,200,255)</color>
+            <commonality>0.02</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>6.0</MaxHitPoints>
+                <Flammability>0</Flammability>
+                <Beauty>4</Beauty>
+                <DoorOpenSpeed>3.5</DoorOpenSpeed>
+                <BedRestEffectiveness>1.8</BedRestEffectiveness>
+                <WorkToMake>5.0</WorkToMake>
+                <WorkToBuild>5.0</WorkToBuild>
+                <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>50</allowedArchonexusCount>
+    </ThingDef>
     <!--=============== BetaPoly ====================-->
     <ThingDef ParentName="ResourceBase">
-      <defName>BetaPoly</defName>
-      <label>beta-poly</label>
-      <description>Advanced synthetic polymer developed for high-impact military and space applications. Beta-poly is nearly impervious to cutting and highly resistant to heat.</description>
-      <graphicData>
-        <texPath>Things/Item/Resource/BPoly</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-      </graphicData>
-      <soundInteract>Metal_Drop</soundInteract>
-      <soundDrop>Metal_Drop</soundDrop>
-      <useHitPoints>false</useHitPoints>
-      <healthAffectsPrice>false</healthAffectsPrice>
-      <statBases>
-        <MarketValue>85</MarketValue>
-        <Mass>0.1</Mass>
-        <StuffPower_Armor_Sharp>3.0</StuffPower_Armor_Sharp>
-        <StuffPower_Armor_Blunt>1.8</StuffPower_Armor_Blunt>
-        <StuffPower_Armor_Heat>2.2</StuffPower_Armor_Heat>
-        <StuffPower_Insulation_Cold>5</StuffPower_Insulation_Cold>
-        <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
-        <SharpDamageMultiplier>2.0</SharpDamageMultiplier>
-        <BluntDamageMultiplier>1.7</BluntDamageMultiplier>
-      </statBases>
-      <thingCategories>
-        <li>ResourcesRaw</li>
-      </thingCategories>
-      <burnableByRecipe>false</burnableByRecipe>
-      <smeltable>false</smeltable>
-      <stuffProps>
-        <categories>
-          <li>Metallic</li>
-          <li>Fabric</li>
-        </categories>
-        <appearance>Metal</appearance>
-        <color>(200,200,255)</color>
-        <commonality>0.02</commonality>
-        <constructEffect>ConstructMetal</constructEffect>
-        <isAirtight>true</isAirtight>
-        <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
-        <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-        <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-        <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
-        <statFactors>
-          <MaxHitPoints>6.0</MaxHitPoints>
-          <Flammability>0</Flammability>
-          <Beauty>4</Beauty>
-          <DoorOpenSpeed>3.5</DoorOpenSpeed>
-          <BedRestEffectiveness>1.8</BedRestEffectiveness>
-          <WorkToMake>5.0</WorkToMake>
-          <WorkToBuild>5.0</WorkToBuild>
-          <MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
-        </statFactors>
-      </stuffProps>
-      <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
-      <allowedArchonexusCount>50</allowedArchonexusCount>
+        <defName>BetaPoly</defName>
+        <label>beta-poly</label>
+        <description>Advanced synthetic polymer developed for high-impact military and space applications. Beta-poly is nearly impervious to cutting and highly resistant to heat.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/BPoly</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Metal_Drop</soundInteract>
+        <soundDrop>Metal_Drop</soundDrop>
+        <useHitPoints>false</useHitPoints>
+        <healthAffectsPrice>false</healthAffectsPrice>
+        <statBases>
+            <MarketValue>320</MarketValue>
+            <Mass>0.05</Mass>
+            <StuffPower_Armor_Sharp>5.0</StuffPower_Armor_Sharp>
+            <StuffPower_Armor_Blunt>3.0</StuffPower_Armor_Blunt>
+            <StuffPower_Armor_Heat>4.0</StuffPower_Armor_Heat>
+            <StuffPower_Insulation_Cold>8</StuffPower_Insulation_Cold>
+            <StuffPower_Insulation_Heat>0</StuffPower_Insulation_Heat>
+            <SharpDamageMultiplier>3.0</SharpDamageMultiplier>
+            <BluntDamageMultiplier>2.5</BluntDamageMultiplier>
+        </statBases>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <deepCommonality>0.01</deepCommonality>
+        <deepCountPerPortion>10</deepCountPerPortion>
+        <deepLumpSizeRange>2~4</deepLumpSizeRange>
+        <burnableByRecipe>false</burnableByRecipe>
+        <smeltable>false</smeltable>
+        <stuffProps>
+            <categories>
+                <li>Metallic</li>
+            </categories>
+            <appearance>Metal</appearance>
+            <color>(255,240,150)</color>
+            <commonality>0.005</commonality>
+            <constructEffect>ConstructMetal</constructEffect>
+            <isAirtight>true</isAirtight>
+            <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
+            <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+            <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+            <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Metal</soundImpactMelee>
+            <statFactors>
+                <MaxHitPoints>12.0</MaxHitPoints>
+                <Flammability>0</Flammability>
+                <Beauty>5</Beauty>
+                <DoorOpenSpeed>4.0</DoorOpenSpeed>
+                <BedRestEffectiveness>2.0</BedRestEffectiveness>
+                <WorkToMake>8.0</WorkToMake>
+                <WorkToBuild>8.0</WorkToBuild>
+                <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+            </statFactors>
+        </stuffProps>
+        <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+        <allowedArchonexusCount>20</allowedArchonexusCount>
     </ThingDef>
-
-
     <!--=============== Components ====================-->
-
     <ThingDef ParentName="ResourceBase">
         <defName>MagneticCoil</defName>
         <label>Magnetic Coil</label>
@@ -203,7 +200,6 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-
     <ThingDef ParentName="ResourceBase">
         <defName>Silicon</defName>
         <label>Silicon</label>
@@ -223,7 +219,6 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-
     <ThingDef ParentName="ResourceBase">
         <defName>ComputerComp</defName>
         <label>Computer components</label>
@@ -243,7 +238,6 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-
     <ThingDef ParentName="ResourceBase">
         <defName>Ethanol</defName>
         <label>Ethanol</label>
@@ -263,7 +257,6 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-
     <ThingDef ParentName="ResourceBase">
         <defName>Bandage</defName>
         <label>Bandages</label>
@@ -283,7 +276,6 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-
     <ThingDef ParentName="ResourceBase">
         <defName>Serum</defName>
         <label>Serum</label>
@@ -303,5 +295,4 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
-
 </Defs>

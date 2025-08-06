@@ -19,7 +19,7 @@
             <isResourceRock>true</isResourceRock>
             <mineableThing>Titanium_GT</mineableThing>
             <mineableYield>20</mineableYield>
-            <mineableScatterCommonality>0.1</mineableScatterCommonality>
+            <mineableScatterCommonality>0.02</mineableScatterCommonality>
             <mineableScatterLumpSizeRange>10~60</mineableScatterLumpSizeRange>
             <veinMineable>true</veinMineable>
         </building>

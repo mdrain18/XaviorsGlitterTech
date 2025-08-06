@@ -1,46 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- ==================================== Base =====================================-->
-    <ThingDef Name="ApparelArmorPowerBase_GT" ParentName="ArmorMachineableBase" Abstract="True">
+    <!-- ==================================== Base - Armor =====================================-->
+    <ThingDef Abstract="True" Name="ApparelArmorPowerBase_GT" ParentName="ApparelArmorPowerBase">
         <techLevel>Spacer</techLevel>
-        <recipeMaker>
-            <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
-            <researchPrerequisite>PoweredArmor</researchPrerequisite>
-            <skillRequirements>
-                <Crafting>12</Crafting>
-            </skillRequirements>
-            <recipeUsers Inherit="False">
-                <li>RobAssem</li>
-            </recipeUsers>
-        </recipeMaker>
-        <graphicData>
-            <texPath>Things/Pawn/Humanlike/Apparel/PowerArmor/PowerArmor</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-        </graphicData>
-        <generateCommonality>2</generateCommonality>
-        <statBases>
-            <WorkToMake>60000</WorkToMake>
-            <MaxHitPoints>340</MaxHitPoints>
-            <Flammability>0.4</Flammability>
-            <ArmorRating_Sharp>1.06</ArmorRating_Sharp>
-            <ArmorRating_Blunt>0.45</ArmorRating_Blunt>
-            <ArmorRating_Heat>0.54</ArmorRating_Heat>
-            <Insulation_Cold>34</Insulation_Cold>
-            <Insulation_Heat>10</Insulation_Heat>
-            <EquipDelay>10</EquipDelay>
-        </statBases>
-        <equippedStatOffsets>
-            <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.5</SlaveSuppressionOffset>
-            <VacuumResistance MayRequire="Ludeon.RimWorld.Odyssey">0.6</VacuumResistance>
-        </equippedStatOffsets>
-        <thingCategories>
-            <li>ApparelArmor</li>
-        </thingCategories>
-        <tradeTags>
-            <li>HiTechArmor</li>
-            <li>Armor</li>
-        </tradeTags>
         <colorGenerator Class="ColorGenerator_Options">
             <options>
                 <li>
@@ -62,19 +24,43 @@
                 </li>
             </options>
         </colorGenerator>
-        <comps>
-            <li Class="CompProperties_Biocodable"/>
-        </comps>
         <thingSetMakerTags>
             <li>RewardStandardHighFreq</li>
         </thingSetMakerTags>
     </ThingDef>
-
+    <!-- ==================================== Base - NanoSkin =====================================-->
+    <ThingDef Abstract="True" Name="ApparelNanoSkinPowerBase_GT" ParentName="ApparelMakeableBase">
+        <techLevel>Spacer</techLevel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.9,0.9,0.9)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.33,0.33,0.33)</only>
+                </li>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.65,0.65,0.65)</only>
+                </li>
+                <li>
+                    <weight>6</weight>
+                    <min>(0.3,0.3,0.3)</min>
+                    <max>(0.5,0.5,0.5)</max>
+                </li>
+            </options>
+        </colorGenerator>
+        <thingSetMakerTags>
+            <li>RewardStandardHighFreq</li>
+        </thingSetMakerTags>
+    </ThingDef>
     <!-- ==================================== Nano =====================================-->
     <ThingDef ParentName="ApparelArmorPowerBase_GT">
         <defName>Apparel_NanoSuit</defName>
         <label>Nano Suit</label>
-        <description>Powered armor augmented with Nano technology usually reserved for commandos from advanced glitterworld planets. Equipped with Electromagnetic barriers which will repulse most kinetic weapons fire.</description>
+        <description>Powered armor augmented with Nano technology usually reserved for commandos from advanced glitterworld planets. Equipped with Electromagnetic barriers which will repulse most kinetic weapons fire and air-tight for those space travelers.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSuit/Nano</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -111,6 +97,15 @@
                 <li>Legs</li>
             </bodyPartGroups>
         </apparel>
+        <recipeMaker>
+            <workSkill>Crafting</workSkill>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+        </recipeMaker>
         <costList>
             <AlphaPoly>2</AlphaPoly>
             <ComputerComp>10</ComputerComp>
@@ -167,11 +162,10 @@
             </options>
         </colorGenerator>
     </ThingDef>
-
     <ThingDef ParentName="ApparelArmorHelmetPowerBase">
         <defName>Apparel_NanoSuitHelmet</defName>
         <label>Nano Suit helmet</label>
-        <description>The Integrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the latest neural-cybernetic-counter-intrusion software (protection against psychic effects)</description>
+        <description>The Integrated Helmet with a Nano Suit. Complete with a shiny Heads-Up Display. Includes the latest neural-cybernetic-counter-intrusion software (protection against psychic effects) and air-tight for those space travelers.</description>
         <graphicData>
             <texPath>Things/Pawn/Humanoid/Apparel/NanoSuitHelmet/NanoSuitHelmet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -202,6 +196,15 @@
                 <li>GlitterHelmet</li>
             </defaultOutfitTags>
         </apparel>
+        <recipeMaker>
+            <workSkill>Crafting</workSkill>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+        </recipeMaker>
         <costList>
             <AlphaPoly>1</AlphaPoly>
             <ComputerComp>5</ComputerComp>
@@ -258,7 +261,6 @@
             </options>
         </colorGenerator>
     </ThingDef>
-
     <ThingDef ParentName="ApparelArmorPowerBase_GT">
         <defName>Apparel_Reactive</defName>
         <label>Reactive Suit</label>
@@ -297,6 +299,15 @@
                 <li>Torso</li>
             </bodyPartGroups>
         </apparel>
+        <recipeMaker>
+            <workSkill>Crafting</workSkill>
+            <skillRequirements>
+                <Crafting>10</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+        </recipeMaker>
         <costList>
             <AlphaPoly>4</AlphaPoly>
             <ComputerComp>10</ComputerComp>
@@ -329,8 +340,7 @@
             </options>
         </colorGenerator>
     </ThingDef>
-
-    <ThingDef ParentName="ApparelArmorPowerBase_GT">
+    <ThingDef ParentName="ApparelNanoSkinPowerBase_GT">
         <defName>Apparel_NanoSkin</defName>
         <label>Fiber Skin Suit</label>
         <description>Thin nano technology skin. Not as durable as a full nano-suit, but compact enough fit under clothing and even a nano-suit. This armor is typically worn by the highest tier super soldiers under their suits or by high value targets, against assassination. Very expensive and rare, but speeds the wearer up, and boosts protection stats. Best worn under a nano-suit and reactive armor.</description>
@@ -373,6 +383,15 @@
                 <li>Feet</li>
             </bodyPartGroups>
         </apparel>
+        <recipeMaker>
+            <workSkill>Crafting</workSkill>
+            <skillRequirements>
+                <Crafting>12</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+        </recipeMaker>
         <costList>
             <AlphaPoly>5</AlphaPoly>
             <Cloth>50</Cloth>
@@ -402,8 +421,7 @@
             </options>
         </colorGenerator>
     </ThingDef>
-
-    <ThingDef ParentName="ApparelArmorPowerBase_GT">
+    <ThingDef ParentName="ApparelNanoSkinPowerBase_GT">
         <defName>Apparel_NanoSpeed</defName>
         <label>Speed Skin Suit</label>
         <description>Thin nano technology skin. Similar construction to the fiber suit, but weaved from reactive metal liquid crystal which scales speed and movement. Increases speed substantially at the cost of defensive capability.</description>
@@ -446,6 +464,15 @@
                 <li>Feet</li>
             </bodyPartGroups>
         </apparel>
+        <recipeMaker>
+            <workSkill>Crafting</workSkill>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+            <recipeUsers Inherit="False">
+                <li>RobAssem</li>
+            </recipeUsers>
+        </recipeMaker>
         <costList>
             <BetaPoly>5</BetaPoly>
             <Cloth>50</Cloth>
@@ -460,5 +487,4 @@
             </options>
         </colorGenerator>
     </ThingDef>
-
 </Defs>

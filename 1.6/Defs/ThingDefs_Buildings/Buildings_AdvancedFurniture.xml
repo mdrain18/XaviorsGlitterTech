@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <!--============================== Beds ==============================-->
-
     <ThingDef ParentName="FurnitureBase">
         <defName>ambTable</defName>
         <label>Re-Ambulation Pod</label>
@@ -81,8 +79,6 @@
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <designationCategory>Furniture</designationCategory>
     </ThingDef>
-
-
     <ThingDef ParentName="FurnitureBase">
         <defName>DynChair</defName>
         <label>Dynamic Relaxation Chair</label>
@@ -128,6 +124,11 @@
         <building>
             <isSittable>true</isSittable>
         </building>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>30</basePowerConsumption>
+            </li>
+        </comps>
     </ThingDef>
-
 </Defs>

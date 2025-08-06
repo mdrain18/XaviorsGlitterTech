@@ -1,0 +1,80 @@
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>TEG_Glitter</defName>
+    <label>wall-mounted TEG</label>
+    <description>A compact thermoelectric generator that mounts directly onto walls. Absorbs ambient heat and converts it to power which allows it to run on very little power. However, there is no regulator for this technology and so smaller rooms can get very cold..</description>
+    <rotatable>true</rotatable>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TEG_Glitter</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,1)</drawSize>
+      <drawOffsetNorth>(0,0,0.5)</drawOffsetNorth>
+      <drawOffsetSouth>(0,0,-0.5)</drawOffsetSouth>
+      <drawOffsetWest>(-0.5,0,0)</drawOffsetWest>
+      <drawOffsetEast>(0.5,0,0)</drawOffsetEast>
+      <damageData>
+        <enabled>false</enabled>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Misc/TEG_Glitter_MenuIcon</uiIconPath>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>BuildingOnTop</altitudeLayer>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded IsNull="True" />
+    <pathCost>0</pathCost>
+    <overrideMinifiedRot>North</overrideMinifiedRot>
+    <minifiedDrawOffset>(0, 0, 0.2)</minifiedDrawOffset>
+    <thingCategories>
+      <li>BuildingsTemperature</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Flammability>0.1</Flammability>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <Titanium_GT>40</Titanium_GT>
+      <Plasteel>50</Plasteel>
+      <MagneticCoil>2</MagneticCoil>
+      <ComputerComp>10</ComputerComp>
+    </costList>
+    <killedLeavings>
+      <Titanium_GT>10</Titanium_GT>
+      <Plasteel>10</Plasteel>
+      <ComputerComp>2</ComputerComp>
+    </killedLeavings>
+    <tickerType>Normal</tickerType>
+    <building>
+      <isEdifice>false</isEdifice>
+      <isAttachment>true</isAttachment>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+    <placeWorkers>
+      <li>Placeworker_AttachedToWall</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>50</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>-21</heatPerSecond>
+        <heatPushMinTemperature>-10</heatPushMinTemperature>
+      </li>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Glower">
+        <glowRadius>3</glowRadius>
+        <glowColor>(0, 255, 255, 0)</glowColor>
+      </li>
+    </comps>
+    <designationCategory>Temperature</designationCategory>
+    <researchPrerequisites>
+      <li>DynElect</li>
+      <li>Electricity</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

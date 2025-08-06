@@ -1,84 +1,81 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <!--==================================PowerSource=====================================-->
-
     <ThingDef ParentName="BuildingBase">
-      <defName>XenonIonTurbine</defName>
-      <label>Xenon-Ion Turbine</label>
-      <description>Produces electricity by collecting trace Xenon from water and ionizing it into plasma. Must be placed on a geyser.</description>
-      <thingClass>Building</thingClass>
-      <drawerType>MapMeshAndRealTime</drawerType>
-      <graphicData>
-        <texPath>Things/Building/Power/XenonIonTurbine</texPath>
-        <graphicClass>Graphic_Single</graphicClass>
-        <drawSize>(6,6)</drawSize>
-        <damageData>
-          <rect>(0.3,0,5.4,6)</rect>
-        </damageData>
-      </graphicData>
-      <altitudeLayer>Building</altitudeLayer>
-      <passability>Impassable</passability>
-      <blockWind>true</blockWind>
-      <scatterableOnMapGen>false</scatterableOnMapGen>
-      <fillPercent>1</fillPercent>
-      <blockLight>true</blockLight>
-      <canOverlapZones>false</canOverlapZones>
-      <statBases>
-        <MaxHitPoints>400</MaxHitPoints>
-        <WorkToBuild>9600</WorkToBuild>
-        <Flammability>1.0</Flammability>
-        <Beauty>-20</Beauty>
-      </statBases>
-      <tickerType>Normal</tickerType>
-      <size>(6,6)</size>
-      <costList>
-        <Steel>640</Steel>
-        <Titanium_GT>80</Titanium_GT>
-        <Uranium>12</Uranium>
-        <MagneticCoil>8</MagneticCoil>
-        <ComponentIndustrial>8</ComponentIndustrial>
-      </costList>
-      <comps>
-        <li Class="CompProperties_Power">
-          <compClass>CompPowerTrader</compClass>
-          <basePowerConsumption>-8200</basePowerConsumption>
-          <transmitsPower>true</transmitsPower>
-        </li>
-        <li Class="CompProperties_Breakdownable"/>
-        <li Class="CompProperties_Glower">
-          <glowRadius>12</glowRadius>
-          <glowColor>(217,112,33,0)</glowColor>
-        </li>
-        <li Class="CompProperties_HeatPusher">
-          <compClass>CompHeatPusher</compClass>
-          <heatPerSecond>100</heatPerSecond>
-        </li>
-        <li Class="CompProperties_AmbientSound">
-          <sound>XITurbine</sound>
-          <disabledOnUnpowered>true</disabledOnUnpowered>
-        </li>
-      </comps>
-      <rotatable>false</rotatable>
-      <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
-      <designationCategory>Power</designationCategory>
-      <uiOrder>2110</uiOrder>
-      <placeWorkers>
-        <li>PlaceWorker_OnSteamGeyser</li>
-        <li>PlaceWorker_InvalidOverSubstructure</li>
-      </placeWorkers>
-      <building>
-        <ai_chillDestination>false</ai_chillDestination>
-        <destroySound>BuildingDestroyed_Metal_Big</destroySound>
-      </building>
-      <constructEffect>ConstructMetal</constructEffect>
-      <designationHotKey>Misc6</designationHotKey>
-      <researchPrerequisites>
-        <li>DynElect</li>
-      </researchPrerequisites>
-      <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <defName>XenonIonTurbine</defName>
+        <label>Xenon-Ion Turbine</label>
+        <description>Produces electricity by collecting trace Xenon from water and ionizing it into plasma. Must be placed on a geyser.</description>
+        <thingClass>Building</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/Power/XenonIonTurbine</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(6,6)</drawSize>
+            <damageData>
+                <rect>(0.3,0,5.4,6)</rect>
+            </damageData>
+        </graphicData>
+        <altitudeLayer>Building</altitudeLayer>
+        <passability>Impassable</passability>
+        <blockWind>true</blockWind>
+        <scatterableOnMapGen>false</scatterableOnMapGen>
+        <fillPercent>1</fillPercent>
+        <blockLight>true</blockLight>
+        <canOverlapZones>false</canOverlapZones>
+        <statBases>
+            <MaxHitPoints>400</MaxHitPoints>
+            <WorkToBuild>9600</WorkToBuild>
+            <Flammability>1.0</Flammability>
+            <Beauty>-20</Beauty>
+        </statBases>
+        <tickerType>Normal</tickerType>
+        <size>(6,6)</size>
+        <costList>
+            <Steel>640</Steel>
+            <Titanium_GT>80</Titanium_GT>
+            <Uranium>12</Uranium>
+            <MagneticCoil>8</MagneticCoil>
+            <ComponentIndustrial>8</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>-8200</basePowerConsumption>
+                <transmitsPower>true</transmitsPower>
+            </li>
+            <li Class="CompProperties_Breakdownable"/>
+            <li Class="CompProperties_Glower">
+                <glowRadius>12</glowRadius>
+                <glowColor>(217,112,33,0)</glowColor>
+            </li>
+            <li Class="CompProperties_HeatPusher">
+                <compClass>CompHeatPusher</compClass>
+                <heatPerSecond>100</heatPerSecond>
+            </li>
+            <li Class="CompProperties_AmbientSound">
+                <sound>XITurbine</sound>
+                <disabledOnUnpowered>true</disabledOnUnpowered>
+            </li>
+        </comps>
+        <rotatable>false</rotatable>
+        <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+        <designationCategory>Power</designationCategory>
+        <uiOrder>2110</uiOrder>
+        <placeWorkers>
+            <li>PlaceWorker_OnSteamGeyser</li>
+            <li>PlaceWorker_InvalidOverSubstructure</li>
+        </placeWorkers>
+        <building>
+            <ai_chillDestination>false</ai_chillDestination>
+            <destroySound>BuildingDestroyed_Metal_Big</destroySound>
+        </building>
+        <constructEffect>ConstructMetal</constructEffect>
+        <designationHotKey>Misc6</designationHotKey>
+        <researchPrerequisites>
+            <li>DynElect</li>
+        </researchPrerequisites>
+        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
     </ThingDef>
-
     <ThingDef ParentName="BuildingBase">
         <defName>PlasmaReactor</defName>
         <label>Plasma Fusion Reactor</label>
@@ -144,9 +141,7 @@
             <li>ElectroPlasmatics</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!--==================================Batteries=====================================-->
-
     <ThingDef ParentName="BuildingBase">
         <defName>FissionBattery</defName>
         <label>Battery</label>
@@ -182,6 +177,10 @@
         </statBases>
         <size>(2,2)</size>
         <building>
+            <drawPowerBar>true</drawPowerBar>
+            <powerBarOffset>(0.5, 0.5)</powerBarOffset>
+            <!-- Centered relative to origin -->
+            <powerBarSize>(0.6, 0.25)</powerBarSize>
             <ai_chillDestination>false</ai_chillDestination>
         </building>
         <costList>
@@ -212,13 +211,13 @@
             <li>DynElect</li>
         </researchPrerequisites>
     </ThingDef>
-
-    <ThingDef ParentName="BuildingBase">
+    <ThingDef Name="HeavyPowerConduit" ParentName="BuildingBase">
         <defName>HeavyPowerConduit</defName>
         <label>heavy power conduit</label>
-        <thingClass>Building</thingClass>
         <description>A set of heavy electrical cables, very strong and non-flammable</description>
+        <thingClass>Building</thingClass>
         <category>Building</category>
+        <noRightClickDraftAttack>true</noRightClickDraftAttack>
         <graphicData>
             <texPath>Things/Building/Linked/PowerConduit_Atlas</texPath>
             <graphicClass>Graphic_Single</graphicClass>
@@ -231,23 +230,30 @@
             </damageData>
         </graphicData>
         <uiIconPath>Things/Building/Linked/PowerConduit_MenuIcon</uiIconPath>
+        <uiIconScale>1</uiIconScale>
         <building>
+            <isPowerConduit>true</isPowerConduit>
             <ai_chillDestination>false</ai_chillDestination>
             <isInert>true</isInert>
+            <isEdifice>false</isEdifice>
+            <canLandGravshipOn>true</canLandGravshipOn>
             <blueprintGraphicData>
                 <texPath>Things/Building/Linked/PowerConduit_Blueprint_Atlas</texPath>
             </blueprintGraphicData>
-            <isEdifice>false</isEdifice>
+            <canConstructInCorner>true</canConstructInCorner>
         </building>
-        <altitudeLayer>FloorEmplacement</altitudeLayer>
+        <drawerType>MapMeshOnly</drawerType>
+        <altitudeLayer>Conduits</altitudeLayer>
         <passability>Standable</passability>
         <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+        <resourcesFractionWhenDeconstructed>0</resourcesFractionWhenDeconstructed>
         <statBases>
             <MaxHitPoints>350</MaxHitPoints>
             <WorkToBuild>135</WorkToBuild>
             <Flammability>0</Flammability>
-            <Beauty>-6</Beauty>
+            <Beauty>-2</Beauty>
         </statBases>
+        <drawStyleCategory>Conduits</drawStyleCategory>
         <costList>
             <Steel>5</Steel>
             <Titanium_GT>1</Titanium_GT>
@@ -268,8 +274,43 @@
         <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
         <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
         <designationCategory>Power</designationCategory>
+        <uiOrder>2010</uiOrder>
         <constructEffect>ConstructMetal</constructEffect>
         <clearBuildingArea>false</clearBuildingArea>
+        <researchPrerequisites>
+            <li>Electricity</li>
+        </researchPrerequisites>
+        <replaceTags>
+            <li>Conduit</li>
+        </replaceTags>
     </ThingDef>
-
+    <ThingDef ParentName="HeavyPowerConduit">
+        <defName>HeavyHiddenConduit</defName>
+        <label>heavy hidden conduit</label>
+        <description>A set of heavy electrical cables, very strong and non-flammable, which someone put under the ground.</description>
+        <graphicData>
+            <color>(0,0,0,0)</color>
+            <shaderType>Transparent</shaderType>
+        </graphicData>
+        <statBases>
+            <MaxHitPoints>450</MaxHitPoints>
+            <WorkToBuild>235</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Beauty>0</Beauty>
+        </statBases>
+        <uiIconPath>Things/Building/Linked/HiddenConduit_MenuIcon</uiIconPath>
+        <designationHotKey>Misc9</designationHotKey>
+        <costList>
+            <Steel>10</Steel>
+            <Titanium_GT>1</Titanium_GT>
+            <Silicon>2</Silicon>
+        </costList>
+        <constructEffect>ConstructDirt</constructEffect>
+        <building>
+            <ai_neverTrashThis>true</ai_neverTrashThis>
+            <isTargetable>false</isTargetable>
+            <expandHomeArea>false</expandHomeArea>
+            <canBeDamagedByAttacks>false</canBeDamagedByAttacks>
+        </building>
+    </ThingDef>
 </Defs>

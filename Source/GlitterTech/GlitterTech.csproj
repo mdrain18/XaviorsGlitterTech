@@ -67,9 +67,11 @@
     <Compile Include="JobDriver_OperateAdvancedDeepDrill.cs" />
     <Compile Include="Patches\DeepDrillRadiusPatch.cs" />
     <Compile Include="Patches\GammaShieldAbsorbPatch.cs" />
+    <Compile Include="Patches\ScannerTargetPatch.cs" />
     <Compile Include="Patches\\GlitterTechPatcher.cs" />
     <Compile Include="Patches\\ResourceYieldPatch.cs" />
     <Compile Include="Patches\\StatBasesPatch.cs" />
+    <Compile Include="PatchOperationAddModExtension.cs" />
     <Compile Include="Properties\\AssemblyInfo.cs" />
     <Compile Include="WorkGiver_OperateAdvancedDeepDrill.cs" />
   </ItemGroup>

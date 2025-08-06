@@ -4,10 +4,10 @@
     <RecipeDef>
         <defName>BuildBandages</defName>
         <label>Produce bandages</label>
-        <description>Produce bandages</description>
+        <description>Produce basic cloth bandages for medical treatment.</description>
         <jobString>Producing bandages</jobString>
         <workAmount>400</workAmount>
-        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
         <ingredients>
@@ -28,16 +28,16 @@
                 <li>Cloth</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <workSkill>Crafting</workSkill>
+        <workSkill>Intellectual</workSkill>
     </RecipeDef>
 
     <RecipeDef>
         <defName>ProduceSerum</defName>
-        <label>fabricate Serum</label>
-        <description>Fabricate Serum</description>
-        <jobString>fabricating Serum</jobString>
+        <label>Fabricate serum</label>
+        <description>Fabricate glittertech medical serum using rare materials and solvents.</description>
+        <jobString>Fabricating serum</jobString>
         <workAmount>2000</workAmount>
-        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
         <ingredients>
@@ -76,16 +76,16 @@
                 <li>Silicon</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <workSkill>Crafting</workSkill>
+        <workSkill>Intellectual</workSkill>
     </RecipeDef>
 
     <RecipeDef>
         <defName>BuildMedicine</defName>
-        <label>Produce Medicine</label>
-        <description>Produce Medicine</description>
-        <jobString>Producing Medicine</jobString>
+        <label>Produce medicine</label>
+        <description>Combine herbal ingredients, ethanol, and bandages into industrial-grade medicine.</description>
+        <jobString>Producing medicine</jobString>
         <workAmount>1800</workAmount>
-        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
         <ingredients>
@@ -124,16 +124,16 @@
                 <li>Bandage</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <workSkill>Crafting</workSkill>
+        <workSkill>Intellectual</workSkill>
     </RecipeDef>
 
     <RecipeDef>
         <defName>ProduceGlitterworldMedicine</defName>
-        <label>Produce glitterworld Medicine</label>
-        <description>Produce glitterworld Medicine</description>
-        <jobString>Producing glitterworld Medicine</jobString>
+        <label>Produce glitterworld medicine</label>
+        <description>Produce ultra-tech grade glitterworld medicine using advanced compounds.</description>
+        <jobString>Producing glitterworld medicine</jobString>
         <workAmount>3200</workAmount>
-        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
         <effectWorking>Smelt</effectWorking>
         <soundWorking>Recipe_Smelt</soundWorking>
         <ingredients>
@@ -148,7 +148,7 @@
             <li>
                 <filter>
                     <thingDefs>
-                        <li>MedicineHerbal</li>
+                        <li>Neutroamine</li>
                     </thingDefs>
                 </filter>
                 <count>8</count>
@@ -181,6 +181,7 @@
                 <li>Serum</li>
             </thingDefs>
         </fixedIngredientFilter>
-        <workSkill>Crafting</workSkill>
+        <workSkill>Intellectual</workSkill>
     </RecipeDef>
+
 </Defs>

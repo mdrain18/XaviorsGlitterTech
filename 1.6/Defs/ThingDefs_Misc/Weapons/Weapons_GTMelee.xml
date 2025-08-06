@@ -18,6 +18,7 @@
         </stuffCategories>
         <recipeMaker>
             <researchPrerequisite>ChargedShot</researchPrerequisite>
+            <workSkill>Crafting</workSkill>
             <skillRequirements>
                 <Crafting>15</Crafting>
             </skillRequirements>

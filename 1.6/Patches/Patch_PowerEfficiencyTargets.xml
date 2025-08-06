@@ -1,0 +1,76 @@
+<Patch>
+  <!-- Add Tier I upgrade to Autodoor -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[contains(defName, &quot;Autodoor&quot;)]/comps/li[@Class=&quot;CompProperties_Power&quot;]</xpath>
+    <value>
+      <powerUpgrades>
+        <li>
+          <researchProject>PowerEfficiency_I</researchProject>
+          <factor>0.5</factor>
+        </li>
+      </powerUpgrades>
+    </value>
+  </Operation>
+  <!-- Add Tier I upgrade to SunLamp -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[contains(defName, &quot;SunLamp&quot;)]/comps/li[@Class=&quot;CompProperties_Power&quot;]</xpath>
+    <value>
+      <powerUpgrades>
+        <li>
+          <researchProject>PowerEfficiency_I</researchProject>
+          <factor>0.689655</factor>
+        </li>
+      </powerUpgrades>
+    </value>
+  </Operation>
+  <!-- Add Tier II upgrade to Autodoor -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName=&quot;Autodoor&quot;]/comps/li[@Class=&quot;CompProperties_Power&quot;]/powerUpgrades</xpath>
+    <value>
+      <li>
+        <researchProject>PowerEfficiency_II</researchProject>
+        <factor>0.6</factor>
+      </li>
+    </value>
+  </Operation>
+  <!-- Add Tier II upgrade to SunLamp -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName=&quot;SunLamp&quot;]/comps/li[@Class=&quot;CompProperties_Power&quot;]/powerUpgrades</xpath>
+    <value>
+      <li>
+        <researchProject>PowerEfficiency_II</researchProject>
+        <factor>0.75</factor>
+      </li>
+    </value>
+  </Operation>
+  <!-- Add Tier II upgrade to StandingLamp -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName=&quot;StandingLamp&quot;]/comps/li[@Class=&quot;CompProperties_Power&quot;]/powerUpgrades</xpath>
+    <value>
+      <li>
+        <researchProject>PowerEfficiency_II</researchProject>
+        <factor>0.333</factor>
+      </li>
+    </value>
+  </Operation>
+  <!-- Add Tier II upgrade to Wall Lamp -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName=&quot;WallLamp&quot;]/comps/li[@Class=&quot;CompProperties_Power&quot;]/powerUpgrades</xpath>
+    <value>
+      <li>
+        <researchProject>PowerEfficiency_II</researchProject>
+        <factor>0.333</factor>
+      </li>
+    </value>
+  </Operation>
+  <!-- Add Tier II upgrade to Flood Light -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName=&quot;FloodLight&quot;]/comps/li[@Class=&quot;CompProperties_Power&quot;]/powerUpgrades</xpath>
+    <value>
+      <li>
+        <researchProject>PowerEfficiency_II</researchProject>
+        <factor>0.3</factor>
+      </li>
+    </value>
+  </Operation>
+</Patch>

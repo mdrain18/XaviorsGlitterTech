@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
     <!-- ========================= Work tables ==========================-->
-
     <ThingDef ParentName="BenchBase">
         <defName>PharmaTable</defName>
         <label>pharmaceutical table</label>
@@ -15,8 +14,8 @@
             <WorkToBuild>6500</WorkToBuild>
             <Flammability>1.0</Flammability>
         </statBases>
-        <minifiedDef />
-        <thingCategories Inherit="false" />
+        <minifiedDef/>
+        <thingCategories Inherit="false"/>
         <size>(3,1)</size>
         <costList>
             <Steel>120</Steel>
@@ -54,7 +53,7 @@
             <texPath>Things/Building/Production/TablePharmaceutical</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
-            <drawSize>(3,1)</drawSize>
+            <drawSize>(3,1.5)</drawSize>
             <damageData>
                 <cornerTL>Damage/Corner</cornerTL>
                 <cornerTR>Damage/Corner</cornerTR>
@@ -78,7 +77,7 @@
         <designationCategory>Production</designationCategory>
         <surfaceType>Item</surfaceType>
         <constructEffect>ConstructMetal</constructEffect>
-        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -87,7 +86,6 @@
             <li>Pharmaceuticals</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!-- ========================= Matter fabricator ==========================-->
     <ThingDef ParentName="BenchBase">
         <defName>Matterfab</defName>
@@ -102,8 +100,8 @@
             <WorkToBuild>18000</WorkToBuild>
             <Flammability>1.0</Flammability>
         </statBases>
-        <minifiedDef />
-        <thingCategories Inherit="false" />
+        <minifiedDef/>
+        <thingCategories Inherit="false"/>
         <size>(7,2)</size>
         <costList>
             <Steel>650</Steel>
@@ -135,7 +133,6 @@
             <li>ProduceAPoly</li>
             <li>ProduceBPoly</li>
             <li>ProduceTitanium</li>
-            <li>ProducePlasteel</li>
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/MatterFab</texPath>
@@ -165,7 +162,7 @@
         <designationCategory>Production</designationCategory>
         <surfaceType>Item</surfaceType>
         <constructEffect>ConstructMetal</constructEffect>
-        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -174,9 +171,7 @@
             <li>AtomicA</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!-- ========================= Electrolyzer ==========================-->
-
     <ThingDef ParentName="BenchBase">
         <defName>Electrolyzer</defName>
         <label>Electrolyzer</label>
@@ -190,8 +185,8 @@
             <WorkToBuild>5000</WorkToBuild>
             <Flammability>1.0</Flammability>
         </statBases>
-        <minifiedDef />
-        <thingCategories Inherit="false" />
+        <minifiedDef/>
+        <thingCategories Inherit="false"/>
         <size>(3,2)</size>
         <costList>
             <Steel>540</Steel>
@@ -221,13 +216,13 @@
             <li>ProduceSilicon</li>
             <li>ProduceEthanol</li>
             <li>ProduceHyperweave</li>
-            <li>ProduceCondensedSteel</li>    
+            <li>ProduceCondensedSteel</li>
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/Electrolyzer</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
-            <drawSize>(3,2)</drawSize>
+            <drawSize>(3,1.9)</drawSize>
             <damageData>
                 <cornerTL>Damage/Corner</cornerTL>
                 <cornerTR>Damage/Corner</cornerTR>
@@ -251,7 +246,7 @@
         <designationCategory>Production</designationCategory>
         <surfaceType>Item</surfaceType>
         <constructEffect>ConstructMetal</constructEffect>
-        <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
         <placeWorkers>
             <li>PlaceWorker_ShowFacilitiesConnections</li>
             <li>PlaceWorker_PreventInteractionSpotOverlap</li>
@@ -260,9 +255,7 @@
             <li>Electrolysis</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!-- ========================= Robotic assembler ==========================-->
-
     <ThingDef ParentName="BenchBase">
         <defName>RobAssem</defName>
         <label>Robotic Assembler</label>
@@ -276,8 +269,8 @@
             <WorkToBuild>6600</WorkToBuild>
             <Flammability>1.0</Flammability>
         </statBases>
-        <minifiedDef />
-        <thingCategories Inherit="false" />
+        <minifiedDef/>
+        <thingCategories Inherit="false"/>
         <size>(5,2)</size>
         <costList>
             <Steel>480</Steel>
@@ -306,12 +299,18 @@
         <recipes>
             <li>BuildComputerComp</li>
             <li>BuildMagneticCoil</li>
+            <li>MakeComponentIndustrialBulk20</li>
+            <li>MakeComponentSpacerBulk20</li>
         </recipes>
         <graphicData>
             <texPath>Things/Building/Production/RobAssem</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>CutoutComplex</shaderType>
-            <drawSize>(5,2)</drawSize>
+            <drawSize>(5,2.5)</drawSize>
+            <drawOffsetNorth>(0, 0, 0.3)</drawOffsetNorth>
+            <drawOffsetSouth>(0, 0, 0.1)</drawOffsetSouth>
+            <drawOffsetEast>(0.1, 0, 0)</drawOffsetEast>
+            <drawOffsetWest>(-0.1, 0, 0)</drawOffsetWest>
             <damageData>
                 <cornerTL>Damage/Corner</cornerTL>
                 <cornerTR>Damage/Corner</cornerTR>
@@ -344,5 +343,4 @@
             <li>RoboticEngineering</li>
         </researchPrerequisites>
     </ThingDef>
-
 </Defs>

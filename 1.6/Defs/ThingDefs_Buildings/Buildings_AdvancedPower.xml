@@ -93,7 +93,7 @@
         <passability>Impassable</passability>
         <castEdgeShadows>true</castEdgeShadows>
         <fillPercent>1</fillPercent>
-        <blockLight>true</blockLight>
+        <blockLight>false</blockLight>
         <statBases>
             <MaxHitPoints>5000</MaxHitPoints>
             <WorkToBuild>15000</WorkToBuild>
@@ -114,7 +114,7 @@
         <comps>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>-320000</basePowerConsumption>
+                <basePowerConsumption>-32000</basePowerConsumption>
                 <transmitsPower>true</transmitsPower>
                 <soundAmbientProducingPower>ShipReactor_Ambience</soundAmbientProducingPower>
             </li>
@@ -169,7 +169,7 @@
             <li>BuildingsPower</li>
         </thingCategories>
         <statBases>
-            <MaxHitPoints>100</MaxHitPoints>
+            <MaxHitPoints>400</MaxHitPoints>
             <WorkToBuild>1200</WorkToBuild>
             <Mass>20</Mass>
             <Flammability>2.0</Flammability>
@@ -177,12 +177,9 @@
         </statBases>
         <size>(2,2)</size>
         <building>
-            <drawPowerBar>true</drawPowerBar>
-            <powerBarOffset>(0.5, 0.5)</powerBarOffset>
-            <!-- Centered relative to origin -->
-            <powerBarSize>(0.6, 0.25)</powerBarSize>
             <ai_chillDestination>false</ai_chillDestination>
         </building>
+        <drawerType>MapMeshAndRealTime</drawerType>
         <costList>
             <Steel>150</Steel>
             <Uranium>1</Uranium>

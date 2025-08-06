@@ -57,13 +57,13 @@
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <texPath>Things/Building/Production/AdvancedDeepDrill</texPath>
-            <drawSize>(6, 6)</drawSize>
+            <drawSize>(3, 3)</drawSize>
             <shadowData>
                 <volume>(0.78, 0.795, 0.135)</volume>
                 <offset>(0,0,-0.645)</offset>
             </shadowData>
         </graphicData>
-        <size>(3.5, 3.5)</size>
+        <size>(3, 3)</size>
         <altitudeLayer>Building</altitudeLayer>
         <passability>PassThroughOnly</passability>
         <pathCost>50</pathCost>

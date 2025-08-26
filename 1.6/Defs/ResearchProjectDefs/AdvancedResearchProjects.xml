@@ -125,11 +125,11 @@
         <label>Electro plasmatics</label>
         <tab>GlitterTech</tab>
         <description>Allows you to direct plasma using magnetic fields. Unlocks very high tier technology that wields the extreme power of plasma.</description>
-        <baseCost>1900</baseCost>
+        <baseCost>2000</baseCost>
         <prerequisites>
             <li>DynElect</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -142,11 +142,11 @@
         <label>Advanced factorization</label>
         <tab>GlitterTech</tab>
         <description>The first step in understanding the basics of advanced manufacturing methods, to give your colony access to the latest assembly machinery.</description>
-        <baseCost>1500</baseCost>
+        <baseCost>2000</baseCost>
         <prerequisites>
             <li>ElectroPlasmatics</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -159,17 +159,34 @@
         <label>Robotic Engineering</label>
         <tab>GlitterTech</tab>
         <description>Allows you to engineer state of the art intricate robotics, useful for complex precision assembling machinery and most machinery found on Glitter worlds.</description>
-        <baseCost>1400</baseCost>
+        <baseCost>2000</baseCost>
         <prerequisites>
             <li>AdvancedFact</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
         </requiredResearchFacilities>
         <researchViewX>4</researchViewX>
         <researchViewY>.8</researchViewY>
+    </ResearchProjectDef>
+    <ResearchProjectDef>
+        <defName>AdvancedTT</defName>
+        <label>Advanced Targeting Turret</label>
+        <tab>GlitterTech</tab>
+        <description>Allows you to build the advanced targeting turret.</description>
+        <baseCost>4000</baseCost>
+        <prerequisites>
+            <li>AdvancedFact</li>
+        </prerequisites>
+        <techLevel>Spacer</techLevel>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <researchViewX>4</researchViewX>
+        <researchViewY>1.05</researchViewY>
     </ResearchProjectDef>
     <ResearchProjectDef>
         <defName>Electrolysis</defName>
@@ -180,7 +197,7 @@
         <prerequisites>
             <li>AdvancedFact</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -197,7 +214,7 @@
         <prerequisites>
             <li>AdvancedFact</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -214,7 +231,7 @@
         <prerequisites>
             <li>AtomicD</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -231,7 +248,7 @@
         <prerequisites>
             <li>ElectroPlasmatics</li>
         </prerequisites>
-        <techLevel>Industrial</techLevel>
+        <techLevel>Spacer</techLevel>
         <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
         <requiredResearchFacilities>
             <li>MultiAnalyzer</li>
@@ -281,5 +298,33 @@
         </prerequisites>
         <researchViewX>3</researchViewX>
         <researchViewY>2</researchViewY>
+    </ResearchProjectDef>
+    <!-- ===== Nanites (Ultra) ===== -->
+    <ResearchProjectDef>
+        <defName>NaniteEngineering_GT</defName>
+        <label>nanite engineering</label>
+        <tab>GlitterTech</tab>
+        <description>Master the fabrication of programmable nanites by integrating ultratech robotics, electrolysis-grade purification, and sub-atomic assembly techniques.</description>
+        <baseCost>10000</baseCost>
+        <techLevel>Ultra</techLevel>
+        <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+        <requiredResearchFacilities>
+            <li>MultiAnalyzer</li>
+        </requiredResearchFacilities>
+        <techprintCount>2</techprintCount>
+        <techprintCommonality>1</techprintCommonality>
+        <techprintMarketValue>4000</techprintMarketValue>
+        <heldByFactionCategoryTags>
+            <li>Pirate</li>
+            <li>Outlander</li>
+            <li>Empire</li>
+        </heldByFactionCategoryTags>
+        <prerequisites>
+            <li>RoboticEngineering</li>
+            <li>AtomicA</li>
+            <li>Electrolysis</li>
+        </prerequisites>
+        <researchViewX>6.5</researchViewX>
+        <researchViewY>2.1</researchViewY>
     </ResearchProjectDef>
 </Defs>

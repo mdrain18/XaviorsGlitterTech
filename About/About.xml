@@ -20,7 +20,6 @@
         </li>
     </modDependencies>
     <packageId>Xavior.GlitterTech</packageId>
-
     <forceLoadAfter>
         <li>Ludeon.RimWorld</li>
         <li>Ludeon.RimWorld.Royalty</li>
@@ -28,10 +27,9 @@
         <li>Ludeon.RimWorld.Biotech</li>
         <li>Ludeon.RimWorld.Anomaly</li>
         <li>Ludeon.RimWorld.Odyssey</li>
+        <li>sarg.alphamechs</li>
     </forceLoadAfter>
-
-    <description>
-        GlitterTech adds a ton of shiny new and futuristic items found on the richer developed Glitter worlds. But, this expensive and illegal tech attracts attention of Glitter world Commandos.
+    <description>GlitterTech adds a ton of shiny new and futuristic items found on the richer developed Glitter worlds. But, this expensive and illegal tech attracts attention of Glitter world Commandos.
 
         (Unofficial Version for 1.5 and below)
         *I am not the original author*
@@ -54,32 +52,50 @@
         5) More..... STUFF! Starting with Glitter swords and Glitter psycasts... I think. Not sure if I will ever get
         here but I'm being optimistic
 
-        Let me know in the "Changes" discussion what you want done with this mod and I will do my best to make it
+        Let me know in the &quot;Changes&quot; discussion what you want done with this mod and I will do my best to make it
         happen. Link below:
         https://steamcommunity.com/workshop/filedetails/discussion/2558099206/3480742287613877229/
 
         Release Notes: 1.6.4514
         - Updated to 1.6 version of the game.
-        - Incorporated the "No Surgery" mod as a checkbox into this one. Please let me know if there is any issues with this. 
+        - Incorporated the &quot;No Surgery&quot; mod as a checkbox into this one. Please let me know if there is any issues with this. 
         - Added airtight tags to Titanium, Alpha and Beta Polys
         - Added support for new 1.6 tags like VacuumResistance and terrain affordance.
         - Introduced stopping power to bullets
+        - Updated some graphics (more to come)
+        - Batteries now have charging bar..again
+        - Over arching game play balance and bug fixes
+        - Description changes to match game play
+        - Key bugs fixed:
+            - Heavy duty power conduct does click and drag placement
+            - Turrets now point in the right direction
+            - Nano tech gear layers have been corrected
+            - Plasma Fusion Reactor: corrected power output... sorry for the extra zero LOL (reduced size to 7x7)
+            - Advanced drill: now is prioritized over regular drill
+            - Several recipes now use corresponding skills for production
+        - New Items:
+            - TEG: super efficient way of cooling rooms.. but lacks the ability for set temps
+            - Powered wall: just a wall, with a power outlet
+            - Advanced security door: security door from DLC but stronger and faster open/close rates
+            - Glowing Column - satisfies Royalty Titles and I'm working on getting the Ideologies to accept it as well
+            - Advanced Turret - name is self explanatory, let me know if I should increase or decrease its damage
+            - Ultra Skin Gland - increases beauty and provides armor
+            - OCD Katana - :)
+            - Odyssey's Unique Weapons:
+                - OCD Katana (done)
+                - MPG-5 (in progress)
+                - OCD Guns (TBD)
+                - EMRG-1 (TBD)
 
+        - New research: 
+            - two new researches which, once completed, decrease the power consumption of core game items (lights/auto doors)
+            - see patch folder in game files to see how to set for other mods
 
-        Release Notes: 1.5.40602
-        - Updated to work with release
-        - Added Resource Slider - this will change the stat values of the three resources of this mod based on what the slider is set to
-        - Added Titanium yield setting slider
-        - Added three army incident where Commandos and OC's fight the Empire!
-            (includes settings for changing various parts of the incident)
-        - Added the Advanced Deep Drill. Bigger. Faster. Can reach further!
-
+        ** Introducing Nanites - they don't really do anything yet but they are in the mod and will be used in future recipes. 
         
-        Release Notes: 1.4.04
-        - Titanium is now Titanium_GT which should fix problems with other metal mods that have titanium in them
-        - Updated to 1.4: Except:
-        - Tanks: big problems here which I am tabling for now
-        not sure why this isn't working
-        - Tanks have been completely removed and should not spawn so the error shouldn't happen
+        ** Removed the Cargo Shuttle as I can't get the dumb thing to look right when you rotate it
+
+        Any questions or bugs, let me know about them in the comments or on GitHub.
+        
     </description>
 </ModMetaData>

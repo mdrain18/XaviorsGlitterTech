@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- UNIQUE: Persona Katana -->
+  <ThingDef ParentName="OCDKatana_GT">
+    <defName>Katana_GT_Unique</defName>
+    <label>unique persona katana</label>
+    <description>A persona katana with customized parts.</description>
+    <!-- Keep your existing art; Unique color tint will still apply -->
+    <graphicData>
+      <texPath>Things/Item/Equipment/OrionCorp/OCDKatana</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <comps Inherit="False">
+      <!-- Traits can inject abilityProps here at runtime -->
+      <li Class="CompProperties_EquippableAbilityReloadable"/>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Styleable"/>
+      <!-- Keep bladelink bonding/biocode-on-equip -->
+      <li Class="CompProperties_BladelinkWeapon">
+        <biocodeOnEquip>true</biocodeOnEquip>
+      </li>
+      <!-- No CompProperties_GeneratedName here; Unique comp will name it -->
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtWeaponMelee</nameMaker>
+        <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+        <!-- Odyssey uniques usually gate art at Excellent so titles show reliably -->
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+      <!-- Unique Weapons driver -->
+      <li Class="CompProperties_UniqueWeapon">
+        <weaponCategories>
+          <!-- Broad tags so melee traits can roll -->
+          <li>Melee</li>
+          <li>Sword</li>
+          <li>MeleePiercer</li>
+          <li>Ultratech</li>
+          <li>Bladelink</li>
+        </weaponCategories>
+        <namerLabels>
+          <li>katana</li>
+          <li>blade</li>
+          <li>edge</li>
+          <li>longblade</li>
+        </namerLabels>
+      </li>
+    </comps>
+    <!-- Make it a non-craftable unique reward like Odyssey does -->
+    <generateAllowChance>0</generateAllowChance>
+    <possessionCount>0</possessionCount>
+    <tradeability>Sellable</tradeability>
+    <thingSetMakerTags Inherit="False">
+      <li>RewardStandardLowFreq</li>
+      <li>UniqueWeapon</li>
+    </thingSetMakerTags>
+    <recipeMaker Inherit="False" IsNull="True"/>
+    <thingCategories Inherit="False">
+      <li>WeaponsUnique</li>
+    </thingCategories>
+    
+    <descriptionHyperlinks>
+      <ThingDef>OCDKatana_GT</ThingDef>
+    </descriptionHyperlinks>
+  </ThingDef>
+</Defs>

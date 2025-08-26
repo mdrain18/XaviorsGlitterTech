@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>!-- Melee categories for unique melee traits --&gt;
+  <WeaponCategoryDef>
+    <defName>Melee</defName></WeaponCategoryDef>
+  <WeaponCategoryDef>
+    <defName>Sword</defName>
+  </WeaponCategoryDef>
+  <WeaponCategoryDef>
+    <defName>MeleePiercer</defName>
+  </WeaponCategoryDef>
+  <WeaponCategoryDef>
+    <defName>Ultratech</defName>
+  </WeaponCategoryDef>
+  <WeaponCategoryDef>
+    <defName>Bladelink</defName>
+  </WeaponCategoryDef>
+</Defs>

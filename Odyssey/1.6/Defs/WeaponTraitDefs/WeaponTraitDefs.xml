@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Lighter handling; small power bump -->
+  <WeaponTraitDef>
+    <defName>Lightweightsword</defName>
+    <label>lightweight</label>
+    <description>This weapon is much lighter than normal, improving handling.</description>
+    <commonality>1</commonality>
+    <weaponCategory>Sword</weaponCategory>
+    <exclusionTags>
+      <li>Weight</li>
+      <!-- Also exclude other speed-mod traits so they don't stack -->
+      <li>SpeedMod</li>
+    </exclusionTags>
+    <statFactors>
+      <Mass>0.75</Mass>
+      <!-- If you're using the cooldown shim and the weapon has a base cooldown -->
+      <MeleeWeapon_Cooldown>0.95</MeleeWeapon_Cooldown>
+    </statFactors>
+    <statOffsets>
+      <MeleeWeapon_DamageMultiplier>0.05</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_ArmorPenetrationMultiplier>0.05</MeleeWeapon_ArmorPenetrationMultiplier>
+      <MarketValue>80</MarketValue>
+    </statOffsets>
+    <traitAdjectives>
+      <li>light</li>
+      <li>swift</li>
+    </traitAdjectives>
+  </WeaponTraitDef>
+
+  <!-- Clean "sharp" bonus -->
+  <WeaponTraitDef>
+    <defName>KeenEdge_Melee</defName>
+    <label>keen-edged</label>
+    <description>Impossibly sharp and perfectly balanced for flowing strikes.</description>
+    <commonality>1.2</commonality>
+    <weaponCategory>Sword</weaponCategory>
+    <statFactors>
+      <Mass>0.85</Mass>
+      <MeleeWeapon_Cooldown>0.93</MeleeWeapon_Cooldown>
+    </statFactors>
+    <statOffsets>
+      <MeleeWeapon_DamageMultiplier>0.12</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_ArmorPenetrationMultiplier>0.12</MeleeWeapon_ArmorPenetrationMultiplier>
+      <MarketValue>120</MarketValue>
+    </statOffsets>
+    <traitAdjectives>
+      <li>keen</li>
+      <li>razor</li>
+      <li>honed</li>
+    </traitAdjectives>
+    <exclusionTags>
+      <li>SpeedMod</li>
+    </exclusionTags>
+  </WeaponTraitDef>
+
+  <!-- “Penetration” theme; modest damage + AP bump -->
+  <WeaponTraitDef>
+    <defName>Heartseeker_Melee</defName>
+    <label>heartseeking</label>
+    <description>Balanced for decisive thrusts that find tiny openings in armor.</description>
+    <commonality>1.0</commonality>
+    <weaponCategory>MeleePiercer</weaponCategory>
+    <statFactors>
+      <MeleeWeapon_Cooldown>0.98</MeleeWeapon_Cooldown>
+    </statFactors>
+    <statOffsets>
+      <MeleeWeapon_DamageMultiplier>0.06</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_ArmorPenetrationMultiplier>0.08</MeleeWeapon_ArmorPenetrationMultiplier>
+      <MarketValue>100</MarketValue>
+    </statOffsets>
+    <traitAdjectives>
+      <li>piercing</li>
+      <li>sharp</li>
+      <li>sabot</li>
+      <li>penetrating</li>
+    </traitAdjectives>
+  </WeaponTraitDef>
+
+  <!-- Techy feel + lighter handling -->
+  <WeaponTraitDef>
+    <defName>ResonantLattice_Melee</defName>
+    <label>resonant lattice</label>
+    <description>A humming micro-lattice stabilizes the blade’s edge at a molecular level.</description>
+    <commonality>1.0</commonality>
+    <weaponCategory>Ultratech</weaponCategory>
+    <statFactors>
+      <Mass>0.90</Mass>
+      <MeleeWeapon_Cooldown>0.97</MeleeWeapon_Cooldown>
+    </statFactors>
+    <statOffsets>
+      <MeleeWeapon_DamageMultiplier>0.08</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_ArmorPenetrationMultiplier>0.08</MeleeWeapon_ArmorPenetrationMultiplier>
+      <MarketValue>180</MarketValue>
+    </statOffsets>
+    <traitAdjectives>
+      <li>resonant</li>
+      <li>latticed</li>
+      <li>tuned</li>
+    </traitAdjectives>
+  </WeaponTraitDef>
+
+  <!-- Persona synergy; gentle tweaks -->
+  <WeaponTraitDef>
+    <defName>Whispersilk_Melee</defName>
+    <label>whispersilk</label>
+    <description>The bound persona anticipates its partner’s motions with silky intuition.</description>
+    <commonality>0.8</commonality>
+    <canGenerateAlone>false</canGenerateAlone>
+    <weaponCategory>Bladelink</weaponCategory>
+    <statFactors>
+      <Mass>0.90</Mass>
+      <MeleeWeapon_Cooldown>0.98</MeleeWeapon_Cooldown>
+    </statFactors>
+    <statOffsets>
+      <MeleeWeapon_DamageMultiplier>0.03</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_ArmorPenetrationMultiplier>0.03</MeleeWeapon_ArmorPenetrationMultiplier>
+    </statOffsets>
+    <traitAdjectives>
+      <li>whispering</li>
+      <li>silken</li>
+      <li>bonded</li>
+    </traitAdjectives>
+    <exclusionTags>
+      <li>SpeedMod</li>
+    </exclusionTags>
+  </WeaponTraitDef>
+
+  <!-- Generic melee fallback -->
+  <WeaponTraitDef>
+    <defName>BalancedGuard_Melee</defName>
+    <label>balanced guard</label>
+    <description>Subtle geometry tweaks yield a poised, controlled guard.</description>
+    <commonality>1.3</commonality>
+    <weaponCategory>Melee</weaponCategory>
+    <statFactors>
+      <Mass>0.95</Mass>
+      <MeleeWeapon_Cooldown>0.99</MeleeWeapon_Cooldown>
+    </statFactors>
+    <statOffsets>
+      <MeleeWeapon_DamageMultiplier>0.03</MeleeWeapon_DamageMultiplier>
+      <MeleeWeapon_ArmorPenetrationMultiplier>0.03</MeleeWeapon_ArmorPenetrationMultiplier>
+    </statOffsets>
+    <traitAdjectives>
+      <li>balanced</li>
+      <li>poised</li>
+    </traitAdjectives>
+  </WeaponTraitDef>
+
+</Defs>

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <ThingDef ParentName="BuildingBase">
         <defName>Shield</defName>
         <label>Shield</label>
@@ -58,14 +57,12 @@
         <designationCategory>Security</designationCategory>
         <staticSunShadowHeight>0.20</staticSunShadowHeight>
     </ThingDef>
-
     <!--=============== Turret Base ===============-->
-
-    <ThingDef ParentName="AutocannonTurret" Name="AutocannonTurret_GT" Abstract="True">
+    <ThingDef Abstract="True" Name="AutocannonTurret_GT" ParentName="AutocannonTurret">
         <thingClass>Building_TurretGun</thingClass>
         <drawerType>MapMeshAndRealTime</drawerType>
         <graphicData>
-            <texPath>Things/Building/Turret/EMRGTurret_Base</texPath>
+            <texPath>Things/Building/Turret/XGT_Turret_Base</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(3, 3)</drawSize>
             <drawOffset>(0,0,-0.1)</drawOffset>
@@ -89,21 +86,22 @@
             <li>EMRGDefense</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!-- EMTurret -->
     <ThingDef ParentName="AutocannonTurret_GT">
         <defName>EMTurret</defName>
         <label>EMRG turret</label>
         <description>An EMRG rifle mounted on a sentry gun assembly that automatically fires at nearby enemies.\nExplodes when damaged.</description>
-        <uiIconPath>Things/Building/Security/TurretAutocannon_MenuIcon</uiIconPath>
+        <uiIconPath>Things/Building/Turret/EMRGTurret_Top</uiIconPath>
+        <size>(2,2)</size>
         <statBases>
-            <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+            <ShootingAccuracyTurret>0.97</ShootingAccuracyTurret>
         </statBases>
         <costList>
-            <Titanium_GT>55</Titanium_GT>
-            <ComputerComp>2</ComputerComp>
+            <Steel>100</Steel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComputerComp>1</ComputerComp>
             <Gun_EMRifle>1</Gun_EMRifle>
-            <ComponentIndustrial>3</ComponentIndustrial>
+            <ComponentIndustrial>2</ComponentIndustrial>
         </costList>
         <comps>
             <li Class="CompProperties_Explosive">
@@ -115,18 +113,19 @@
             <li Class="CompProperties_Forbiddable"/>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>500</basePowerConsumption>
+                <basePowerConsumption>300</basePowerConsumption>
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Breakdownable"/>
         </comps>
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
             <turretGunDef>Gun_EMRGTurret</turretGunDef>
             <turretBurstCooldownTime>5</turretBurstCooldownTime>
+            <turretTopDrawSize>1.2</turretTopDrawSize>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_EMRGTurret</defName>
         <label>Improvised turret bullet</label>
@@ -140,7 +139,6 @@
             <speed>200</speed>
         </projectile>
     </ThingDef>
-
     <ThingDef ParentName="BaseWeaponTurret">
         <defName>Gun_EMRGTurret</defName>
         <label>EMRG Turret Gun</label>
@@ -178,13 +176,13 @@
             </li>
         </verbs>
     </ThingDef>
-
     <!-- CanisterTurret -->
     <ThingDef ParentName="AutocannonTurret_GT">
         <defName>CanisterTurret</defName>
         <label>Canister turret</label>
         <description>A powerful canister turret that automatically fires at nearby enemies.\nGood for cramped quarters.\nExplodes when damaged.</description>
-        <uiIconPath>Things/Building/Turret/EMRGTurret_Top</uiIconPath>
+        <uiIconPath>Things/Building/Turret/CanisterTurret_Top</uiIconPath>
+        <size>(1,1)</size>
         <statBases>
             <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
         </statBases>
@@ -202,18 +200,19 @@
             <li Class="CompProperties_Forbiddable"/>
             <li Class="CompProperties_Power">
                 <compClass>CompPowerTrader</compClass>
-                <basePowerConsumption>500</basePowerConsumption>
+                <basePowerConsumption>100</basePowerConsumption>
             </li>
             <li Class="CompProperties_Flickable"/>
             <li Class="CompProperties_Breakdownable"/>
         </comps>
         <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
         <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
             <turretGunDef>Gun_CanisterTurret</turretGunDef>
             <turretBurstCooldownTime>10</turretBurstCooldownTime>
+            <turretTopDrawSize>2</turretTopDrawSize>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_CanisterTurret</defName>
         <label>Improvised turret bullet</label>
@@ -227,13 +226,12 @@
             <speed>90</speed>
         </projectile>
     </ThingDef>
-
     <ThingDef ParentName="BaseWeaponTurret">
         <defName>Gun_CanisterTurret</defName>
         <label>Canister Turret Gun</label>
         <description>A cross between minigun and shotgun, attached to a turret.</description>
         <graphicData>
-            <texPath>Things/Building/Turret/EMRGTurret_Top</texPath>
+            <texPath>Things/Building/Turret/CanisterTurret_Top</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <drawSize>(2,2)</drawSize>
         </graphicData>
@@ -261,10 +259,116 @@
             </li>
         </verbs>
     </ThingDef>
-
+    <!-- Advanced TT -->
+    <ThingDef ParentName="AutocannonTurret">
+        <defName>AdvancedTTurret</defName>
+        <label>Advanced targeting turret</label>
+        <description>A turret with a highly advanced targeting system and onboard safety protocols which keep it from exploding.</description>
+        <uiIconPath>Things/Building/Turret/Advanced_TT_Icon</uiIconPath>
+        <thingClass>Building_TurretGun</thingClass>
+        <drawerType>MapMeshAndRealTime</drawerType>
+        <graphicData>
+            <texPath>Things/Building/Turret/Advanced_TT_Base_short</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(3,3)</drawSize>
+            <drawOffset>(0,0,-0.1)</drawOffset>
+            <damageData>
+                <rect>(0.2,0.2,0.6,0.6)</rect>
+            </damageData>
+            <shadowData>
+                <volume>(1.5,0.35,1.4)</volume>
+                <offset>(0,0,-0.05)</offset>
+            </shadowData>
+        </graphicData>
+        <size>(3,3)</size>
+        <statBases>
+            <ShootingAccuracyTurret>1</ShootingAccuracyTurret>
+            <MaxHitPoints>2000</MaxHitPoints>
+            <WorkToBuild>25000</WorkToBuild>
+            <Flammability>0</Flammability>
+            <Mass>200</Mass>
+            <Beauty>-20</Beauty>
+        </statBases>
+        <costList>
+            <Plasteel>150</Plasteel>
+            <Titanium_GT>20</Titanium_GT>
+            <AlphaPoly>5</AlphaPoly>
+            <ComputerComp>2</ComputerComp>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Power">
+                <compClass>CompPowerTrader</compClass>
+                <basePowerConsumption>800</basePowerConsumption>
+            </li>
+            <li Class="CompProperties_Flickable"/>
+            <li Class="CompProperties_Breakdownable"/>
+        </comps>
+        <building>
+            <ai_combatDangerous>true</ai_combatDangerous>
+            <turretTopOffset>(0, 0.7)</turretTopOffset>
+            <turretGunDef>Gun_AdvancedTT</turretGunDef>
+            <turretBurstCooldownTime>3</turretBurstCooldownTime>
+        </building>
+        <constructionSkillPrerequisite>14</constructionSkillPrerequisite>
+        <researchPrerequisites>
+            <li>EMRGDefense</li>
+        </researchPrerequisites>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_ATT</defName>
+        <label>charge lance shot</label>
+        <graphicData>
+            <texPath>Things/Projectile/ChargeLanceShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>50</damageAmountBase>
+            <stoppingPower>3.5</stoppingPower>
+            <speed>220</speed>
+        </projectile>
+    </ThingDef>
+    <ThingDef ParentName="BaseWeaponTurret">
+        <defName>Gun_AdvancedTT</defName>
+        <label>Advanced TT Gun</label>
+        <description>Highly advanced targeting turret gun.</description>
+        <graphicData>
+            <texPath>Things/Building/Turret/Advanced_TT_Top</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(2,2)</drawSize>
+        </graphicData>
+        <statBases>
+            <AccuracyTouch>0.88</AccuracyTouch>
+            <AccuracyShort>0.98</AccuracyShort>
+            <AccuracyMedium>0.99</AccuracyMedium>
+            <AccuracyLong>0.99</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0</DeteriorationRate>
+            <Mass>40</Mass>
+            <Flammability>0</Flammability>
+        </statBases>
+        <techLevel>Spacer</techLevel>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <defaultProjectile>Bullet_ATT</defaultProjectile>
+                <warmupTime>0</warmupTime>
+                <range>55</range>
+                <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+                <burstShotCount>8</burstShotCount>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+                <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+            </li>
+        </verbs>
+    </ThingDef>
     <!--=============== Mortar turret ===============-->
-
-    <ThingDef ParentName="BuildingBase" Name="AutoMortarBase_GT" Abstract="True">
+    <ThingDef Abstract="True" Name="AutoMortarBase_GT" ParentName="BuildingBase">
         <thingClass>Building_TurretGun</thingClass>
         <drawerType>MapMeshAndRealTime</drawerType>
         <receivesSignals>true</receivesSignals>
@@ -305,7 +409,6 @@
             <li>AdvancedFact</li>
         </researchPrerequisites>
     </ThingDef>
-
     <!-- AutoMortar -->
     <ThingDef ParentName="AutoMortarBase_GT">
         <defName>AutoMortar_GT</defName>
@@ -340,7 +443,6 @@
             <turretInitialCooldownTime>50</turretInitialCooldownTime>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Auto_Artillery_Mortar</defName>
         <label>auto-mortar</label>
@@ -371,7 +473,6 @@
             </li>
         </verbs>
     </ThingDef>
-
     <!-- ClusterMortar -->
     <ThingDef ParentName="AutoMortarBase_GT">
         <defName>ClusterMortar</defName>
@@ -406,7 +507,6 @@
             <turretInitialCooldownTime>50</turretInitialCooldownTime>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Auto_Cluster_Mortar</defName>
         <label>auto-mortar</label>
@@ -437,7 +537,6 @@
             </li>
         </verbs>
     </ThingDef>
-
     <!-- EMPAMortar -->
     <ThingDef ParentName="AutoMortarBase_GT">
         <defName>EMPAMortar</defName>
@@ -472,7 +571,6 @@
             <turretInitialCooldownTime>50</turretInitialCooldownTime>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_EMPAMortar</defName>
         <label>explosive mortar shell</label>
@@ -494,7 +592,6 @@
             <soundAmbient>MortarRound_Ambient</soundAmbient>
         </projectile>
     </ThingDef>
-
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Auto_EMP_Mortar</defName>
         <label>auto-mortar</label>
@@ -525,7 +622,6 @@
             </li>
         </verbs>
     </ThingDef>
-
     <!-- MissileTurret -->
     <ThingDef ParentName="AutoMortarBase_GT">
         <defName>MissileSwarmTurret</defName>
@@ -561,7 +657,6 @@
             <turretInitialCooldownTime>50</turretInitialCooldownTime>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseBullet">
         <defName>Proj_Rocket_GT</defName>
         <label>rockets</label>
@@ -584,7 +679,6 @@
             <soundAmbient>MortarRound_Ambient</soundAmbient>
         </projectile>
     </ThingDef>
-
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Gun_RocketswarmLauncher_GT</defName>
         <label>rocket-swarm tube</label>
@@ -616,7 +710,6 @@
             </li>
         </verbs>
     </ThingDef>
-
     <!-- CMissileTurret -->
     <ThingDef ParentName="AutoMortarBase_GT">
         <defName>CruiseMissileTurret</defName>
@@ -652,7 +745,6 @@
             <turretInitialCooldownTime>70</turretInitialCooldownTime>
         </building>
     </ThingDef>
-
     <ThingDef ParentName="BaseBullet">
         <defName>Bullet_CMissileTurret</defName>
         <label>rockets</label>
@@ -675,7 +767,6 @@
             <soundAmbient>MortarRound_Ambient</soundAmbient>
         </projectile>
     </ThingDef>
-
     <ThingDef ParentName="BaseArtilleryWeapon">
         <defName>Gun_CMissileTurret</defName>
         <label>rocket-swarm tube</label>
@@ -707,5 +798,4 @@
             </li>
         </verbs>
     </ThingDef>
-
 </Defs>

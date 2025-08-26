@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Advanced Bionic Spine -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTSpine</defName>
+        <label>Advanced bionic spine</label>
+        <labelNoun>an advanced bionic spine</labelNoun>
+        <description>The second generation of bionic upgrades. A flexible spine replacement that enhances movement capabilities and provides improved stability.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTSpine</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTSpine</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>0.5</offset>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>0.2</offset>
+            </li>
+            </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTSpine</defName>
+        <label>Advanced bionic spine</label>
+        <description>The second generation of bionic upgrades. A flexible spine replacement that enhances movement capabilities and provides improved stability.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTSpine</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>15</Plasteel>
+            <Titanium_GT>20</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>3000</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTSpine</defName>
+        <label>install advanced bionic spine</label>
+        <description>Install an advanced bionic spine.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTSpine</ThingDef>
+            <HediffDef>GTSpine</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic spine.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+            <li>GTSpine</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTSpine</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTSpine</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTSpine</defName>
+        <label>remove advanced bionic spine</label>
+        <description>Remove advanced bionic spine.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTSpine</ThingDef>
+            <HediffDef>GTSpine</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic spine.</jobString>
+        <removesHediff>GTSpine</removesHediff>
+    </RecipeDef>
+</Defs>

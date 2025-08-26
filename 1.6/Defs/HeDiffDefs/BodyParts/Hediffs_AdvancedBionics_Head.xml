@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Advanced Bionic Ear -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTEar</defName>
+        <label>Advanced bionic ear</label>
+        <labelNoun>an advanced bionic ear</labelNoun>
+        <description>The advanced version of the bionic ear. The second generation of bionic upgrades, typically reserved for top brass military forces, which allow the user to hear the slightest inflections of someone else's voice which gives them a leg up in negotiations. Users have even said after having the ear installed, individuals with annoying voices seemed to suddenly sound less annoying...</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEar</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTEar</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Hearing</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <SocialImpact>0.05</SocialImpact>
+                    <TradePriceImprovement>0.10</TradePriceImprovement>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTEar</defName>
+        <label>Advanced bionic ear</label>
+        <description>The advanced version of the bionic ear. The second generation of bionic upgrades, typically reserved for top brass military forces.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTEar</RecipeDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/BodyPart/CyberneticOrgan</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>2000</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>AdvancedGTLimb</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTEar</defName>
+        <label>install advanced bionic ear</label>
+        <description>Install an advanced bionic ear.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEar</ThingDef>
+            <HediffDef>GTEar</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic ear.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTEar</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTEar</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Ear</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTEar</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTEar</defName>
+        <label>remove advanced bionic ear</label>
+        <description>Remove advanced bionic ear.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEar</ThingDef>
+            <HediffDef>GTEar</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic ear.</jobString>
+        <removesHediff>GTEar</removesHediff>
+    </RecipeDef>
+    <!-- Advanced Bionic Eye -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTEye</defName>
+        <label>Advanced bionic eye</label>
+        <labelNoun>an advanced bionic eye</labelNoun>
+        <description>The advanced version of the bionic eye. The second generation of bionic upgrades, typically reserved for top brass military forces, increasing their shooting accuracy and time it takes to aim.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEye</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTEye</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>1</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ShootingAccuracyPawn>0.1</ShootingAccuracyPawn>
+                    <AimingDelayFactor>-0.1</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <renderNodeProperties>
+            <li Class="PawnRenderNodeProperties_Eye">
+                <workerClass>PawnRenderNodeWorker_HediffEye</workerClass>
+                <texPath>Things/Pawn/Wounds/BionicEye</texPath>
+                <parentTagDef>Head</parentTagDef>
+                <drawSize>0.15</drawSize>
+                <drawData>
+                    <defaultData>
+                        <layer>56</layer>
+                        <offset>(0, 0, -0.25)</offset>
+                    </defaultData>
+                    <dataWest>
+                        <flip>true</flip>
+                    </dataWest>
+                </drawData>
+            </li>
+        </renderNodeProperties>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTEye</defName>
+        <label>Advanced bionic eye</label>
+        <description>The advanced version of the bionic eye. The second generation of bionic upgrades, typically reserved for top brass military forces, increasing their shooting accuracy and time it takes to aim.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTEye</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>10</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.3</Mass>
+            <MarketValue>3400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTEye</defName>
+        <label>install advanced bionic eye</label>
+        <description>Install an advanced bionic eye.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEye</ThingDef>
+            <HediffDef>GTEye</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic eye.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTEye</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTEye</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Eye</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTEye</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTEye</defName>
+        <label>remove advanced bionic eye</label>
+        <description>Remove advanced bionic eye.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTEye</ThingDef>
+            <HediffDef>GTEye</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic eye.</jobString>
+        <removesHediff>GTEye</removesHediff>
+    </RecipeDef>
+    <!-- Advanced Bionic Dentures -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTDentures</defName>
+        <label>Advanced bionic dentures</label>
+        <labelNoun>an advanced set of bionic dentures</labelNoun>
+        <description>The second generation of bionic upgrades. A set of advanced dentures that significantly improve chewing and overall oral health.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTDentures</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTDentures</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <EatingSpeed>0.4</EatingSpeed>
+                    <SocialImpact>0.1</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTDentures</defName>
+        <label>Advanced bionic dentures</label>
+        <description>The second generation of bionic upgrades. A set of advanced dentures that significantly improve chewing and overall oral health.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTDentures</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>5</Plasteel>
+            <Titanium_GT>8</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>0.5</Mass>
+            <MarketValue>2100</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTDentures</defName>
+        <label>install advanced bionic dentures</label>
+        <description>Install an advanced set of bionic dentures.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTDentures</ThingDef>
+            <HediffDef>GTDentures</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic dentures.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTDentures</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTDentures</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Jaw</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTDentures</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTDentures</defName>
+        <label>remove advanced bionic dentures</label>
+        <description>Remove advanced bionic dentures.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTDentures</ThingDef>
+            <HediffDef>GTDentures</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic dentures.</jobString>
+        <removesHediff>GTDentures</removesHediff>
+    </RecipeDef>
+</Defs>

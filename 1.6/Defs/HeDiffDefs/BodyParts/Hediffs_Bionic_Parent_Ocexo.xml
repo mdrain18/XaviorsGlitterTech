@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Added body parts -->
+    <!-- Parent Bases -->
+    <HediffDef Abstract="True" Name="GlitterTechBionicBase" ParentName="AddedBodyPartBase">
+        <label>GlitterTech bionic part</label>
+        <description>A base for all GlitterTech hediff for bionic parts.</description>
+    </HediffDef>
+    <ThingDef Abstract="True" Name="GlitterTechBionicItemBase" ParentName="BodyPartBionicBase">
+        <label>GlitterTech bionic item</label>
+        <description>A base for all GlitterTech bionic parts.</description>
+    </ThingDef>
+    <RecipeDef Abstract="True" Name="GlitterTechSurgeryBase" ParentName="SurgeryInstallBodyPartArtificialBase">
+        <label>GlitterTech install surgery</label>
+    </RecipeDef>
+    <!-- Orion Corp Exoskeleton -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>OCExo</defName>
+        <label>Orion Exoskeleton</label>
+        <labelNoun>an Orion Exoskeleton</labelNoun>
+        <description>Installed Orion Corp Exoskeleton. Enhances strength and dexterity significantly, providing an edge in both combat and labor.</description>
+        <descriptionHyperlinks>
+            <ThingDef>OCExo</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>OCExo</spawnThingOnRemoved>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.0</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>0.5</offset>
+            </li>
+            <li>
+                <capacity>Manipulation</capacity>
+                <offset>0.5</offset>
+            </li>
+            </capMods>
+            <statOffsets>
+                <MeleeDPS>5.0</MeleeDPS>
+            </statOffsets>
+            </li>
+        </stages>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+            <li>
+                <label>exo punch</label>
+                <capacities>
+            <li>Blunt</li>
+            </capacities>
+            <power>12</power>
+            <cooldownTime>1.5</cooldownTime>
+            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+            </li>
+            </tools>
+            </li>
+        </comps>
+    </HediffDef>
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>OCExo</defName>
+        <label>Orion Exoskeleton</label>
+        <description>A standard issue Orion Corporation exoskeleton. Equipped by most Orion security forces, this all-purpose exoskeleton gives them a cheap and capable edge against their competitors.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallOCExo</RecipeDef>
+        </descriptionHyperlinks>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+        <costList>
+            <Plasteel>50</Plasteel>
+            <AlphaPoly>10</AlphaPoly>
+            <ComputerComp>1</ComputerComp>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardCore</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2</Mass>
+            <MarketValue>2500</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>OCBodyParts</li>
+        </techHediffsTags>
+    </ThingDef>
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallOCExo</defName>
+        <label>Install Orion Exoskeleton</label>
+        <description>Installs Orion Exoskeleton.</description>
+        <descriptionHyperlinks>
+            <ThingDef>OCExo</ThingDef>
+            <HediffDef>OCExo</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing Orion Exoskeleton.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+            <li>Medicine</li>
+            </categories>
+            </filter>
+            <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+            <li>OCExo</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+            <thingDefs>
+                <li>OCExo</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Spine</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>OCExo</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveOCExo</defName>
+        <label>remove Orion Exoskeleton</label>
+        <description>Remove Orion Exoskeleton.</description>
+        <descriptionHyperlinks>
+            <ThingDef>OCExo</ThingDef>
+            <HediffDef>OCExo</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing Orion Exoskeleton.</jobString>
+        <removesHediff>OCExo</removesHediff>
+    </RecipeDef>
+</Defs>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Advanced Bionic Leg -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTLeg</defName>
+        <label>Advanced bionic leg</label>
+        <labelNoun>an advanced bionic leg</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Enhances speed, strength, and stability. You can run faster, jump higher, and kick harder.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTLeg</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTLeg</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>0.5</offset>
+            </li>
+            </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTLeg</defName>
+        <label>Advanced bionic leg</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Enhances speed, strength, and stability. You can run faster, jump higher, and kick harder.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTLeg</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTLeg</defName>
+        <label>install advanced bionic leg</label>
+        <description>Install an advanced bionic leg.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTLeg</ThingDef>
+            <HediffDef>GTLeg</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic leg.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+            <li>GTLeg</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTLeg</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Leg</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTLeg</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTLeg</defName>
+        <label>remove advanced bionic leg</label>
+        <description>Remove advanced bionic leg.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTLeg</ThingDef>
+            <HediffDef>GTLeg</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic leg.</jobString>
+        <removesHediff>GTLeg</removesHediff>
+    </RecipeDef>
+    <!-- Advanced Bionic Foot -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTFoot</defName>
+        <label>Advanced bionic foot</label>
+        <labelNoun>an advanced bionic foot</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible balance and strength.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTFoot</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTFoot</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+            <li>
+                <capacity>Moving</capacity>
+                <offset>0.5</offset>
+            </li>
+            </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTFoot</defName>
+        <label>Advanced bionic foot</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible balance and strength.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTFoot</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>8</Plasteel>
+            <Titanium_GT>12</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTFoot</defName>
+        <label>install advanced bionic foot</label>
+        <description>Install an advanced bionic foot.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTFoot</ThingDef>
+            <HediffDef>GTFoot</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic foot.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+            <li>GTFoot</li>
+            </thingDefs>
+            </filter>
+            <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTFoot</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Foot</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTFoot</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTFoot</defName>
+        <label>remove advanced bionic foot</label>
+        <description>Remove advanced bionic foot.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTFoot</ThingDef>
+            <HediffDef>GTFoot</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic foot.</jobString>
+        <removesHediff>GTFoot</removesHediff>
+    </RecipeDef>
+</Defs>

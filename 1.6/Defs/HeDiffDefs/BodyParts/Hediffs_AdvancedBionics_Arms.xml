@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Advanced Bionic Arm -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTArm</defName>
+        <label>Advanced bionic arm</label>
+        <labelNoun>an advanced bionic arm</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible strength. You may destroy your opponents' limbs in a fist fight...not recommended for wardens.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTArm</ThingDef>
+        </descriptionHyperlinks>
+        <comps>
+            <li Class="HediffCompProperties_VerbGiver">
+                <tools>
+                    <li>
+                        <label>fist</label>
+                        <capacities>
+                            <li>Blunt</li>
+                        </capacities>
+                        <power>12</power>
+                        <cooldownTime>2</cooldownTime>
+                        <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
+                        <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+                    </li>
+                </tools>
+            </li>
+        </comps>
+        <spawnThingOnRemoved>GTArm</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.3</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDPS>5.0</MeleeDPS>
+                </statOffsets>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTArm</defName>
+        <label>Advanced bionic arm</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible strength. You may destroy your opponents' limbs in a fist fight...not recommended for wardens.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTArm</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>10</Plasteel>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>2.0</Mass>
+            <MarketValue>2400</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTArm</defName>
+        <label>install advanced bionic arm</label>
+        <description>Install an advanced bionic arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTArm</ThingDef>
+            <HediffDef>GTArm</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic arm.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTArm</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTArm</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Shoulder</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTArm</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTArm</defName>
+        <label>remove advanced bionic arm</label>
+        <description>Remove advanced bionic arm.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTArm</ThingDef>
+            <HediffDef>GTArm</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic arm.</jobString>
+        <removesHediff>GTArm</removesHediff>
+    </RecipeDef>
+    <!-- Advanced Bionic Hand -->
+    <!-- HediffDef -->
+    <HediffDef ParentName="GlitterTechBionicBase">
+        <defName>GTHand</defName>
+        <label>Advanced bionic hand</label>
+        <labelNoun>an advanced bionic hand</labelNoun>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible dexterity and strength.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTHand</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>GTHand</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>1.4</partEfficiency>
+            <betterThanNatural>true</betterThanNatural>
+        </addedPartProps>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechBionicItemBase">
+        <defName>GTHand</defName>
+        <label>Advanced bionic hand</label>
+        <description>The second generation of bionic upgrades, using nano fibres to produce artificial muscles. Gives the owner incredible dexterity and strength.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallGTHand</RecipeDef>
+        </descriptionHyperlinks>
+        <costList>
+            <Plasteel>8</Plasteel>
+            <Titanium_GT>12</Titanium_GT>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <ComponentSpacer>2</ComponentSpacer>
+        </costList>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <statBases>
+            <Mass>1.5</Mass>
+            <MarketValue>2300</MarketValue>
+        </statBases>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="GlitterTechSurgeryBase">
+        <defName>InstallGTHand</defName>
+        <label>install advanced bionic hand</label>
+        <description>Install an advanced bionic hand.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTHand</ThingDef>
+            <HediffDef>GTHand</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing advanced bionic hand.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>GTHand</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>GTHand</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Hand</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>GTHand</addsHediff>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveGTHand</defName>
+        <label>remove advanced bionic hand</label>
+        <description>Remove advanced bionic hand.</description>
+        <descriptionHyperlinks>
+            <ThingDef>GTHand</ThingDef>
+            <HediffDef>GTHand</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Removing advanced bionic hand.</jobString>
+        <removesHediff>GTHand</removesHediff>
+    </RecipeDef>
+</Defs>

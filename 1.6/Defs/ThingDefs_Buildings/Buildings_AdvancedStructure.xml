@@ -69,9 +69,9 @@
         <useStuffTerrainAffordance>false</useStuffTerrainAffordance>
         <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
         <building>
-            <poweredDoorOpenSpeedFactor>6</poweredDoorOpenSpeedFactor>
-            <unpoweredDoorOpenSpeedFactor>2</unpoweredDoorOpenSpeedFactor>
-            <unpoweredDoorCloseSpeedFactor>2</unpoweredDoorCloseSpeedFactor>
+            <poweredDoorOpenSpeedFactor>8</poweredDoorOpenSpeedFactor>
+            <unpoweredDoorOpenSpeedFactor>4</unpoweredDoorOpenSpeedFactor>
+            <unpoweredDoorCloseSpeedFactor>4</unpoweredDoorCloseSpeedFactor>
             <isAirtight>true</isAirtight>
             <blueprintClass>Blueprint_Build</blueprintClass>
             <blueprintGraphicData>
@@ -109,7 +109,7 @@
             <li>SecurityDoor</li>
             <li>AdvancedFabrication</li>
         </researchPrerequisites>
-        <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>11</constructionSkillPrerequisite>
         <placeWorkers>
             <li>PlaceWorker_MultiCellDoor</li>
         </placeWorkers>
@@ -123,15 +123,14 @@
         </comps>
     </ThingDef>
     <!--==========================================================-->
-    <!--
     <ThingDef ParentName="DoorBase">
         <defName>LargerOrnateDoor</defName>
-        <label>ornate door</label>
+        <label>Larger Ornate door</label>
         <description>Divides rooms. An intricately-carved door, decorated with gold. This large, heavy door requires adjacent walls to function.</description>
-        <thingClass>Building_MultiTileDoor</thingClass>
+        <thingClass>GlitterTech.Building_TripleTileDoor</thingClass>
         <statBases>
             <WorkToBuild>15000</WorkToBuild>
-            <MaxHitPoints>250</MaxHitPoints>
+            <MaxHitPoints>450</MaxHitPoints>
             <Beauty>45</Beauty>
         </statBases>
         <graphicData>
@@ -146,7 +145,7 @@
         <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
         <size>(3, 1)</size>
         <rotatable>true</rotatable>
-        <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+        <constructionSkillPrerequisite>7</constructionSkillPrerequisite>
         <costStuffCount>120</costStuffCount>
         <costList>
             <Gold>70</Gold>
@@ -157,18 +156,18 @@
                 <texPath>Things/Building/OrnateDoor/OrnateDoor_MenuIcon</texPath>
                 <graphicClass>Graphic_Multi</graphicClass>
                 <shaderType>EdgeDetect</shaderType>
-                <drawSize>(2.6, 3.1)</drawSize>
+                <drawSize>(2.8, 3.9)</drawSize>
             </blueprintGraphicData>
             <isSupportDoor>true</isSupportDoor>
             <doorTopGraphic>
                 <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Top</texPath>
                 <graphicClass>Graphic_Multi</graphicClass>
-                <drawSize>(4.4, 3.1)</drawSize>
+                <drawSize>(3.9, 2.8)</drawSize>
             </doorTopGraphic>
             <doorSupportGraphic>
                 <texPath>Things/Building/OrnateDoor/OrnateDoor2x1_Support</texPath>
                 <graphicClass>Graphic_Multi</graphicClass>
-                <drawSize>(4.4, 3.1)</drawSize>
+                <drawSize>(3.9, 2.8)</drawSize>
             </doorSupportGraphic>
         </building>
         <researchPrerequisites>
@@ -179,7 +178,6 @@
             <li>PlaceWorker_MultiCellDoor</li>
         </placeWorkers>
     </ThingDef>
-    -->
     <!--========================= Walls =============================-->
     <ThingDef ParentName="Wall">
         <defName>WallWindow</defName>

@@ -57,7 +57,7 @@
         <graphicData>
             <graphicClass>Graphic_Single</graphicClass>
             <texPath>Things/Building/Production/AdvancedDeepDrill</texPath>
-            <drawSize>(3, 3)</drawSize>
+            <drawSize>(2.8, 2.8)</drawSize>
             <shadowData>
                 <volume>(0.78, 0.795, 0.135)</volume>
                 <offset>(0,0,-0.645)</offset>

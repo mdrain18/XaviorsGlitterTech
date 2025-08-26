@@ -39,6 +39,7 @@
         </statBases>
         <techLevel>Spacer</techLevel>
         <recipeMaker>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
             <researchPrerequisite>ChargedShot</researchPrerequisite>
             <workSkill>Crafting</workSkill>
             <skillRequirements>
@@ -137,6 +138,7 @@
         </statBases>
         <techLevel>Spacer</techLevel>
         <recipeMaker>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
             <researchPrerequisite>ChargedShot</researchPrerequisite>
             <workSkill>Crafting</workSkill>
             <skillRequirements>

@@ -84,7 +84,7 @@
         <graphicData>
             <texPath>Things/Building/Power/PlasmaReactor</texPath>
             <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(9,9)</drawSize>
+            <drawSize>(7,7)</drawSize>
             <damageData>
                 <rect>(0.3,0,5.4,6)</rect>
             </damageData>
@@ -95,13 +95,13 @@
         <fillPercent>1</fillPercent>
         <blockLight>false</blockLight>
         <statBases>
-            <MaxHitPoints>5000</MaxHitPoints>
-            <WorkToBuild>15000</WorkToBuild>
+            <MaxHitPoints>7500</MaxHitPoints>
+            <WorkToBuild>20000</WorkToBuild>
             <Flammability>1.0</Flammability>
             <Beauty>-10</Beauty>
         </statBases>
         <tickerType>Normal</tickerType>
-        <size>(9,9)</size>
+        <size>(7,7)</size>
         <costList>
             <Steel>2400</Steel>
             <Titanium_GT>320</Titanium_GT>
@@ -144,7 +144,7 @@
     <!--==================================Batteries=====================================-->
     <ThingDef ParentName="BuildingBase">
         <defName>FissionBattery</defName>
-        <label>Battery</label>
+        <label>Fission Battery</label>
         <thingClass>Building_Battery</thingClass>
         <description>Stores electricity and recycles charge using fission processes. Slightly more efficient and stores four times as much. Warning - charged batteries tend to explode when heated or wet.</description>
         <graphicData>

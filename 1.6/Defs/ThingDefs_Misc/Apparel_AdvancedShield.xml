@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <!-- ==================================== Base =====================================-->
-    <ThingDef Name="ApparelShieldBase_GT" ParentName="ApparelBase" Abstract="True">
+    <!-- HC-1 Shield -->
+    <ThingDef ParentName="ApparelBase">
+        <defName>Apparel_HC1Shield</defName>
+        <label>HC-1 shield</label>
+        <description>A high-capacity energy shield device. The top-tier class of personal shields, the mark 1 increases energy capacity by a factor of ten but recycles the shield slower.</description>
         <thingClass>Apparel</thingClass>
         <graphicData>
             <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
@@ -12,14 +14,105 @@
         <techLevel>Spacer</techLevel>
         <statBases>
             <Mass>2</Mass>
-            <WorkToMake>14000</WorkToMake>
-            <Flammability>0.4</Flammability>
-            <EquipDelay>2</EquipDelay>
+            <WorkToMake>16000</WorkToMake>
+            <MarketValue>2400</MarketValue>
+            <Flammability>0.1</Flammability>
+            <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
+            <EquipDelay>1</EquipDelay>
         </statBases>
         <thingSetMakerTags>
             <li>RewardStandardMidFreq</li>
             <li>RewardStandardQualitySuper</li>
         </thingSetMakerTags>
+        <costList>
+            <BetaPoly>1</BetaPoly>
+            <Uranium>5</Uranium>
+            <Silicon>30</Silicon>
+            <ComputerComp>5</ComputerComp>
+        </costList>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+            <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <useIngredientsForColor>false</useIngredientsForColor>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+            <displayPriority>310</displayPriority>
+        </recipeMaker>
+        <thingCategories>
+            <li>ApparelUtility</li>
+        </thingCategories>
+        <apparel>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <careIfWornByCorpse>false</careIfWornByCorpse>
+            <careIfDamaged>false</careIfDamaged>
+            <wearPerDay>0</wearPerDay>
+            <bodyPartGroups>
+                <li>Waist</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Belt</li>
+            </layers>
+            <tags>
+                <li>BeltDefense</li>
+            </tags>
+            <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.8,0.8,0.8,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+        <comps>
+            <li Class="CompProperties_Shield"/>
+        </comps>
+        <allowedArchonexusCount>1</allowedArchonexusCount>
+        <tradeTags>
+            <li>Armor</li>
+        </tradeTags>
+    </ThingDef>
+    <!-- Orion Corp Shield -->
+    <ThingDef ParentName="ApparelBase">
+        <defName>Apparel_OCShield</defName>
+        <label>Orion Corp defense shield</label>
+        <description>An Orion corp patented personal defense shield. Standard capacity, but recycles the shield much faster than all of the competitors.</description>
+        <thingClass>Apparel</thingClass>
+        <graphicData>
+            <texPath>Things/Pawn/Humanlike/Apparel/ShieldBelt/ShieldBelt</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tickerType>Normal</tickerType>
+        <techLevel>Spacer</techLevel>
+        <statBases>
+            <Mass>2</Mass>
+            <WorkToMake>16000</WorkToMake>
+            <Flammability>0.1</Flammability>
+            <EquipDelay>2</EquipDelay>
+            <MarketValue>2100</MarketValue>
+            <EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
+        </statBases>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <costList>
+            <AlphaPoly>5</AlphaPoly>
+            <Uranium>5</Uranium>
+            <Silicon>10</Silicon>
+            <ComputerComp>10</ComputerComp>
+        </costList>
         <recipeMaker>
             <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
             <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
@@ -55,113 +148,66 @@
             </tags>
             <developmentalStageFilter>Child, Adult</developmentalStageFilter>
         </apparel>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>(0.8,0.8,0.8,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
         <comps>
-            <li Class="CompProperties_Shield" />
+            <li Class="CompProperties_Shield"/>
         </comps>
         <allowedArchonexusCount>1</allowedArchonexusCount>
         <tradeTags>
             <li>Armor</li>
         </tradeTags>
     </ThingDef>
-
-    <!-- HC-1 Shield -->
-    <ThingDef ParentName="ApparelShieldBase_GT">
-        <defName>Apparel_HC1Shield</defName>
-        <label>HC-1 shield</label>
-        <description>A high-capacity energy shield device. The top-tier class of personal shields, the mark 1 increases energy capacity by a factor of ten but recycles the shield slower.</description>
-        <statBases>
-            <MarketValue>2400</MarketValue>
-            <EnergyShieldRechargeRate>0.4</EnergyShieldRechargeRate>
-            <EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
-        </statBases>
-        <costList>
-            <BetaPoly>1</BetaPoly>
-            <Uranium>5</Uranium>
-            <Silicon>30</Silicon>
-            <ComputerComp>5</ComputerComp>
-        </costList>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <colorGenerator Class="ColorGenerator_Options">
-            <options>
-                <li>
-                    <weight>10</weight>
-                    <only>RGBA(0.8,0.8,0.8,1)</only>
-                </li>
-            </options>
-        </colorGenerator>
-    </ThingDef>
-
-    <!-- Orion Corp Shield -->
-    <ThingDef ParentName="ApparelShieldBase_GT">
-        <defName>Apparel_OCShield</defName>
-        <label>Orion Corp defense shield</label>
-        <description>An Orion corp patented personal defense shield. Standard capacity, but recycles the shield much faster than all of the competitors.</description>
-        <statBases>
-            <MarketValue>2100</MarketValue>
-            <EnergyShieldRechargeRate>1</EnergyShieldRechargeRate>
-            <EnergyShieldEnergyMax>2</EnergyShieldEnergyMax>
-        </statBases>
-        <costList>
-            <AlphaPoly>5</AlphaPoly>
-            <Uranium>5</Uranium>
-            <Silicon>10</Silicon>
-            <ComputerComp>10</ComputerComp>
-        </costList>
-        <minifiedDef>MinifiedThing</minifiedDef>
-        <colorGenerator Class="ColorGenerator_Options">
-            <options>
-                <li>
-                    <weight>10</weight>
-                    <only>RGBA(0.6,0.6,1,1)</only>
-                </li>
-            </options>
-        </colorGenerator>
-    </ThingDef>
-
     <!-- Gamma Shield -->
-    <ThingDef ParentName="ApparelShieldBase_GT">
-      <defName>Apparel_GammaShieldBelt</defName>
-      <label>gamma shield belt</label>
-      <description>A state-of-the-art shield belt that can deflect gamma rays from Odyssey sources.</description>
-      <!--<MayRequire>ludeon.rimworld.odyssey</MayRequire> -->
-      <statBases>
-        <MarketValue>5600</MarketValue>
-        <EnergyShieldRechargeRate>1.2</EnergyShieldRechargeRate>
-        <EnergyShieldEnergyMax>4</EnergyShieldEnergyMax>
-      </statBases>
-      <costList>
-        <AlphaPoly>20</AlphaPoly>
-        <Titanium_GT>15</Titanium_GT>
-        <ComponentSpacer>6</ComponentSpacer>
-        <ComputerComp>10</ComputerComp>
-        <MagneticCoil>2</MagneticCoil>
-      </costList>
-      <recipeMaker>
-        <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
-        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-        <workSkill>Crafting</workSkill>
-        <effectWorking>Smith</effectWorking>
-        <soundWorking>Recipe_Machining</soundWorking>
-        <recipeUsers>
-          <li>RobAssem</li>
-        </recipeUsers>
-        <skillRequirements>
-          <Crafting>15</Crafting>
-        </skillRequirements>
-        <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
-      </recipeMaker>
-      <minifiedDef>MinifiedThing</minifiedDef>
-      <colorGenerator Class="ColorGenerator_Options">
-        <options>
-          <li>
-            <weight>10</weight>
-            <only>RGBA(0.3,1,1,1)</only>
-          </li>
-        </options>
-      </colorGenerator>
-      <comps>
-        <!--<li Class="GammaShield.CompProperties_GammaShield" /> -->
-      </comps>
+    <!--
+    <ThingDef MayRequire="Ludeon.RimWorld.Odyssey" ParentName="ApparelBase">
+        <defName>Apparel_GammaShieldBelt</defName>
+        <label>gamma shield belt</label>
+        <description>A state-of-the-art shield belt that can deflect gamma rays from Odyssey sources.</description>
+        <statBases>
+            <MarketValue>5600</MarketValue>
+            <EnergyShieldRechargeRate>1.2</EnergyShieldRechargeRate>
+            <EnergyShieldEnergyMax>4</EnergyShieldEnergyMax>
+        </statBases>
+        <costList>
+            <BetaPoly>5</BetaPoly>
+            <AlphaPoly>20</AlphaPoly>
+            <Titanium_GT>15</Titanium_GT>
+            <ComponentSpacer>6</ComponentSpacer>
+            <ComputerComp>10</ComputerComp>
+            <MagneticCoil>2</MagneticCoil>
+        </costList>
+        <recipeMaker>
+            <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>15</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>ElectroPlasmatics</researchPrerequisite>
+        </recipeMaker>
+        <colorGenerator Class="ColorGenerator_Options">
+            <options>
+                <li>
+                    <weight>10</weight>
+                    <only>RGBA(0.3,1,1,1)</only>
+                </li>
+            </options>
+        </colorGenerator>
+        <comps>
+            <li Class="CompProperties_Shield"/>
+        </comps>
     </ThingDef>
-
+-->
 </Defs>

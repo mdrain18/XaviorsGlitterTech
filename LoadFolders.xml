@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<loadFolders>
+  <v1.6>
+    <li>/</li>
+    <li>1.6</li>
+    <li IfModActive="Ludeon.RimWorld.Royalty">Royalty/1.6</li>
+    <li IfModActiveAll="Ludeon.RimWorld.Ideology,VanillaExpanded.VFEArt">Ideology/1.6</li>
+    <li IfModActive="Ludeon.RimWorld.Odyssey">Odyssey/1.6</li>
+  </v1.6>
+</loadFolders>

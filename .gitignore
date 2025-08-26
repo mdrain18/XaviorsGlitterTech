@@ -47,3 +47,4 @@ Temporary Items
 .apdisk
 .idea
 /Source/GlitterTech/.vs/GlitterTech
+*.cache

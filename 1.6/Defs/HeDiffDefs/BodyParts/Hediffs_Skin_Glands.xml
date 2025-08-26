@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Ultra Skin Gland -->
+    <!-- Base: Bionic body part (ultra tech) -->
+    <ThingDef Abstract="True" Name="GlitterTechUltraBionicItemBase" ParentName="BodyPartBase">
+        <techLevel>Ultra</techLevel>
+        <thingCategories>
+            <li>BodyPartsBionic</li>
+        </thingCategories>
+        <graphicData>
+            <texPath>Things/Item/Health/HealthItem</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.80</drawSize>
+            <color>(26,188,156)</color>
+        </graphicData>
+        <tradeTags>
+            <li>Bionic</li>
+        </tradeTags>
+        <techHediffsTags>
+            <li>Advanced</li>
+        </techHediffsTags>
+        <statBases>
+            <WorkToMake>36000</WorkToMake>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Smith</soundWorking>
+            <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+            <skillRequirements>
+                <Crafting>14</Crafting>
+            </skillRequirements>
+            <researchPrerequisite>NaniteEngineering_GT</researchPrerequisite>
+            <recipeUsers>
+                <li>RobAssem</li>
+            </recipeUsers>
+            <displayPriority>300</displayPriority>
+        </recipeMaker>
+    </ThingDef>
+    <!-- HediffDef -->
+    <HediffDef ParentName="ImplantHediffBase">
+        <defName>UltraskinGland</defName>
+        <label>ultraskin gland</label>
+        <labelNoun>an ultraskin gland</labelNoun>
+        <description>An installed ultraskin gland. Reinforces the skin and subtly improves beauty. Extremely advanced technology.</description>
+        <descriptionHyperlinks>
+            <ThingDef>UltraskinGland</ThingDef>
+        </descriptionHyperlinks>
+        <spawnThingOnRemoved>UltraskinGland</spawnThingOnRemoved>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+                    <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+                    <ArmorRating_Heat>0.6</ArmorRating_Heat>
+                    <PawnBeauty>1</PawnBeauty>
+                </statOffsets>
+            </li>
+        </stages>
+        <tags>
+            <li>ArmorGland</li>
+        </tags>
+    </HediffDef>
+    <!-- ThingDef -->
+    <ThingDef ParentName="GlitterTechUltraBionicItemBase">
+        <defName>UltraskinGland</defName>
+        <label>ultraskin gland</label>
+        <description>An ultratech skin-reinforcement gland whose adaptive nanites harden on impact to resist cuts, blows, and heat, then relax to repair and smooth the dermis—quietly boosting protection and the wearer’s appearance.</description>
+        <descriptionHyperlinks>
+            <RecipeDef>InstallUltraskinGland</RecipeDef>
+        </descriptionHyperlinks>
+        <thingSetMakerTags>
+            <li>RewardStandardMidFreq</li>
+        </thingSetMakerTags>
+        <costList>
+            <Titanium_GT>25</Titanium_GT>
+            <ComponentSpacer>6</ComponentSpacer>
+            <Nanites_GT>2</Nanites_GT>
+        </costList>
+        <recipeMaker>
+            <researchPrerequisite>SkinHardening</researchPrerequisite>
+        </recipeMaker>
+    </ThingDef>
+    <!-- RecipeDef (Install) -->
+    <RecipeDef ParentName="SurgeryInstallImplantBase">
+        <defName>InstallUltraskinGland</defName>
+        <label>install ultraskin gland</label>
+        <description>Install an ultraskin gland.</description>
+        <descriptionHyperlinks>
+            <ThingDef>UltraskinGland</ThingDef>
+            <HediffDef>UltraskinGland</HediffDef>
+        </descriptionHyperlinks>
+        <jobString>Installing ultraskin gland.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>UltraskinGland</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>UltraskinGland</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <addsHediff>UltraskinGland</addsHediff>
+        <incompatibleWithHediffTags>
+            <li>ArmorGland</li>
+        </incompatibleWithHediffTags>
+    </RecipeDef>
+    <!-- RecipeDef (Un-Install) -->
+    <RecipeDef ParentName="SurgeryRemoveImplantBase">
+        <defName>RemoveUltraskinGland</defName>
+        <label>remove ultraskin gland</label>
+        <description>Remove ultraskin gland.</description>
+        <descriptionHyperlinks>
+            <ThingDef>UltraskinGland</ThingDef>
+        </descriptionHyperlinks>
+        <jobString>Removing ultraskin gland.</jobString>
+        <removesHediff>UltraskinGland</removesHediff>
+    </RecipeDef>
+</Defs>

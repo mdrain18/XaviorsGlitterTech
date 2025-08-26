@@ -136,7 +136,7 @@
                         <li>Plasteel</li>
                     </thingDefs>
                 </filter>
-                <count>40</count>
+                <count>30</count>
             </li>
         </ingredients>
         <products>
@@ -200,7 +200,7 @@
             </li>
         </ingredients>
         <products>
-            <Plasteel>6</Plasteel>
+            <Plasteel>8</Plasteel>
         </products>
         <fixedIngredientFilter>
             <thingDefs>
@@ -233,7 +233,7 @@
                         <li>DevilstrandCloth</li>
                     </thingDefs>
                 </filter>
-                <count>10</count>
+                <count>20</count>
             </li>
         </ingredients>
         <products>
@@ -479,5 +479,52 @@
             </thingDefs>
         </fixedIngredientFilter>
         <workSkill>Crafting</workSkill>
+    </RecipeDef>
+    <RecipeDef>
+        <defName>Make_Nanites_GT</defName>
+        <label>craft nanites</label>
+        <description>Combines titanium, silicon, and gold into programmable nanites.</description>
+        <jobString>Crafting nanites.</jobString>
+        <researchPrerequisite>NaniteEngineering_GT</researchPrerequisite>
+        <workAmount>5000</workAmount>
+        <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+        <workSkill>Crafting</workSkill>
+        <effectWorking>Smith</effectWorking>
+        <soundWorking>Recipe_Smith</soundWorking>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Titanium_GT</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Silicon</li>
+                    </thingDefs>
+                </filter>
+                <count>10</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Gold</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <products>
+            <Nanites_GT>10</Nanites_GT>
+        </products>
+        <skillRequirements>
+            <Crafting>6</Crafting>
+        </skillRequirements>
+        <recipeUsers>
+            <li>RobAssem</li>
+        </recipeUsers>
     </RecipeDef>
 </Defs>

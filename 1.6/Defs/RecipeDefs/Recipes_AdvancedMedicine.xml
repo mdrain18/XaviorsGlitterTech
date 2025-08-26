@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
     <RecipeDef>
         <defName>BuildBandages</defName>
         <label>Produce bandages</label>
@@ -30,7 +29,6 @@
         </fixedIngredientFilter>
         <workSkill>Intellectual</workSkill>
     </RecipeDef>
-
     <RecipeDef>
         <defName>ProduceSerum</defName>
         <label>Fabricate serum</label>
@@ -78,7 +76,6 @@
         </fixedIngredientFilter>
         <workSkill>Intellectual</workSkill>
     </RecipeDef>
-
     <RecipeDef>
         <defName>BuildMedicine</defName>
         <label>Produce medicine</label>
@@ -126,7 +123,6 @@
         </fixedIngredientFilter>
         <workSkill>Intellectual</workSkill>
     </RecipeDef>
-
     <RecipeDef>
         <defName>ProduceGlitterworldMedicine</defName>
         <label>Produce glitterworld medicine</label>
@@ -183,5 +179,4 @@
         </fixedIngredientFilter>
         <workSkill>Intellectual</workSkill>
     </RecipeDef>
-
 </Defs>

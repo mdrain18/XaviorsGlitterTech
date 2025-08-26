@@ -7,7 +7,8 @@
         <description>Titanium alloy. A complex mix of rare elements, making a very strong, durable, and light material resistant to corrosion, and high velocity kinetics. Perfect for star ships and orbital space elevators...</description>
         <graphicData>
             <texPath>Things/Item/Resource/Titanium_GT</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>1</drawSize>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
@@ -41,7 +42,6 @@
             <commonality>0.05</commonality>
             <constructEffect>ConstructMetal</constructEffect>
             <isAirtight>true</isAirtight>
-            <!-- IMPORTANT FOR 1.6 -->
             <soundImpactBullet>BulletImpact_Metal</soundImpactBullet>
             <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
             <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
@@ -67,7 +67,8 @@
         <description>Hyper-advanced molecular composite only producible in orbital nano-forges. Alpha-poly is virtually indestructible and nearly immune to environmental extremes.</description>
         <graphicData>
             <texPath>Things/Item/Resource/APoly</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.9</drawSize>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
@@ -95,7 +96,6 @@
         <stuffProps>
             <categories>
                 <li>Metallic</li>
-                <li>Fabric</li>
             </categories>
             <appearance>Metal</appearance>
             <color>(200,200,255)</color>
@@ -127,7 +127,8 @@
         <description>Advanced synthetic polymer developed for high-impact military and space applications. Beta-poly is nearly impervious to cutting and highly resistant to heat.</description>
         <graphicData>
             <texPath>Things/Item/Resource/BPoly</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.9</drawSize>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
@@ -183,11 +184,11 @@
     <ThingDef ParentName="ResourceBase">
         <defName>MagneticCoil</defName>
         <label>Magnetic Coil</label>
-        <description>An advanced magnetic coil. Beyond the fabrication skills of anyone but an Electromagnetic
-            physicist.</description>
+        <description>An advanced magnetic coil. Beyond the fabrication skills of anyone but an Electromagnetic physicist.</description>
         <graphicData>
             <texPath>Things/Item/Resource/MagneticCoil</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.5</drawSize>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
@@ -200,13 +201,15 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
+    <!--===================================-->
     <ThingDef ParentName="ResourceBase">
         <defName>Silicon</defName>
-        <label>Silicon</label>
-        <description>Raw elemental Silicon, used in most electronic components.</description>
+        <label>Silicon wafers</label>
+        <description>Raw elemental silicon wafers, used in most electronic components.</description>
         <graphicData>
             <texPath>Things/Item/Resource/Silicon</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <graphicClass>Graphic_StackCount</graphicClass>
+            <drawSize>0.6</drawSize>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
@@ -219,6 +222,7 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
+    <!--===================================-->
     <ThingDef ParentName="ResourceBase">
         <defName>ComputerComp</defName>
         <label>Computer components</label>
@@ -226,6 +230,7 @@
         <graphicData>
             <texPath>Things/Item/Resource/ComputerComp</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.45</drawSize>
         </graphicData>
         <soundInteract>Metal_Drop</soundInteract>
         <soundDrop>Metal_Drop</soundDrop>
@@ -238,6 +243,7 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
+    <!--===================================-->
     <ThingDef ParentName="ResourceBase">
         <defName>Ethanol</defName>
         <label>Ethanol</label>
@@ -245,6 +251,7 @@
         <graphicData>
             <texPath>Things/Item/Resource/Ethanol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.4</drawSize>
         </graphicData>
         <soundInteract>Standard_Drop</soundInteract>
         <soundDrop>Standard_Drop</soundDrop>
@@ -257,6 +264,7 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
+    <!--===================================-->
     <ThingDef ParentName="ResourceBase">
         <defName>Bandage</defName>
         <label>Bandages</label>
@@ -264,6 +272,7 @@
         <graphicData>
             <texPath>Things/Item/Resource/Bandage</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.5</drawSize>
         </graphicData>
         <soundInteract>Standard_Drop</soundInteract>
         <soundDrop>Standard_Drop</soundDrop>
@@ -276,6 +285,7 @@
             <li>Manufactured</li>
         </thingCategories>
     </ThingDef>
+    <!--===================================-->
     <ThingDef ParentName="ResourceBase">
         <defName>Serum</defName>
         <label>Serum</label>
@@ -283,6 +293,7 @@
         <graphicData>
             <texPath>Things/Item/Resource/Serum</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.4</drawSize>
         </graphicData>
         <soundInteract>Standard_Drop</soundInteract>
         <soundDrop>Standard_Drop</soundDrop>
@@ -294,5 +305,28 @@
         <thingCategories>
             <li>Manufactured</li>
         </thingCategories>
+    </ThingDef>
+    <!--===================================-->
+    <ThingDef ParentName="ResourceBase">
+        <defName>Nanites_GT</defName>
+        <label>Nanites</label>
+        <description>A pack of microscopic, programmable machines capable of performing complex tasks at the molecular level.</description>
+        <graphicData>
+            <texPath>Things/Item/Resource/Nanites</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.4</drawSize>
+        </graphicData>
+        <statBases>
+            <MarketValue>15</MarketValue>
+            <Mass>0.03</Mass>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
     </ThingDef>
 </Defs>
